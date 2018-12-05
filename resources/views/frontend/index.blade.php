@@ -8,405 +8,597 @@
     <meta http-equiv="mobile-agent" content="format=html5; url={{str_replace('http://www.','http://m.',config('app.url'))}}" />
     <link rel="alternate" media="only screen and(max-width: 640px)" href="{{str_replace('http://www.','http://m.',config('app.url'))}}" >
     <link rel="canonical" href="{{config('app.url')}}{{str_replace('','',Request::getrequesturi())}}"/>
-    <link rel="stylesheet" href="/frontend/css/index.css" />
 @stop
 @section('main_content')
-    <!-- banner -->
-    <div class="zong_banner mt20">
-        <div class="clear banWrap wrap_mar">
-            <ul class="banWrap_left pr fl">
-                <li class="item"> <i class="zong_icon i21"></i><h3><a href="/zaojiao/" title="早教加盟" target="_blank">早教加盟</a></h3></li>
-                <li class="item"> <i class="zong_icon i19"></i><h3><a href="/youeryuan/" title="幼儿园加盟" target="_blank">幼儿园加盟</a></h3></li>
-                <li class="item"> <i class="zong_icon i18"></i><h3><a href="/guoxue/" title="国学馆加盟" target="_blank">国学馆加盟</a></h3></li>
-                <li class="item"> <i class="zong_icon i22"></i><h3><a href="/shaoer/" title="少儿英语加盟" target="_blank">少儿英语加盟</a></h3></li>
-                <li class="item"> <i class="zong_icon i22"></i><h3><a href="/qianneng/" title="潜能教育加盟" target="_blank">潜能教育加盟</a></h3></li>
-                <li class="item"> <i class="zong_icon i15"></i><h3><a href="/liuxue/" title="出国留学加盟" target="_blank">出国留学加盟</a></h3></li>
-                <li class="item"> <i class="zong_icon i20"></i><h3><a href="/xuedifudao/" title="学习辅导加盟" target="_blank">学习辅导加盟</a></h3></li>
-                <li class="item"> <i class="zong_icon i16"></i><h3><a href="/wudao/" title="舞蹈培训加盟" target="_blank">舞蹈培训加盟</a></h3></li>
-                <li class="item"> <i class="zong_icon i17"></i><h3><a href="/yishujiaoyu/" title="艺术教育加盟" target="_blank">艺术教育加盟</a></h3></li>
-                <li class="item"> <i class="zong_icon i18"></i><h3><a href="/shaoerbiancheng/" title="少儿编程加盟" target="_blank">少儿编程加盟</a></h3></li>
-                <li class="item"> <i class="zong_icon i15"></i><h3><a href="/meishu/" title="美术教育加盟" target="_blank">美术教育加盟</a></h3></li>
-                <li class="item"> <i class="zong_icon i17"></i><h3><a href="/zuowen/" title="作文培训加盟" target="_blank">作文培训加盟</a></h3></li>
-                <li class="item"> <i class="zong_icon i14"></i><h3><a href="/jiqiren/" title="机器人教育加盟" target="_blank">机器人教育加盟</a></h3></li>
+    <div class="con1 center">
+        <div class="con1-left">
+            <h1>项目查找</h1>
+            <select style="margin-top: 12px;">
+                <option>干洗分类</option>
+            </select>
+            <select>
+                <option>投资金额</option>
+            </select>
+            <select>
+                <option>店铺面积</option>
+            </select>
+
+            <input type="text" placeholder="请输入文本" class="input1">
+            <input type="button" value="项目搜索" class="input2">
+            <ul class="jiner">
+                <li><p>投资金额</p></li>
+                <li><a href="" style="margin-top: 13px;">1-5万元</a></li>
+                <li><a href="" style="margin-top: 13px;">5-10万元</a></li>
+                <li><a href="">10-20万元</a></li>
+                <li><a href="">20-50万元</a></li>
+                <li><a href="">50-100万元</a></li>
+                <li><a href="">100万以上</a></li>
             </ul>
-            <!-- banner 中间 -->
-            <div class="jm-index clearfix">
-                <div class="fl">
-                    <div class="carousel carousel-bar1">
-                        <div class="ovh swiper-container">
-                            <ul class="ban-ul swiper-wrapper">
-                                <a target="_blank" href="/xm/112.shtml" class="item img-block swiper-slide"><img src="/frontend/images/yidiandianad.jpg" alt="聚能教育"></a>
-                                <a target="_blank" href="/xm/26.shtml" class="item img-block swiper-slide"><img src="/frontend/images/9be32109eec0417d8e474437ed7fb0ea.jpg" alt="芝麻街英语"></a>
-                                <a target="_blank" href="/xm/204.shtml" class="item img-block swiper-slide"><img src="/frontend/images/aebed277ee964c94bfeaa080c0e0c64a.jpg" alt="UBTV小主播"></a>
-                            </ul>
-                        </div>
-                        <div class="dot">
-                            <div class="swiper-pagination"></div>
-                        </div>
-                    </div>
-                    <dl class="fl char-type char-type-h172 mt20">
-                        @foreach($cbrands as $cbrand)
-                            <dd class="magnify @if(!$loop->last) mr20 @endif">
-                                <a target="_blank" href="/xm/{{$cbrand->id}}.shtml" class="img-block magnify"><img src="{{$cbrand->indexpic}}" alt="" style="width:170px;height:170px">
-                                    <div class="txt">
-                                        <p class="f18">{{$cbrand->brandname}}</p>
-                                        <p class="f14">{{str_limit($cbrand->brandpsp,22,'...')}}</p>
-                                    </div>
-                                </a>
-                            </dd>
-                        @endforeach
-                    </dl>
-                </div>
-                <div class="fr xm-qingxian">
-                    <h2>项目抢先看</h2>
-                    <div class="carousel xm-carousel">
-                        <div class="ovh swiper-container">
-                            <ul class="ban-ul swiper-wrapper">
-                                @foreach($hotbrandsearch as $hotbrandsearch)
-                                    <li class="item swiper-slide">
-                                        <div style="padding:0 20px">
-                                            <img src="{{$hotbrandsearch->litpic}}" width="190" height="190">
-                                            <p class="f16"> {{$hotbrandsearch->brandname}}</p>
-                                            <p class="f14">
-                                                投资金额：<b class="s-oe">{{$hotbrandsearch->brandpay}}</b>
-                                            </p>
-                                            <p class="h72">{{$hotbrandsearch->description}}</p>
-                                            <div class="btn-bar">
-                                                <a target="_blank" href="/xm/{{$hotbrandsearch->id}}.shtml" class="btn btn-oe-line fl">详细考察</a><a href="javascript:void(0);" class="btn btn-oe fr btn-wyzx">我要咨询</a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                @endforeach
-                            </ul>
-                        </div>
-                        <div class="dot">
-                            <div class="swiper-pagination"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- main -->
-    <div class="fine navhotbox">
-        <div class="conta">
-            <div class="clearfix">
-                <div class="fine-left f-l">
-                    <div class="fine-left-top clearfix">
-                        <h4 class="f-l">精品推荐</h4>
-                        <ul class="f-li clearfix f-r" data-id="pc_jptj" data-type="cmsadpos">
-                            @foreach($topnavs as $topnav)
-                            <li><a href="/{{$topnav->real_path}}/" target="_blank">{{$topnav->typename}}</a></li>
-                            @endforeach
-                            <li><a href="/xm/" target="_blank">更多+</a></li>
-                        </ul>
-                    </div>
-                    <div class="fine-left-bottom clearfix">
-                        <div class="fine-left-bottomL f-l">
-                            <ul class="f-li clearfix" data-id="pc_a02_1" data-type="cmsadpos">
-                                @if($ctbrand)
-                                <li class="li-first" style="position: relative;"><a target="_blank" href="/xm/{{$ctbrand->id}}.shtml"><img  width="260" height="242" alt="{{$ctbrand->brandname}}" src="{{$ctbrand->indexpic}}" style=""></a></li>
-                                @endif
-                                    @foreach($otbrands as $otbrand)
-                                        <li><a target="_blank" href="/xm/{{$otbrand->id}}.shtml"><img  alt="{{$otbrand->brandname}}" src="{{$otbrand->litpic}}" style=""></a></li>
-                                @endforeach
-                            </ul>
-                        </div>
-                        <div class="fine-left-bottomR f-r">
-                            <ul class="f-li clearfix" data-id="pc_a03_1" data-type="cmsadpos">
-                                @foreach($cbrandrs as $cbrandr)
-                                    <li>
-                                        <a  target="_blank" href="/xm/{{$cbrandr->id}}.shtml"><img  width="174" height="140"  alt="" src="{{$cbrandr->indexpic}}" style=""></a>
-                                        <p>品牌名称：<span>{{$cbrandr->brandname}}</span></p>
-                                        <p>
-                                            <span>￥</span><span class="sq">{{$cbrandr->brandpay}}</span><a target="_blank" href="/xm/{{$cbrandr->id}}.shtml">了解详情</a>
-                                        </p>
-                                    </li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="advment" data-id="pc_image1" data-type="cmsadpos">
-                <a href="/xm/112.shtml" title="聚能教育品牌广告" data-id="1181" data-type="cmsad" target="_blank"> <img class="lazy" width="1200" height="110" alt="聚能教育品牌广告" src="/frontend/images/adjuneng.png" /></a>
-            </div>
+            <ul class="mianji">
+                <li><p>面积</p></li>
+                <li><a href="" style="margin-top: 13px;">10平以下</a></li>
+                <li><a href="" style="margin-top: 13px;">10-30平米</a></li>
+                <li><a href="">30-50平米</a></li>
+                <li><a href="">50-80平米</a></li>
+                <li><a href="">100平以上</a></li>
+            </ul>
 
         </div>
-    </div>
-    <!--新品上线-->
-    <div class="fine navhotbox">
-        <div class="conta">
-            <div class="clearfix">
-                <div class="fine-left f-l">
-                    <div class="fine-left-top clearfix">
-                        <h4 class="f-l">新品上线</h4>
-                        <ul class="f-li clearfix f-r" data-id="pc_jptj" data-type="cmsadpos">
-                            @foreach($topnav2s as $topnav2)
-                                <li><a href="/{{$topnav2->real_path}}/" target="_blank">{{$topnav2->typename}}</a></li>
-                            @endforeach
-                        </ul>
-                    </div>
-                    <div class="fine-left-bottom clearfix">
-                        <div class="fine-left-bottomL f-l">
-                            <ul class="f-li clearfix" data-id="pc_a02_1" data-type="cmsadpos">
-                                @if($lbrand)
-                                <li class="li-first" style="position: relative;"><a target="_blank" href="/xm/{{$lbrand->id}}.shtml"><img  width="260" height="242" alt="{{$lbrand->brandname}}" src="{{$lbrand->litpic}}" style=""></a></li>
-                                @endif
-                                    @foreach($latestbrandrs as $latestbrandr)
-                                    <li><a target="_blank" href="/xm/{{$latestbrandr->id}}.shtml"><img  alt="{{$latestbrandr->brandname}}" src="{{$latestbrandr->litpic}}" style=""></a></li>
-                                @endforeach
-                            </ul>
-                        </div>
-                        <div class="fine-left-bottomR f-r">
-                            <ul class="f-li clearfix" data-id="pc_a03_1" data-type="cmsadpos">
-                                @foreach($latestbrands as $latestbrand)
-                                    <li>
-                                        <a  target="_blank" href="/xm/{{$latestbrand->id}}.shtml"><img  width="174" height="140"  alt="" src="{{$latestbrand->litpic}}" style=""></a>
-                                        <span class="index_brandinfo"><a href="/xm/{{$latestbrand->id}}.shtml" target="_blank">{{$latestbrand->brandname}}</a></span>
-                                    </li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="advment" data-id="pc_image1" data-type="cmsadpos">
-                <a href="/xm/26.shtml" title="芝麻街英语加盟广告图" data-id="595" data-type="cmsad" target="_blank"> <img class="lazy" width="1200" height="110" alt="芝麻街英语加盟广告图" src="/frontend/images/adzhimajie.png" /></a>
-            </div>
-        </div>
-    </div>
+        <!--<div class="banner">
+            <img src="/frontend/images/banner_18.png"/>
+        </div>-->
 
-    <!--新品上线end-->
-    <!--项目大全-->
-    <div class="fine navhotbox">
-        <div class="conta">
-            <div class="fourth_floor">
-                <div class="fine-left-top clearfix">
-                    <h4 class="f-l">项目大全</h4>
-                </div>
-                <div class="fourth_floor_b">
-                    <div class="fourth_floor_b_b">
-                        <div class="fourth_floor_b_b_t">
-                            <a class="x_canyin" href="/zaojiao/">早教加盟</a>
-                                <span class="fourth_floor_b_b_h">热门：
-                                    @foreach($clingshibrands as $clingshibrand) <a href="/xm/{{$clingshibrand->id}}.shtml" target="_blank">{{$clingshibrand->brandname}}</a>@endforeach
-                                </span>
-                        </div>
-                        <div class="fourth_floor_b_b_pic">
-                            <ul>
-                                @foreach($flingshibrands as $flingshibrand)
-                                <li>
-                                    <a href="/xm/{{$flingshibrand->id}}.shtml" target="_blank"><img src="{{$flingshibrand->litpic}}" alt="{{$flingshibrand->brandname}}"></a>
-                                    <div class="fourth_floor_b_b_pic_title"><a href="/xm/{{$flingshibrand->id}}.shtml" target="_blank">{{$flingshibrand->brandname}}</a></div>
-                                </li>
-                                @endforeach
-                            </ul>
-                        </div>
+        <div class="middle">
+            <script src="/demos/googlegg.js"></script>
 
-                        <div class="fourth_floor_b_b_link">
-                            @foreach($alingshibrands as $alingshibrand)
-                            <a href="/xm/{{$alingshibrand->id}}.shtml" target="_blank">{{$alingshibrand->brandname}}</a> <span>|</span>
-                            @endforeach
-                            <a href="/zaojiao/" target="_blank">更多&gt;&gt;</a>
-                        </div>
-                    </div>
+            <div id="wrapper">
 
-                    <div class="fourth_floor_b_b">
-                        <div class="fourth_floor_b_b_t"> <a class="x_jiaoyu" href="/youeryuan/">幼儿园加盟</a>
-                            <span class="fourth_floor_b_b_h">热门：
-                                @foreach($chaohuobrands as $chaohuobrand)<a href="/xm/{{$chaohuobrand->id}}.shtml" target="_blank">{{$chaohuobrand->brandname}}</a>@endforeach
-                            </span>
-                        </div>
-                        <div class="fourth_floor_b_b_pic">
-                            <ul>
-                                @foreach($fchaohuobrands as $fchaohuobrand)
-                                <li>
-                                    <a href="/xm/{{$fchaohuobrand->id}}.shtml" target="_blank"><img src="{{$fchaohuobrand->litpic}}" alt="{{$fchaohuobrand->brandname}}"></a>
-                                    <div class="fourth_floor_b_b_pic_title"><a href="/xm/{{$fchaohuobrand->id}}.shtml" target="_blank">{{$fchaohuobrand->brandname}}</a></div>
-                                </li>
-                                @endforeach
-                            </ul>
-                        </div>
+                <div id="slider-wrap">
+                    <ul id="slider">
+                        <li style="background: url(/frontend/images/banner_18.png) no-repeat center;background-size:100% 100% ;">
+                            <i class="fa fa-image"></i>
+                        </li>
 
-                        <div class="fourth_floor_b_b_link">
-                            @foreach($achaohuobrands as $achaohuobrand)
-                             <a href="/xm/{{$achaohuobrand->id}}.shtml" target="_blank">{{$achaohuobrand->brandname}}</a> <span>|</span>
-                            @endforeach
-                            <a href="/youeryuan/" target="_blank">更多&gt;&gt;</a>
-                        </div>
-                    </div>
+                        <li style="background: url(/frontend/images/banner04.png) no-repeat center;background-size:100% 100% ;">
+                            <i class="fa fa-gears"></i>
+                        </li>
 
-                    <div class="fourth_floor_b_b">
-                        <div class="fourth_floor_b_b_t"> <a class="x_muying" href="/shaoer/">少儿英语</a>
-                            <span class="fourth_floor_b_b_h">热门：
-                                @foreach($cjinkoubrands as $cjinkoubrand)<a href="/xm/{{$cjinkoubrand->id}}.shtml" target="_blank">{{$cjinkoubrand->brandname}}</a>@endforeach
-                            </span>
-                        </div>
-                        <div class="fourth_floor_b_b_pic">
-                            <ul>
-                                @foreach($fjinkoubrands as $fjinkoubrand)
-                                <li>
-                                    <a href="/xm/{{$fjinkoubrand->id}}.shtml" target="_blank"><img src="{{$fjinkoubrand->litpic}}" alt="{{$fjinkoubrand->brandname}}"></a>
-                                    <div class="fourth_floor_b_b_pic_title"><a href="/xm/{{$fjinkoubrand->id}}.shtml" target="_blank">{{$fjinkoubrand->brandname}}</a></div>
-                                </li>
-                               @endforeach
-                            </ul>
-                        </div>
+                        <li style="background: url(/frontend/images/banner02.png) no-repeat center;background-size: 100% 100%;">
+                            <i class="fa fa-sliders"></i>
+                        </li>
 
-                        <div class="fourth_floor_b_b_link">
-                            @foreach($ajinkoubrands as $ajinkoubrand)
-                            <a href="/xm/{{$ajinkoubrand->id}}.shtml" target="_blank">{{$ajinkoubrand->brandname}}</a> <span>|</span>
-                            @endforeach
-                            <a href="/shaoer/" target="_blank">更多&gt;&gt;</a>
-                        </div>
-                    </div>
-
-                    <div class="fourth_floor_b_b">
-                        <div class="fourth_floor_b_b_t">
-                            <a class="x_qiche" href="/wudao/">舞蹈培训</a>
-                            <span class="fourth_floor_b_b_h">热门：
-                                @foreach($cpenghuabrands as $cpenghuabrand)<a href="/xm/{{$cpenghuabrand->id}}.shtml" target="_blank">{{$cpenghuabrand->brandname}}</a>   @endforeach
-                            </span>
-                        </div>
-                        <div class="fourth_floor_b_b_pic">
-                            <ul>
-                                @foreach($fpenghuabrands as $fpenghuabrand)
-                                <li>
-                                    <a href="/xm/{{$fpenghuabrand->id}}.shtml" target="_blank"><img src="{{$fpenghuabrand->litpic}}" alt="{{$fpenghuabrand->brandname}}"></a>
-                                    <div class="fourth_floor_b_b_pic_title"><a href="/xm/{{$fpenghuabrand->id}}.shtml" target="_blank">{{$fpenghuabrand->brandname}}</a></div>
-                                </li>
-                                @endforeach
-                            </ul>
-                        </div>
-
-                        <div class="fourth_floor_b_b_link">
-                            @foreach($apenghuabrands as $apenghuabrand)
-                            <a href="/xm/{{$apenghuabrand->id}}.shtml" target="_blank">{{$apenghuabrand->brandname}}</a> <span>|</span>
-                            @endforeach
-                            <a href="/wudao/" target="_blank">更多&gt;&gt;</a> </div>
-                    </div>
-                </div>
-            </div>
-            <div class="advment" data-id="pc_image1" data-type="cmsadpos">
-                <a href="/xm/204.shtml" title="UBTV小主播教育加盟" data-id="1240" data-type="cmsad" target="_blank"> <img class="lazy" width="1200" height="110" alt="UBTV小主播教育加盟" src="/frontend/images/adubtv.png" /></a>
-            </div>
-        </div>
-    </div>
-    <!--排行榜-->
-
-
-    <div class="fine navhotbox">
-        <div class="conta">
-            <div class="clearfix">
-                <div class="fine-left f-l" style="height: 600px;">
-                    <div class="fine-left-top clearfix">
-                        <h4 class="f-l">加盟加盟品牌项目排行榜</h4>
-                        <ul class="f-li clearfix f-r" data-id="pc_jptj" data-type="cmsadpos">
-                            @foreach($topnavs as $topnav)
-                                <li><a href="/{{$topnav->real_path}}/" target="_blank">{{$topnav->typename}}</a></li>
-                            @endforeach
-                        </ul>
-                    </div>
-                    <ul class="crunchies-list mt10 clearfix">
-                        @foreach($paihangbangs as $index=>$paihangbang)
-                        <li @if(($index+1)%6) class="" @endif><a href="/paihangbang/{{$paihangbang->real_path}}/"><img src="{{$paihangbang->litpic}}" /><p>{{$paihangbang->typename}}排行榜</p></a></li>
-                         @endforeach
-                            <div style="clear: both;"></div>
+                        <li style="background: url(/frontend/images/banner06.png) no-repeat center ;background-size: 100% 100%;">
+                            <i class="fa fa-code"></i>
+                        </li>
+                        <li style="background: url(/frontend/images/banner07.png) no-repeat center;background-size: 100% 100%;">
+                            <i class="fa fa-microphone-slash"></i>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <div class="advment" data-id="pc_image1" data-type="cmsadpos">
-                <a href="/xm/124.shtml" title="格伦教育加盟" data-id="98" data-type="cmsad" target="_blank"> <img class="lazy" width="1200" height="110" alt="格伦教育加盟" src="/frontend/images/adgelun.png" /></a>
+
+            <div class="con1-bottom">
+                <ul>
+                    <li>
+                        <img src="/frontend/images/con1-bottom_26.png" />
+                        <p>找项目</p>
+                    </li>
+                    <li>
+                        <img src="/frontend/images/con1-bottom_28.png" />
+                        <p>留言咨询</p>
+                    </li>
+                    <li>
+                        <img src="/frontend/images/con1-bottom_30.png" />
+                        <p>等待回访</p>
+                    </li>
+                    <li style="border-right: none;">
+                        <img src="/frontend/images/con1-bottom_33.png" />
+                        <p>成功合作</p>
+                    </li>
+                </ul>
             </div>
+
+        </div>
+        <div class="con1-right">
+            <h1>5000</h1>
+            <ul class="xiangmu">
+                <li><p style="margin-top: 0px;">【赛维干洗】干洗品牌不负期望。。。</p></li>
+                <li><p>【赛维干洗】干洗品牌不负期望。。。</p></li>
+                <li><p>【赛维干洗】干洗品牌不负期望。。。</p></li>
+            </ul>
+            <input type="button" value="马上找好项目"/>
+            <div class="bibei">
+                <p>创业必备工具</p>
+            </div>
+            <ul class="gongju">
+                <li style="margin-left: 0px;margin-top: 0px;">
+                    <img src="/frontend/images/con1-right_28.png" />
+                    <a href="">成本计算</a>
+                </li>
+                <li style="margin-top: 0px;">
+                    <img src="/frontend/images/con1-right_30.png" />
+                    <a href="">贷款计算</a>
+                </li>
+                <li style="margin-top: 0px;">
+                    <img src="/frontend/images/con1-right_33.png" style="margin-top: 12px;"/>
+                    <a href="">投资预算</a>
+                </li>
+                <li style="margin-left: 0px;">
+                    <img src="/frontend/images/con1-right_55.png" style="margin-top: 11px;" />
+                    <a href="">创业红包</a>
+                </li>
+                <li>
+                    <img src="/frontend/images/con1-right_52.png" style="margin-top: 10px;" />
+                    <a href="">先行赔付</a>
+                </li>
+                <li>
+                    <img src="/frontend/images/con1-right_39.png"  style="margin-top: 0px;"/>
+                    <a href="">金融支持</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="con2 center">
+        <div class="con2-left">
+            <h1 class="con2-left-top-1">品牌推荐</h1>
+            <a href="" class="con2-left-top-2">查看更多</a>
+            <div class="con2-left-xian"></div>
+
+            <div class="con2-left-left">
+                <img src="/frontend/images/con2-left01_03.png" />
+                <p>干洗店加盟连锁品牌中名列前茅的干洗<br />
+                    店，名字叫做UCC国际洗衣。那么相比<br />
+                    其他干洗加盟连锁品牌，UCC国际洗衣<br />
+                    有哪些独特的优势呢?</p>
+                <a href="">了解详情</a>
+            </div>
+
+            <ul class="con2-left-right">
+                <li style="margin-left: 0px;">
+                    <div style="background: url(/frontend/images/con2-left-right_05.png)no-repeat center;">
+                        <h1>德奈福干洗</h1>
+                        <h2>国际大品牌</h2>
+                    </div>
+                    <p>全球门店<font>5000</font>家！覆盖全球<font>70%</font></p>
+                    <h3>5-10万</h3>
+                    <a href="">了解详情</a>
+                </li>
+
+                <li>
+                    <div style="background: url(/frontend/images/con2-left-right_07.png) no-repeat center;">
+                        <h1>赛维干洗</h1>
+                        <h2>中国大品牌</h2>
+                    </div>
+                    <p>全球门店<font>5000</font>家！覆盖全球<font>70%</font></p>
+                    <h3>5-10万</h3>
+                    <a href="品牌详情页.html">了解详情</a>
+                </li>
+
+                <li>
+                    <div style="background: url(/frontend/images/con2-left-right_09.png) no-repeat center;">
+                        <h1>福奈特干洗</h1>
+                        <h2>国际知名品牌</h2>
+                    </div>
+                    <p>全球门店<font>5000</font>家！覆盖全球<font>70%</font></p>
+                    <h3>5-10万</h3>
+                    <a href="">了解详情</a>
+                </li>
+
+                <li style="margin-left: 0px;">
+                    <div style="background: url(/frontend/images/con2-left-right_14.png) no-repeat center;">
+                        <h1>洁丰干洗</h1>
+                        <h2>中国知名品牌</h2>
+                    </div>
+                    <p>全球门店<font>5000</font>家！覆盖全球<font>70%</font></p>
+                    <h3>5-10万</h3>
+                    <a href="">了解详情</a>
+                </li>
+
+                <li>
+                    <div style="background: url(/frontend/images/con2-left-right_15.png) no-repeat center;">
+                        <h1>洗多郎干洗</h1>
+                        <h2>亚洲知名品牌</h2>
+                    </div>
+                    <p>全球门店<font>5000</font>家！覆盖全球<font>70%</font></p>
+                    <h3>5-10万</h3>
+                    <a href="">了解详情</a>
+                </li>
+
+                <li>
+                    <div style="background: url(/frontend/images/con2-left-right_16.png) no-repeat center;">
+                        <h1>洗衣婆干洗</h1>
+                        <h2>中国知名品牌</h2>
+                    </div>
+                    <p>全球门店<font>5000</font>家！覆盖全球<font>70%</font></p>
+                    <h3>5-10万</h3>
+                    <a href="">了解详情</a>
+                </li>
+            </ul>
+
+        </div>
+        <div class="con2-right">
+            <h1 class="con2-right-top-1">排行榜</h1>
+            <div></div>
+            <img src="/frontend/images/con2-right_11.png"  class="con2-right-img"/>
+            <ul class="con2-left-ul1">
+                <li style="margin-top: 0px;">
+                    <img src="/frontend/images/con2-right_15.png" />
+                    <a href="">NO1.    <font>威特斯国际干洗</font></a>
+                </li>
+                <li>
+                    <img src="/frontend/images/con2-right_21.png" />
+                    <a href="">NO2.    <font>UCC国际洗衣</font></a>
+                </li>
+                <li>
+                    <img src="/frontend/images/con2-right_27.png" />
+                    <a href="">NO3.    <font>德奈福国际干洗</font></a>
+                </li>
+                <li>
+                    <img src="/frontend/images/con2-right_29.png" />
+                    <a href="品牌详情页.html">NO4.    <font>赛维国际干洗</font></a>
+                </li>
+                <li>
+                    <img src="/frontend/images/con2-right_34.png" />
+                    <a href="">NO5.    <font>洁丰国际干洗</font></a>
+                </li>
+            </ul>
+
+            <ul class="con2-left-ul2">
+                <li style="margin-top: 0px;"><p>12345</p></li>
+                <li><p>9235</p></li>
+                <li><p>8336</p></li>
+                <li><p>6412</p></li>
+                <li><p>3558</p></li>
+            </ul>
+
         </div>
     </div>
 
-    <!--排行榜end-->
+    <div class="xiantiao1 center">
+        <img src="/frontend/images/xitian-con1_18.png" />
+    </div>
 
-    <!--项目大全end-->
-    <!--文档-->
-    <div class="bg-ff mt20">
-        <div class="w1200 clearfix mt20">
-            <div class="fl w360 mr40">
-                <div class="nav-h30 nav-h30-line-oe">
-                    <h3 class="f22">品牌新闻</h3>
-                    <a href="/news/" class="fr s-c59">更多</a>
-                </div>
-                <ul class="tw-list tw-list-h72 mt10">
-                    @foreach($cnews as $cnew)
-                    <li><a href="/news/{{$cnew->id}}.shtml" class="img-block magnify"><img src="{{$cnew->litpic}}" alt=""></a>
-                        <p class="f16">
-                            <a href="/news/{{$cnew->id}}.shtml">{{$cnew->title}}</a>
-                        </p>
-                        <p class="f14 s-8c">
-                        {{$cnew->description}}
-                        </p>
-                    </li>
-                   @endforeach
-                </ul>
+    <div class="con3 center">
+        <div class="con3-left">
+
+            <h1 class="con2-left-top-1">新品推荐</h1>
+            <a href="" class="con2-left-top-2">查看更多</a>
+            <div class="con2-left-xian"></div>
+
+            <div class="con2-left-left">
+                <img src="/frontend/images/con3_22.png" />
+                <p>赛维干洗店加盟在国内投资巨资设立干<br />
+                    洗设备生产基地，全套引进生产工艺，<br />
+                    每个细节全面实行电脑监控，确保干洗<br />
+                    设备的高质量要求。</p>
+                <a href="">了解详情</a>
             </div>
-            <div class="fl w380 mr40">
-                @if(isset($fnew))<a href="/news/{{$fnew->id}}.shtml" class="img-block magnify magnify-txt h253 pr"><img src="{{$fnew->litpic}}" alt="{{$fnew->title}}"><div class="img-bg"></div><p>{{$fnew->title}}</p></a>@endif
-                <ul class="gl-list mt40">
-                    <li class="mr20 mb20"><a href="/news/"><i class="icon-all i-a22"></i><h3>品牌新闻</h3></a></li>
-                    <li class="mb20"><a href="/guide/"><i class="icon-all i-a23"></i><h3>加盟指南</h3></a></li>
-                    <li class="mr20"><a href="/analysis/"><i class="icon-all i-a24"></i> <h3>投资分析</h3></a></li>
-                    <li><a href="/management/"><i class="icon-all i-a25"></i><h3>经营管理</h3></a></li>
-                </ul>
+
+            <ul class="con2-left-right">
+                <li style="margin-left: 0px;">
+                    <div style="background: url(/frontend/images/con3_24.png) no-repeat center;">
+                        <h1>洁澳干洗</h1>
+                        <h2>国际新兴品牌</h2>
+                    </div>
+                    <p>全球门店<font>5000</font>家！覆盖全球<font>70%</font></p>
+                    <h3>5-10万</h3>
+                    <a href="">了解详情</a>
+                </li>
+
+                <li>
+                    <div style="background: url(/frontend/images/con3_26.png) no-repeat center;">
+                        <h1>衣保姆洗衣</h1>
+                        <h2>中国新兴品牌</h2>
+                    </div>
+                    <p>全球门店<font>5000</font>家！覆盖全球<font>70%</font></p>
+                    <h3>5-10万</h3>
+                    <a href="">了解详情</a>
+                </li>
+
+                <li>
+                    <div style="background: url(/frontend/images/con3_28.png) no-repeat center;">
+                        <h1>常洗客干洗</h1>
+                        <h2>中国新兴品牌</h2>
+                    </div>
+                    <p>全球门店<font>5000</font>家！覆盖全球<font>70%</font></p>
+                    <h3>5-10万</h3>
+                    <a href="">了解详情</a>
+                </li>
+
+                <li style="margin-left: 0px;">
+                    <div style="background: url(/frontend/images/con3_36.png) no-repeat center;">
+                        <h1>洗洁澳干洗</h1>
+                        <h2>国际新兴品牌</h2>
+                    </div>
+                    <p>全球门店<font>5000</font>家！覆盖全球<font>70%</font></p>
+                    <h3>5-10万</h3>
+                    <a href="">了解详情</a>
+                </li>
+
+                <li>
+                    <div style="background: url(/frontend/images/con3_37.png) no-repeat center;">
+                        <h1>四季连锁干洗</h1>
+                        <h2>国内新兴品牌</h2>
+                    </div>
+                    <p>全球门店<font>5000</font>家！覆盖全球<font>70%</font></p>
+                    <h3>5-10万</h3>
+                    <a href="">了解详情</a>
+                </li>
+
+                <li>
+                    <div style="background: url(/frontend/images/con3_38.png) no-repeat center;">
+                        <h1>嘻唰唰干洗</h1>
+                        <h2>中国新兴品牌</h2>
+                    </div>
+                    <p>全球门店<font>5000</font>家！覆盖全球<font>70%</font></p>
+                    <h3>5-10万</h3>
+                    <a href="">了解详情</a>
+                </li>
+            </ul>
+
+        </div>
+        <div class="con3-right">
+            <h1>品牌资讯</h1>
+            <div></div>
+
+            <img src="/frontend/images/con3_30.png" />
+
+            <ul class="con3-ul1">
+                <li><a href="" style="margin-top: 0px;font-size: 14px;color: #d40822;">如何降低干洗店投资成本?专家支</a></li>
+                <li><p>从现在干洗店的市场行情来看，选择干洗开店的人是不<br />
+                        少的。但...</p></li>
+                <li><a href="" style="margin-top: 5px;">开一家干洗店需要多少钱?费用详</a></li>
+                <li><a href="">开家洗衣店成本要多少?低成本居</a></li>
+                <li><a href="">加盟一个洗衣店要多少钱?费用低</a></li>
+            </ul>
+
+            <ul class="con3-ul2">
+                <li><a href="" style="margin-top: 0px;font-size: 14px;color: #d40822;">开一个干洗店大概需要投资多少钱</a></li>
+                <li><a href="" style="margin-top: 12px;">开干洗加盟店预计需要多少钱</a></li>
+                <li><a href="">开家干洗店加盟预计需要多少钱</a></li>
+                <li><a href="">干洗加盟店利润如何能够稳定提高</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="xiantiao2 center">
+        <img src="/frontend/images/xitiao-con2_43.png" />
+    </div>
+
+    <div class="con4 center">
+        <div class="con4-left">
+            <h1 class="con4-left-top-1">设备推荐</h1>
+            <a href="" class="con4-left-top-2">查看更多</a>
+            <div class="con4-left-xian"></div>
+
+            <div class="con4-left-left">
+                <img src="/frontend/images/con4_46.png" />
+                <p>
+                    <font style="margin-bottom: 5px;">
+                        “UCC”系列F141B 溶剂干洗机<br />
+                    </font>
+                    是目前世界上技术性能领先的最新一代环保、高<br />
+                    效、节能型干洗机，是世界洗衣科技的又一领先<br />
+                    突破!根据多年的行业经验，、皮革、裘皮衣物、<br />
+                    纺织品服装的干洗溶液——HCFC141B 溶剂(简<br />
+                    称141B)，这是一种透明无味的、高纯度的、无<br />
+                    毒、无腐蚀、不燃，稳定性高，ODP 值极低的<br />
+                    环保清洗溶剂，具有良好的化学稳定性。
+                </p>
+                <a href="">点击查看</a>
             </div>
-            <div class="fr w380">
-                        <dl class="wz-list">
-                            @foreach($zhinannews as $zhinannew)
-                                @if($loop->first)
-                                <dt>
-                                    <p class="f24">
-                                        <a href="/news/{{$zhinannew->id}}.shtml" class="s-oe">{{$zhinannew->title}}</a>
-                                    </p>
-                                    <p class="f14 s-8c">{{$zhinannew->description}}<a href="/news/{{$zhinannew->id}}.shtml" class="s-c59">详细&gt;&gt;</a>
-                                    </p>
-                                </dt>
-                                @else
-                                <dd><span class="fr s-8c ml20">{{date('Y-m-d',strtotime($zhinannew->created_at))}}</span><a href="/news/{{$zhinannew->id}}.shtml">{{$zhinannew->title}}</a></dd>
-                                @endif
-                            @endforeach
-                        </dl>
-                <div class="nav-h30 nav-h30-line-oe mt30">
-                    <h3 class="f22">创业大讲堂</h3>
-                </div>
-                <dl class="wz-list mt25">
-                    @foreach($jingyingnews as $jingyingnew)
-                    <dd><span class="fr s-8c ml20">{{date('Y-m-d',strtotime($jingyingnew->created_at))}}</span><a href="/news/{{$jingyingnew->id}}.shtml">{{$jingyingnew->title}}</a></dd>
-                    @endforeach
-                </dl>
-            </div>
-            <div style="clear: both"></div>
+
+            <ul class="con4-left-right">
+                <li style="margin-left: 0px;">
+                    <img src="/frontend/images/con4_51.png" />
+                    <h1>四氯乙烯干洗机</h1>
+                    <p>全自动四氯乙烯干洗机<br />
+                        用于服装厂、工矿企业<br />
+                        以及个体洗染行业</p>
+                    <a href="">点击查看</a>
+                </li>
+                <li>
+                    <img src="/frontend/images/con4_53.png" />
+                    <h1>多溶剂精洗机
+                    </h1>
+                    <p>独家专利，打破行规<br />
+                        一机器多用，引领高端<br />
+                        洗衣风尚</p>
+                    <a href="">点击查看</a>
+                </li>
+                <li>
+                    <img src="/frontend/images/con4_55.png" />
+                    <h1>自动烘干机
+
+                    </h1>
+                    <p>采用耐热优良SUS3004<br />
+                        不锈钢做内桶箱，可以<br />
+                        保持烘干环境</p>
+                    <a href="">点击查看</a>
+                </li>
+                <li>
+                    <img src="/frontend/images/con4_57.png" />
+                    <h1>自动干洗机
+
+                    </h1>
+                    <p>自动干洗机，内部结构<br />
+                        与众不同，采用不一样<br />
+                        的技术</p>
+                    <a href="">点击查看</a>
+                </li>
+                <li style="margin-left: 0px;margin-top: 13px;">
+                    <img src="/frontend/images/con4_66.png" />
+                    <h1>干洗烘干一体机
+                    </h1>
+                    <p>该技术用国家正规高端<br />
+                        技术，制造商保证绝对<br />
+                        的方便</p>
+                    <a href="">点击查看</a>
+                </li>
+                <li style="margin-top: 13px;">
+                    <img src="/frontend/images/con4_68.png" />
+                    <h1>全自动干洗机
+                    </h1>
+                    <p>该技术采用的是欧洲<br />
+                        正规进口的技术，加上<br />
+                        科技</p>
+                    <a href="">点击查看</a>
+                </li>
+                <li style="margin-top: 13px;">
+                    <img src="/frontend/images/con4_70.png" />
+                    <h1>超级干洗机
+                    </h1>
+                    <p>该干洗机是一款以用在<br />
+                        多出的干洗机，如医院<br />
+                        工厂，学校等等</p>
+                    <a href="">点击查看</a>
+                </li>
+                <li style="margin-top: 13px;">
+                    <img src="/frontend/images/con4_72.png" />
+                    <h1>烘干机
+                    </h1>
+                    <p>该烘干机是高能量的<br />
+                        的。他可以容纳多件的<br />
+                        衣物等</p>
+                    <a href="">点击查看</a>
+                </li>
+            </ul>
         </div>
 
-        <div class="brands ysbh">
-            <div class="conta">
-                <div class="clearfix">
-                    <div class="content f-l">
-                        <div class="fine-left-top clearfix">
-                            <h4 class="f-l">友情链接</h4>
-                        </div>
-                        <div class="fine-left-bottom clearfix">
-                            <ul class="yqlj_item">
-                                @foreach($flinks as $flink)
-                                <li><a href="{{$flink->weburl}}" target="_blank"><i></i><b>{{$flink->webname}}</b></a></li>
-                                @endforeach
-                            </ul>
-                        </div>
+        <div class="con4-right">
+            <h1>创业资讯</h1>
+            <div></div>
+            <img src="/frontend/images/con4_48.png" />
+            <ul>
+                <li style="margin-top: 0px;"><a href=""><font>11-12</font>现在开家干洗店成本要多少？ <font style="float: right;margin-right: 0px;font-size: 14px;">></font>  </a></li>
+                <li><a href=""><font>11-01</font>开干洗店有哪些盈利技巧？               <font style="float: right;margin-right: 0px;font-size: 14px;">></font>       </a></li>
+                <li><a href=""><font>10-25</font>品牌干洗店有哪些加盟优势？            <font style="float: right;margin-right: 0px;font-size: 14px;">></font>         </a></li>
+                <li><a href=""><font>10-15</font>如何给你的干洗市场定位？                <font style="float: right;margin-right: 0px;font-size: 14px;">></font>        </a></li>
+                <li><a href=""><font>10-07</font>干洗店的店面该如何装修更吸引顾       <font style="float: right;margin-right: 0px;font-size: 14px;">></font>        </a></li>
+                <li><a href=""><font>09-30</font>如何选择干洗品牌开店？                    <font style="float: right;margin-right: 0px;font-size: 14px;">></font>         </a></li>
+                <li><a href=""><font>09-25</font>成功开干洗店途径：选择好的品牌         <font style="float: right;margin-right: 0px;font-size: 14px;">></font>       </a></li>
+                <li><a href=""><font>09-20</font>如何开一家高质量的品牌干洗店？          <font style="float: right;margin-right: 0px;font-size: 14px;">></font>     </a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="xiantiao3">
+        <img src="/frontend/images/xitiao-con3_78.png" />
+    </div>
+
+    <div class="con5 center">
+        <div class="con5-left">
+            <h1 class="con5-left-top-1">样板店</h1>
+            <a href="" class="con5-left-top-2">查看更多</a>
+            <div class="con5-left-xian"></div>
+
+            <div class="con5-left-tu">
+                <div class="con5-left-tu1">
+                    <div>
+                        <a href="">百福莱干洗店</a>
                     </div>
                 </div>
-                <div style="clear: both"></div>
+                <div class="con5-left-tu2">
+                    <div>
+                        <a href="">赛维干洗店</a>
+                    </div>
+                </div>
+                <div class="con5-left-tu3">
+                    <div>
+                        <a href="">澳洁干洗店</a>
+                    </div>
+                </div>
+                <div class="con5-left-tu4">
+                    <div>
+                        <a href="">洁丰干洗店</a>
+                    </div>
+                </div>
+                <div class="con5-left-tu5">
+                    <div>
+                        <a href="">洗多郎干洗店</a>
+                    </div>
+                </div>
             </div>
+            <div class="con5-left-zi">
+
+                <ul>
+                    <li><a href="" style="font-size: 14px;color: #d40822;">干洗店装修费用</a></li>
+                    <li style="margin-top: 18px;"><a href="">干洗店如何正确把握装修格</a></li>
+                    <li><a href="">洗衣店装修多少钱</a></li>
+                    <li><a href="">开一家干洗店装修重要么</a></li>
+                </ul>
+
+                <ul>
+                    <li><a href="" style="font-size: 14px;color: #d40822;">45平干洗店装修效果图</a></li>
+                    <li style="margin-top: 18px;"><a href="">干洗店如何装修能收到顾客的青睐</a></li>
+                    <li><a href="">一般装修一个干洗店需要多久</a></li>
+                    <li><a href="">干洗店应该如何装修好</a></li>
+                </ul>
+
+                <ul style="width: 189px;margin-left: 15px;">
+                    <li><a href="" style="font-size: 14px;color: #d40822;">80平干洗店装修效果图</a></li>
+                    <li style="margin-top: 18px;"><a href="">干洗店装修费用</a></li>
+                    <li><a href="">干洗店装修图纸设计</a></li>
+                    <li><a href="">薪金普丽店怎么装修好</a></li>
+                </ul>
+
+                <ul style="width: 189px;margin-left: 15px;">
+                    <li><a href="" style="font-size: 14px;color: #d40822;">小型干洗店怎么装修</a></li>
+                    <li style="margin-top: 18px;"><a href="">40平干洗店装修效果图</a></li>
+                    <li><a href="">80平干洗店装修效果图</a></li>
+                    <li><a href="">开干洗店装修风格重要么</a></li>
+                </ul>
+
+            </div>
+
+
+
+
+
+        </div>
+        <div class="con5-right">
+            <h1>经营指南</h1>
+            <div></div>
+
+            <img src="/frontend/images/con5-tu_09.png" />
+
+            <ul>
+                <li style="margin-top: 0px;"><a href=""><font>10-28</font>选择哪个干洗店加盟品牌<font style="float: right;margin-right: 0px;font-size: 14px;">></font>  </a></li>
+                <li><a href=""><font>10-28</font>加盟干洗店到底有什么好<font style="float: right;margin-right: 0px;font-size: 14px;">></font>       </a></li>
+                <li><a href=""><font>10-28</font> 开什么样的干洗店好如何<font style="float: right;margin-right: 0px;font-size: 14px;">></font>         </a></li>
+                <li><a href=""><font>10-28</font>干洗加盟商选择品牌如何 <font style="float: right;margin-right: 0px;font-size: 14px;">></font>        </a></li>
+                <li><a href=""><font>10-28</font>干洗店加盟如何获得成功<font style="float: right;margin-right: 0px;font-size: 14px;">></font>        </a></li>
+                <li><a href=""><font>10-28</font>国内有哪些比较好的干洗<font style="float: right;margin-right: 0px;font-size: 14px;">></font>         </a></li>
+                <li><a href=""><font>10-28</font> 想开家干洗店不知哪个品<font style="float: right;margin-right: 0px;font-size: 14px;">></font>       </a></li>
+            </ul>
+
         </div>
     </div>
-    <!--文档end-->
 
-    <!-- /main -->
+    <div class="foot">
+        <div class="center">
+            <p>
+                <img src="/frontend/images/youqiglianjie_20.png" />友情链接  :
+            </p>
+            <ul>
+                <li><a href="">干洗店加盟</a></li>
+                <li><a href="">中国干洗网</a></li>
+                <li><a href="">UCC干洗店加盟</a></li>
+                <li><a href="">福奈特干洗店加盟</a></li>
+                <li><a href="">干洗店品牌大全干</a></li>
+                <li><a href="">洗店加盟排行榜</a></li>
+                <li><a href="">赛维干洗店加盟</a></li>
+                <li><a href="">象王干洗店加盟</a></li>
+                <li><a href="">咖啡店加盟</a></li>
+                <li><a href="" style="margin-top: 10px;">服装加盟</a></li>
+                <li><a href="" style="margin-top: 10px;">美博会</a></li>
+            </ul>
+        </div>
+    </div>
 @stop
 @section('footerlibs')
-
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/slide.js"></script>
 @stop
