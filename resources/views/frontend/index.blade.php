@@ -15,11 +15,19 @@
             <h1>项目查找</h1>
             <select style="margin-top: 12px;">
                 <option>干洗分类</option>
+                <option>干洗分类</option>
+                <option>干洗分类</option>
             </select>
             <select>
                 <option>投资金额</option>
+                <option>投资金额</option>
+                <option>投资金额</option>
+                <option>投资金额</option>
             </select>
             <select>
+                <option>店铺面积</option>
+                <option>店铺面积</option>
+                <option>店铺面积</option>
                 <option>店铺面积</option>
             </select>
 
@@ -155,67 +163,96 @@
                 <a href="">了解详情</a>
             </div>
 
-            <ul class="con2-left-right">
-                <li style="margin-left: 0px;">
-                    <div style="background: url(/frontend/images/con2-left-right_05.png)no-repeat center;">
-                        <h1>德奈福干洗</h1>
-                        <h2>国际大品牌</h2>
-                    </div>
-                    <p>全球门店<font>5000</font>家！覆盖全球<font>70%</font></p>
-                    <h3>5-10万</h3>
-                    <a href="">了解详情</a>
-                </li>
+            <div class="con2-left-right">
 
-                <li>
-                    <div style="background: url(/frontend/images/con2-left-right_07.png) no-repeat center;">
-                        <h1>赛维干洗</h1>
-                        <h2>中国大品牌</h2>
-                    </div>
-                    <p>全球门店<font>5000</font>家！覆盖全球<font>70%</font></p>
-                    <h3>5-10万</h3>
-                    <a href="品牌详情页.html">了解详情</a>
-                </li>
 
-                <li>
-                    <div style="background: url(/frontend/images/con2-left-right_09.png) no-repeat center;">
-                        <h1>福奈特干洗</h1>
-                        <h2>国际知名品牌</h2>
-                    </div>
-                    <p>全球门店<font>5000</font>家！覆盖全球<font>70%</font></p>
-                    <h3>5-10万</h3>
-                    <a href="">了解详情</a>
-                </li>
+                    <dl>
+                        <dt>
+                            <img src="/frontend/images/con2-left-right_07.png" alt="">
+                            <div class="brandinfo">
+                                <strong>德奈福干洗</strong>
+                                <p>国际大品牌 轻松洗衣一站式</p>
+                            </div>
+                        </dt>
+                        <dd>
+                        <p>全球门店<font>5000</font>家！覆盖全球<font>70%</font></p>
+                        <h3>5-10万</h3>
+                        <a href="">了解详情</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <img src="/frontend/images/con2-left-right_07.png" alt="">
+                            <div class="brandinfo">
+                                <strong>德奈福干洗</strong>
+                                <p>国际大品牌 轻松洗衣一站式</p>
+                            </div>
+                        </dt>
+                        <dd>
+                        <p>全球门店<font>5000</font>家！覆盖全球<font>70%</font></p>
+                        <h3>5-10万</h3>
+                        <a href="">了解详情</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <img src="/frontend/images/con2-left-right_07.png" alt="">
+                            <div class="brandinfo">
+                                <strong>德奈福干洗</strong>
+                                <p>国际大品牌 轻松洗衣一站式</p>
+                            </div>
+                        </dt>
+                        <dd>
+                        <p>全球门店<font>5000</font>家！覆盖全球<font>70%</font></p>
+                        <h3>5-10万</h3>
+                        <a href="">了解详情</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <img src="/frontend/images/con2-left-right_07.png" alt="">
+                            <div class="brandinfo">
+                                <strong>德奈福干洗</strong>
+                                <p>国际大品牌 轻松洗衣一站式</p>
+                            </div>
+                        </dt>
+                        <dd>
+                        <p>全球门店<font>5000</font>家！覆盖全球<font>70%</font></p>
+                        <h3>5-10万</h3>
+                        <a href="">了解详情</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <img src="/frontend/images/con2-left-right_07.png" alt="">
+                            <div class="brandinfo">
+                                <strong>德奈福干洗</strong>
+                                <p>国际大品牌 轻松洗衣一站式</p>
+                            </div>
+                        </dt>
+                        <dd>
+                        <p>全球门店<font>5000</font>家！覆盖全球<font>70%</font></p>
+                        <h3>5-10万</h3>
+                        <a href="">了解详情</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <img src="/frontend/images/con2-left-right_07.png" alt="">
+                            <div class="brandinfo">
+                                <strong>德奈福干洗</strong>
+                                <p>国际大品牌 轻松洗衣一站式</p>
+                            </div>
+                        </dt>
+                        <dd>
+                        <p>全球门店<font>5000</font>家！覆盖全球<font>70%</font></p>
+                        <h3>5-10万</h3>
+                        <a href="">了解详情</a>
+                        </dd>
+                    </dl>
 
-                <li style="margin-left: 0px;">
-                    <div style="background: url(/frontend/images/con2-left-right_14.png) no-repeat center;">
-                        <h1>洁丰干洗</h1>
-                        <h2>中国知名品牌</h2>
-                    </div>
-                    <p>全球门店<font>5000</font>家！覆盖全球<font>70%</font></p>
-                    <h3>5-10万</h3>
-                    <a href="">了解详情</a>
-                </li>
 
-                <li>
-                    <div style="background: url(/frontend/images/con2-left-right_15.png) no-repeat center;">
-                        <h1>洗多郎干洗</h1>
-                        <h2>亚洲知名品牌</h2>
-                    </div>
-                    <p>全球门店<font>5000</font>家！覆盖全球<font>70%</font></p>
-                    <h3>5-10万</h3>
-                    <a href="">了解详情</a>
-                </li>
-
-                <li>
-                    <div style="background: url(/frontend/images/con2-left-right_16.png) no-repeat center;">
-                        <h1>洗衣婆干洗</h1>
-                        <h2>中国知名品牌</h2>
-                    </div>
-                    <p>全球门店<font>5000</font>家！覆盖全球<font>70%</font></p>
-                    <h3>5-10万</h3>
-                    <a href="">了解详情</a>
-                </li>
-            </ul>
+            </div>
 
         </div>
         <div class="con2-right">
@@ -277,65 +314,97 @@
             </div>
 
             <ul class="con2-left-right">
-                <li style="margin-left: 0px;">
-                    <div style="background: url(/frontend/images/con3_24.png) no-repeat center;">
-                        <h1>洁澳干洗</h1>
-                        <h2>国际新兴品牌</h2>
-                    </div>
-                    <p>全球门店<font>5000</font>家！覆盖全球<font>70%</font></p>
-                    <h3>5-10万</h3>
-                    <a href="">了解详情</a>
-                </li>
 
-                <li>
-                    <div style="background: url(/frontend/images/con3_26.png) no-repeat center;">
-                        <h1>衣保姆洗衣</h1>
-                        <h2>中国新兴品牌</h2>
-                    </div>
-                    <p>全球门店<font>5000</font>家！覆盖全球<font>70%</font></p>
-                    <h3>5-10万</h3>
-                    <a href="">了解详情</a>
-                </li>
+                <dl>
+                    <dt>
+                        <img src="/frontend/images/con2-left-right_07.png" alt="">
+                        <div class="brandinfo">
+                            <strong>德奈福干洗</strong>
+                            <p>国际大品牌 轻松洗衣一站式</p>
+                        </div>
+                    </dt>
+                    <dd>
+                        <p>全球门店<font>5000</font>家！覆盖全球<font>70%</font></p>
+                        <h3>5-10万</h3>
+                        <a href="">了解详情</a>
+                    </dd>
+                </dl>
 
-                <li>
-                    <div style="background: url(/frontend/images/con3_28.png) no-repeat center;">
-                        <h1>常洗客干洗</h1>
-                        <h2>中国新兴品牌</h2>
-                    </div>
-                    <p>全球门店<font>5000</font>家！覆盖全球<font>70%</font></p>
-                    <h3>5-10万</h3>
-                    <a href="">了解详情</a>
-                </li>
+                <dl>
+                    <dt>
+                        <img src="/frontend/images/con2-left-right_07.png" alt="">
+                        <div class="brandinfo">
+                            <strong>德奈福干洗</strong>
+                            <p>国际大品牌 轻松洗衣一站式</p>
+                        </div>
+                    </dt>
+                    <dd>
+                        <p>全球门店<font>5000</font>家！覆盖全球<font>70%</font></p>
+                        <h3>5-10万</h3>
+                        <a href="">了解详情</a>
+                    </dd>
+                </dl>
 
-                <li style="margin-left: 0px;">
-                    <div style="background: url(/frontend/images/con3_36.png) no-repeat center;">
-                        <h1>洗洁澳干洗</h1>
-                        <h2>国际新兴品牌</h2>
-                    </div>
-                    <p>全球门店<font>5000</font>家！覆盖全球<font>70%</font></p>
-                    <h3>5-10万</h3>
-                    <a href="">了解详情</a>
-                </li>
+                <dl>
+                    <dt>
+                        <img src="/frontend/images/con2-left-right_07.png" alt="">
+                        <div class="brandinfo">
+                            <strong>德奈福干洗</strong>
+                            <p>国际大品牌 轻松洗衣一站式</p>
+                        </div>
+                    </dt>
+                    <dd>
+                        <p>全球门店<font>5000</font>家！覆盖全球<font>70%</font></p>
+                        <h3>5-10万</h3>
+                        <a href="">了解详情</a>
+                    </dd>
+                </dl>
 
-                <li>
-                    <div style="background: url(/frontend/images/con3_37.png) no-repeat center;">
-                        <h1>四季连锁干洗</h1>
-                        <h2>国内新兴品牌</h2>
-                    </div>
-                    <p>全球门店<font>5000</font>家！覆盖全球<font>70%</font></p>
-                    <h3>5-10万</h3>
-                    <a href="">了解详情</a>
-                </li>
+                <dl>
+                    <dt>
+                        <img src="/frontend/images/con2-left-right_07.png" alt="">
+                        <div class="brandinfo">
+                            <strong>德奈福干洗</strong>
+                            <p>国际大品牌 轻松洗衣一站式</p>
+                        </div>
+                    </dt>
+                    <dd>
+                        <p>全球门店<font>5000</font>家！覆盖全球<font>70%</font></p>
+                        <h3>5-10万</h3>
+                        <a href="">了解详情</a>
+                    </dd>
+                </dl>
 
-                <li>
-                    <div style="background: url(/frontend/images/con3_38.png) no-repeat center;">
-                        <h1>嘻唰唰干洗</h1>
-                        <h2>中国新兴品牌</h2>
-                    </div>
-                    <p>全球门店<font>5000</font>家！覆盖全球<font>70%</font></p>
-                    <h3>5-10万</h3>
-                    <a href="">了解详情</a>
-                </li>
+                <dl>
+                    <dt>
+                        <img src="/frontend/images/con2-left-right_07.png" alt="">
+                        <div class="brandinfo">
+                            <strong>德奈福干洗</strong>
+                            <p>国际大品牌 轻松洗衣一站式</p>
+                        </div>
+                    </dt>
+                    <dd>
+                        <p>全球门店<font>5000</font>家！覆盖全球<font>70%</font></p>
+                        <h3>5-10万</h3>
+                        <a href="">了解详情</a>
+                    </dd>
+                </dl>
+
+                <dl>
+                    <dt>
+                        <img src="/frontend/images/con2-left-right_07.png" alt="">
+                        <div class="brandinfo">
+                            <strong>德奈福干洗</strong>
+                            <p>国际大品牌 轻松洗衣一站式</p>
+                        </div>
+                    </dt>
+                    <dd>
+                        <p>全球门店<font>5000</font>家！覆盖全球<font>70%</font></p>
+                        <h3>5-10万</h3>
+                        <a href="">了解详情</a>
+                    </dd>
+                </dl>
+
             </ul>
 
         </div>
