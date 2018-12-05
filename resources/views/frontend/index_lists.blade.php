@@ -22,7 +22,7 @@
     </div>
 
     <div class="conl1 center">
-        <img src="img/con1-tu_03.png" />
+        <img src="/frontend/images/con1-tu_03.png" />
         <h1>携手零食店加盟轻松实现财富梦想</h1>
         <p>随着人们对零食喜爱程度的增加，零食店加盟项目也成为了一个财富空间更加庞大的创业项目，给创业者带去了更<br />
             加丰厚的财富回报，现在越来越多的创业者走上了零食店加盟项目，且借助零食店加盟项目，成功的从零食行</p>
@@ -46,7 +46,7 @@
         <div class="conl2-left">
             <ul>
                 <li>
-                    <a href="普通文档页面.html"><img src="img/chuangyezixun-con-left_06.png" /></a>
+                    <a href="普通文档页面.html"><img src="/frontend/images/chuangyezixun-con-left_06.png" /></a>
                     <a href="普通文档页面.html" class="conl2-left-a">爱尚悠品加盟怎么样？品牌优势强 加盟门槛低</a>
                     <p>如今生活的节奏越来越快，压力也越来越大，消费观念也跟随着发生了巨大的<br />
                         变化。爱尚悠品专为资金不富裕的投资者打造的投资平台，投资费用也比较低<br />
@@ -55,7 +55,7 @@
                 </li>
 
                 <li>
-                    <a href=""><img src="img/chuangyezixun-con-left_06.png" /></a>
+                    <a href=""><img src="/frontend/images/chuangyezixun-con-left_06.png" /></a>
                     <a href="" class="conl2-left-a">爱尚悠品加盟怎么样？品牌优势强 加盟门槛低</a>
                     <p>如今生活的节奏越来越快，压力也越来越大，消费观念也跟随着发生了巨大的<br />
                         变化。爱尚悠品专为资金不富裕的投资者打造的投资平台，投资费用也比较低<br />
@@ -64,7 +64,7 @@
                 </li>
 
                 <li>
-                    <a href=""><img src="img/chuangyezixun-con-left_06.png" /></a>
+                    <a href=""><img src="/frontend/images/chuangyezixun-con-left_06.png" /></a>
                     <a href="" class="conl2-left-a">爱尚悠品加盟怎么样？品牌优势强 加盟门槛低</a>
                     <p>如今生活的节奏越来越快，压力也越来越大，消费观念也跟随着发生了巨大的<br />
                         变化。爱尚悠品专为资金不富裕的投资者打造的投资平台，投资费用也比较低<br />
@@ -73,7 +73,7 @@
                 </li>
 
                 <li>
-                    <a href=""><img src="img/chuangyezixun-con-left_06.png" /></a>
+                    <a href=""><img src="/frontend/images/chuangyezixun-con-left_06.png" /></a>
                     <a href="" class="conl2-left-a">爱尚悠品加盟怎么样？品牌优势强 加盟门槛低</a>
                     <p>如今生活的节奏越来越快，压力也越来越大，消费观念也跟随着发生了巨大的<br />
                         变化。爱尚悠品专为资金不富裕的投资者打造的投资平台，投资费用也比较低<br />
@@ -82,7 +82,7 @@
                 </li>
 
                 <li>
-                    <a href=""><img src="img/chuangyezixun-con-left_06.png" /></a>
+                    <a href=""><img src="/frontend/images/chuangyezixun-con-left_06.png" /></a>
                     <a href="" class="conl2-left-a">爱尚悠品加盟怎么样？品牌优势强 加盟门槛低</a>
                     <p>如今生活的节奏越来越快，压力也越来越大，消费观念也跟随着发生了巨大的<br />
                         变化。爱尚悠品专为资金不富裕的投资者打造的投资平台，投资费用也比较低<br />
@@ -91,7 +91,7 @@
                 </li>
 
                 <li>
-                    <a href=""><img src="img/chuangyezixun-con-left_06.png" /></a>
+                    <a href=""><img src="/frontend/images/chuangyezixun-con-left_06.png" /></a>
                     <a href="" class="conl2-left-a">爱尚悠品加盟怎么样？品牌优势强 加盟门槛低</a>
                     <p>如今生活的节奏越来越快，压力也越来越大，消费观念也跟随着发生了巨大的<br />
                         变化。爱尚悠品专为资金不富裕的投资者打造的投资平台，投资费用也比较低<br />
@@ -100,7 +100,7 @@
                 </li>
 
                 <li>
-                    <a href=""><img src="img/chuangyezixun-con-left_06.png" /></a>
+                    <a href=""><img src="/frontend/images/chuangyezixun-con-left_06.png" /></a>
                     <a href="" class="conl2-left-a">爱尚悠品加盟怎么样？品牌优势强 加盟门槛低</a>
                     <p>如今生活的节奏越来越快，压力也越来越大，消费观念也跟随着发生了巨大的<br />
                         变化。爱尚悠品专为资金不富裕的投资者打造的投资平台，投资费用也比较低<br />
@@ -109,7 +109,7 @@
                 </li>
 
                 <li>
-                    <a href=""><img src="img/chuangyezixun-con-left_06.png" /></a>
+                    <a href=""><img src="/frontend/images/chuangyezixun-con-left_06.png" /></a>
                     <a href="" class="conl2-left-a">爱尚悠品加盟怎么样？品牌优势强 加盟门槛低</a>
                     <p>如今生活的节奏越来越快，压力也越来越大，消费观念也跟随着发生了巨大的<br />
                         变化。爱尚悠品专为资金不富裕的投资者打造的投资平台，投资费用也比较低<br />
@@ -118,7 +118,7 @@
                 </li>
 
                 <li>
-                    <a href=""><img src="img/chuangyezixun-con-left_06.png" /></a>
+                    <a href=""><img src="/frontend/images/chuangyezixun-con-left_06.png" /></a>
                     <a href="" class="conl2-left-a">爱尚悠品加盟怎么样？品牌优势强 加盟门槛低</a>
                     <p>如今生活的节奏越来越快，压力也越来越大，消费观念也跟随着发生了巨大的<br />
                         变化。爱尚悠品专为资金不富裕的投资者打造的投资平台，投资费用也比较低<br />
@@ -127,7 +127,7 @@
                 </li>
 
                 <li>
-                    <a href=""><img src="img/chuangyezixun-con-left_06.png" /></a>
+                    <a href=""><img src="/frontend/images/chuangyezixun-con-left_06.png" /></a>
                     <a href="" class="conl2-left-a">爱尚悠品加盟怎么样？品牌优势强 加盟门槛低</a>
                     <p>如今生活的节奏越来越快，压力也越来越大，消费观念也跟随着发生了巨大的<br />
                         变化。爱尚悠品专为资金不富裕的投资者打造的投资平台，投资费用也比较低<br />
@@ -136,7 +136,7 @@
                 </li>
 
                 <li>
-                    <a href=""><img src="img/chuangyezixun-con-left_06.png" /></a>
+                    <a href=""><img src="/frontend/images/chuangyezixun-con-left_06.png" /></a>
                     <a href="" class="conl2-left-a">爱尚悠品加盟怎么样？品牌优势强 加盟门槛低</a>
                     <p>如今生活的节奏越来越快，压力也越来越大，消费观念也跟随着发生了巨大的<br />
                         变化。爱尚悠品专为资金不富裕的投资者打造的投资平台，投资费用也比较低<br />
@@ -145,7 +145,7 @@
                 </li>
 
                 <li>
-                    <a href=""><img src="img/chuangyezixun-con-left_06.png" /></a>
+                    <a href=""><img src="/frontend/images/chuangyezixun-con-left_06.png" /></a>
                     <a href="" class="conl2-left-a">爱尚悠品加盟怎么样？品牌优势强 加盟门槛低</a>
                     <p>如今生活的节奏越来越快，压力也越来越大，消费观念也跟随着发生了巨大的<br />
                         变化。爱尚悠品专为资金不富裕的投资者打造的投资平台，投资费用也比较低<br />
@@ -154,7 +154,7 @@
                 </li>
 
                 <li style="border-bottom: none;">
-                    <a href=""><img src="img/chuangyezixun-con-left_06.png" /></a>
+                    <a href=""><img src="/frontend/images/chuangyezixun-con-left_06.png" /></a>
                     <a href="" class="conl2-left-a">爱尚悠品加盟怎么样？品牌优势强 加盟门槛低</a>
                     <p>如今生活的节奏越来越快，压力也越来越大，消费观念也跟随着发生了巨大的<br />
                         变化。爱尚悠品专为资金不富裕的投资者打造的投资平台，投资费用也比较低<br />
@@ -169,35 +169,35 @@
                 <div class="con3-right-1-xian"></div>
                 <ul>
                     <li style="margin-top: 0px;">
-                        <a href=""><img src="img/con3-right-1_06.png" /></a>
+                        <a href=""><img src="/frontend/images/con3-right-1_06.png" /></a>
                         <a href="" class="a2"><font>NO1</font><font style="color:#494949;">.威特斯国际干洗</font><br />
                             一家国际知名干洗店，权<br />
                             威认证 </a>
                     </li>
 
                     <li>
-                        <a href=""><img src="img/con3-right-1_06.png" /></a>
+                        <a href=""><img src="/frontend/images/con3-right-1_06.png" /></a>
                         <a href="" class="a2"><font>NO2</font><font style="color:#494949;">.威特斯国际干洗</font><br />
                             一家国际知名干洗店，权<br />
                             威认证 </a>
                     </li>
 
                     <li>
-                        <a href=""><img src="img/con3-right-1_06.png" /></a>
+                        <a href=""><img src="/frontend/images/con3-right-1_06.png" /></a>
                         <a href="" class="a2"><font>NO3</font><font style="color:#494949;">.威特斯国际干洗</font><br />
                             一家国际知名干洗店，权<br />
                             威认证 </a>
                     </li>
 
                     <li>
-                        <a href=""><img src="img/con3-right-1_06.png" /></a>
+                        <a href=""><img src="/frontend/images/con3-right-1_06.png" /></a>
                         <a href="" class="a2"><font>NO4</font><font style="color:#494949;">.威特斯国际干洗</font><br />
                             一家国际知名干洗店，权<br />
                             威认证 </a>
                     </li>
 
                     <li>
-                        <a href=""><img src="img/con3-right-1_06.png" /></a>
+                        <a href=""><img src="/frontend/images/con3-right-1_06.png" /></a>
                         <a href="" class="a2"><font>NO5</font><font style="color: #494949;">.威特斯国际干洗</font><br />
                             一家国际知名干洗店，权<br />
                             威认证 </a>
@@ -212,32 +212,32 @@
 
                 <ul>
                     <li>
-                        <a href=""><img src="img/chuangyezixun-con2-right-2_10.png" /></a>
+                        <a href=""><img src="/frontend/images/chuangyezixun-con2-right-2_10.png" /></a>
                         <a href="" class="conl2-right-2-a">维特斯干洗加盟</a>
                     </li>
 
                     <li style="margin-left: 20px;">
-                        <a href=""><img src="img/chuangyezixun-con2-right-2_10.png" /></a>
+                        <a href=""><img src="/frontend/images/chuangyezixun-con2-right-2_10.png" /></a>
                         <a href="" class="conl2-right-2-a">维特斯干洗加盟</a>
                     </li>
 
                     <li>
-                        <a href=""><img src="img/chuangyezixun-con2-right-2_10.png" /></a>
+                        <a href=""><img src="/frontend/images/chuangyezixun-con2-right-2_10.png" /></a>
                         <a href="" class="conl2-right-2-a">维特斯干洗加盟</a>
                     </li>
 
                     <li style="margin-left: 20px;">
-                        <a href=""><img src="img/chuangyezixun-con2-right-2_10.png" /></a>
+                        <a href=""><img src="/frontend/images/chuangyezixun-con2-right-2_10.png" /></a>
                         <a href="" class="conl2-right-2-a">维特斯干洗加盟</a>
                     </li>
 
                     <li>
-                        <a href=""><img src="img/chuangyezixun-con2-right-2_10.png" /></a>
+                        <a href=""><img src="/frontend/images/chuangyezixun-con2-right-2_10.png" /></a>
                         <a href="" class="conl2-right-2-a">维特斯干洗加盟</a>
                     </li>
 
                     <li style="margin-left: 20px;">
-                        <a href=""><img src="img/chuangyezixun-con2-right-2_10.png" /></a>
+                        <a href=""><img src="/frontend/images/chuangyezixun-con2-right-2_10.png" /></a>
                         <a href="" class="conl2-right-2-a">维特斯干洗加盟</a>
                     </li>
                 </ul>
@@ -252,7 +252,7 @@
 
                 <ul>
                     <li style="margin-top: 0px;">
-                        <a href=""><img src="img/con3-rught-2-tu_10.png" /></a>
+                        <a href=""><img src="/frontend/images/con3-rught-2-tu_10.png" /></a>
                         <a href="" class="a3">赛维干洗店</a>
                         <p>
                             投资金额 ： <font>5万以下</font><br />
@@ -261,7 +261,7 @@
                     </li>
 
                     <li>
-                        <a href=""><img src="img/con3-rught-2-tu_10.png" /></a>
+                        <a href=""><img src="/frontend/images/con3-rught-2-tu_10.png" /></a>
                         <a href=""  class="a3">赛维干洗店</a>
                         <p>
                             投资金额 ： <font>5万以下</font><br />
@@ -270,7 +270,7 @@
                     </li>
 
                     <li>
-                        <a href=""><img src="img/con3-rught-2-tu_10.png" /></a>
+                        <a href=""><img src="/frontend/images/con3-rught-2-tu_10.png" /></a>
                         <a href=""  class="a3">赛维干洗店</a>
                         <p>
                             投资金额 ： <font>5万以下</font><br />
@@ -279,7 +279,7 @@
                     </li>
 
                     <li>
-                        <a href=""><img src="img/con3-rught-2-tu_10.png" /></a>
+                        <a href=""><img src="/frontend/images/con3-rught-2-tu_10.png" /></a>
                         <a href="" class="a3">赛维干洗店</a>
                         <p>
                             投资金额 ： <font>5万以下</font><br />
@@ -288,7 +288,7 @@
                     </li>
 
                     <li>
-                        <a href=""><img src="img/con3-rught-2-tu_10.png" /></a>
+                        <a href=""><img src="/frontend/images/con3-rught-2-tu_10.png" /></a>
                         <a href="" class="a3">赛维干洗店</a>
                         <p>
                             投资金额 ： <font>5万以下</font><br />
@@ -311,37 +311,37 @@
 
                 <ul>
                     <li style="margin-top: 0px;">
-                        <a href=""><img src="img/con2-right-4_13.png" /></a>
+                        <a href=""><img src="/frontend/images/con2-right-4_13.png" /></a>
                         <a href="" class="a4">1988豆花加盟条件是什么？</a>
                         <p>2018-10-12<font>11:51:57</font></p>
                     </li>
 
                     <li>
-                        <a href=""><img src="img/con2-right-4_13.png" /></a>
+                        <a href=""><img src="/frontend/images/con2-right-4_13.png" /></a>
                         <a href="" class="a4">1988豆花加盟条件是什么？</a>
                         <p>2018-10-12<font>11:51:57</font></p>
                     </li>
 
                     <li>
-                        <a href=""><img src="img/con2-right-4_13.png" /></a>
+                        <a href=""><img src="/frontend/images/con2-right-4_13.png" /></a>
                         <a href="" class="a4">1988豆花加盟条件是什么？</a>
                         <p>2018-10-12<font>11:51:57</font></p>
                     </li>
 
                     <li>
-                        <a href=""><img src="img/con2-right-4_13.png" /></a>
+                        <a href=""><img src="/frontend/images/con2-right-4_13.png" /></a>
                         <a href="" class="a4">1988豆花加盟条件是什么？</a>
                         <p>2018-10-12<font>11:51:57</font></p>
                     </li>
 
                     <li>
-                        <a href=""><img src="img/con2-right-4_13.png" /></a>
+                        <a href=""><img src="/frontend/images/con2-right-4_13.png" /></a>
                         <a href="" class="a4">1988豆花加盟条件是什么？</a>
                         <p>2018-10-12<font>11:51:57</font></p>
                     </li>
 
                     <li>
-                        <a href=""><img src="img/con2-right-4_13.png" /></a>
+                        <a href=""><img src="/frontend/images/con2-right-4_13.png" /></a>
                         <a href="" class="a4">1988豆花加盟条件是什么？</a>
                         <p>2018-10-12<font>11:51:57</font></p>
                     </li>
