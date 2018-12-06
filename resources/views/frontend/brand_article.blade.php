@@ -22,17 +22,9 @@
 @section('main_content')
 <div class="main_content">
     <div class="mianbaoxie center">
-        <ul>
-            <li><a href="index.html" style="margin-left: 0px;">首页</a></li>
-            <li><p>></p></li>
-            <li><a href="">创业资讯</a></li>
-            <li><p>></p></li>
-            <li><a href="">北京蓝箭空间科技有限公司</a></li>
-
-        </ul>
+        <p><a href="index.html" style="margin-left: 0px;">首页</a> > <a href="">创业资讯</a> > <a href="">北京蓝箭空间科技有限公司</a></p>
     </div>
-
-    <div class="b_con1 center">
+    <div class="b_con1 center box-shadow">
         <div class="b_con1-left">
             <div class="b_con1-left-tu">
                 <img src="/frontend/images/pinpaixinagqingye-con1_03.png"  class="datu"/>
@@ -149,7 +141,7 @@
 
 
     <div class="b_con3 center">
-        <div class="b_con3-left">
+        <div class="b_con3-left box-shadow">
             <ul class="b_con3-left-top">
                 <li style="width: 172px;font-weight: 500;"><a href="">特许经营信息</a></li>
                 <li><a href="">品牌介绍</a></li>
@@ -466,7 +458,7 @@
         </div>
         <div class="b_con3-right">
 
-            <div class="b_con3-right-1">
+            <div class="b_con3-right-1 box-shadow">
                 <h1>品牌排行榜<a href="">关注量</a></h1>
                 <div class="b_con3-right-1-xian"></div>
                 <ul>
@@ -508,7 +500,7 @@
 
             </div>
 
-            <div class="b_con3-right-2">
+            <div class="b_con3-right-2 box-shadow">
 
 
                 <h1>最新入驻品牌<a href="">更多</a></h1>
@@ -596,7 +588,7 @@
 
             </div>
 
-            <div class="b_con3-right-3">
+            <div class="b_con3-right-3 box-shadow">
                 <ul>
                     <li style="height: 59px;"><h1>干洗品牌加盟资讯</h1></li>
                     <li><a href="">罗山县男孩女孩童装柜组</a></li>
@@ -604,10 +596,14 @@
                     <li><a href="">上海童涵春堂晨春大药房</a></li>
                     <li><a href="">日喀则市秋林硼业有限公司</a></li>
                     <li style="border: none;"><a href="">中旗科创(北京)投资基金有限公司</a></li>
+                    <li style="border: none;"><a href="">中旗科创(北京)投资基金有限公司</a></li>
+                    <li style="border: none;"><a href="">中旗科创(北京)投资基金有限公司</a></li>
+                    <li style="border: none;"><a href="">中旗科创(北京)投资基金有限公司</a></li>
+                    <li style="border: none;"><a href="">中旗科创(北京)投资基金有限公司</a></li>
                 </ul>
             </div>
 
-            <div class="b_con3-right-4">
+            <div class="b_con3-right-4 box-shadow">
                 <h1>全站最新品牌资讯</h1>
                 <ul>
                     <li>

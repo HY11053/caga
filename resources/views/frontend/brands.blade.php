@@ -241,7 +241,7 @@
         </div>
         <div class="bl_con3-right">
 
-            <div class="bl_con3-right-1">
+            <div class="bl_con3-right-1 box-shadow">
                 <h1>品牌排行榜<a href="">关注量</a></h1>
                 <div class="bl_con3-right-1-xian"></div>
                 <ul>
@@ -283,8 +283,8 @@
 
             </div>
 
-            <div class="bl_con3-right-2">
-                <h1>品牌招商热门加盟项目<a href="">更多</a></font></h1>
+            <div class="bl_con3-right-2 box-shadow">
+                <h1>品牌招商热门加盟项目<a href="">更多</a>></h1>
                 <div class="bl_con3-right-2-xian"></div>
 
                 <ul>
@@ -363,8 +363,8 @@
 
             </div>
 
-            <div class="bl_con3-right-3">
-                <h1>加盟咨询<a href="">更多</a></font></h1>
+            <div class="bl_con3-right-3 box-shadow">
+                <h1>加盟咨询<a href="">更多</a></h1>
                 <div class="bl_con3-right-3-xian"></div>
 
                 <ul>

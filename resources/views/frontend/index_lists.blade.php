@@ -13,14 +13,9 @@
 @stop
 @section('main_content')
     <div class="main_content">
-    <div class="mianbaoxie center">
-        <ul>
-            <li><a href="index.html" style="margin-left: 0px;">首页</a></li>
-            <li><p>></p></li>
-            <li><a href="">创业资讯</a></li>
-
-        </ul>
-    </div>
+        <div class="mianbaoxie center">
+            <p><a href="index.html" style="margin-left: 0px;">首页</a> > <a href="">创业资讯</a> > <a href="">北京蓝箭空间科技有限公司</a></p>
+        </div>
 
     <div class="conl1 center">
         <img src="/frontend/images/con1-tu_03.png" />
@@ -44,7 +39,7 @@
     </div>
 
     <div class="conl2 center">
-        <div class="conl2-left">
+        <div class="conl2-left box-shadow">
             <ul>
                 <li>
                     <a href="普通文档页面.html"><img src="/frontend/images/chuangyezixun-con-left_06.png" /></a>
@@ -153,10 +148,42 @@
                 </li>
 
              </ul>
+            <div class=" page-bar tc mb20 ">
+                <ul class="pagination">
+
+                    <li class="disabled"><span>首页</span></li>
+
+
+
+
+
+                    <li class="active"><span>1</span></li>
+                    <li><a href="http://www.xiuxianshipin.com/nlist/2/page/2/">2</a></li>
+                    <li><a href="http://www.xiuxianshipin.com/nlist/2/page/3/">3</a></li>
+                    <li><a href="http://www.xiuxianshipin.com/nlist/2/page/4/">4</a></li>
+                    <li><a href="http://www.xiuxianshipin.com/nlist/2/page/5/">5</a></li>
+                    <li><a href="http://www.xiuxianshipin.com/nlist/2/page/6/">6</a></li>
+                    <li><a href="http://www.xiuxianshipin.com/nlist/2/page/7/">7</a></li>
+                    <li><a href="http://www.xiuxianshipin.com/nlist/2/page/8/">8</a></li>
+
+                    <li class="disabled"><span>...</span></li>
+
+
+
+
+
+                    <li><a href="http://www.xiuxianshipin.com/nlist/2/page/146/">146</a></li>
+                    <li><a href="http://www.xiuxianshipin.com/nlist/2/page/147/">147</a></li>
+
+
+                    <li><a href="http://www.xiuxianshipin.com/nlist/2/page/2/">下一页</a></li>
+                </ul>
+
+            </div>
             <div class="clear"></div>
         </div>
-        <div class="conl2-right">
-            <div class="conl2-right-1">
+        <div class="conl2-right box">
+            <div class="conl2-right-1 box-shadow">
                 <h1>品牌排行榜<a href="">关注量</a></h1>
                 <div class="con3-right-1-xian"></div>
                 <ul>
@@ -198,7 +225,7 @@
 
             </div>
 
-            <div class="conl2-right-2">
+            <div class="conl2-right-2 box-shadow">
                 <h1>品牌专栏<a href="">更多</a></h1>
                 <div class="conl2-right-2-xian"></div>
 
@@ -236,7 +263,7 @@
 
             </div>
 
-            <div class="conl2-right-3">
+            <div class="conl2-right-3 box-shadow">
 
 
                 <h1>最新入驻品牌<a href="">更多</a></h1>
@@ -297,7 +324,7 @@
 
             </div>
 
-            <div class="conl2-right-4">
+            <div class="conl2-right-4 box-shadow">
                 <h1>最新加盟资讯<a href="">更多</a></h1>
                 <div class="conl2-right-4-xian"></div>
 
@@ -318,6 +345,10 @@
                         <a href=""><img src="/frontend/images/con2-right-4_13.png" /></a>
                         <a href="" class="a4">1988豆花加盟条件是什么？</a>
                         <p>2018-10-12<font>11:51:57</font></p>
+                    </li><li>
+                        <a href=""><img src="/frontend/images/con2-right-4_13.png" /></a>
+                        <a href="" class="a4">1988豆花加盟条件是什么？</a>
+                        <p>2018-10-12<font>11:51:57</font></p>
                     </li>
 
                     <li>
@@ -342,25 +373,7 @@
 
 
         </div>
-
-        <div class="pageinfo">
-            <div class="fenye">
-                <a href="" class="shangyiye">上一页</a>
-                <ul>
-                    <li><a href="" style="margin-left:0px ;">1</a></li>
-                    <li><a href="">2</a></li>
-                    <li><a href="">3</a></li>
-                    <li><a href="">4</a></li>
-                    <li><a href="">5</a></li>
-                    <li><a href="">6</a></li>
-                    <li><a href="">7</a></li>
-                    <li><a href="">8</a></li>
-                </ul>
-                <a href="" class="xiayiye">下一页</a>
-            </div>
-            <div class="clear"></div>
-        </div>
-
     </div>
+        <div class="clear"></div>
     </div>
 @stop

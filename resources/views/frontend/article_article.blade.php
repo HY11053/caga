@@ -16,14 +16,7 @@
 @section('main_content')
 <div class="main_content">
     <div class="mianbaoxie center">
-        <ul>
-            <li><a href="index.html" style="margin-left: 0px;">首页</a></li>
-            <li><p>></p></li>
-            <li><a href="">创业资讯</a></li>
-            <li><p>></p></li>
-            <li><a href="">北京蓝箭空间科技有限公司</a></li>
-
-        </ul>
+        <p><a href="index.html" style="margin-left: 0px;">首页</a> > <a href="">创业资讯</a> > <a href="">北京蓝箭空间科技有限公司</a></p>
     </div>
 
     <div class="ar_con1 center">
@@ -226,7 +219,7 @@
             <div class="ar_con1-right-2">
 
 
-                <h1>最新入驻品牌<a href="">更多</a></font></h1>
+                <h1>最新入驻品牌<a href="">更多</a></h1>
                 <div class="ar_con1-right-2-xian"></div>
 
                 <ul>
@@ -285,7 +278,7 @@
             </div>
 
             <div class="ar_con1-right-3">
-                <h1>最新加盟资讯<a href="">更多</a></font></h1>
+                <h1>最新加盟资讯<a href="">更多</a></h1>
                 <div class="ar_con1-right-3-xian"></div>
 
                 <ul>
