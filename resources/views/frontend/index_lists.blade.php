@@ -12,6 +12,7 @@
     <link rel="canonical" href="{{config('app.url')}}{{str_replace('','',Request::getrequesturi())}}"/>
 @stop
 @section('main_content')
+    <div class="main_content">
     <div class="mianbaoxie center">
         <ul>
             <li><a href="index.html" style="margin-left: 0px;">首页</a></li>
@@ -51,117 +52,108 @@
                     <p>如今生活的节奏越来越快，压力也越来越大，消费观念也跟随着发生了巨大的<br />
                         变化。爱尚悠品专为资金不富裕的投资者打造的投资平台，投资费用也比较低<br />
                         ，爱尚悠品就是一个值得投</p>
-                    <h1>2018-10-09 11:48:27<font>中国休闲食品加盟网</font></h1>
+                    <p class="info">2018-10-09 11:48:27<span>中国休闲食品加盟网</span></p>
                 </li>
-
-                <li>
-                    <a href=""><img src="/frontend/images/chuangyezixun-con-left_06.png" /></a>
-                    <a href="" class="conl2-left-a">爱尚悠品加盟怎么样？品牌优势强 加盟门槛低</a>
+ <li>
+                    <a href="普通文档页面.html"><img src="/frontend/images/chuangyezixun-con-left_06.png" /></a>
+                    <a href="普通文档页面.html" class="conl2-left-a">爱尚悠品加盟怎么样？品牌优势强 加盟门槛低</a>
                     <p>如今生活的节奏越来越快，压力也越来越大，消费观念也跟随着发生了巨大的<br />
                         变化。爱尚悠品专为资金不富裕的投资者打造的投资平台，投资费用也比较低<br />
                         ，爱尚悠品就是一个值得投</p>
-                    <h1>2018-10-09 11:48:27<font>中国休闲食品加盟网</font></h1>
+                    <p class="info">2018-10-09 11:48:27<span>中国休闲食品加盟网</span></p>
                 </li>
 
-                <li>
-                    <a href=""><img src="/frontend/images/chuangyezixun-con-left_06.png" /></a>
-                    <a href="" class="conl2-left-a">爱尚悠品加盟怎么样？品牌优势强 加盟门槛低</a>
+ <li>
+                    <a href="普通文档页面.html"><img src="/frontend/images/chuangyezixun-con-left_06.png" /></a>
+                    <a href="普通文档页面.html" class="conl2-left-a">爱尚悠品加盟怎么样？品牌优势强 加盟门槛低</a>
                     <p>如今生活的节奏越来越快，压力也越来越大，消费观念也跟随着发生了巨大的<br />
                         变化。爱尚悠品专为资金不富裕的投资者打造的投资平台，投资费用也比较低<br />
                         ，爱尚悠品就是一个值得投</p>
-                    <h1>2018-10-09 11:48:27<font>中国休闲食品加盟网</font></h1>
+                    <p class="info">2018-10-09 11:48:27<span>中国休闲食品加盟网</span></p>
                 </li>
-
-                <li>
-                    <a href=""><img src="/frontend/images/chuangyezixun-con-left_06.png" /></a>
-                    <a href="" class="conl2-left-a">爱尚悠品加盟怎么样？品牌优势强 加盟门槛低</a>
+ <li>
+                    <a href="普通文档页面.html"><img src="/frontend/images/chuangyezixun-con-left_06.png" /></a>
+                    <a href="普通文档页面.html" class="conl2-left-a">爱尚悠品加盟怎么样？品牌优势强 加盟门槛低</a>
                     <p>如今生活的节奏越来越快，压力也越来越大，消费观念也跟随着发生了巨大的<br />
                         变化。爱尚悠品专为资金不富裕的投资者打造的投资平台，投资费用也比较低<br />
                         ，爱尚悠品就是一个值得投</p>
-                    <h1>2018-10-09 11:48:27<font>中国休闲食品加盟网</font></h1>
+                    <p class="info">2018-10-09 11:48:27<span>中国休闲食品加盟网</span></p>
                 </li>
-
-                <li>
-                    <a href=""><img src="/frontend/images/chuangyezixun-con-left_06.png" /></a>
-                    <a href="" class="conl2-left-a">爱尚悠品加盟怎么样？品牌优势强 加盟门槛低</a>
+ <li>
+                    <a href="普通文档页面.html"><img src="/frontend/images/chuangyezixun-con-left_06.png" /></a>
+                    <a href="普通文档页面.html" class="conl2-left-a">爱尚悠品加盟怎么样？品牌优势强 加盟门槛低</a>
                     <p>如今生活的节奏越来越快，压力也越来越大，消费观念也跟随着发生了巨大的<br />
                         变化。爱尚悠品专为资金不富裕的投资者打造的投资平台，投资费用也比较低<br />
                         ，爱尚悠品就是一个值得投</p>
-                    <h1>2018-10-09 11:48:27<font>中国休闲食品加盟网</font></h1>
+                    <p class="info">2018-10-09 11:48:27<span>中国休闲食品加盟网</span></p>
                 </li>
-
-                <li>
-                    <a href=""><img src="/frontend/images/chuangyezixun-con-left_06.png" /></a>
-                    <a href="" class="conl2-left-a">爱尚悠品加盟怎么样？品牌优势强 加盟门槛低</a>
+ <li>
+                    <a href="普通文档页面.html"><img src="/frontend/images/chuangyezixun-con-left_06.png" /></a>
+                    <a href="普通文档页面.html" class="conl2-left-a">爱尚悠品加盟怎么样？品牌优势强 加盟门槛低</a>
                     <p>如今生活的节奏越来越快，压力也越来越大，消费观念也跟随着发生了巨大的<br />
                         变化。爱尚悠品专为资金不富裕的投资者打造的投资平台，投资费用也比较低<br />
                         ，爱尚悠品就是一个值得投</p>
-                    <h1>2018-10-09 11:48:27<font>中国休闲食品加盟网</font></h1>
+                    <p class="info">2018-10-09 11:48:27<span>中国休闲食品加盟网</span></p>
                 </li>
-
-                <li>
-                    <a href=""><img src="/frontend/images/chuangyezixun-con-left_06.png" /></a>
-                    <a href="" class="conl2-left-a">爱尚悠品加盟怎么样？品牌优势强 加盟门槛低</a>
+ <li>
+                    <a href="普通文档页面.html"><img src="/frontend/images/chuangyezixun-con-left_06.png" /></a>
+                    <a href="普通文档页面.html" class="conl2-left-a">爱尚悠品加盟怎么样？品牌优势强 加盟门槛低</a>
                     <p>如今生活的节奏越来越快，压力也越来越大，消费观念也跟随着发生了巨大的<br />
                         变化。爱尚悠品专为资金不富裕的投资者打造的投资平台，投资费用也比较低<br />
                         ，爱尚悠品就是一个值得投</p>
-                    <h1>2018-10-09 11:48:27<font>中国休闲食品加盟网</font></h1>
+                    <p class="info">2018-10-09 11:48:27<span>中国休闲食品加盟网</span></p>
                 </li>
-
-                <li>
-                    <a href=""><img src="/frontend/images/chuangyezixun-con-left_06.png" /></a>
-                    <a href="" class="conl2-left-a">爱尚悠品加盟怎么样？品牌优势强 加盟门槛低</a>
+ <li>
+                    <a href="普通文档页面.html"><img src="/frontend/images/chuangyezixun-con-left_06.png" /></a>
+                    <a href="普通文档页面.html" class="conl2-left-a">爱尚悠品加盟怎么样？品牌优势强 加盟门槛低</a>
                     <p>如今生活的节奏越来越快，压力也越来越大，消费观念也跟随着发生了巨大的<br />
                         变化。爱尚悠品专为资金不富裕的投资者打造的投资平台，投资费用也比较低<br />
                         ，爱尚悠品就是一个值得投</p>
-                    <h1>2018-10-09 11:48:27<font>中国休闲食品加盟网</font></h1>
+                    <p class="info">2018-10-09 11:48:27<span>中国休闲食品加盟网</span></p>
                 </li>
-
-                <li>
-                    <a href=""><img src="/frontend/images/chuangyezixun-con-left_06.png" /></a>
-                    <a href="" class="conl2-left-a">爱尚悠品加盟怎么样？品牌优势强 加盟门槛低</a>
+ <li>
+                    <a href="普通文档页面.html"><img src="/frontend/images/chuangyezixun-con-left_06.png" /></a>
+                    <a href="普通文档页面.html" class="conl2-left-a">爱尚悠品加盟怎么样？品牌优势强 加盟门槛低</a>
                     <p>如今生活的节奏越来越快，压力也越来越大，消费观念也跟随着发生了巨大的<br />
                         变化。爱尚悠品专为资金不富裕的投资者打造的投资平台，投资费用也比较低<br />
                         ，爱尚悠品就是一个值得投</p>
-                    <h1>2018-10-09 11:48:27<font>中国休闲食品加盟网</font></h1>
+                    <p class="info">2018-10-09 11:48:27<span>中国休闲食品加盟网</span></p>
                 </li>
-
-                <li>
-                    <a href=""><img src="/frontend/images/chuangyezixun-con-left_06.png" /></a>
-                    <a href="" class="conl2-left-a">爱尚悠品加盟怎么样？品牌优势强 加盟门槛低</a>
+ <li>
+                    <a href="普通文档页面.html"><img src="/frontend/images/chuangyezixun-con-left_06.png" /></a>
+                    <a href="普通文档页面.html" class="conl2-left-a">爱尚悠品加盟怎么样？品牌优势强 加盟门槛低</a>
                     <p>如今生活的节奏越来越快，压力也越来越大，消费观念也跟随着发生了巨大的<br />
                         变化。爱尚悠品专为资金不富裕的投资者打造的投资平台，投资费用也比较低<br />
                         ，爱尚悠品就是一个值得投</p>
-                    <h1>2018-10-09 11:48:27<font>中国休闲食品加盟网</font></h1>
+                    <p class="info">2018-10-09 11:48:27<span>中国休闲食品加盟网</span></p>
                 </li>
-
-                <li>
-                    <a href=""><img src="/frontend/images/chuangyezixun-con-left_06.png" /></a>
-                    <a href="" class="conl2-left-a">爱尚悠品加盟怎么样？品牌优势强 加盟门槛低</a>
+ <li>
+                    <a href="普通文档页面.html"><img src="/frontend/images/chuangyezixun-con-left_06.png" /></a>
+                    <a href="普通文档页面.html" class="conl2-left-a">爱尚悠品加盟怎么样？品牌优势强 加盟门槛低</a>
                     <p>如今生活的节奏越来越快，压力也越来越大，消费观念也跟随着发生了巨大的<br />
                         变化。爱尚悠品专为资金不富裕的投资者打造的投资平台，投资费用也比较低<br />
                         ，爱尚悠品就是一个值得投</p>
-                    <h1>2018-10-09 11:48:27<font>中国休闲食品加盟网</font></h1>
+                    <p class="info">2018-10-09 11:48:27<span>中国休闲食品加盟网</span></p>
                 </li>
-
-                <li>
-                    <a href=""><img src="/frontend/images/chuangyezixun-con-left_06.png" /></a>
-                    <a href="" class="conl2-left-a">爱尚悠品加盟怎么样？品牌优势强 加盟门槛低</a>
+ <li>
+                    <a href="普通文档页面.html"><img src="/frontend/images/chuangyezixun-con-left_06.png" /></a>
+                    <a href="普通文档页面.html" class="conl2-left-a">爱尚悠品加盟怎么样？品牌优势强 加盟门槛低</a>
                     <p>如今生活的节奏越来越快，压力也越来越大，消费观念也跟随着发生了巨大的<br />
                         变化。爱尚悠品专为资金不富裕的投资者打造的投资平台，投资费用也比较低<br />
                         ，爱尚悠品就是一个值得投</p>
-                    <h1>2018-10-09 11:48:27<font>中国休闲食品加盟网</font></h1>
+                    <p class="info">2018-10-09 11:48:27<span>中国休闲食品加盟网</span></p>
                 </li>
-
-                <li style="border-bottom: none;">
-                    <a href=""><img src="/frontend/images/chuangyezixun-con-left_06.png" /></a>
-                    <a href="" class="conl2-left-a">爱尚悠品加盟怎么样？品牌优势强 加盟门槛低</a>
+ <li>
+                    <a href="普通文档页面.html"><img src="/frontend/images/chuangyezixun-con-left_06.png" /></a>
+                    <a href="普通文档页面.html" class="conl2-left-a">爱尚悠品加盟怎么样？品牌优势强 加盟门槛低</a>
                     <p>如今生活的节奏越来越快，压力也越来越大，消费观念也跟随着发生了巨大的<br />
                         变化。爱尚悠品专为资金不富裕的投资者打造的投资平台，投资费用也比较低<br />
                         ，爱尚悠品就是一个值得投</p>
-                    <h1>2018-10-09 11:48:27<font>中国休闲食品加盟网</font></h1>
+                    <p class="info">2018-10-09 11:48:27<span>中国休闲食品加盟网</span></p>
                 </li>
-            </ul>
+
+             </ul>
+            <div class="clear"></div>
         </div>
         <div class="conl2-right">
             <div class="conl2-right-1">
@@ -247,7 +239,7 @@
             <div class="conl2-right-3">
 
 
-                <h1>最新入驻品牌<a href="">更多</a></font></h1>
+                <h1>最新入驻品牌<a href="">更多</a></h1>
                 <div class="conl2-right-3-xian"></div>
 
                 <ul>
@@ -306,7 +298,7 @@
             </div>
 
             <div class="conl2-right-4">
-                <h1>最新加盟资讯<a href="">更多</a></font></h1>
+                <h1>最新加盟资讯<a href="">更多</a></h1>
                 <div class="conl2-right-4-xian"></div>
 
                 <ul>
@@ -350,23 +342,25 @@
 
 
         </div>
-    </div>
 
-    <div class="center">
-        <div class="fenye">
-            <a href="" class="shangyiye">上一页</a>
-            <ul>
-                <li><a href="" style="margin-left:0px ;">1</a></li>
-                <li><a href="">2</a></li>
-                <li><a href="">3</a></li>
-                <li><a href="">4</a></li>
-                <li><a href="">5</a></li>
-                <li><a href="">6</a></li>
-                <li><a href="">7</a></li>
-                <li><a href="">8</a></li>
-            </ul>
-            <a href="" class="xiayiye">下一页</a>
+        <div class="pageinfo">
+            <div class="fenye">
+                <a href="" class="shangyiye">上一页</a>
+                <ul>
+                    <li><a href="" style="margin-left:0px ;">1</a></li>
+                    <li><a href="">2</a></li>
+                    <li><a href="">3</a></li>
+                    <li><a href="">4</a></li>
+                    <li><a href="">5</a></li>
+                    <li><a href="">6</a></li>
+                    <li><a href="">7</a></li>
+                    <li><a href="">8</a></li>
+                </ul>
+                <a href="" class="xiayiye">下一页</a>
+            </div>
+            <div class="clear"></div>
         </div>
-    </div>
 
+    </div>
+    </div>
 @stop

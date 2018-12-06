@@ -8,9 +8,14 @@
     <meta http-equiv="mobile-agent" content="format=html5; url={{str_replace('http://www.','http://m.',config('app.url'))}}" />
     <link rel="alternate" media="only screen and(max-width: 640px)" href="{{str_replace('http://www.','http://m.',config('app.url'))}}" >
     <link rel="canonical" href="{{config('app.url')}}{{str_replace('','',Request::getrequesturi())}}"/>
+    <link rel="stylesheet" href="http://www.xiuxianshipin.com/frontend/css/swiper.min.css" />
+
 @stop
 @section('main_content')
-    <div class="con1 center">
+    <div class="main_content">
+
+
+    <div class="con1 center box-shadow">
         <div class="con1-left">
             <h1>项目查找</h1>
             <select style="margin-top: 12px;">
@@ -57,31 +62,18 @@
         </div>-->
 
         <div class="middle">
-            <script src="/demos/googlegg.js"></script>
-
-            <div id="wrapper">
-
-                <div id="slider-wrap">
-                    <ul id="slider">
-                        <li style="background: url(/frontend/images/banner_18.png) no-repeat center;background-size:100% 100% ;">
-                            <i class="fa fa-image"></i>
-                        </li>
-
-                        <li style="background: url(/frontend/images/banner04.png) no-repeat center;background-size:100% 100% ;">
-                            <i class="fa fa-gears"></i>
-                        </li>
-
-                        <li style="background: url(/frontend/images/banner02.png) no-repeat center;background-size: 100% 100%;">
-                            <i class="fa fa-sliders"></i>
-                        </li>
-
-                        <li style="background: url(/frontend/images/banner06.png) no-repeat center ;background-size: 100% 100%;">
-                            <i class="fa fa-code"></i>
-                        </li>
-                        <li style="background: url(/frontend/images/banner07.png) no-repeat center;background-size: 100% 100%;">
-                            <i class="fa fa-microphone-slash"></i>
-                        </li>
+            <div class="carousel carousel-bar1">
+                <div class="ovh swiper-container">
+                    <ul class="ban-ul swiper-wrapper">
+                        <a target="_blank" href="/brand/1396/" class="item img-block swiper-slide"><img src="/frontend/images/banner_18.png" alt="一点点奶茶"></a>
+                        <a target="_blank" href="/brand/7/" class="item img-block swiper-slide"><img src="/frontend/images/banner04.png" alt="良品铺子"></a>
+                        <a target="_blank" href="/brand/1062/" class="item img-block swiper-slide"><img src="/frontend/images/banner02.png" alt="一扫光"></a>
+                        <a target="_blank" href="/brand/1062/" class="item img-block swiper-slide"><img src="/frontend/images/banner06.png" alt="一扫光"></a>
+                        <a target="_blank" href="/brand/1062/" class="item img-block swiper-slide"><img src="/frontend/images/banner07.png" alt="一扫光"></a>
                     </ul>
+                </div>
+                <div class="dot">
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
 
@@ -107,50 +99,86 @@
             </div>
 
         </div>
-        <div class="con1-right">
-            <h1>5000</h1>
-            <ul class="xiangmu">
-                <li><p style="margin-top: 0px;">【赛维干洗】干洗品牌不负期望。。。</p></li>
-                <li><p>【赛维干洗】干洗品牌不负期望。。。</p></li>
-                <li><p>【赛维干洗】干洗品牌不负期望。。。</p></li>
-            </ul>
-            <input type="button" value="马上找好项目"/>
-            <div class="bibei">
-                <p>创业必备工具</p>
+        <div class="fr xm-qingxian">
+            <h2>项目抢先看</h2>
+            <div class="carousel xm-carousel">
+                <div class="ovh swiper-container">
+                    <ul class="ban-ul swiper-wrapper">
+                        <li class="item swiper-slide">
+                            <div style="padding:0 20px">
+                                <img src="/storage/uploads/2018/12/06/71cc3f68381222c404ba71a18eace1df.jpg" width="190" height="190">
+                                <p class="f16"> 小时代简餐</p>
+                                <p class="f14">
+                                    投资金额：<b class="s-oe">9万~26万</b>
+                                </p>
+                                <p class="h72">在饮食上，大家是很注重的，特色的养生产品，精心制作，养生减肥的好选择。“轻食主义”是指“少油、少盐、少糖、高纤维及高钙，满足身体营养所需，同时不给身体造成负担的科学饮食”的代名词。小时</p>
+                                <div class="btn-bar">
+                                    <a target="_blank" href="/brand/2166/" class="btn btn-oe-line fl">详细考察</a><a href="javascript:void(0);" class="btn btn-oe fr btn-wyzx">我要咨询</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item swiper-slide">
+                            <div style="padding:0 20px">
+                                <img src="/storage/uploads/2018/12/06/cf5f4f13dace006c09b59f96f54d401e.png" width="190" height="190">
+                                <p class="f16"> 爱八寸披萨</p>
+                                <p class="f14">
+                                    投资金额：<b class="s-oe">8万~23万</b>
+                                </p>
+                                <p class="h72">爱八寸披萨有着芳香扑鼻的味道，激爽的外形，动感的味道，一同构成忘情的尖叫，美妙的回忆。爱八寸披萨以香脆酥软的风味饼，裹着幼滑酥爽的比萨馅，加上少许的芝士，咬上去，拉出长长的丝，饱满</p>
+                                <div class="btn-bar">
+                                    <a target="_blank" href="/brand/2165/" class="btn btn-oe-line fl">详细考察</a><a href="javascript:void(0);" class="btn btn-oe fr btn-wyzx">我要咨询</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item swiper-slide">
+                            <div style="padding:0 20px">
+                                <img src="/storage/uploads/2018/12/06/4cca15bf81d8ea03fb53ae15d9a3adc4.jpg" width="190" height="190">
+                                <p class="f16"> 预见时尚简餐</p>
+                                <p class="f14">
+                                    投资金额：<b class="s-oe">7万~26</b>
+                                </p>
+                                <p class="h72">预见时尚简餐目前餐饮市场如火如荼，想在这个火爆市场上占有一定地位，就要独树一帜的特色，就是一家有特色的快餐，并且与O2O完美结合。专家及营养师指导搭配餐饮，美味、健康，营养，快捷。深</p>
+                                <div class="btn-bar">
+                                    <a target="_blank" href="/brand/2164/" class="btn btn-oe-line fl">详细考察</a><a href="javascript:void(0);" class="btn btn-oe fr btn-wyzx">我要咨询</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item swiper-slide">
+                            <div style="padding:0 20px">
+                                <img src="/storage/uploads/2018/12/06/1975a6764e5e70c07acaf7aeca62c043.png" width="190" height="190">
+                                <p class="f16"> 897披萨</p>
+                                <p class="f14">
+                                    投资金额：<b class="s-oe">9万~22万</b>
+                                </p>
+                                <p class="h72">897披萨是经营意大利式外卖披萨的连锁企业，897披萨属于江苏省北塘区西岸边披萨屋，在市场上有着较高的品牌知名度及成熟的品牌推广传播体系。897披萨公司拥有自己的披萨研发部门，并重金从意大</p>
+                                <div class="btn-bar">
+                                    <a target="_blank" href="/brand/2163/" class="btn btn-oe-line fl">详细考察</a><a href="javascript:void(0);" class="btn btn-oe fr btn-wyzx">我要咨询</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item swiper-slide">
+                            <div style="padding:0 20px">
+                                <img src="/storage/uploads/2018/12/06/178ab59e1de1ea58ad3f81868c6bb9ad.jpg" width="190" height="190">
+                                <p class="f16"> 苗员外简餐</p>
+                                <p class="f14">
+                                    投资金额：<b class="s-oe">6万~22万</b>
+                                </p>
+                                <p class="h72">不知不觉快节奏的生活悄然而至，人们的生活越来越没有规律，再加上饮食不够科学等问题，
+                                    人们对于健康的饮食习惯越来越重视，无论在大城小县都有需求，且在各年龄段的分布也较为均匀。那么在快</p>
+                                <div class="btn-bar">
+                                    <a target="_blank" href="/brand/2162/" class="btn btn-oe-line fl">详细考察</a><a href="javascript:void(0);" class="btn btn-oe fr btn-wyzx">我要咨询</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <ul class="gongju">
-                <li style="margin-left: 0px;margin-top: 0px;">
-                    <img src="/frontend/images/con1-right_28.png" />
-                    <a href="">成本计算</a>
-                </li>
-                <li style="margin-top: 0px;">
-                    <img src="/frontend/images/con1-right_30.png" />
-                    <a href="">贷款计算</a>
-                </li>
-                <li style="margin-top: 0px;">
-                    <img src="/frontend/images/con1-right_33.png" style="margin-top: 12px;"/>
-                    <a href="">投资预算</a>
-                </li>
-                <li style="margin-left: 0px;">
-                    <img src="/frontend/images/con1-right_55.png" style="margin-top: 11px;" />
-                    <a href="">创业红包</a>
-                </li>
-                <li>
-                    <img src="/frontend/images/con1-right_52.png" style="margin-top: 10px;" />
-                    <a href="">先行赔付</a>
-                </li>
-                <li>
-                    <img src="/frontend/images/con1-right_39.png"  style="margin-top: 0px;"/>
-                    <a href="">金融支持</a>
-                </li>
-            </ul>
         </div>
-
     </div>
 
-    <div class="con2 center">
+    <div class="con2 center box-shadow">
         <div class="con2-left">
-            <h1 class="con2-left-top-1">品牌推荐</h1>
+            <h1 class="con2-left-top-1">干洗店连锁品牌推荐</h1>
             <a href="" class="con2-left-top-2">查看更多</a>
             <div class="con2-left-xian"></div>
 
@@ -164,8 +192,6 @@
             </div>
 
             <div class="con2-left-right">
-
-
                     <dl>
                         <dt>
                             <img src="/frontend/images/con2-left-right_07.png" alt="">
@@ -256,8 +282,7 @@
 
         </div>
         <div class="con2-right">
-            <h1 class="con2-right-top-1">排行榜</h1>
-            <div></div>
+            <h1 class="con2-right-top-1" id="paihangbang">排行榜</h1>
             <img src="/frontend/images/con2-right_11.png"  class="con2-right-img"/>
             <ul class="con2-left-ul1">
                 <li style="margin-top: 0px;">
@@ -297,7 +322,7 @@
         <img src="/frontend/images/xitian-con1_18.png" />
     </div>
 
-    <div class="con3 center">
+    <div class="con3 center box-shadow">
         <div class="con3-left">
 
             <h1 class="con2-left-top-1">新品推荐</h1>
@@ -436,7 +461,7 @@
         <img src="/frontend/images/xitiao-con2_43.png" />
     </div>
 
-    <div class="con4 center">
+    <div class="con4 center box-shadow">
         <div class="con4-left">
             <h1 class="con4-left-top-1">设备推荐</h1>
             <a href="" class="con4-left-top-2">查看更多</a>
@@ -557,7 +582,7 @@
         <img src="/frontend/images/xitiao-con3_78.png" />
     </div>
 
-    <div class="con5 center">
+    <div class="con5 center box-shadow">
         <div class="con5-left">
             <h1 class="con5-left-top-1">样板店</h1>
             <a href="" class="con5-left-top-2">查看更多</a>
@@ -666,8 +691,23 @@
             </ul>
         </div>
     </div>
+</div>
 @stop
 @section('footerlibs')
-    <script src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/slide.js"></script>
+    <script src="http://www.xiuxianshipin.com//frontend/js/jquery.min.js"></script>
+    <script src="http://www.xiuxianshipin.com/frontend/js/swiper.min.js"></script>
+    <script>
+        var mySwiper = new Swiper ('.swiper-container', {
+            direction: 'horizontal',
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                stopOnLastSlide: false,
+                disableOnInteraction: true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+    </script>
 @stop

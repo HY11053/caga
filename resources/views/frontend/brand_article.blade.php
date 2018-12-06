@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="/frontend/css/brand_article.css" />
 @stop
 @section('main_content')
+<div class="main_content">
     <div class="mianbaoxie center">
         <ul>
             <li><a href="index.html" style="margin-left: 0px;">首页</a></li>
@@ -150,7 +151,7 @@
     <div class="b_con3 center">
         <div class="b_con3-left">
             <ul class="b_con3-left-top">
-                <li style="width: 172px;font-weight: 550;"><a href="">特许经营信息</a></li>
+                <li style="width: 172px;font-weight: 500;"><a href="">特许经营信息</a></li>
                 <li><a href="">品牌介绍</a></li>
                 <li><a href="">品牌展示</a></li>
                 <li><a href="">投资分析</a></li>
@@ -510,7 +511,7 @@
             <div class="b_con3-right-2">
 
 
-                <h1>最新入驻品牌<a href="">更多</a></font></h1>
+                <h1>最新入驻品牌<a href="">更多</a></h1>
                 <div class="b_con3-right-2-xian"></div>
 
                 <ul>
@@ -651,5 +652,7 @@
             </div>
 
         </div>
+        <div class="clear"></div>
     </div>
+</div>
 @stop
