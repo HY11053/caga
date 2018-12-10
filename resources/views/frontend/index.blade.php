@@ -194,7 +194,7 @@
             <div class="con2-left-right">
                     <dl>
                         <dt>
-                            <img src="/frontend/images/con2-left-right_07.png" alt="">
+                            <a href="#"><img src="/frontend/images/con2-left-right_07.png" alt=""></a>
                             <div class="brandinfo">
                                 <strong>德奈福干洗</strong>
                                 <p>国际大品牌 轻松洗衣一站式</p>
@@ -671,7 +671,7 @@
         </div>
     </div>
 
-    <div class="foot">
+    <div class="flink">
         <div class="center">
             <p>
                 <img src="/frontend/images/youqiglianjie_20.png" />友情链接  :
@@ -686,8 +686,8 @@
                 <li><a href="">赛维干洗店加盟</a></li>
                 <li><a href="">象王干洗店加盟</a></li>
                 <li><a href="">咖啡店加盟</a></li>
-                <li><a href="" style="margin-top: 10px;">服装加盟</a></li>
-                <li><a href="" style="margin-top: 10px;">美博会</a></li>
+                <li><a href="">服装加盟</a></li>
+                <li><a href="">美博会</a></li>
             </ul>
         </div>
     </div>

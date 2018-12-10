@@ -432,20 +432,36 @@
         </div>
         <div class="clear"></div>
         <div class="pageinfo">
-            <div class="fenye">
-                <a href="" class="shangyiye">上一页</a>
-                <ul>
-                    <li><a href="" style="margin-left:0px ;">1</a></li>
-                    <li><a href="">2</a></li>
-                    <li><a href="">3</a></li>
-                    <li><a href="">4</a></li>
-                    <li><a href="">5</a></li>
-                    <li><a href="">6</a></li>
-                    <li><a href="">7</a></li>
-                    <li><a href="">8</a></li>
-                </ul>
-                <a href="" class="xiayiye">下一页</a>
-            </div>
+            <ul class="pagination">
+
+                <li class="disabled"><span>首页</span></li>
+
+
+
+
+
+                <li class="active"><span>1</span></li>
+                <li><a href="http://www.xiuxianshipin.com/nlist/2/page/2/">2</a></li>
+                <li><a href="http://www.xiuxianshipin.com/nlist/2/page/3/">3</a></li>
+                <li><a href="http://www.xiuxianshipin.com/nlist/2/page/4/">4</a></li>
+                <li><a href="http://www.xiuxianshipin.com/nlist/2/page/5/">5</a></li>
+                <li><a href="http://www.xiuxianshipin.com/nlist/2/page/6/">6</a></li>
+                <li><a href="http://www.xiuxianshipin.com/nlist/2/page/7/">7</a></li>
+                <li><a href="http://www.xiuxianshipin.com/nlist/2/page/8/">8</a></li>
+
+                <li class="disabled"><span>...</span></li>
+
+
+
+
+
+                <li><a href="http://www.xiuxianshipin.com/nlist/2/page/146/">146</a></li>
+                <li><a href="http://www.xiuxianshipin.com/nlist/2/page/147/">147</a></li>
+
+
+                <li><a href="http://www.xiuxianshipin.com/nlist/2/page/2/">下一页</a></li>
+            </ul>
+
             <div class="clear"></div>
         </div>
     </div>
