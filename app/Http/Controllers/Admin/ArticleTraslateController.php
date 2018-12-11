@@ -43,77 +43,37 @@ class ArticleTraslateController extends Controller
 
     public function getBrandArticles()
     {
-        $articles=DB::connection('jiaoyu')->select('SELECT * FROM jiaoyu_brandarticles  WHERE id>?',[0]);
-        foreach ($articles as $article)
-        {
-            $inserarticle=[];
-            $inserarticle['typeid']=$article->typeid;
-            $inserarticle['ismake']=$article->ismake;
-            $inserarticle['click']=$article->click;
-            $inserarticle['title']=$article->title;
-            $inserarticle['shorttitle']=$article->shorttitle;
-            $inserarticle['flags']=$article->flags;
-            $inserarticle['tags']=$article->tags;
-            $inserarticle['country']=$article->country;
-            $inserarticle['mid']=$article->mid;
-            $inserarticle['keywords']=$article->keywords;
-            $inserarticle['description']=$article->description;
-            $inserarticle['write']='梁李良';
-            $inserarticle['litpic']=$article->litpic;
-            $inserarticle['dutyadmin']=$article->dutyadmin;
-            $inserarticle['body']=$article->body;
-            $inserarticle['brandname']=$article->brandname;
-            $inserarticle['brandtime']=$article->brandtime;
-            $inserarticle['brandorigin']=$article->brandorigin;
-            $inserarticle['brandnum']=$article->brandnum;
-            $inserarticle['brandpay']=$article->brandpay;
-            $inserarticle['brandarea']=$article->brandarea;
-            $inserarticle['brandmap']=$article->brandmap;
-            $inserarticle['brandperson']=$article->brandperson;
-            $inserarticle['brandattch']=$article->brandattch;
-            $inserarticle['brandapply']=$article->brandapply;
-            $inserarticle['brandchat']=$article->brandchat;
-            $inserarticle['brandgroup']=$article->brandgroup;
-            $inserarticle['brandaddr']=$article->brandaddr;
-            $inserarticle['brandduty']=$article->brandduty;
-            $inserarticle['imagepics']=$article->imagepics;
-            $inserarticle['acreage']=$article->acreage;
-            $inserarticle['genre']=$article->genre;
-            $inserarticle['licenseno']=$article->licenseno;
-            $inserarticle['registeredcapital']=$article->registeredcapital;
-            $inserarticle['decorationpay']=$article->decorationpay;
-            $inserarticle['quartersrent']=$article->quartersrent;
-            $inserarticle['equipmentcost']=$article->equipmentcost;
-            $inserarticle['workingcapital']=$article->workingcapital;
-            $inserarticle['laborquarter']=$article->laborquarter;
-            $inserarticle['miscellaneous']=$article->miscellaneous;
-            $inserarticle['dailyvolume']=$article->dailyvolume;
-            $inserarticle['unitprice']=$article->unitprice;
-            $inserarticle['watercoal']=$article->watercoal;
-            $inserarticle['brandpsp']=$article->brandpsp;
-            Brandarticle::create($inserarticle);
-        }
-        Brandarticle::where('typeid',170)->update(['typeid'=>24]);
-        Brandarticle::where('typeid',169)->update(['typeid'=>23]);
-        Brandarticle::where('typeid',168)->update(['typeid'=>8]);
-        Brandarticle::where('typeid',167)->update(['typeid'=>10]);
-        Brandarticle::where('typeid',166)->update(['typeid'=>7]);
-        Brandarticle::where('typeid',165)->update(['typeid'=>22]);
-        Brandarticle::where('typeid',164)->update(['typeid'=>21]);
-        Brandarticle::where('typeid',163)->update(['typeid'=>13]);
-        Brandarticle::where('typeid',162)->update(['typeid'=>20]);
-        Brandarticle::where('typeid',161)->update(['typeid'=>19]);
-        Brandarticle::where('typeid',159)->update(['typeid'=>17]);
-        Brandarticle::where('typeid',158)->update(['typeid'=>9]);
-        Brandarticle::where('typeid',157)->update(['typeid'=>14]);
-        Brandarticle::where('typeid',156)->update(['typeid'=>16]);
-        Brandarticle::where('typeid',153)->update(['typeid'=>12]);
-        Brandarticle::where('typeid',152)->update(['typeid'=>15]);
-        Brandarticle::where('typeid',151)->update(['typeid'=>6]);
-        Brandarticle::where('typeid',150)->update(['typeid'=>5]);
-        Brandarticle::where('typeid',148)->update(['typeid'=>8]);
-        Brandarticle::where('typeid',147)->update(['typeid'=>4]);
-        Brandarticle::where('typeid',146)->update(['typeid'=>3]);
+        DB::connection('ganxidata')->table('ganxi_brandarticles')->orderBy('id')->chunk(100, function($articles) {
+            foreach ($articles as $article) {
+                $inserarticle = [];
+                $inserarticle['typeid'] = 1;
+                $inserarticle['ismake'] = 0;
+                $inserarticle['click'] = rand(1000, 8000);
+                $inserarticle['title'] = $article->title;
+                $inserarticle['shorttitle'] = $article->shorttitle;
+                $inserarticle['flags'] = $article->flags;
+                $inserarticle['tags'] = $article->tags;
+                $inserarticle['country'] = $article->country;
+                $inserarticle['mid'] = 1;
+                $inserarticle['keywords'] = $article->keywords;
+                $inserarticle['description'] = $article->description;
+                $inserarticle['write'] = '梁李良';
+                $inserarticle['litpic'] = $article->litpic;
+                $inserarticle['dutyadmin'] = $article->dutyadmin;
+                $inserarticle['body'] = $article->body;
+                $inserarticle['brandname'] = $article->brandname;
+                $inserarticle['brandtime'] = $article->brandtime;
+                $inserarticle['brandnum'] = $article->brandnum;
+                $inserarticle['brandpay'] = $article->brandpay;
+                $inserarticle['brandarea'] = $article->brandarea;
+                $inserarticle['brandmap'] = $article->brandmap;
+                $inserarticle['brandgroup'] = $article->brandgroup;
+                $inserarticle['brandaddr'] = $article->brandaddr;
+                $inserarticle['imagepics'] = $article->imagepics;
+                Brandarticle::create($inserarticle);
+            }
+        });
+        echo '导入成功';
     }
 
     public function getarctypes()

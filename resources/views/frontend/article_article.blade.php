@@ -16,19 +16,18 @@
 @section('main_content')
 <div class="main_content">
     <div class="mianbaoxie center">
-        <p><a href="index.html" style="margin-left: 0px;">首页</a> > <a href="">创业资讯</a> > <a href="">北京蓝箭空间科技有限公司</a></p>
+        <p><a href="{{config('app.url')}}" style="margin-left: 0px;">首页</a> > <a href="">{{$thisarticleinfos->arctype->typename}}</a> > <a href="{{$thisarticleinfos->arctype->reap_path}}">{{$thisarticleinfos->title}}</a></p>
     </div>
 
     <div class="ar_con1 center">
         <div class="ar_con1-left">
             <div class="ar_con1-left-top">
-                <h1>威特斯国际干洗怎么加盟?投资少&nbsp;利润高&nbsp;经营压力小</h1>
-                <p>2018-10-12 10:03:51来源：中国休闲食品加盟网<font>加盟指南</font></p>
+                <h1>{{$thisarticleinfos->title}}</h1>
+                <p>{{$thisarticleinfos->created_at}}来源：{{config('app.indexname')}}<font>{{$thisarticleinfos->arctype->typename}}</font></p>
             </div>
 
             <div class="ar_con1-left-con1">
                 <img src="/frontend/images/putongwendang-tu1_03.png" />
-
                 <ul class="ar_con1-ul1">
                     <li><p style="margin-top: 0px;">加盟人气：</p></li>
                     <li><p>加盟费用：</p></li>
@@ -39,7 +38,6 @@
                     <li><p>品牌详情：</p></li>
                     <li><p>项目咨询：</p></li>
                 </ul>
-
                 <ul class="ar_con1-ul2">
                     <li><p style="margin-top: 0px;">480</p></li>
                     <li><p>面议</p></li>
@@ -52,47 +50,8 @@
                 </ul>
             </div>
 
-            <p class="ar_con1-left-con2">
-                如今人们的消费水平提高了，对产品的品质要求也是越来越高。那么就要选择一个消费者认可的品牌，才会帮助<br />
-                加盟商更好的创业。在市场发展多年的回头客，口碑最佳，品牌产品销售好。零食行业的投资成本比较少，利润<br />
-                大。零食行业发展是大家都非常认可的，这么好的创业项目不要错了。
-            </p>
-
-            <div class="ar_con1-left-con3">
-                <h1>回头客加盟优势有哪些</h1>
-                <ul>
-                    <li><p style="margin-top: 0px;">1、品牌支持：回头客授权合作伙伴使用品牌，拥有公司品牌资源，享受品牌网络规模影响力。
-
-
-                        </p></li>
-                    <li><p style="line-height: 28px;">2、店面选址：总部专业的拓展部人员将协助您做好当地市场调查及商圈分析，工作人员将向您提供具有市场价值<br />
-                            选址评估，对客户前期的资金投入、店铺营运成本、营业销售估算、回报预测等方向进行预算，使您估算出投资<br />
-                            此项目的可行性，避免投资风险。</p></li>
-                    <li><p>3、装修设计：回头客有偿提供陈列柜、收银台、形象墙、店头招牌、特价车等，让你的装修更省心省钱。</p></li>
-                    <li><p style="line-height: 28px;">4、开业促销方案的拟定：公司营运部人员会根据当地的市场情况结合自身的经验拟定一套行之有效的开业促销方<br />
-                            案，让加盟商开业一炮打红。</p></li>
-                </ul>
-            </div>
-
-            <div class="ar_con1-left-con4">
-                <h1>回头客食品怎么加盟</h1>
-                <ul>
-                    <li><p style="margin-top: 0px;">1、投资咨询：创业者可以通过浏览官方网站、电话咨询、寄发资料等方式了解总部的加盟信息。</p></li>
-                    <li><p>2、实地考察：携个人身份证件赴总部现场参观、考察、洽谈，了解项目及加盟合作具体事宜。</p></li>
-                    <li><p>3、资格审核：总部对投资者进行审核。确认投资者的合作资格。</p></li>
-                    <li><p>4、签订合同：双方确认考察结果无争议，正式签订合同。</p></li>
-                    <li><p>5、缴纳费用：投资者按所选择的投资类型向总部交纳相关的费用。</p></li>
-                    <li><p>6、总部培训：总部安排投资者进行技术培训，培训合格后颁发授权铜牌。</p></li>
-                    <li><p>7、店面装修：总部为加盟者提供装修指导，与设计指导。</p></li>
-                    <li><p>8、开业：总部持续关注加盟者的经营情况，并给予经营指导与帮助。</p></li>
-                </ul>
-
-                <p class="ar_con4-p-bottom">
-                    选择回头客，门槛低，适合各种投资者，是创业加盟的优质好项目。该公司秉承以客户的需求为唯一的宗旨，带<br />
-                    着让创业更轻松的企业使命，以极低的同类产品加盟费用，良好的服务态度和完善的加盟培训机制，打造一个市<br />
-                    场广阔、投资门槛低的创业项目。
-                </p>
-
+            <div class="content col-{{rand(1,150000)}}{{rand(1,10000)}}">
+                {!! $thisarticleinfos->body !!}
             </div>
 
             <div class="biaoqian">
@@ -321,6 +280,7 @@
             </div>
 
         </div>
+        <div class="clear"></div>
     </div>
 
 </div>
