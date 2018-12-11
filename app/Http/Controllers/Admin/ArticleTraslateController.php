@@ -6,6 +6,7 @@ use App\AdminModel\Arctype;
 use App\AdminModel\Area;
 use App\AdminModel\Brandarticle;
 use App\AdminModel\Production;
+use App\Scopes\PublishedScope;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -16,35 +17,27 @@ class ArticleTraslateController extends Controller
 
     public function getArticles()
     {
-        $articles=DB::connection('jiaoyu')->select('SELECT * FROM jiaoyu_archives  WHERE id> ?',[0]);
-        foreach ($articles as $article)
-        {
-            $inserarticle=[];
-            $inserarticle['typeid']=$article->typeid;
-            $inserarticle['brandid']=$article->brandid;
-            $inserarticle['title']=$article->title;
-            $inserarticle['litpic']=$article->litpic;
-            $inserarticle['tags']=$article->tags;
-            $inserarticle['keywords']=$article->keywords;
-            $inserarticle['description']=$article->description;
-            $inserarticle['body']=$article->body;
-            $inserarticle['click']=$article->click;
-            $inserarticle['flags']=$article->flags;
-            $inserarticle['ismake']=$article->ismake;
-            $inserarticle['mid']=0;
-            $inserarticle['write']='梁李良';
-            $inserarticle['dutyadmin']=1;
-            $inserarticle['shorttitle']=$article->shorttitle;
-            $inserarticle['bdname']=$article->bdname;
-            $inserarticle['created_at']=Carbon::now();
-            $inserarticle['updated_at']=$inserarticle['created_at'];
-            $inserarticle['published_at']=$inserarticle['created_at'];
-            Archive::create($inserarticle);
-        }
-        Archive::where('typeid',139)->update(['typeid'=>25]);
-        Archive::where('typeid',171)->update(['typeid'=>26]);
-        Archive::where('typeid',172)->update(['typeid'=>2]);
-        Archive::where('typeid',174)->update(['typeid'=>27]);
+        DB::connection('ganxidata')->table('ganxi_articles')->orderBy('id')->chunk(100, function($articles) {
+            foreach ($articles as $article) {
+                $inserarticle=[];
+                if (!Archive::withoutGlobalScope(PublishedScope::class)->where('url',$article->url)->value('url'))
+                {
+                    $inserarticle['typeid']=9;
+                    $inserarticle['title']=$article->title;
+                    $inserarticle['body']=preg_replace("/<a[^>]*>(.*?)<\/a>/is", "$1", htmlspecialchars_decode($article->body));
+                    $inserarticle['click']=rand(1000,5000);
+                    $inserarticle['ismake']=0;
+                    $inserarticle['url']=$article->url;
+                    $inserarticle['mid']=0;
+                    $inserarticle['write']='梁李良';
+                    $inserarticle['dutyadmin']=1;
+                    $inserarticle['created_at']=Carbon::now();
+                    $inserarticle['updated_at']=$inserarticle['created_at'];
+                    $inserarticle['published_at']=$inserarticle['created_at'];
+                    Archive::create($inserarticle);
+                }
+            }
+        });
         echo '导入成功！';
     }
 

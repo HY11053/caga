@@ -146,4 +146,5 @@ Route::group(['prefix' => 'admin'],function ()
     Route::get('checktool/articletime','CheckToolsController@updateArticleTime');
     Route::post('acreage/edit/{id}','AcreageMentController@postAcreageMentEdit');
     Route::get('/captcha/{config?}','CaptchasController@Captchas');
+    Route::get('articletranslate/getarticle','ArticleTraslateController@getArticles');
 });
