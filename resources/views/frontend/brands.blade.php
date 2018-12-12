@@ -57,12 +57,10 @@
             <li><a href="">辽宁</a></li>
             <li><a href="">内蒙</a></li>
         </ul>
-
-
     </div>
 
     <div class="bl_con2 center box-shadow">
-        <h1>品牌招商项目列表</h1>
+        <div class="brand_head">品牌招商项目列表</div>
         <ul>
             <li><a href="" style="margin-left: 0px;">默认排序</a></li>
             <li><p>|</p></li>
@@ -82,7 +80,7 @@
                     </div>
                     <a target="_blank" href="/{{$pagelist->arctype->real_path}}/{{$pagelist->id}}.shtml/" class="img-block magnify"><img src="{{$pagelist->litpic}}" alt="{{$pagelist->brandname}}"></a>
                     <div class="f20">
-                        <a target="_blank" href="/{{$pagelist->arctype->real_path}}/{{$pagelist->id}}.shtml">{{$pagelist->brandname}}</a>
+                        <h3><a target="_blank" href="/{{$pagelist->arctype->real_path}}/{{$pagelist->id}}.shtml">{{$pagelist->brandname}}</a></h3>
                     </div>
                     <div class="info">
                         <span title="{{$pagelist->brandpay}}">投资金额：<b class="s-oe">{{$pagelist->brandpay}}</b></span><span title="30-50平米㎡">所需面积：<b class="s-oe">30-50平米㎡</b></span>
@@ -98,7 +96,7 @@
         </div>
         <div class="bl_con3-right">
             <div class="bl_con3-right-1 box-shadow">
-                <h1>品牌排行榜<a href="">关注量</a></h1>
+                <h3>干洗品牌排行榜关注量</h3>
                 <div class="bl_con3-right-1-xian"></div>
                 <ul>
                     @foreach($topbrands as $index=>$topbrand)
@@ -116,12 +114,12 @@
             </div>
 
             <div class="bl_con3-right-2 box-shadow">
-                <h1>品牌招商热门加盟项目<a href="">更多</a>></h1>
+                <h3>干洗店加盟优选品牌</h3>
                 <div class="bl_con3-right-2-xian"></div>
 
                 <ul>
                     @foreach($hotbrands as $hotbrand)
-                    <li>
+                    <li @if($loop->first) class="mt0" @endif>
                         <a href=""><img src="{{$hotbrand->litpic}}" /></a>
                         <a href="" class="a3">{{$hotbrand->brandname}}</a>
                         <p>
@@ -131,16 +129,13 @@
                     </li>
                   @endforeach
                 </ul>
-
             </div>
-
             <div class="bl_con3-right-3 box-shadow">
-                <h1>加盟咨询<a href="">更多</a></h1>
+                <h3>干洗店加盟资讯</h3>
                 <div class="bl_con3-right-3-xian"></div>
-
                 <ul>
                     @foreach($cnewslists as $cnewslist)
-                    <li>
+                    <li  @if($loop->first) class="mt0" @endif>
                         <a href="/{{$cnewslist->arctype->real_path}}/{{$cnewslist->id}}.shtml"><img src="{{$cnewslist->litpic}}" /></a>
                         <a href="/{{$cnewslist->arctype->real_path}}/{{$cnewslist->id}}.shtml" class="a4">{{$cnewslist->title}}</a>
                         <p>{{str_limit($cnewslist->description,60,'...')}}</p>
@@ -148,6 +143,7 @@
                     @endforeach
                 </ul>
             </div>
+            <div class="clear"></div>
         </div>
         <div class="clear"></div>
         <div class="pageinfo">

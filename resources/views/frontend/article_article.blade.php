@@ -1,5 +1,5 @@
 @extends('frontend.frontend')
-@section('title'){{$thisarticleinfos->title}}-{{$indexname}}@stop
+@section('title'){{$thisarticleinfos->title}}-{{config('app.name')}}@stop
 @section('description'){{$thisarticleinfos->description}}@stop
 @section('headlibs')
     <meta name="Copyright" content="{{config('app.name')}}-{{config('app.url')}}"/>
@@ -115,167 +115,64 @@
                 <h1>赛维加盟咨询</h1>
                 <div></div>
                 <ul>
-                    <li><a href="" style="margin-top: 0px;">公主驾到休闲食品加盟赚钱吗？</a></li>
-                    <li><a href="">万元起步 盈利更轻松公主驾到加盟条件有哪些？</a></li>
-                    <li><a href="">加盟门槛低 品牌知名度高公主驾到加盟利润怎么样？</a></li>
-                    <li><a href="">小投资大回报公主驾到零食加盟费是多少?</a></li>
-                    <li><a href="">投入低 致富快加盟公主驾到零食店如何让生意更好？</a></li>
-                </ul>
-                <ul>
-                    <li><a href="" style="margin-top: 0px;">经营技巧要掌握公主驾到休闲零食加盟的做法有哪些？</a></li>
-                    <li><a href="">首先需要咨询公主驾到零食加盟店怎么做好经营管理？</a></li>
-                    <li><a href="">合理装修很重要开公主驾到加盟店赚钱的概率大吗？</a></li>
-                    <li><a href="">轻松赚钱公主驾到零食店加盟，买车买房轻轻松松！</a></li>
-                    <li><a href="">公主驾到零食店加盟，加盟一年轻松拿下女神！</a></li>
+                    @foreach($xg_search as $search)
+                    <li><a href="/{{$search->arctype->real_path}}/{{$search->id}}.shtml" >{{$search->title}}</a></li>
+                    @endforeach
                 </ul>
             </div>
 
         </div>
         <div class="ar_con1-right">
 
-            <div class="ar_con1-right-1">
-                <h1>品牌排行榜<a href="">关注量</a></h1>
-                <div class="ar_con1-right-1-xian"></div>
+            <div class="bl_con3-right-1 box-shadow">
+                <h3>干洗品牌排行榜</h3>
+                <div class="bl_con3-right-1-xian"></div>
                 <ul>
-                    <li style="margin-top: 0px;">
-                        <a href=""><img src="/frontend/images/con3-right-1_06.png" /></a>
-                        <a href="" class="a2"><span>NO1</span><span style="color:#494949;">.威特斯国际干洗</span><br />
-                            一家国际知名干洗店，权<br />
-                            威认证 </a>
-                    </li>
+                    @foreach($topbrands as $index=>$topbrand)
+                        <li>
+                            <a href="/{{$topbrand->arctype->real_path}}/{{$topbrand->id}}.shtml"><img src="{{$topbrand->litpic}}" /></a>
+                            <dl class="paihangbf">
+                                <dt class="a2"><span>NO{{$index+1}}.</span><a class="b_tit" href="/{{$topbrand->arctype->real_path}}/{{$topbrand->id}}.shtml">{{$topbrand->brandname}}</a></dt>
+                                <dd>
+                                    项目特色:{{$topbrand->brandpsp}}
+                                </dd>
+                            </dl>
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
+            <div class="conl2-right-3 box-shadow">
 
-                    <li>
-                        <a href=""><img src="/frontend/images/con3-right-1_06.png" /></a>
-                        <a href="" class="a2"><span>NO2</span><span style="color:#494949;">.威特斯国际干洗</span><br />
-                            一家国际知名干洗店，权<br />
-                            威认证 </a>
-                    </li>
 
-                    <li>
-                        <a href=""><img src="/frontend/images/con3-right-1_06.png" /></a>
-                        <a href="" class="a2"><span>NO3</span><span style="color:#494949;">.威特斯国际干洗</span><br />
-                            一家国际知名干洗店，权<br />
-                            威认证 </a>
-                    </li>
+                <h3>最新入驻品牌<a href="/{{\App\AdminModel\Arctype::where('id',1)->value('real_path')}}/">更多</a></h3>
+                <div class="conl2-right-3-xian"></div>
 
-                    <li>
-                        <a href=""><img src="/frontend/images/con3-right-1_06.png" /></a>
-                        <a href="" class="a2"><span>NO4</span><span style="color:#494949;">.威特斯国际干洗</span><br />
-                            一家国际知名干洗店，权<br />
-                            威认证 </a>
-                    </li>
-
-                    <li>
-                        <a href=""><img src="/frontend/images/con3-right-1_06.png" /></a>
-                        <a href="" class="a2"><span>NO5</span><span style="color: #494949;">.威特斯国际干洗</span><br />
-                            一家国际知名干洗店，权<br />
-                            威认证 </a>
-                    </li>
+                <ul>
+                    @foreach($latestbrands as $latestbrand)
+                        <li @if($loop->first) class="mt0" @endif>
+                            <a href="/{{$latestbrand->arctype->real_path}}/{{$latestbrand->id}}.shtml"><img src="{{$latestbrand->litpic}}" /></a>
+                            <a href="" class="a3">{{$latestbrand->brandname}}</a>
+                            <p>
+                                投资金额 ： <span>{{$latestbrand->brandpay}}</span><br />
+                                加盟门店数 ： <span>{{$latestbrand->brandnum}}</span>
+                            </p>
+                        </li>
+                    @endforeach
                 </ul>
 
             </div>
-
-            <div class="ar_con1-right-2">
-
-
-                <h1>最新入驻品牌<a href="">更多</a></h1>
-                <div class="ar_con1-right-2-xian"></div>
+            <div class="conl2-right-4 box-shadow">
+                <h3>最新加盟资讯<a href="">更多</a></h3>
+                <div class="conl2-right-4-xian"></div>
 
                 <ul>
-                    <li style="margin-top: 0px;">
-                        <a href=""><img src="/frontend/images/con3-rught-2-tu_10.png" /></a>
-                        <a href="" class="a3">赛维干洗店</a>
-                        <p>
-                            投资金额 ： <span>5万以下</span><br />
-                            加盟门店数 ： <span>3456</span>
-                        </p>
-                    </li>
-
-                    <li>
-                        <a href=""><img src="/frontend/images/con3-rught-2-tu_10.png" /></a>
-                        <a href=""  class="a3">赛维干洗店</a>
-                        <p>
-                            投资金额 ： <span>5万以下</span><br />
-                            加盟门店数 ： <span>3456</span>
-                        </p>
-                    </li>
-
-                    <li>
-                        <a href=""><img src="/frontend/images/con3-rught-2-tu_10.png" /></a>
-                        <a href=""  class="a3">赛维干洗店</a>
-                        <p>
-                            投资金额 ： <span>5万以下</span><br />
-                            加盟门店数 ： <span>3456</span>
-                        </p>
-                    </li>
-
-                    <li>
-                        <a href=""><img src="/frontend/images/con3-rught-2-tu_10.png" /></a>
-                        <a href="" class="a3">赛维干洗店</a>
-                        <p>
-                            投资金额 ： <span>5万以下</span><br />
-                            加盟门店数 ： <span>3456</span>
-                        </p>
-                    </li>
-
-                    <li>
-                        <a href=""><img src="/frontend/images/con3-rught-2-tu_10.png" /></a>
-                        <a href="" class="a3">赛维干洗店</a>
-                        <p>
-                            投资金额 ： <span>5万以下</span><br />
-                            加盟门店数 ： <span>3456</span>
-                        </p>
-                    </li>
-
-
-
-
-                </ul>
-
-
-
-            </div>
-
-            <div class="ar_con1-right-3">
-                <h1>最新加盟资讯<a href="">更多</a></h1>
-                <div class="ar_con1-right-3-xian"></div>
-
-                <ul>
-                    <li style="margin-top: 0px;">
-                        <a href=""><img src="/frontend/images/con2-right-4_13.png" /></a>
-                        <a href="" class="a4">1988豆花加盟条件是什么？</a>
-                        <p>2018-10-12<span>11:51:57</span></p>
-                    </li>
-
-                    <li>
-                        <a href=""><img src="/frontend/images/con2-right-4_13.png" /></a>
-                        <a href="" class="a4">1988豆花加盟条件是什么？</a>
-                        <p>2018-10-12<span>11:51:57</span></p>
-                    </li>
-
-                    <li>
-                        <a href=""><img src="/frontend/images/con2-right-4_13.png" /></a>
-                        <a href="" class="a4">1988豆花加盟条件是什么？</a>
-                        <p>2018-10-12<span>11:51:57</span></p>
-                    </li>
-
-                    <li>
-                        <a href=""><img src="/frontend/images/con2-right-4_13.png" /></a>
-                        <a href="" class="a4">1988豆花加盟条件是什么？</a>
-                        <p>2018-10-12<span>11:51:57</span></p>
-                    </li>
-
-                    <li>
-                        <a href=""><img src="/frontend/images/con2-right-4_13.png" /></a>
-                        <a href="" class="a4">1988豆花加盟条件是什么？</a>
-                        <p>2018-10-12<span>11:51:57</span></p>
-                    </li>
-
-                    <li>
-                        <a href=""><img src="/frontend/images/con2-right-4_13.png" /></a>
-                        <a href="" class="a4">1988豆花加盟条件是什么？</a>
-                        <p>2018-10-12<span>11:51:57</span></p>
-                    </li>
+                    @foreach($latesenews as $latesenew)
+                        <li @if($loop->first) class="mt0" @endif>
+                            <a href="/{{$latesenew->arctype->real_path}}/{{$latesenew->id}}.shtml"><img src="{{$latesenew->litpic}}" /></a>
+                            <a href="" class="a4">{{$latesenew->title}}</a>
+                            <p>{{$latesenew->created_at}}</p>
+                        </li>
+                    @endforeach
                 </ul>
             </div>
 

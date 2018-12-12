@@ -28,7 +28,7 @@ class ArticleController extends Controller
             if (isset($thisBrandArticle->id))
             {
                 $brandtypeid=Brandarticle::where('id',$thisarticleinfos->brandid)->value('typeid');
-                $topbrands=Brandarticle::where('mid','1')->where('typeid',$brandtypeid)->take(10)->orderBy('click','desc')->get();
+                $topbrands=Brandarticle::where('mid','1')->where('typeid',$brandtypeid)->take(5)->orderBy('click','desc')->get();
                 $hotnewslists=Archive::whereIn('brandid',Brandarticle::where('typeid',$brandtypeid)->pluck('id'))->where('brandid','<>',$thisarticleinfos->brandid)->take(10)->latest()->get();
                 $cnew=Archive::whereIn('brandid',Brandarticle::where('typeid',$brandtypeid)->pluck('id'))->where('brandid','<>',$thisarticleinfos->brandid)->latest()->first();
                 $xg_search=Archive::where('title','like','%'.$thisBrandArticle->brandname.'%')->take(10)->latest()->get();
@@ -36,14 +36,14 @@ class ArticleController extends Controller
             }else{
                 $hotnewslists=Archive::where('typeid',Arctype::where('id',Archive::where('id',$id)->value('typeid'))->value('id'))->where('flags','like','%c%')->take(10)->latest()->get();
                 $cnew=Archive::where('typeid',Arctype::where('id',Archive::where('id',$id)->value('typeid'))->value('id'))->where('flags','like','%c%')->latest()->first();
-                $topbrands=Brandarticle::where('mid','1')->take(10)->orderBy('click','desc')->get();
+                $topbrands=Brandarticle::where('mid','1')->take(5)->orderBy('click','desc')->get();
                 $xg_search=Archive::where('typeid',$thisarticleinfos->typeid)->take(10)->latest()->get();
                 $abrandlists=Brandarticle::where('mid','1')->where('flags','like','%'.'a'.'%')->take(4)->orderBy('id','desc')->get();
             }
         }else{
             $hotnewslists=Archive::where('typeid',Arctype::where('id',Archive::where('id',$id)->value('typeid'))->value('id'))->where('flags','like','%c%')->take(10)->latest()->get();
             $cnew=Archive::where('typeid',Arctype::where('id',Archive::where('id',$id)->value('typeid'))->value('id'))->where('flags','like','%c%')->latest()->first();
-            $topbrands=Brandarticle::where('mid','1')->take(10)->orderBy('click','desc')->get();
+            $topbrands=Brandarticle::where('mid','1')->take(5)->orderBy('click','desc')->get();
             $xg_search=Archive::where('typeid',$thisarticleinfos->typeid)->take(10)->latest()->get();
             $abrandlists=Brandarticle::where('mid','1')->where('flags','like','%'.'a'.'%')->take(4)->orderBy('id','desc')->get();
         }
@@ -51,10 +51,9 @@ class ArticleController extends Controller
         DB::table('archives')->where('id',$id)->update(['click'=>$thisarticleinfos->click+1,'published_at'=>$published]);
         $prev_article = Archive::latest('published_at')->find($this->getPrevArticleId($thisarticleinfos->id));
         $next_article = Archive::latest('published_at')->find($this->getNextArticleId($thisarticleinfos->id));
-        $flashlingshibrands=Brandarticle::where('mid','1')->where('flags','like','%'.'c'.'%')->take(5)->orderBy('id','desc')->get();
-        $indexname=$thisarticleinfos->nid?'中国教育招商网':'中国教育招商网';
-        $latestnewslists=Archive::where('typeid',5)->take(4)->latest()->get();
-        return view('frontend.article_article',compact('thisarticleinfos','thisBrandArticle','prev_article','next_article','xg_search','indexname','cnewslists','flashlingshibrands','hotnewslists','topbrands','latestnewslists','abrandlists','cnew'));
+        $latestbrands=Brandarticle::where('mid','1')->latest()->take(5)->orderBy('id','desc')->get();
+        $latesenews=Archive::where('typeid','<>',$thisarticleinfos->arctype->id)->take(7)->latest()->get();
+        return view('frontend.article_article',compact('thisarticleinfos','thisBrandArticle','prev_article','next_article','xg_search','latestbrands','cnewslists','flashlingshibrands','hotnewslists','topbrands','latesenews','abrandlists','cnew'));
     }
 
     /**品牌文档界面

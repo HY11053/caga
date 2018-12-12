@@ -159,7 +159,6 @@
                 <div class="xiaokuai6"></div>
                 <h1>{{$thisarticleinfos->brandname}}<font>运营综合分析</font></h1>
                 <div class="b_con3-6-xian"></div>
-
                 <table>
                     <tbody>
                     <tr>
@@ -185,7 +184,6 @@
                         <td class="td_style">2605</td>
                         <td class="td_color">水电煤(元/月)</td>
                         <td class="td_style">448</td>
-
                     </tr>
                     <tr>
                         <td class="td_color">日成交量</td>
@@ -266,154 +264,52 @@
                 <h1>赛维加盟咨询</h1>
                 <div class="b_con3-8-xian"></div>
                 <ul>
-                    <li><a href="" style="margin-top: 0px;">公主驾到休闲食品加盟赚钱吗？</a></li>
-                    <li><a href="">万元起步 盈利更轻松公主驾到加盟条件有哪些？</a></li>
-                    <li><a href="">加盟门槛低 品牌知名度高公主驾到加盟利润怎么样？</a></li>
-                    <li><a href="">小投资大回报公主驾到零食加盟费是多少?</a></li>
-                    <li><a href="">投入低 致富快加盟公主驾到零食店如何让生意更好？</a></li>
-                </ul>
-                <ul>
-                    <li><a href="" style="margin-top: 0px;">经营技巧要掌握公主驾到休闲零食加盟的做法有哪些？</a></li>
-                    <li><a href="">首先需要咨询公主驾到零食加盟店怎么做好经营管理？</a></li>
-                    <li><a href="">合理装修很重要开公主驾到加盟店赚钱的概率大吗？</a></li>
-                    <li><a href="">轻松赚钱公主驾到零食店加盟，买车买房轻轻松松！</a></li>
-                    <li><a href="">公主驾到零食店加盟，加盟一年轻松拿下女神！</a></li>
+                    @foreach($brandnews as $brandnew)
+                        <li><a href="/{{$brandnew->arctype->real_path}}/{{$brandnew->id}}.shtml">{{$brandnew->title}}</a></li>
+                    @endforeach
                 </ul>
             </div>
 
         </div>
         <div class="b_con3-right">
 
-            <div class="b_con3-right-1 box-shadow">
-                <h1>品牌排行榜<a href="">关注量</a></h1>
-                <div class="b_con3-right-1-xian"></div>
+            <div class="bl_con3-right-1 box-shadow">
+                <h3>干洗品牌排行榜</h3>
+                <div class="bl_con3-right-1-xian"></div>
                 <ul>
-                    <li style="margin-top: 0px;">
-                        <a href=""><img src="/frontend/images/con3-right-1_06.png" /></a>
-                        <a href="" class="a2"><font>NO1</font><font style="color:#494949;">.威特斯国际干洗</font><br />
-                            一家国际知名干洗店，权<br />
-                            威认证 </a>
-                    </li>
+                    @foreach($topbrands as $index=>$topbrand)
+                        <li>
+                            <a href="/{{$topbrand->arctype->real_path}}/{{$topbrand->id}}.shtml"><img src="/frontend/images/con3-right-1_06.png" /></a>
+                            <dl class="paihangbf">
+                                <dt class="a2"><span>NO{{$index+1}}.</span><a class="b_tit" href="/{{$topbrand->arctype->real_path}}/{{$topbrand->id}}.shtml">{{$topbrand->brandname}}</a></dt>
+                                <dd>
+                                    项目特色:{{$topbrand->brandpsp}}
+                                </dd>
+                            </dl>
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
+            <div class="conl2-right-3 box-shadow">
 
-                    <li>
-                        <a href=""><img src="/frontend/images/con3-right-1_06.png" /></a>
-                        <a href="" class="a2"><font>NO2</font><font style="color:#494949;">.威特斯国际干洗</font><br />
-                            一家国际知名干洗店，权<br />
-                            威认证 </a>
-                    </li>
 
-                    <li>
-                        <a href=""><img src="/frontend/images/con3-right-1_06.png" /></a>
-                        <a href="" class="a2"><font>NO3</font><font style="color:#494949;">.威特斯国际干洗</font><br />
-                            一家国际知名干洗店，权<br />
-                            威认证 </a>
-                    </li>
+                <h3>最新入驻品牌<a href="/{{\App\AdminModel\Arctype::where('id',1)->value('real_path')}}/">更多</a></h3>
+                <div class="conl2-right-3-xian"></div>
 
-                    <li>
-                        <a href=""><img src="/frontend/images/con3-right-1_06.png" /></a>
-                        <a href="" class="a2"><font>NO4</font><font style="color:#494949;">.威特斯国际干洗</font><br />
-                            一家国际知名干洗店，权<br />
-                            威认证 </a>
-                    </li>
-
-                    <li>
-                        <a href=""><img src="/frontend/images/con3-right-1_06.png" /></a>
-                        <a href="" class="a2"><font>NO5</font><font style="color: #494949;">.威特斯国际干洗</font><br />
-                            一家国际知名干洗店，权<br />
-                            威认证 </a>
-                    </li>
+                <ul>
+                    @foreach($latestbrands as $latestbrand)
+                        <li @if($loop->first) class="mt0" @endif>
+                            <a href="/{{$latestbrand->arctype->real_path}}/{{$latestbrand->id}}.shtml"><img src="{{$latestbrand->litpic}}" /></a>
+                            <a href="" class="a3">{{$latestbrand->brandname}}</a>
+                            <p>
+                                投资金额 ： <span>{{$latestbrand->brandpay}}</span><br />
+                                加盟门店数 ： <span>{{$latestbrand->brandnum}}</span>
+                            </p>
+                        </li>
+                    @endforeach
                 </ul>
 
             </div>
-
-            <div class="b_con3-right-2 box-shadow">
-
-
-                <h1>最新入驻品牌<a href="">更多</a></h1>
-                <div class="b_con3-right-2-xian"></div>
-
-                <ul>
-                    <li style="margin-top: 0px;">
-                        <a href=""><img src="/frontend/images/con3-rught-2-tu_10.png" /></a>
-                        <a href="" class="a3">赛维干洗店</a>
-                        <p>
-                            投资金额 ： <font>5万以下</font><br />
-                            加盟门店数 ： <font>3456</font>
-                        </p>
-                    </li>
-
-                    <li>
-                        <a href=""><img src="/frontend/images/con3-rught-2-tu_10.png" /></a>
-                        <a href=""  class="a3">赛维干洗店</a>
-                        <p>
-                            投资金额 ： <font>5万以下</font><br />
-                            加盟门店数 ： <font>3456</font>
-                        </p>
-                    </li>
-
-                    <li>
-                        <a href=""><img src="/frontend/images/con3-rught-2-tu_10.png" /></a>
-                        <a href=""  class="a3">赛维干洗店</a>
-                        <p>
-                            投资金额 ： <font>5万以下</font><br />
-                            加盟门店数 ： <font>3456</font>
-                        </p>
-                    </li>
-
-                    <li>
-                        <a href=""><img src="/frontend/images/con3-rught-2-tu_10.png" /></a>
-                        <a href="" class="a3">赛维干洗店</a>
-                        <p>
-                            投资金额 ： <font>5万以下</font><br />
-                            加盟门店数 ： <font>3456</font>
-                        </p>
-                    </li>
-
-                    <li>
-                        <a href=""><img src="/frontend/images/con3-rught-2-tu_10.png" /></a>
-                        <a href="" class="a3">赛维干洗店</a>
-                        <p>
-                            投资金额 ： <font>5万以下</font><br />
-                            加盟门店数 ： <font>3456</font>
-                        </p>
-                    </li>
-
-                    <li>
-                        <a href=""><img src="/frontend/images/con3-rught-2-tu_10.png" /></a>
-                        <a href=""  class="a3">赛维干洗店</a>
-                        <p>
-                            投资金额 ： <font>5万以下</font><br />
-                            加盟门店数 ： <font>3456</font>
-                        </p>
-                    </li>
-
-                    <li>
-                        <a href=""><img src="/frontend/images/con3-rught-2-tu_10.png" /></a>
-                        <a href=""  class="a3">赛维干洗店</a>
-                        <p>
-                            投资金额 ： <font>5万以下</font><br />
-                            加盟门店数 ： <font>3456</font>
-                        </p>
-                    </li>
-
-                    <li>
-                        <a href=""><img src="/frontend/images/con3-rught-2-tu_10.png" /></a>
-                        <a href=""  class="a3">赛维干洗店</a>
-                        <p>
-                            投资金额 ： <font>5万以下</font><br />
-                            加盟门店数 ： <font>3456</font>
-                        </p>
-                    </li>
-
-
-
-
-                </ul>
-
-
-
-            </div>
-
             <div class="b_con3-right-3 box-shadow">
                 <ul>
                     <li style="height: 59px;"><h1>干洗品牌加盟资讯</h1></li>

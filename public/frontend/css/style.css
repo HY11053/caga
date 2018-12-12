@@ -189,7 +189,7 @@ a.s-oe:hover { text-decoration: underline; }
 /***********paingahng***************/
 .box-shadow {	box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .05);}
 .xm-list-H224 {}
-.xm-list-H224 a{     color: #262626;     text-decoration: none;}
+.xm-list-H224 h3 a{  font-size: 16px;   color: #262626;     text-decoration: none;}
 .xm-list-H224 li {    float: left;    width: 670px;    height: 184px;    position: relative;    padding: 20px 20px 20px 160px;    background-color: #fff;    box-shadow: 0 1px 3px 0 rgba(0,0,0,.05);    transition: all .15s linear;    margin-bottom: 20px}
 .xm-list-H224 li .btn-duibi {    position: absolute;    top: 15px;    right: 15px;    display: none;    width: 60px;    height: 24px;    background-color: #bfbfbf;    border-radius: 3px;    line-height: 24px;    text-align: center;    color: #fff;    cursor: pointer;    transition: all .15s linear}
 .xm-list-H224 li .btn-duibi .icon-Contrast {    font-size: 14px;    margin: -3px 5px 0 0}
