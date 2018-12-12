@@ -24,28 +24,20 @@
     </div>
     <div class="center">
         <img src="/frontend/images/logo_03.png" class="logo" />
-        <form action="" method="post">
+        <form action="/sprodlist/all/" method="post">
             {{csrf_field()}}
             <input type="text" name="secrch" placeholder="请输入您感兴趣的项目名称" class="shuru">
             <input type="button" value="搜索"  class="sousuo">
         </form>
         <ul class="top-right">
             <li style="margin-left: 0px;"><img src="/frontend/images/top01.png" /><a href="/paihangbang/">排行榜</a></li>
-            <li> <img src="/frontend/images/top02.png" /><a href="/search/">项目搜索</a></li>
-            <li><img src="/frontend/images/top03.png" /><a href="pinpai">品类大全</a></li>
+            <li> <img src="/frontend/images/top02.png" /><a href="/sprodlist/all/">项目搜索</a></li>
+            <li><img src="/frontend/images/top03.png" /><a href="/{{\App\AdminModel\Arctype::where('id',1)->value('real_path')}}/">品牌大全</a></li>
         </ul>
         <ul class="nav2">
-            <li><p style="margin-left: 0px;">热门干洗品牌：</p></li>
-            <li><a href="">赛维干洗</a></li>
-            <li><p>|</p></li>
-            <li><a href="">洁丰干洗</a></li>
-            <li><p>|</p></li>
-            <li><a href="">欧瑞斯干洗</a></li>
-            <li><p>|</p></li>
-            <li><a href="">福奈特干洗</a></li>
+            <p id="hotsearch">热门干洗品牌：<a href="">UCC国际洗衣</a>|<a href="">福奈特干洗店</a>|<a href="">赛维干洗店</a></p>
         </ul>
     </div>
-
     <div class="xian1"></div>
     <div class="center">
         <ul class="nav">

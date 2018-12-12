@@ -23,7 +23,7 @@
         <div class="ar_con1-left">
             <div class="ar_con1-left-top">
                 <h1>{{$thisarticleinfos->title}}</h1>
-                <p>{{$thisarticleinfos->created_at}}来源：{{config('app.indexname')}}<font>{{$thisarticleinfos->arctype->typename}}</font></p>
+                <p>{{$thisarticleinfos->created_at}}来源：{{config('app.indexname')}}<span>{{$thisarticleinfos->arctype->typename}}</span></p>
             </div>
 
             <div class="ar_con1-left-con1">
@@ -62,21 +62,21 @@
 
             <div class="ar_con1-left-con5">
                 <div class="ar_con1-left-con5-top">
-                    <h1>给<font>赛维</font>留言，立即获得最新加盟资料</h1>
-                    <p>（<font>*</font>为必填选项）</p>
+                    <h1>给<span>赛维</span>留言，立即获得最新加盟资料</h1>
+                    <p>（<span>*</span>为必填选项）</p>
                 </div>
 
                 <ul class="ar_con5-ul1">
                     <li style="margin-top: 0px;">
-                        <p><font>*</font>姓名</p>
+                        <p><span>*</span>姓名</p>
                         <input type="text" placeholder="您的真实姓名"/>
                     </li>
                     <li>
-                        <p><font>*</font>手机</p>
+                        <p><span>*</span>手机</p>
                         <input type="text" placeholder="电话是与您联系的重要方式"/>
                     </li>
                     <li>
-                        <p><font>*</font>地址</p>
+                        <p><span>*</span>地址</p>
                         <input type="text" placeholder="与您联系的重要方式"/>
                     </li>
                 </ul>
@@ -93,7 +93,7 @@
                 </ul>
 
                 <div class="ar_con1-left-con5-bottom">
-                    <h1><font>*</font>留言</h1>
+                    <h1><span>*</span>留言</h1>
                     <textarea id="note" name="content" class="textarea_bk" placeholder="请输入您的留言内容或选择快捷留言"></textarea>
 
                     <ul>
@@ -139,35 +139,35 @@
                 <ul>
                     <li style="margin-top: 0px;">
                         <a href=""><img src="/frontend/images/con3-right-1_06.png" /></a>
-                        <a href="" class="a2"><font>NO1</font><font style="color:#494949;">.威特斯国际干洗</font><br />
+                        <a href="" class="a2"><span>NO1</span><span style="color:#494949;">.威特斯国际干洗</span><br />
                             一家国际知名干洗店，权<br />
                             威认证 </a>
                     </li>
 
                     <li>
                         <a href=""><img src="/frontend/images/con3-right-1_06.png" /></a>
-                        <a href="" class="a2"><font>NO2</font><font style="color:#494949;">.威特斯国际干洗</font><br />
+                        <a href="" class="a2"><span>NO2</span><span style="color:#494949;">.威特斯国际干洗</span><br />
                             一家国际知名干洗店，权<br />
                             威认证 </a>
                     </li>
 
                     <li>
                         <a href=""><img src="/frontend/images/con3-right-1_06.png" /></a>
-                        <a href="" class="a2"><font>NO3</font><font style="color:#494949;">.威特斯国际干洗</font><br />
+                        <a href="" class="a2"><span>NO3</span><span style="color:#494949;">.威特斯国际干洗</span><br />
                             一家国际知名干洗店，权<br />
                             威认证 </a>
                     </li>
 
                     <li>
                         <a href=""><img src="/frontend/images/con3-right-1_06.png" /></a>
-                        <a href="" class="a2"><font>NO4</font><font style="color:#494949;">.威特斯国际干洗</font><br />
+                        <a href="" class="a2"><span>NO4</span><span style="color:#494949;">.威特斯国际干洗</span><br />
                             一家国际知名干洗店，权<br />
                             威认证 </a>
                     </li>
 
                     <li>
                         <a href=""><img src="/frontend/images/con3-right-1_06.png" /></a>
-                        <a href="" class="a2"><font>NO5</font><font style="color: #494949;">.威特斯国际干洗</font><br />
+                        <a href="" class="a2"><span>NO5</span><span style="color: #494949;">.威特斯国际干洗</span><br />
                             一家国际知名干洗店，权<br />
                             威认证 </a>
                     </li>
@@ -186,8 +186,8 @@
                         <a href=""><img src="/frontend/images/con3-rught-2-tu_10.png" /></a>
                         <a href="" class="a3">赛维干洗店</a>
                         <p>
-                            投资金额 ： <font>5万以下</font><br />
-                            加盟门店数 ： <font>3456</font>
+                            投资金额 ： <span>5万以下</span><br />
+                            加盟门店数 ： <span>3456</span>
                         </p>
                     </li>
 
@@ -195,8 +195,8 @@
                         <a href=""><img src="/frontend/images/con3-rught-2-tu_10.png" /></a>
                         <a href=""  class="a3">赛维干洗店</a>
                         <p>
-                            投资金额 ： <font>5万以下</font><br />
-                            加盟门店数 ： <font>3456</font>
+                            投资金额 ： <span>5万以下</span><br />
+                            加盟门店数 ： <span>3456</span>
                         </p>
                     </li>
 
@@ -204,8 +204,8 @@
                         <a href=""><img src="/frontend/images/con3-rught-2-tu_10.png" /></a>
                         <a href=""  class="a3">赛维干洗店</a>
                         <p>
-                            投资金额 ： <font>5万以下</font><br />
-                            加盟门店数 ： <font>3456</font>
+                            投资金额 ： <span>5万以下</span><br />
+                            加盟门店数 ： <span>3456</span>
                         </p>
                     </li>
 
@@ -213,8 +213,8 @@
                         <a href=""><img src="/frontend/images/con3-rught-2-tu_10.png" /></a>
                         <a href="" class="a3">赛维干洗店</a>
                         <p>
-                            投资金额 ： <font>5万以下</font><br />
-                            加盟门店数 ： <font>3456</font>
+                            投资金额 ： <span>5万以下</span><br />
+                            加盟门店数 ： <span>3456</span>
                         </p>
                     </li>
 
@@ -222,8 +222,8 @@
                         <a href=""><img src="/frontend/images/con3-rught-2-tu_10.png" /></a>
                         <a href="" class="a3">赛维干洗店</a>
                         <p>
-                            投资金额 ： <font>5万以下</font><br />
-                            加盟门店数 ： <font>3456</font>
+                            投资金额 ： <span>5万以下</span><br />
+                            加盟门店数 ： <span>3456</span>
                         </p>
                     </li>
 
@@ -244,37 +244,37 @@
                     <li style="margin-top: 0px;">
                         <a href=""><img src="/frontend/images/con2-right-4_13.png" /></a>
                         <a href="" class="a4">1988豆花加盟条件是什么？</a>
-                        <p>2018-10-12<font>11:51:57</font></p>
+                        <p>2018-10-12<span>11:51:57</span></p>
                     </li>
 
                     <li>
                         <a href=""><img src="/frontend/images/con2-right-4_13.png" /></a>
                         <a href="" class="a4">1988豆花加盟条件是什么？</a>
-                        <p>2018-10-12<font>11:51:57</font></p>
+                        <p>2018-10-12<span>11:51:57</span></p>
                     </li>
 
                     <li>
                         <a href=""><img src="/frontend/images/con2-right-4_13.png" /></a>
                         <a href="" class="a4">1988豆花加盟条件是什么？</a>
-                        <p>2018-10-12<font>11:51:57</font></p>
+                        <p>2018-10-12<span>11:51:57</span></p>
                     </li>
 
                     <li>
                         <a href=""><img src="/frontend/images/con2-right-4_13.png" /></a>
                         <a href="" class="a4">1988豆花加盟条件是什么？</a>
-                        <p>2018-10-12<font>11:51:57</font></p>
+                        <p>2018-10-12<span>11:51:57</span></p>
                     </li>
 
                     <li>
                         <a href=""><img src="/frontend/images/con2-right-4_13.png" /></a>
                         <a href="" class="a4">1988豆花加盟条件是什么？</a>
-                        <p>2018-10-12<font>11:51:57</font></p>
+                        <p>2018-10-12<span>11:51:57</span></p>
                     </li>
 
                     <li>
                         <a href=""><img src="/frontend/images/con2-right-4_13.png" /></a>
                         <a href="" class="a4">1988豆花加盟条件是什么？</a>
-                        <p>2018-10-12<font>11:51:57</font></p>
+                        <p>2018-10-12<span>11:51:57</span></p>
                     </li>
                 </ul>
             </div>

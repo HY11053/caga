@@ -247,35 +247,35 @@
                 <ul>
                     <li style="margin-top: 0px;">
                         <a href=""><img src="/frontend/images/con3-right-1_06.png" /></a>
-                        <a href="" class="a2"><font>NO1</font><font style="color:#494949;">.威特斯国际干洗</font><br />
+                        <a href="" class="a2"><span>NO1</span><span style="color:#494949;">.威特斯国际干洗</span><br />
                             一家国际知名干洗店，权<br />
                             威认证 </a>
                     </li>
 
                     <li>
                         <a href=""><img src="/frontend/images/con3-right-1_06.png" /></a>
-                        <a href="" class="a2"><font>NO2</font><font style="color:#494949;">.威特斯国际干洗</font><br />
+                        <a href="" class="a2"><span>NO2</span><span style="color:#494949;">.威特斯国际干洗</span><br />
                             一家国际知名干洗店，权<br />
                             威认证 </a>
                     </li>
 
                     <li>
                         <a href=""><img src="/frontend/images/con3-right-1_06.png" /></a>
-                        <a href="" class="a2"><font>NO3</font><font style="color:#494949;">.威特斯国际干洗</font><br />
+                        <a href="" class="a2"><span>NO3</span><span style="color:#494949;">.威特斯国际干洗</span><br />
                             一家国际知名干洗店，权<br />
                             威认证 </a>
                     </li>
 
                     <li>
                         <a href=""><img src="/frontend/images/con3-right-1_06.png" /></a>
-                        <a href="" class="a2"><font>NO4</font><font style="color:#494949;">.威特斯国际干洗</font><br />
+                        <a href="" class="a2"><span>NO4</span><span style="color:#494949;">.威特斯国际干洗</span><br />
                             一家国际知名干洗店，权<br />
                             威认证 </a>
                     </li>
 
                     <li>
                         <a href=""><img src="/frontend/images/con3-right-1_06.png" /></a>
-                        <a href="" class="a2"><font>NO5</font><font style="color: #494949;">.威特斯国际干洗</font><br />
+                        <a href="" class="a2"><span>NO5</span><span style="color: #494949;">.威特斯国际干洗</span><br />
                             一家国际知名干洗店，权<br />
                             威认证 </a>
                     </li>
@@ -292,8 +292,8 @@
                         <a href=""><img src="/frontend/images/con3-rught-2-tu_10.png" /></a>
                         <a href="" class="a3">赛维干洗店</a>
                         <p>
-                            投资金额 ： <font>5万以下</font><br />
-                            加盟门店数 ： <font>3456</font>
+                            投资金额 ： <span>5万以下</span><br />
+                            加盟门店数 ： <span>3456</span>
                         </p>
                     </li>
 
@@ -301,8 +301,8 @@
                         <a href=""><img src="/frontend/images/con3-rught-2-tu_10.png" /></a>
                         <a href=""  class="a3">赛维干洗店</a>
                         <p>
-                            投资金额 ： <font>5万以下</font><br />
-                            加盟门店数 ： <font>3456</font>
+                            投资金额 ： <span>5万以下</span><br />
+                            加盟门店数 ： <span>3456</span>
                         </p>
                     </li>
 
@@ -310,8 +310,8 @@
                         <a href=""><img src="/frontend/images/con3-rught-2-tu_10.png" /></a>
                         <a href=""  class="a3">赛维干洗店</a>
                         <p>
-                            投资金额 ： <font>5万以下</font><br />
-                            加盟门店数 ： <font>3456</font>
+                            投资金额 ： <span>5万以下</span><br />
+                            加盟门店数 ： <span>3456</span>
                         </p>
                     </li>
 
@@ -319,8 +319,8 @@
                         <a href=""><img src="/frontend/images/con3-rught-2-tu_10.png" /></a>
                         <a href="" class="a3">赛维干洗店</a>
                         <p>
-                            投资金额 ： <font>5万以下</font><br />
-                            加盟门店数 ： <font>3456</font>
+                            投资金额 ： <span>5万以下</span><br />
+                            加盟门店数 ： <span>3456</span>
                         </p>
                     </li>
 
@@ -328,8 +328,8 @@
                         <a href=""><img src="/frontend/images/con3-rught-2-tu_10.png" /></a>
                         <a href="" class="a3">赛维干洗店</a>
                         <p>
-                            投资金额 ： <font>5万以下</font><br />
-                            加盟门店数 ： <font>3456</font>
+                            投资金额 ： <span>5万以下</span><br />
+                            加盟门店数 ： <span>3456</span>
                         </p>
                     </li>
 
@@ -337,8 +337,8 @@
                         <a href=""><img src="/frontend/images/con3-rught-2-tu_10.png" /></a>
                         <a href="" class="a3">赛维干洗店</a>
                         <p>
-                            投资金额 ： <font>5万以下</font><br />
-                            加盟门店数 ： <font>3456</font>
+                            投资金额 ： <span>5万以下</span><br />
+                            加盟门店数 ： <span>3456</span>
                         </p>
                     </li>
 
@@ -346,8 +346,8 @@
                         <a href=""><img src="/frontend/images/con3-rught-2-tu_10.png" /></a>
                         <a href="" class="a3">赛维干洗店</a>
                         <p>
-                            投资金额 ： <font>5万以下</font><br />
-                            加盟门店数 ： <font>3456</font>
+                            投资金额 ： <span>5万以下</span><br />
+                            加盟门店数 ： <span>3456</span>
                         </p>
                     </li>
 
@@ -355,8 +355,8 @@
                         <a href=""><img src="/frontend/images/con3-rught-2-tu_10.png" /></a>
                         <a href="" class="a3">赛维干洗店</a>
                         <p>
-                            投资金额 ： <font>5万以下</font><br />
-                            加盟门店数 ： <font>3456</font>
+                            投资金额 ： <span>5万以下</span><br />
+                            加盟门店数 ： <span>3456</span>
                         </p>
                     </li>
                 </ul>

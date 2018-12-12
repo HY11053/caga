@@ -152,11 +152,8 @@
             </ul>
 
             <div class="b_con3-1">
-                <div></div>
-                <h1>{{$thisarticleinfos->brandname}}加盟公示信息</h1>
-
+                <h2>{{$thisarticleinfos->brandname}}加盟公示信息</h2>
                 <table class="ntable">
-
                     <tr>
                         <td width="20%" class="tb">品牌名称：</td>
                         <td width="30%" class=""> {{$thisarticleinfos->brandname}}</td>
@@ -218,7 +215,6 @@
             <div class="b_con3-2">
                 <div class="xiaokuai2"></div>
                 <h2>{{$thisarticleinfos->brandname}}品牌介绍</h2>
-                <div class="b_con3-2-xian"></div>
                 {!! $thisarticleinfos->body !!}
             </div>
             <div class="b_con3-6">
