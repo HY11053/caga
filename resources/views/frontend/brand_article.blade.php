@@ -42,27 +42,27 @@
                 <div class="b_con1-right-top">
                     <h1>【{{$thisarticleinfos->brandname}}】</h1>
                     <ul>
-                        <li style="margin-top: 0px;"><p>投资金额：<font style="font-size: 16px;color: #df0000;">{{$thisarticleinfos->brandpay}}</font></p></li>
-                        <li><p>所属行业：<font>干洗</font></p></li>
+                        <li style="margin-top: 0px;"><p>投资金额：<span style="font-size: 16px;color: #df0000;">{{$thisarticleinfos->brandpay}}</span></p></li>
+                        <li><p>所属行业：<span>干洗</span></p></li>
                     </ul>
 
                 </div>
 
                 <div class="b_con1-right-con">
                     <ul>
-                        <li><p style="margin-top: 0px;">成立时间：<font>{{$thisarticleinfos->brandtime}}</font></p></li>
-                        <li><p>品牌发源地：<font>{{$thisarticleinfos->brandorigin}}</font></p></li>
-                        <li><p>加盟区域：<font>{{$thisarticleinfos->brandarea}}等全国地区</font></p></li>
-                        <li><p>经营范围：<font>{{$thisarticleinfos->brandmap}}</font></p></li>
-                        <li><p>所需面积：<font>{{$thisarticleinfos->acreage}}</font></p></li>
+                        <li><p style="margin-top: 0px;">成立时间：<span>{{$thisarticleinfos->brandtime}}</span></p></li>
+                        <li><p>品牌发源地：<span>{{$thisarticleinfos->brandorigin}}</span></p></li>
+                        <li><p>加盟区域：<span>{{$thisarticleinfos->brandarea}}等全国地区</span></p></li>
+                        <li><p>经营范围：<span>{{$thisarticleinfos->brandmap}}</span></p></li>
+                        <li><p>所需面积：<span>{{$thisarticleinfos->acreage}}</span></p></li>
                     </ul>
 
                     <ul>
-                        <li><p style="margin-top: 0px;">门店总数：<font>{{$thisarticleinfos->brandnum}}</font></p></li>
-                        <li><p>适合人群：<font>{{$thisarticleinfos->brandperson}}</font></p></li>
-                        <li><p>项目咨询人数：<font>{{$thisarticleinfos->brandchat}}</font></p></li>
-                        <li><p>公司名称：<font>{{$thisarticleinfos->brandgroup}}</font></p></li>
-                        <li><p>公司地址：<font>{{$thisarticleinfos->brandaddr}}</font></p></li>
+                        <li><p style="margin-top: 0px;">门店总数：<span>{{$thisarticleinfos->brandnum}}</span></p></li>
+                        <li><p>适合人群：<span>{{$thisarticleinfos->brandperson}}</span></p></li>
+                        <li><p>项目咨询人数：<span>{{$thisarticleinfos->brandchat}}</span></p></li>
+                        <li><p>公司名称：<span>{{$thisarticleinfos->brandgroup}}</span></p></li>
+                        <li><p>公司地址：<span>{{$thisarticleinfos->brandaddr}}</span></p></li>
                     </ul>
                 </div>
 
@@ -70,17 +70,17 @@
                     <ul style="margin-left: 0px;">
                         <li><p>意向加盟</p></li>
                         <li><h1>{{$thisarticleinfos->brandattch}}</h1></li>
-                        <li><font>|</font></li>
+                        <li><span>|</span></li>
                     </ul>
                     <ul>
                         <li><p>申请加盟</p></li>
                         <li><h1>{{$thisarticleinfos->brandapply}}</h1></li>
-                        <li><font>|</font></li>
+                        <li><span>|</span></li>
                     </ul>
                     <ul>
                         <li><p>品牌好评率</p></li>
                         <li><h1>{{rand(95,99)}}%</h1></li>
-                        <!--<li><font>|</font></li>-->
+                        <!--<li><span>|</span></li>-->
                     </ul>
                 </div>
                 <div class="b_con1-right-button">
@@ -106,9 +106,9 @@
             <img src="/frontend/images/pinpaixinagqingye-con1_03.png" />
             <h1>{{$thisarticleinfos->brandgroup}}</h1>
             <ul>
-                <li><p style="margin-top: 0px;">所在地：<font>{{$thisarticleinfos->brandaddr}}</font></p></li>
-                <li><p>注册资金：<font>{{$thisarticleinfos->registeredcapital}}</font></p></li>
-                <li><p>公司类型：<font>{{$thisarticleinfos->genre}}</font></p></li>
+                <li><p style="margin-top: 0px;">所在地：<span>{{$thisarticleinfos->brandaddr}}</span></p></li>
+                <li><p>注册资金：<span>{{$thisarticleinfos->registeredcapital}}</span></p></li>
+                <li><p>公司类型：<span>{{$thisarticleinfos->genre}}</span></p></li>
             </ul>
             <input type="button" value="在线加盟" style="margin-left: 30px;"/>
             <input type="button" value="我要咨询"/>
@@ -125,9 +125,9 @@
         </div>
         <div class="zi1">
             <ul>
-                <li><a href="" style="margin-left: 21px;">自身风险<font>20</font></a></li>
-                <li><a href="">关联风险<font>15</font></a></li>
-                <li><a href="">提示信息<font>1</font></a></li>
+                <li><a href="" style="margin-left: 21px;">自身风险<span>20</span></a></li>
+                <li><a href="">关联风险<span>15</span></a></li>
+                <li><a href="">提示信息<span>1</span></a></li>
             </ul>
         </div>
         <div class="tu2">
@@ -157,7 +157,7 @@
             </div>
             <div class="b_con3-6">
                 <div class="xiaokuai6"></div>
-                <h1>{{$thisarticleinfos->brandname}}<font>运营综合分析</font></h1>
+                <h1>{{$thisarticleinfos->brandname}}<span>运营综合分析</span></h1>
                 <div class="b_con3-6-xian"></div>
                 <table>
                     <tbody>
@@ -210,21 +210,21 @@
             <div class="b_con3-7">
                 <div class="b_con3-7-xiaokuai"></div>
                 <div class="b_con3-7-top">
-                    <h1>给<font>赛维</font>留言，立即获得最新加盟资料</h1>
-                    <p>（<font>*</font>为必填选项）</p>
+                    <h1>给<span>赛维</span>留言，立即获得最新加盟资料</h1>
+                    <p>（<span>*</span>为必填选项）</p>
                 </div>
 
                 <ul class="b_con3-7-ul1">
                     <li style="margin-top: 0px;">
-                        <p><font>*</font>姓名</p>
+                        <p><span>*</span>姓名</p>
                         <input type="text" placeholder="您的真实姓名"/>
                     </li>
                     <li>
-                        <p><font>*</font>手机</p>
+                        <p><span>*</span>手机</p>
                         <input type="text" placeholder="电话是与您联系的重要方式"/>
                     </li>
                     <li>
-                        <p><font>*</font>地址</p>
+                        <p><span>*</span>地址</p>
                         <input type="text" placeholder="与您联系的重要方式"/>
                     </li>
                 </ul>
@@ -241,7 +241,7 @@
                 </ul>
 
                 <div class="b_con3-7-bottom">
-                    <h1><font>*</font>留言</h1>
+                    <h1><span>*</span>留言</h1>
                     <textarea id="note" name="content" class="textarea_bk" placeholder="请输入您的留言内容或选择快捷留言"></textarea>
 
                     <ul>
@@ -333,21 +333,21 @@
                             准备工作
 
                         </a>
-                        <p>2018-10-09<font>西安区县新闻网</font></p>
+                        <p>2018-10-09<span>西安区县新闻网</span></p>
                     </li>
 
                     <li>
                         <a href="">综述：细数国际宇航大会上的中国航天新<br />
                             品|不来梅|中国航天|宇航_新浪新闻
                         </a>
-                        <p>2018-10-04<font>新浪新闻</font></p>
+                        <p>2018-10-04<span>新浪新闻</span></p>
                     </li>
 
                     <li>
                         <a href="">综述：细数国际宇航大会上的中国航天新<br />
                             品-新华网
                         </a>
-                        <p>2018-10-04<font>新华网</font></p>
+                        <p>2018-10-04<span>新华网</span></p>
                     </li>
 
                     <li style="height: 169px;">
@@ -356,7 +356,7 @@
                             张琦,中国,张小平,发射场,舒畅,民企,北京,-<br />
                             中国新闻-东方网
                         </a>
-                        <p>2018-10-04<font>东方网</font></p>
+                        <p>2018-10-04<span>东方网</span></p>
                     </li>
 
                     <li style="height: 156px;">
@@ -364,7 +364,7 @@
                             趋向正常化-摩拜 航天发射 正常化 航天动<br />
                             力 航天公司-中国新闻-东方网
                         </a>
-                        <p>2018-10-04<font>东方网</font></p>
+                        <p>2018-10-04<span>东方网</span></p>
                     </li>
                 </ul>
             </div>
