@@ -263,7 +263,7 @@ class ArticleController extends Controller
             }else{
                 $request['flags'].=',p';
             }
-        }elseif (isset($request['litpic']) && !empty($request['litpic']))
+        }elseif (isset($request['litpic']) && !empty($request['litpic'])  && $request['litpic']!='/frontend/images/nopic.png')
         {
             $request['litpic']=$request['litpic'];
         }elseif (preg_match('/<[img|IMG].*?src=[\' | \"](.*?(?:[\.jpg|\.jpeg|\.png|\.gif|\.bmp]))[\'|\"].*?[\/]?>/i',$request['body'],$match)){
