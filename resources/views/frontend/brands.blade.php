@@ -75,212 +75,44 @@
     <div class="bl_con3 center">
         <div class="w870 fl">
             <ul class="xm-list-H224 clearfix" style="width: 840px; float:left; cursor: pointer">
+                @foreach($pagelists as $pagelist)
                 <li class="">
                     <div class="btn-duibi btn-addbyb" data-id="2171">
                         <i class="iconfont icon-Contrast"></i>咨询
                     </div>
-                    <a target="_blank" href="/brand/2171/" class="img-block magnify"><img src="/frontend/images/con2-left-tu_03.png" alt="美石记韩式拌饭"></a>
+                    <a target="_blank" href="/{{$pagelist->arctype->real_path}}/{{$pagelist->id}}.shtml/" class="img-block magnify"><img src="{{$pagelist->litpic}}" alt="{{$pagelist->brandname}}"></a>
                     <div class="f20">
-                        <a target="_blank" href="/brand/2171/">美石记韩式拌饭</a>
+                        <a target="_blank" href="/{{$pagelist->arctype->real_path}}/{{$pagelist->id}}.shtml">{{$pagelist->brandname}}</a>
                     </div>
                     <div class="info">
-                        <span title="12万以上">投资金额：<b class="s-oe">12万以上</b></span><span title="30-50平米㎡">所需面积：<b class="s-oe">30-50平米㎡</b></span>
+                        <span title="{{$pagelist->brandpay}}">投资金额：<b class="s-oe">{{$pagelist->brandpay}}</b></span><span title="30-50平米㎡">所需面积：<b class="s-oe">30-50平米㎡</b></span>
                     </div>
-                    <p> 门店数量：<span class="s-c26">68</span></p>
-                    <p>加盟区域：<span class="s-c26">安徽</span></p>
-                    <p>主要产品：<span class="s-c26">石锅拌饭系列、年糕火锅、小食、趣味美食等</span></p>
-                    <p style="height:48px">项目描述：<span>美石记韩式拌饭采用韩国传统工艺，美石记秘制，经十几个小时的精心熬煮而成，品质正宗，口味独特。美石记韩式石锅拌饭引进正宗的韩式辣白菜制作工艺。精选菜叶细嫩多汁的黄芯白菜，经过多种复杂</span></p>
+                    <p> 门店数量：<span class="s-c26">{{$pagelist->brandnum}}</span></p>
+                    <p>加盟区域：<span class="s-c26">{{$pagelist->brandarea}}</span></p>
+                    <p>经营范围：<span class="s-c26">{{$pagelist->brandmap}}</span></p>
+                    <p style="height:48px">项目描述：<span>{{$pagelist->description}}</span></p>
                 </li>
-                <li class="">
-                    <div class="btn-duibi btn-addbyb" data-id="2170">
-                        <i class="iconfont icon-Contrast"></i>对比
-                    </div>
-                    <a target="_blank" href="/brand/2170/" class="img-block magnify"><img src="/storage/uploads/2018/12/06/deb9778b38ca9585568fbb55e3a46c1b.png" alt="爱的披萨"></a>
-                    <div class="f20">
-                        <a target="_blank" href="/brand/2170/">爱的披萨</a>
-                    </div>
-                    <div class="info">
-                        <span title="9万~23万">投资金额：<b class="s-oe">9万~23万</b></span><span title="10-30平米㎡">所需面积：<b class="s-oe">10-30平米㎡</b></span>
-                    </div>
-                    <p> 门店数量：<span class="s-c26">301</span></p>
-                    <p>加盟区域：<span class="s-c26">黑龙江、湖南、重庆</span></p>
-                    <p>主要产品：<span class="s-c26">甜品、简餐、披萨</span></p>
-                    <p style="height:48px">项目描述：<span>爱的披萨创建于黑龙江哈尔滨市，该店环境优雅休闲，各种美味小品、饮品，是一个适合约会、聚会、休息的优佳场所。公司有着优异的技术和雄厚的生产实力，产品以富有创意深受经销商和消费者的爱好</span></p>
-                </li>
-                <li class="">
-                    <div class="btn-duibi btn-addbyb" data-id="2169">
-                        <i class="iconfont icon-Contrast"></i>对比
-                    </div>
-                    <a target="_blank" href="/brand/2169/" class="img-block magnify"><img src="/storage/uploads/2018/12/06/d65e6124eb2ff98342e2725b295e909c.jpg" alt="艾奇轻食"></a>
-                    <div class="f20">
-                        <a target="_blank" href="/brand/2169/">艾奇轻食</a>
-                    </div>
-                    <div class="info">
-                        <span title="12万以上">投资金额：<b class="s-oe">12万以上</b></span><span title="30-50平米㎡">所需面积：<b class="s-oe">30-50平米㎡</b></span>
-                    </div>
-                    <p> 门店数量：<span class="s-c26">34</span></p>
-                    <p>加盟区域：<span class="s-c26">浙江</span></p>
-                    <p>主要产品：<span class="s-c26">沙拉、轻食、健身餐</span></p>
-                    <p style="height:48px">项目描述：<span>艾奇轻食创新性复合餐饮休闲理念所构筑的竞争门槛=动漫文化+定制餐饮多元化的盈利模式，非单一传统同类动漫或餐饮项目所能及。艾奇轻食是以经营动漫特色轻食主义为理念的西餐厅，同时为顾客提供</span></p>
-                </li>
-                <li class="">
-                    <div class="btn-duibi btn-addbyb" data-id="2168">
-                        <i class="iconfont icon-Contrast"></i>对比
-                    </div>
-                    <a target="_blank" href="/brand/2168/" class="img-block magnify"><img src="/storage/uploads/2018/12/06/50e0b7c29c30574353fb9674e7dcc4a3.png" alt="阿贝兹手工薄饼披萨"></a>
-                    <div class="f20">
-                        <a target="_blank" href="/brand/2168/">阿贝兹手工薄饼披萨</a>
-                    </div>
-                    <div class="info">
-                        <span title="6万~14万">投资金额：<b class="s-oe">6万~14万</b></span><span title="10-30平米㎡">所需面积：<b class="s-oe">10-30平米㎡</b></span>
-                    </div>
-                    <p> 门店数量：<span class="s-c26">342</span></p>
-                    <p>加盟区域：<span class="s-c26">吉林、甘肃、福建</span></p>
-                    <p>主要产品：<span class="s-c26">披萨、牛排、面包</span></p>
-                    <p style="height:48px">项目描述：<span>阿贝兹手工薄饼披萨专注于手工披萨现烤现做为连锁发展的品牌，是披萨品牌行业中比较知名的一个。阿贝兹手工薄饼披萨专卖连锁企业最初1967年创办于意大利那不勒斯地区，后主要发展于欧美等国家，</span></p>
-                </li>
-                <li class="">
-                    <div class="btn-duibi btn-addbyb" data-id="2167">
-                        <i class="iconfont icon-Contrast"></i>对比
-                    </div>
-                    <a target="_blank" href="/brand/2167/" class="img-block magnify"><img src="/storage/uploads/2018/12/06/c73c7ea4ab09504ecd987ab858cb388b.jpg" alt="禾约创意轻食"></a>
-                    <div class="f20">
-                        <a target="_blank" href="/brand/2167/">禾约创意轻食</a>
-                    </div>
-                    <div class="info">
-                        <span title="11万以上">投资金额：<b class="s-oe">11万以上</b></span><span title="30-50平米㎡">所需面积：<b class="s-oe">30-50平米㎡</b></span>
-                    </div>
-                    <p> 门店数量：<span class="s-c26">124</span></p>
-                    <p>加盟区域：<span class="s-c26">北京</span></p>
-                    <p>主要产品：<span class="s-c26">沙拉、轻食、健身餐</span></p>
-                    <p style="height:48px">项目描述：<span>禾约创意轻食店主要经营这几类菜品：牛人凯撒沙拉、多芒鲜虾沙拉、焙煎鸡胸肉会鲍菇沙拉、日式主题荞麦面、尼斯金枪鱼沙拉、金枪鱼搭温烤南瓜等，蔬菜：综合蔬菜、红酒牛肉、鸡胸肉、面包丁、鸡</span></p>
-                </li>
-                <li class="">
-                    <div class="btn-duibi btn-addbyb" data-id="2166">
-                        <i class="iconfont icon-Contrast"></i>对比
-                    </div>
-                    <a target="_blank" href="/brand/2166/" class="img-block magnify"><img src="/storage/uploads/2018/12/06/71cc3f68381222c404ba71a18eace1df.jpg" alt="小时代简餐"></a>
-                    <div class="f20">
-                        <a target="_blank" href="/brand/2166/">小时代简餐</a>
-                    </div>
-                    <div class="info">
-                        <span title="9万~26万">投资金额：<b class="s-oe">9万~26万</b></span><span title="30-50平米㎡">所需面积：<b class="s-oe">30-50平米㎡</b></span>
-                    </div>
-                    <p> 门店数量：<span class="s-c26">128</span></p>
-                    <p>加盟区域：<span class="s-c26">河北</span></p>
-                    <p>主要产品：<span class="s-c26">沙拉、轻食、健身餐</span></p>
-                    <p style="height:48px">项目描述：<span>在饮食上，大家是很注重的，特色的养生产品，精心制作，养生减肥的好选择。“轻食主义”是指“少油、少盐、少糖、高纤维及高钙，满足身体营养所需，同时不给身体造成负担的科学饮食”的代名词。小时</span></p>
-                </li>
-                <li class="">
-                    <div class="btn-duibi btn-addbyb" data-id="2165">
-                        <i class="iconfont icon-Contrast"></i>对比
-                    </div>
-                    <a target="_blank" href="/brand/2165/" class="img-block magnify"><img src="/storage/uploads/2018/12/06/cf5f4f13dace006c09b59f96f54d401e.png" alt="爱八寸披萨"></a>
-                    <div class="f20">
-                        <a target="_blank" href="/brand/2165/">爱八寸披萨</a>
-                    </div>
-                    <div class="info">
-                        <span title="8万~23万">投资金额：<b class="s-oe">8万~23万</b></span><span title="10-30平米㎡">所需面积：<b class="s-oe">10-30平米㎡</b></span>
-                    </div>
-                    <p> 门店数量：<span class="s-c26">355</span></p>
-                    <p>加盟区域：<span class="s-c26">上海、浙江、重庆</span></p>
-                    <p>主要产品：<span class="s-c26">披萨、牛排、面包</span></p>
-                    <p style="height:48px">项目描述：<span>爱八寸披萨有着芳香扑鼻的味道，激爽的外形，动感的味道，一同构成忘情的尖叫，美妙的回忆。爱八寸披萨以香脆酥软的风味饼，裹着幼滑酥爽的比萨馅，加上少许的芝士，咬上去，拉出长长的丝，饱满</span></p>
-                </li>
-                <li class="">
-                    <div class="btn-duibi btn-addbyb" data-id="2164">
-                        <i class="iconfont icon-Contrast"></i>对比
-                    </div>
-                    <a target="_blank" href="/brand/2164/" class="img-block magnify"><img src="/storage/uploads/2018/12/06/4cca15bf81d8ea03fb53ae15d9a3adc4.jpg" alt="预见时尚简餐"></a>
-                    <div class="f20">
-                        <a target="_blank" href="/brand/2164/">预见时尚简餐</a>
-                    </div>
-                    <div class="info">
-                        <span title="7万~26">投资金额：<b class="s-oe">7万~26</b></span><span title="30-50平米㎡">所需面积：<b class="s-oe">30-50平米㎡</b></span>
-                    </div>
-                    <p> 门店数量：<span class="s-c26">251</span></p>
-                    <p>加盟区域：<span class="s-c26">河北</span></p>
-                    <p>主要产品：<span class="s-c26">沙拉、轻食、健身餐</span></p>
-                    <p style="height:48px">项目描述：<span>预见时尚简餐目前餐饮市场如火如荼，想在这个火爆市场上占有一定地位，就要独树一帜的特色，就是一家有特色的快餐，并且与O2O完美结合。专家及营养师指导搭配餐饮，美味、健康，营养，快捷。深</span></p>
-                </li>
-                <li class="">
-                    <div class="btn-duibi btn-addbyb" data-id="2163">
-                        <i class="iconfont icon-Contrast"></i>对比
-                    </div>
-                    <a target="_blank" href="/brand/2163/" class="img-block magnify"><img src="/storage/uploads/2018/12/06/1975a6764e5e70c07acaf7aeca62c043.png" alt="897披萨"></a>
-                    <div class="f20">
-                        <a target="_blank" href="/brand/2163/">897披萨</a>
-                    </div>
-                    <div class="info">
-                        <span title="9万~22万">投资金额：<b class="s-oe">9万~22万</b></span><span title="30-50平米㎡">所需面积：<b class="s-oe">30-50平米㎡</b></span>
-                    </div>
-                    <p> 门店数量：<span class="s-c26">514</span></p>
-                    <p>加盟区域：<span class="s-c26">江苏、重庆、福建</span></p>
-                    <p>主要产品：<span class="s-c26">披萨、牛排、面包</span></p>
-                    <p style="height:48px">项目描述：<span>897披萨是经营意大利式外卖披萨的连锁企业，897披萨属于江苏省北塘区西岸边披萨屋，在市场上有着较高的品牌知名度及成熟的品牌推广传播体系。897披萨公司拥有自己的披萨研发部门，并重金从意大</span></p>
-                </li>
-                <li class="">
-                    <div class="btn-duibi btn-addbyb" data-id="2162">
-                        <i class="iconfont icon-Contrast"></i>对比
-                    </div>
-                    <a target="_blank" href="/brand/2162/" class="img-block magnify"><img src="/storage/uploads/2018/12/06/178ab59e1de1ea58ad3f81868c6bb9ad.jpg" alt="苗员外简餐"></a>
-                    <div class="f20">
-                        <a target="_blank" href="/brand/2162/">苗员外简餐</a>
-                    </div>
-                    <div class="info">
-                        <span title="6万~22万">投资金额：<b class="s-oe">6万~22万</b></span><span title="10-30平米㎡">所需面积：<b class="s-oe">10-30平米㎡</b></span>
-                    </div>
-                    <p> 门店数量：<span class="s-c26">147</span></p>
-                    <p>加盟区域：<span class="s-c26">上海</span></p>
-                    <p>主要产品：<span class="s-c26">沙拉、轻食、健身餐</span></p>
-                    <p style="height:48px">项目描述：<span>不知不觉快节奏的生活悄然而至，人们的生活越来越没有规律，再加上饮食不够科学等问题，
-人们对于健康的饮食习惯越来越重视，无论在大城小县都有需求，且在各年龄段的分布也较为均匀。那么在快</span></p>
-                </li>
+                @endforeach
             </ul>
             <div class="clear"></div>
         </div>
         <div class="bl_con3-right">
-
             <div class="bl_con3-right-1 box-shadow">
                 <h1>品牌排行榜<a href="">关注量</a></h1>
                 <div class="bl_con3-right-1-xian"></div>
                 <ul>
-                    <li style="margin-top: 0px;">
-                        <a href=""><img src="/frontend/images/con3-right-1_06.png" /></a>
-                        <a href="" class="a2"><span>NO1</span><span style="color:#494949;">.威特斯国际干洗</span><br />
-                            一家国际知名干洗店，权<br />
-                            威认证 </a>
-                    </li>
-
+                    @foreach($topbrands as $index=>$topbrand)
                     <li>
-                        <a href=""><img src="/frontend/images/con3-right-1_06.png" /></a>
-                        <a href="" class="a2"><span>NO2</span><span style="color:#494949;">.威特斯国际干洗</span><br />
-                            一家国际知名干洗店，权<br />
-                            威认证 </a>
+                        <a href="/{{$topbrand->arctype->real_path}}/{{$topbrand->id}}.shtml"><img src="{{$topbrand->litpic}}" /></a>
+                        <dl class="paihangbf">
+                            <dt class="a2"><span>NO{{$index+1}}.</span><a class="b_tit" href="/{{$topbrand->arctype->real_path}}/{{$topbrand->id}}.shtml">{{$topbrand->brandname}}</a></dt>
+                            <dd>
+                                项目特色:{{$topbrand->brandpsp}}
+                            </dd>
+                        </dl>
                     </li>
-
-                    <li>
-                        <a href=""><img src="/frontend/images/con3-right-1_06.png" /></a>
-                        <a href="" class="a2"><span>NO3</span><span style="color:#494949;">.威特斯国际干洗</span><br />
-                            一家国际知名干洗店，权<br />
-                            威认证 </a>
-                    </li>
-
-                    <li>
-                        <a href=""><img src="/frontend/images/con3-right-1_06.png" /></a>
-                        <a href="" class="a2"><span>NO4</span><span style="color:#494949;">.威特斯国际干洗</span><br />
-                            一家国际知名干洗店，权<br />
-                            威认证 </a>
-                    </li>
-
-                    <li>
-                        <a href=""><img src="/frontend/images/con3-right-1_06.png" /></a>
-                        <a href="" class="a2"><span>NO5</span><span style="color: #494949;">.威特斯国际干洗</span><br />
-                            一家国际知名干洗店，权<br />
-                            威认证 </a>
-                    </li>
+                    @endforeach
                 </ul>
-
             </div>
 
             <div class="bl_con3-right-2 box-shadow">
@@ -288,77 +120,16 @@
                 <div class="bl_con3-right-2-xian"></div>
 
                 <ul>
-                    <li style="margin-top: 0px;">
-                        <a href=""><img src="/frontend/images/con3-rught-2-tu_10.png" /></a>
-                        <a href="" class="a3">赛维干洗店</a>
-                        <p>
-                            投资金额 ： <span>5万以下</span><br />
-                            加盟门店数 ： <span>3456</span>
-                        </p>
-                    </li>
-
+                    @foreach($hotbrands as $hotbrand)
                     <li>
-                        <a href=""><img src="/frontend/images/con3-rught-2-tu_10.png" /></a>
-                        <a href=""  class="a3">赛维干洗店</a>
+                        <a href=""><img src="{{$hotbrand->litpic}}" /></a>
+                        <a href="" class="a3">{{$hotbrand->brandname}}</a>
                         <p>
-                            投资金额 ： <span>5万以下</span><br />
-                            加盟门店数 ： <span>3456</span>
+                            投资金额 ： <span>{{$hotbrand->brandpay}}</span><br />
+                            加盟门店数 ： <span>{{$hotbrand->brandnum}}</span>
                         </p>
                     </li>
-
-                    <li>
-                        <a href=""><img src="/frontend/images/con3-rught-2-tu_10.png" /></a>
-                        <a href=""  class="a3">赛维干洗店</a>
-                        <p>
-                            投资金额 ： <span>5万以下</span><br />
-                            加盟门店数 ： <span>3456</span>
-                        </p>
-                    </li>
-
-                    <li>
-                        <a href=""><img src="/frontend/images/con3-rught-2-tu_10.png" /></a>
-                        <a href="" class="a3">赛维干洗店</a>
-                        <p>
-                            投资金额 ： <span>5万以下</span><br />
-                            加盟门店数 ： <span>3456</span>
-                        </p>
-                    </li>
-
-                    <li>
-                        <a href=""><img src="/frontend/images/con3-rught-2-tu_10.png" /></a>
-                        <a href="" class="a3">赛维干洗店</a>
-                        <p>
-                            投资金额 ： <span>5万以下</span><br />
-                            加盟门店数 ： <span>3456</span>
-                        </p>
-                    </li>
-
-                    <li>
-                        <a href=""><img src="/frontend/images/con3-rught-2-tu_10.png" /></a>
-                        <a href="" class="a3">赛维干洗店</a>
-                        <p>
-                            投资金额 ： <span>5万以下</span><br />
-                            加盟门店数 ： <span>3456</span>
-                        </p>
-                    </li>
-
-                    <li>
-                        <a href=""><img src="/frontend/images/con3-rught-2-tu_10.png" /></a>
-                        <a href="" class="a3">赛维干洗店</a>
-                        <p>
-                            投资金额 ： <span>5万以下</span><br />
-                            加盟门店数 ： <span>3456</span>
-                        </p>
-                    </li>
-
-                    <li>
-                        <a href=""><img src="/frontend/images/con3-rught-2-tu_10.png" /></a>
-                        <a href="" class="a3">赛维干洗店</a>
-                        <p>
-                            投资金额 ： <span>5万以下</span><br />
-                            加盟门店数 ： <span>3456</span>
-                        </p>
-                    </li>
+                  @endforeach
                 </ul>
 
             </div>
@@ -368,100 +139,19 @@
                 <div class="bl_con3-right-3-xian"></div>
 
                 <ul>
-                    <li style="margin-top: 0px;">
-                        <a href=""><img src="/frontend/images/con3-right-3-tu_13.png" /></a>
-                        <a href="" class="a4">赛维干洗店加盟啦</a>
-                        <p>抓紧加入赛维实现你的创业<br />
-                            梦想</p>
-
-                    </li>
-
+                    @foreach($cnewslists as $cnewslist)
                     <li>
-                        <a href=""><img src="/frontend/images/con3-right-3-tu_13.png" /></a>
-                        <a href="" class="a4">赛维干洗店加盟啦</a>
-                        <p>抓紧加入赛维实现你的创业<br />
-                            梦想</p>
-
+                        <a href="/{{$cnewslist->arctype->real_path}}/{{$cnewslist->id}}.shtml"><img src="{{$cnewslist->litpic}}" /></a>
+                        <a href="/{{$cnewslist->arctype->real_path}}/{{$cnewslist->id}}.shtml" class="a4">{{$cnewslist->title}}</a>
+                        <p>{{str_limit($cnewslist->description,60,'...')}}</p>
                     </li>
-
-                    <li>
-                        <a href=""><img src="/frontend/images/con3-right-3-tu_13.png" /></a>
-                        <a href="" class="a4">赛维干洗店加盟啦</a>
-                        <p>抓紧加入赛维实现你的创业<br />
-                            梦想</p>
-
-                    </li>
-
-                    <li>
-                        <a href=""><img src="/frontend/images/con3-right-3-tu_13.png" /></a>
-                        <a href="" class="a4">赛维干洗店加盟啦</a>
-                        <p>抓紧加入赛维实现你的创业<br />
-                            梦想</p>
-
-                    </li>
-
-                    <li>
-                        <a href=""><img src="/frontend/images/con3-right-3-tu_13.png" /></a>
-                        <a href="" class="a4">赛维干洗店加盟啦</a>
-                        <p>抓紧加入赛维实现你的创业<br />
-                            梦想</p>
-
-                    </li>
-
-                    <li>
-                        <a href=""><img src="/frontend/images/con3-right-3-tu_13.png" /></a>
-                        <a href="" class="a4">赛维干洗店加盟啦</a>
-                        <p>抓紧加入赛维实现你的创业<br />
-                            梦想</p>
-
-                    </li>
-
-                    <li>
-                        <a href=""><img src="/frontend/images/con3-right-3-tu_13.png" /></a>
-                        <a href="" class="a4">赛维干洗店加盟啦</a>
-                        <p>抓紧加入赛维实现你的创业<br />
-                            梦想</p>
-
-                    </li>
-
-
+                    @endforeach
                 </ul>
-
             </div>
-
         </div>
         <div class="clear"></div>
         <div class="pageinfo">
-            <ul class="pagination">
-
-                <li class="disabled"><span>首页</span></li>
-
-
-
-
-
-                <li class="active"><span>1</span></li>
-                <li><a href="http://www.xiuxianshipin.com/nlist/2/page/2/">2</a></li>
-                <li><a href="http://www.xiuxianshipin.com/nlist/2/page/3/">3</a></li>
-                <li><a href="http://www.xiuxianshipin.com/nlist/2/page/4/">4</a></li>
-                <li><a href="http://www.xiuxianshipin.com/nlist/2/page/5/">5</a></li>
-                <li><a href="http://www.xiuxianshipin.com/nlist/2/page/6/">6</a></li>
-                <li><a href="http://www.xiuxianshipin.com/nlist/2/page/7/">7</a></li>
-                <li><a href="http://www.xiuxianshipin.com/nlist/2/page/8/">8</a></li>
-
-                <li class="disabled"><span>...</span></li>
-
-
-
-
-
-                <li><a href="http://www.xiuxianshipin.com/nlist/2/page/146/">146</a></li>
-                <li><a href="http://www.xiuxianshipin.com/nlist/2/page/147/">147</a></li>
-
-
-                <li><a href="http://www.xiuxianshipin.com/nlist/2/page/2/">下一页</a></li>
-            </ul>
-
+            {!! str_replace('page=','page/',str_replace('?','/',preg_replace('/<a href=[\'\"]?([^\'\" ]+).*?>/','<a href="${1}/">',$pagelists->links()))) !!}
             <div class="clear"></div>
         </div>
     </div>

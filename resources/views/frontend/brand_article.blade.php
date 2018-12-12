@@ -150,68 +150,6 @@
                 <li><a href="">品牌门店</a></li>
                 <li style="border: none;"><a href="">项目咨询</a></li>
             </ul>
-
-            <div class="b_con3-1">
-                <h2>{{$thisarticleinfos->brandname}}加盟公示信息</h2>
-                <table class="ntable">
-                    <tr>
-                        <td width="20%" class="tb">品牌名称：</td>
-                        <td width="30%" class=""> {{$thisarticleinfos->brandname}}</td>
-                        <td width="20%" class="tb">特许备案号：</td>
-                        <td width="30%" class=""> 0111500111800050 </td>
-                    </tr>
-                    <tr>
-                        <td class="tb">特许品牌：</td>
-                        <td class=""> {{$thisarticleinfos->brandname}} </td>
-                        <td class="tb" width="18%">备案公告时间	：</td>
-                        <td class=""> 2018-09-20 </td>
-                    </tr>
-                    <tr>
-                        <td class="tb">公司类型：</td>
-                        <td class=""> {{$thisarticleinfos->genre}} </td>
-                        <td class="tb">所属行业：</td>
-                        <td class=""> 干洗店连锁加盟 </td>
-                    </tr>
-                    <tr>
-                        <td class="tb">投资金额：</td>
-                        <td class="" style="max-width:301px;"> {{$thisarticleinfos->brandpay}} </td>
-                        <td class="tb">门店数：</td>
-                        <td class=""> {{$thisarticleinfos->brandnum}} </td>
-                    </tr>
-                    <tr>
-                        <td class="tb">店铺所需面积：</td>
-                        <td class="" style="max-width:301px;"> {{$thisarticleinfos->acreage}}</td>
-                        <td class="tb">品牌发源地：</td>
-                        <td class=""> {{$thisarticleinfos->brandorigin}} </td>
-                    </tr>
-                    <tr>
-                        <td class="tb"> 申请加盟 </td>
-                        <td class=""> {{$thisarticleinfos->brandapply}}</td>
-                        <td class="tb"> 意向加盟 </td>
-                        <td class=""> {{$thisarticleinfos->brandattch}} </td>
-                    </tr>
-                    <tr>
-                        <td class="tb"> 公司名称 </td>
-                        <td class=""> {{$thisarticleinfos->brandgroup}} </td>
-                        <td class="tb"> 注册资金 </td>
-                        <td class=""> {{$thisarticleinfos->registeredcapital}}</td>
-
-                    </tr>
-                    <tr>
-                        <td class="tb"> 加盟人群 </td>
-                        <td class=""> {{$thisarticleinfos->brandperson}} </td>
-                        <td class="tb"> 加盟区域 </td>
-                        <td class=""> {{$thisarticleinfos->brandarea}} 等全国地区</td>
-                    </tr>
-                    <tr>
-                        <td class="tb">企业地址：</td>
-                        <td class="" > {{$thisarticleinfos->brandaddr}}</td>
-                        <td class="tb">经营范围：</td>
-                        <td class=""> {{$thisarticleinfos->brandmap}}</td>
-                    </tr>
-                </table>
-            </div>
-
             <div class="b_con3-2">
                 <div class="xiaokuai2"></div>
                 <h2>{{$thisarticleinfos->brandname}}品牌介绍</h2>
