@@ -22,7 +22,7 @@
 @section('main_content')
 <div class="main_content">
     <div class="mianbaoxie center">
-        <p><a href="index.html" style="margin-left: 0px;">首页</a> > <a href="">创业资讯</a> > <a href="">北京蓝箭空间科技有限公司</a></p>
+        <p><a href="{{config('app.url')}}" style="margin-left: 0px;">首页</a> > <a href="/{{$thisarticleinfos->arctype->real_path}}/">{{$thisarticleinfos->arctype->typename}}</a> > <a href="">{{str_replace('加盟','',$thisarticleinfos->brandname)}}加盟</a></p>
     </div>
     <div class="b_con1 center box-shadow">
         <div class="b_con1-left">
@@ -40,46 +40,46 @@
 
             <div class="b_con1-right">
                 <div class="b_con1-right-top">
-                    <h1>【赛维干洗】</h1>
+                    <h1>【{{$thisarticleinfos->brandname}}】</h1>
                     <ul>
-                        <li style="margin-top: 0px;"><p>投资金额：<font style="font-size: 16px;color: #df0000;">10-20万元以上</font></p></li>
-                        <li><p>所属行业：<font>零食s</font></p></li>
+                        <li style="margin-top: 0px;"><p>投资金额：<font style="font-size: 16px;color: #df0000;">{{$thisarticleinfos->brandpay}}</font></p></li>
+                        <li><p>所属行业：<font>干洗</font></p></li>
                     </ul>
 
                 </div>
 
                 <div class="b_con1-right-con">
                     <ul>
-                        <li><p style="margin-top: 0px;">成立时间：<font>2012</font></p></li>
-                        <li><p>加盟区域：<font>北京，上海，安徽等全国</font></p></li>
-                        <li><p>经营范围：<font>炒货，坚果，夏威夷果等</font></p></li>
-                        <li><p>店铺面积：<font>>20平米</font></p></li>
-                        <li><p>店铺面积：<font>>20平米</font></p></li>
+                        <li><p style="margin-top: 0px;">成立时间：<font>{{$thisarticleinfos->brandtime}}</font></p></li>
+                        <li><p>品牌发源地：<font>{{$thisarticleinfos->brandorigin}}</font></p></li>
+                        <li><p>加盟区域：<font>{{$thisarticleinfos->brandarea}}等全国地区</font></p></li>
+                        <li><p>经营范围：<font>{{$thisarticleinfos->brandmap}}</font></p></li>
+                        <li><p>所需面积：<font>{{$thisarticleinfos->acreage}}</font></p></li>
                     </ul>
 
                     <ul>
-                        <li><p style="margin-top: 0px;">门店总数：<font>300</font></p></li>
-                        <li><p>适合人群：<font>大学生，80后，白领等</font></p></li>
-                        <li><p>店铺面积：<font>>20平米</font></p></li>
-                        <li><p>店铺面积：<font>>20平米</font></p></li>
-                        <li><p>店铺面积：<font>>20平米</font></p></li>
+                        <li><p style="margin-top: 0px;">门店总数：<font>{{$thisarticleinfos->brandnum}}</font></p></li>
+                        <li><p>适合人群：<font>{{$thisarticleinfos->brandperson}}</font></p></li>
+                        <li><p>项目咨询人数：<font>{{$thisarticleinfos->brandchat}}</font></p></li>
+                        <li><p>公司名称：<font>{{$thisarticleinfos->brandgroup}}</font></p></li>
+                        <li><p>公司地址：<font>{{$thisarticleinfos->brandaddr}}</font></p></li>
                     </ul>
                 </div>
 
                 <div class="b_con1-right-bottom">
                     <ul style="margin-left: 0px;">
                         <li><p>意向加盟</p></li>
-                        <li><h1>5964</h1></li>
+                        <li><h1>{{$thisarticleinfos->brandattch}}</h1></li>
                         <li><font>|</font></li>
                     </ul>
                     <ul>
                         <li><p>申请加盟</p></li>
-                        <li><h1>5274</h1></li>
+                        <li><h1>{{$thisarticleinfos->brandapply}}</h1></li>
                         <li><font>|</font></li>
                     </ul>
                     <ul>
                         <li><p>品牌好评率</p></li>
-                        <li><h1>97%</h1></li>
+                        <li><h1>{{rand(95,99)}}%</h1></li>
                         <!--<li><font>|</font></li>-->
                     </ul>
                 </div>
@@ -104,20 +104,19 @@
 
         <div class="b_con-right">
             <img src="/frontend/images/pinpaixinagqingye-con1_03.png" />
-            <h1>安徽三只松鼠电子商务有限公司</h1>
+            <h1>{{$thisarticleinfos->brandgroup}}</h1>
             <ul>
-                <li><p style="margin-top: 0px;">所在地：<font>安徽省芜湖市弋江区高新开发区南</font></p></li>
-                <li><p>注册资金：<font>150万</font></p></li>
-                <li><p>公司类型：<font>个体经营</font></p></li>
+                <li><p style="margin-top: 0px;">所在地：<font>{{$thisarticleinfos->brandaddr}}</font></p></li>
+                <li><p>注册资金：<font>{{$thisarticleinfos->registeredcapital}}</font></p></li>
+                <li><p>公司类型：<font>{{$thisarticleinfos->genre}}</font></p></li>
             </ul>
             <input type="button" value="在线加盟" style="margin-left: 30px;"/>
             <input type="button" value="我要咨询"/>
         </div>
 
         <div class="b_con1-bottom">
-            <p>浏览：34561</p>
+            <p>浏览：{{$thisarticleinfos->click}} 更新时间：{{$thisarticleinfos->created_at}}</p>
         </div>
-
     </div>
 
     <div class="b_con2 center">
@@ -154,184 +153,77 @@
 
             <div class="b_con3-1">
                 <div></div>
-                <h1>威特斯特许公示信息</h1>
+                <h1>{{$thisarticleinfos->brandname}}加盟公示信息</h1>
 
                 <table class="ntable">
 
                     <tr>
                         <td width="20%" class="tb">品牌名称：</td>
-                        <td width="30%" class=""> 三只松鼠 </td>
+                        <td width="30%" class=""> {{$thisarticleinfos->brandname}}</td>
                         <td width="20%" class="tb">特许备案号：</td>
                         <td width="30%" class=""> 0111500111800050 </td>
                     </tr>
                     <tr>
                         <td class="tb">特许品牌：</td>
-                        <td class=""> 三只松鼠 </td>
+                        <td class=""> {{$thisarticleinfos->brandname}} </td>
                         <td class="tb" width="18%">备案公告时间	：</td>
                         <td class=""> 2018-09-20 </td>
                     </tr>
                     <tr>
-                        <td class="tb">统一社会信用代码：</td>
-                        <td class=""> 91110108344314759F </td>
-                        <td class="tb">纳税人识别号：</td>
-                        <td class=""> 91110108344314759F </td>
-                    </tr>
-                    <tr>
-                        <td class="tb">注册号：</td>
-                        <td class=""> 110108019216937 </td>
-                        <td class="tb" width="15%">组织机构代码：</td>
-                        <td class=""> 34431475-9 </td>
-                    </tr>
-                    <tr>
                         <td class="tb">公司类型：</td>
-                        <td class=""> 有限责任公司(自然人投资或控股) </td>
+                        <td class=""> {{$thisarticleinfos->genre}} </td>
                         <td class="tb">所属行业：</td>
-                        <td class=""> 科学研究和技术服务业 </td>
+                        <td class=""> 干洗店连锁加盟 </td>
                     </tr>
                     <tr>
                         <td class="tb">投资金额：</td>
-                        <td class="" style="max-width:301px;"> ￥3万以下 </td>
+                        <td class="" style="max-width:301px;"> {{$thisarticleinfos->brandpay}} </td>
                         <td class="tb">门店数：</td>
-                        <td class=""> 3316 </td>
+                        <td class=""> {{$thisarticleinfos->brandnum}} </td>
                     </tr>
                     <tr>
                         <td class="tb">店铺所需面积：</td>
-                        <td class="" style="max-width:301px;"> 10-30平米</td>
+                        <td class="" style="max-width:301px;"> {{$thisarticleinfos->acreage}}</td>
                         <td class="tb">品牌发源地：</td>
-                        <td class=""> 芜湖 </td>
+                        <td class=""> {{$thisarticleinfos->brandorigin}} </td>
                     </tr>
                     <tr>
                         <td class="tb"> 申请加盟 </td>
-                        <td class=""> 669人</td>
+                        <td class=""> {{$thisarticleinfos->brandapply}}</td>
                         <td class="tb"> 意向加盟 </td>
-                        <td class=""> 1505 </td>
+                        <td class=""> {{$thisarticleinfos->brandattch}} </td>
                     </tr>
                     <tr>
                         <td class="tb"> 公司名称 </td>
-                        <td class=""> 三只松鼠有限公司 </td>
+                        <td class=""> {{$thisarticleinfos->brandgroup}} </td>
                         <td class="tb"> 注册资金 </td>
-                        <td class=""> 5000万</td>
+                        <td class=""> {{$thisarticleinfos->registeredcapital}}</td>
 
                     </tr>
                     <tr>
                         <td class="tb"> 加盟人群 </td>
-                        <td class=""> 工薪阶层、80后、白领、自由职业者、 </td>
+                        <td class=""> {{$thisarticleinfos->brandperson}} </td>
                         <td class="tb"> 加盟区域 </td>
-                        <td class=""> 威海、安阳、潮州、宜昌、绥化、 等全国地区</td>
-
+                        <td class=""> {{$thisarticleinfos->brandarea}} 等全国地区</td>
                     </tr>
                     <tr>
                         <td class="tb">企业地址：</td>
-                        <td class="" > 安徽省芜湖市弋江区高新开发区南区龙华厂房</td>
+                        <td class="" > {{$thisarticleinfos->brandaddr}}</td>
                         <td class="tb">经营范围：</td>
-                        <td class=""> 中式餐饮，西式餐饮，凉菜制作，烧烤熟肉</td>
+                        <td class=""> {{$thisarticleinfos->brandmap}}</td>
                     </tr>
-
                 </table>
-
-
             </div>
 
             <div class="b_con3-2">
                 <div class="xiaokuai2"></div>
-                <h1>威特斯品牌介绍</h1>
+                <h2>{{$thisarticleinfos->brandname}}品牌介绍</h2>
                 <div class="b_con3-2-xian"></div>
-
-                <p class="b_con3-2-p1">
-                    三只松鼠是安徽三只松鼠电子商务有限公司旗下品牌，于2012年创业，为广大消费者提供各种坚果、干果、茶<br />
-                    叶等等，产品美味、健康、营养、时尚，深得广大消费者的喜爱和信赖，目前，产品已经销往全国各个地区和城<br />
-                    市，建立了比较完善的销售网络。
-
-                </p>
-
-                <ul class="b_con3-2-tu">
-                    <li style="width: 384px;height: 264px;margin-left: 0px;margin-top: 0px;"><img src="/frontend/images/con1-tu_03.png" /> </li>
-                    <li style="margin-top: 0px;"><img src="/frontend/images/con1-tu_03.png" /> </li>
-                    <li style="margin-top: 0px;"><img src="/frontend/images/con1-tu_03.png" /></li>
-                    <li><img src="/frontend/images/con1-tu_03.png" /></li>
-                    <li><img src="/frontend/images/con1-tu_03.png" /></li>
-                </ul>
-                <ul class="b_con3-2-p2">
-                    <li style="margin-top: 0px;"><p>三只松鼠，经历了有无到有，有小到大的历程，目前，已经全面覆盖天猫、淘宝、京东、1号店、QQ网购、美<br />
-                            团、唯品会、聚美优品等各类渠道，并已建成全国华南、华北、华东、西南四大物流中心，可实现日处理订单<br />
-                            量10万单，并实现全国60%区域的消费者次日达极速物流服务。</p></li>
-                    <li><p>三只松鼠，2012年4月获得美国IDG资本150万美元的天使投资，2012年4月获得美国IDG资本150万美元的天使<br />
-                            投资， 2014年3月IDG资本、今日资本追加1亿元人民币C轮投资，2015年9月三只松鼠获峰瑞资本3亿人民币D<br />
-                            轮投资，资金实力比较雄厚，发展速度也比较快速，公司市值超过40亿人民币。</p></li>
-                    <li><p>三只松鼠加盟项目为广大投资创业者带来了一个比较平坦的投资创业平台，项目实力雄厚，优势也比较多，选择<br />
-                            投资加盟该项目，创业者可以轻松获得成功，赚取到大量的金钱！</p></li>
-                </ul>
+                {!! $thisarticleinfos->body !!}
             </div>
-
-            <div class="b_con3-3">
-                <div class="xiaokuai3"></div>
-                <h1>威特斯公司介绍</h1>
-                <div class="b_con3-3-xian"></div>
-
-                <ul class="b_con3-3-ul1">
-                    <li style="margin-top: 0px;"><p>安徽三只松鼠电子商务有限公司，于2012年2月在安徽芜湖国家高新区注册成立，是中国家定位于纯互联网食品<br />
-                            品牌的企业，也是当前中国销售规模大的食品电商企业，初是由5名创始团队组建，到目前公司全国雇员超过17<br />
-                            00余人，其中来自全国的电商运营团队500余人，平均年龄24岁，是全国年轻的电商团队。<br />
-                        </p></li>
-                    <li><p>公司创始人兼CEO章燎原先生，10年草根创业，10年传统行业营销、管理从业经历，4年互联网品牌营销、管理<br />
-                            经验，在电商界人称“松鼠老爹_章三疯”，属于实战派、革命派的草根战略营销者，擅长细分品牌定位、蓝海<br />
-                            市场开拓、互联网品牌打造。目前，已经将旗下品牌——三只松鼠的销售网络覆盖天猫、淘宝、京东、1号店、<br />
-                            QQ网购、美团、唯品会、聚美优品等各类渠道，并已建成全国华南、华北、华东、西南四大物流中心，可实现<br />
-                            日处理订单量10万单，并实现全国60%区域的消费者次日达极速物流服务。</p></li>
-                </ul>
-                <h2>公司发展历程：</h2>
-                <ul class="b_con3-3-ul2">
-                    <li style="margin-top: 0px;"><p>2012年（创业年）：2012年2月，由五名创业初始团队在安徽芜湖都宝小区创立三只松鼠品牌——2012年2月<br />
-                            由五名创业初始团队在安徽芜湖都宝小区创立三只松鼠品牌。</p></li>
-                    <li><p>2013年（发展年）：2013年1月，月销售额突破2200万，位列全网食品销售——2013年12，全网年销售突破<br />
-                            3.26亿元。</p></li>
-                    <li><p>2014年（地基年）：2014年1月，月度销售额突破1.6亿元，松鼠再次发生第二次危机，做出向主人的赔付政策<br />
-                            累计赔付81万元，全员参与危机战斗，再次演绎了松鼠价值观的强大—— 2014年12月12日，全网年销售额
-                            突破10亿元。</p></li>
-                    <li><p>2015年（变革年）：2015年2月，三只松鼠年货销售额达7.35亿元 ——2015年9月，三只松鼠获峰瑞资本3亿人<br />
-                            民币D轮投资，松鼠公司市值超过40亿人民币。</p></li>
-                </ul>
-            </div>
-
-            <div class="b_con3-4">
-                <div class="xiaokuai4"></div>
-                <h1>威特斯加盟流程</h1>
-                <div class="b_con3-4-xian"></div>
-
-                <ul>
-                    <li style="margin-top: 0px;"><p>1、投资咨询：投资者以电话、传真、网上留言等方式向三只松鼠总部专业的投资顾问咨询相关合作事项，索取<br />
-                            有关资料</p></li>
-                    <li><p>2、实地考察：投资者到三只松鼠总部所在地进行项目考察，并与三只松鼠总部工作人员进行业务交流。</p></li>
-                    <li><p>3、资格审核：三只松鼠总部对投资者进行审核，确认投资者的合作资格。</p></li>
-                    <li><p>4、签订合同：双方确认考察结果无争议，正式签订合同。</p></li>
-                    <li><p>5、缴纳费用：投资者按所选择的投资类型向三只松鼠总部交纳相关的费用。</p></li>
-                    <li><p>6、三只松鼠总部培训：三只松鼠总部安排投资者进行技术培训，培训合格后颁发授权铜牌。</p></li>
-                    <li><p>7、店面装修：三只松鼠总部为加盟者提供装修指导，与设计指导。</p></li>
-                    <li><p>8、开业：三只松鼠总部持续关注加盟者的经营情况，并给予经营指导与帮助。</p></li>
-                </ul>
-            </div>
-
-            <div class="b_con3-5">
-                <div class="xiaokuai5"></div>
-                <h1>威特斯市场分析</h1>
-                <div class="b_con3-5-xian"></div>
-
-                <ul>
-                    <li style="margin-top: 0px;"><p>三只松鼠，产品种类丰富，质量高，价格实惠，深受广大消费者的喜爱，在市场上有着良好的口碑，目前，在市
-                            场上也已经形成了比较完善的销售网络，被全国各个地区的消费者所接受，在市场上也形成了比较可观的需求量
-                            ，给选择加盟该项目的创业者带去了巨额财富。</p></li>
-                    <li><p>投资三只松鼠加盟项目，总部会为创业者提供直接的供货方式，减少商品配送过程中的中间环节，降低了商品成
-                            本，让加盟店内的产品售价更低，给广大消费者带来更加物美价廉的产品，赢得了广大消费者的认可，选择前来
-                            光临的消费者的数量十分的庞大。</p></li>
-                    <li><p>三只松鼠加盟，投资小、利润高、风险低，创业者挑选创业项目时的理想选择。想投资创业的朋友，选择了加盟
-                            该项目，那么，他们的财富梦想都将会得到实现。</p></li>
-                    <li style="margin-top: 51px;"><p>数据来源：国家企业信用信息公示系统。</p></li>
-                </ul>
-            </div>
-
             <div class="b_con3-6">
                 <div class="xiaokuai6"></div>
-                <h1>赛维<font>运营综合分析</font></h1>
+                <h1>{{$thisarticleinfos->brandname}}<font>运营综合分析</font></h1>
                 <div class="b_con3-6-xian"></div>
 
                 <table>

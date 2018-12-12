@@ -82,9 +82,9 @@
             <div class="contact">
                 <h4>联系方式</h4>
                 <ul class="list-unstyled">
-                    <li>企查查官方电话：400-928-2212</li>
-                    <li>官方客服QQ：<a target="_blank" href="http://wpa.b.qq.com/cgi/wpa.php?ln=1&amp;key=XzkzODA0NDMwM180ODcyNjFfNDAwOTk4NTIxMl8yXw">4009985212</a></li>
-                    <li>客服邮箱：<a href="mailto:kf@qichacha.com">kf@qichacha.com</a></li>
+                    <li>干洗店官方电话：400-928-2212</li>
+                    <li>官方客服QQ：<a target="_blank" href="#">410547658</a></li>
+                    <li>客服邮箱：<a href="mailto:kf@#.com">kf@hacha.com</a></li>
                     <li>微信客服：qccgf1234</li>
                     <li>微信公众号：qcc365</li>
                     <li>地址：江苏省苏州市工业园区东长路88号2.5产业园C1幢5楼</li>
@@ -93,20 +93,20 @@
             <div class="service" style="">
                 <h4>查查服务</h4>
                 <ul class="list-unstyled">
-                    <li> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'500强企业'});" href="https://www.qichacha.com/cms_top500" target="_blank">500强企业</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'权查查'});" href="http://www.qccip.com/" target="_blank">权查查</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'客找找'});" href="http://www.kezhaozhao.com/" target="_blank">客找找</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'疫苗查查'});" href="http://ai.qichacha.com/" target="_blank">疫苗查查</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'融资查询'});" href="https://www.qichacha.com/elib_financing" target="_blank">融资查询</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'企风控'});" href="http://qifengkong.com/" target="_blank">企风控</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'企业库'});" href="http://www.qichacha.com/elib" target="_blank">企业库</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'裁判文书查询'});" href="http://www.qichacha.com/more_wenshus" target="_blank">裁判文书查询</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'新三板企业查询'});" href="http://sanban.qichacha.com" target="_blank">新三板企业查询</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'上市企业查询'});" href="http://ipo.qichacha.com/" target="_blank">上市企业查询</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'企查查企业查询'});" href="https://www.qichacha.com/gongsi" target="_blank">企查查企业查询</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'企查查移动版'});" href="https://m.qichacha.com" target="_blank">企查查移动版</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'企查查社区'});" href="https://www.qichacha.com/dianping" target="_blank">企查查社区</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'企业风险搜索'});" href="https://www.qichacha.com/more_shixins" target="_blank">企业风险搜索</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'商标专利搜索'});" href="https://www.qichacha.com/more_brands" target="_blank">商标专利搜索</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'企业网址导航'});" href="https://www.qichacha.com/daohang" target="_blank">企业网址导航</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'企业高管查询'});" href="https://www.qichacha.com/boss" target="_blank">企业高管查询</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'企业税号查询'});" href="https://www.qichacha.com/tax" target="_blank">企业税号查询</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'企业新闻头条'});" href="https://www.qichacha.com/news" target="_blank">企业新闻头条</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'企业大数据导航'});" href="https://hao.qichacha.com" target="_blank">企业大数据导航</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'企查查下载'});" href="https://www.qichacha.com/weixin" target="_blank">企查查下载</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'企业失信查询'});" href="https://www.qichacha.com/more_shixins" target="_blank">企业失信查询</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'企查查接口平台'});" href="http://www.yjapi.com/?from=qichacha" target="_blank" rel="nofollow">企查查接口平台</a> <a href="/yellowpage">公司黄页</a> <a href="/cms_dirhot">人员名录</a> <a href="http://open.qichacha.com" target="_blank"> 开放平台</a> </li>
+                    <li> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'500强企业'});" href="https://www.#.com/cms_top500" target="_blank">500强企业</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'权查查'});" href="http://www.qccip.com/" target="_blank">权查查</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'客找找'});" href="http://www.kezhaozhao.com/" target="_blank">客找找</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'疫苗查查'});" href="http://ai.#.com/" target="_blank">疫苗查查</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'融资查询'});" href="https://www.#.com/elib_financing" target="_blank">融资查询</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'企风控'});" href="http://qifengkong.com/" target="_blank">企风控</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'企业库'});" href="http://www.#.com/elib" target="_blank">企业库</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'裁判文书查询'});" href="http://www.#.com/more_wenshus" target="_blank">裁判文书查询</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'新三板企业查询'});" href="http://sanban.#.com" target="_blank">新三板企业查询</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'上市企业查询'});" href="http://ipo.#.com/" target="_blank">上市企业查询</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'干洗店企业查询'});" href="https://www.#.com/gongsi" target="_blank">干洗店企业查询</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'干洗店移动版'});" href="https://m.#.com" target="_blank">干洗店移动版</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'干洗店社区'});" href="https://www.#.com/dianping" target="_blank">干洗店社区</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'企业风险搜索'});" href="https://www.#.com/more_shixins" target="_blank">企业风险搜索</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'商标专利搜索'});" href="https://www.#.com/more_brands" target="_blank">商标专利搜索</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'企业网址导航'});" href="https://www.#.com/daohang" target="_blank">企业网址导航</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'企业高管查询'});" href="https://www.#.com/boss" target="_blank">企业高管查询</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'企业税号查询'});" href="https://www.#.com/tax" target="_blank">企业税号查询</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'企业新闻头条'});" href="https://www.#.com/news" target="_blank">企业新闻头条</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'企业大数据导航'});" href="https://hao.#.com" target="_blank">企业大数据导航</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'干洗店下载'});" href="https://www.#.com/weixin" target="_blank">干洗店下载</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'企业失信查询'});" href="https://www.#.com/more_shixins" target="_blank">企业失信查询</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'干洗店接口平台'});" href="http://www.yjapi.com/?from=#" target="_blank" rel="nofollow">干洗店接口平台</a> <a href="/yellowpage">公司黄页</a> <a href="/cms_dirhot">人员名录</a> <a href="http://open.#.com" target="_blank"> 开放平台</a> </li>
                 </ul>
             </div>
             <div class="qrcode">
                 <div class="qrcode-item">
-                    <img src="/frontend/images/v3/code_xcx.png?t=3" alt="企查查APP下载">
+                    <img src="/frontend/images/v3/code_xcx.png?t=3" alt="APP下载">
                     <span class="ma_xcx">小程序</span>
                 </div>
                 <div class="qrcode-item">
-                    <img src="/frontend/images/v3/code_app.png?t=3" alt="企查查APP下载">
+                    <img src="/frontend/images/v3/code_app.png?t=3" alt="APP下载">
                     <span class="ma_app">扫码下载APP</span>
                 </div>
                 <div class="qrcode-item">
-                    <img src="/frontend/images/v3/code_wx.png?t=3" alt="企查查微信公众号">
+                    <img src="/frontend/images/v3/code_wx.png?t=3" alt="干洗店微信公众号">
                     <span class="ma_wx">微信公众号</span>
                 </div>
             </div>
@@ -133,7 +133,7 @@
             <div class="footer-copy clearfix">
                 <div class="pull-left">
                     <div class="m-t-xs">
-                        <a href="javascript:void(0)" title="企查查">©2014-2018</a>
+                        <a href="javascript:void(0)" title="干洗店">©2014-2018</a>
                         <a href="http://www.miibeian.gov.cn/" target="_blank"> 苏ICP备15042526号-4</a> 版权所有&nbsp;苏州朗动网络科技有限公司 &nbsp;增值电信业务经营许可证：
                         <a href="http://jscainfo.miitbeian.gov.cn/state/outPortal/loginPortal.action" rel="nofollow" target="_blank">苏ICP证B2-20180251</a>
                     </div>

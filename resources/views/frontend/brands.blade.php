@@ -77,7 +77,7 @@
             <ul class="xm-list-H224 clearfix" style="width: 840px; float:left; cursor: pointer">
                 <li class="">
                     <div class="btn-duibi btn-addbyb" data-id="2171">
-                        <i class="iconfont icon-Contrast"></i>对比
+                        <i class="iconfont icon-Contrast"></i>咨询
                     </div>
                     <a target="_blank" href="/brand/2171/" class="img-block magnify"><img src="/frontend/images/con2-left-tu_03.png" alt="美石记韩式拌饭"></a>
                     <div class="f20">
