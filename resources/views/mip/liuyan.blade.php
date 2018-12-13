@@ -6,7 +6,7 @@
         <mip-form method="post" target="_self" url="https://message.5988.com/index.php/my_ci/into/">
         <input type="hidden" name="realm" value="www.xiuxianshipin.com">
         <input type="hidden" name="job" value="guestbook">
-        <input type="hidden" name="title" value="中国教育招商网">
+        <input type="hidden" name="title" value="干洗店品牌网">
         <input type="hidden" name="cla" value="
         @if(isset($thisarticleinfos))
         @if($thisarticleinfos->brandname)

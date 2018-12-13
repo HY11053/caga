@@ -94,7 +94,7 @@
                         <div class="left fl">
                             <div class="lefttitle">{{$brandnew->title}}</div>
                             <div class="text">
-                                <div class="message">编辑：中国教育招商网</div>
+                                <div class="message">编辑：干洗店品牌网</div>
                             </div>
                         </div>
                         <div class="right fr">

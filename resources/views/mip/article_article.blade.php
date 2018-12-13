@@ -168,7 +168,7 @@
                         <div class="left fl">
                             <div class="lefttitle">{{$xg_article->title}}</div>
                             <div class="text">
-                                <div class="message">来源：中国教育招商网</div>
+                                <div class="message">来源：干洗店品牌网</div>
                                 <div class="time">{{date('Y-m-d',strtotime($xg_article->created_at))}}</div>
                             </div>
                         </div>

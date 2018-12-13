@@ -95,7 +95,7 @@ class ArticleController extends Controller
 
         $published=$thisarticleinfos->created_at;
         DB::table('brandarticles')->where('id',$id)->update(['click'=>$thisarticleinfos->click+1,'published_at'=>$published]);
-        $indexname=$thisarticleinfos->nid?'中国教育招商网':'中国教育招商网';
+        $indexname=$thisarticleinfos->nid?'干洗店品牌网':'干洗店品牌网';
         $abrandlists=Brandarticle::where('mid','1')->where('typeid',$thisarticleinfos->typeid)->where('flags','like','%'.'a'.'%')->take(4)->orderBy('id','desc')->get();
         return view('frontend.brand_production',compact('thisarticleinfos','productionlists','pid','productions','topbrands','pics','brandnews','latesnews','latestbrands','indexname','abrandlists'));
     }
@@ -120,7 +120,7 @@ class ArticleController extends Controller
         $latestbrands=Brandarticle::take(5)->orderBy('id','desc')->get();
         $published=$thisarticleinfos->created_at;
         DB::table('brandarticles')->where('id',$id)->update(['click'=>$thisarticleinfos->click+1,'published_at'=>$published]);
-        $indexname=$thisarticleinfos->nid?'中国教育招商网':'中国教育招商网';
+        $indexname=$thisarticleinfos->nid?'干洗店品牌网':'干洗店品牌网';
         $comments=Comment::where('archive_id',$thisarticleinfos->id)->where('is_hidden',0)->get();
         $abrandlists=Brandarticle::where('mid','1')->where('typeid',$thisarticleinfos->typeid)->where('flags','like','%'.'a'.'%')->take(4)->orderBy('id','desc')->get();
         return view('frontend.brand_company',compact('thisarticleinfos','pics','brandnews','topbrands','latesnews','indexname','latestbrands','comments','abrandlists'));
@@ -146,7 +146,7 @@ class ArticleController extends Controller
         $latestbrands=Brandarticle::take(5)->orderBy('id','desc')->get();
         $published=$thisarticleinfos->created_at;
         DB::table('brandarticles')->where('id',$id)->update(['click'=>$thisarticleinfos->click+1,'published_at'=>$published]);
-        $indexname=$thisarticleinfos->nid?'中国教育招商网':'中国教育招商网';
+        $indexname=$thisarticleinfos->nid?'干洗店品牌网':'干洗店品牌网';
         $comments=Comment::where('archive_id',$thisarticleinfos->id)->where('is_hidden',0)->get();
         $abrandlists=Brandarticle::where('mid','1')->where('typeid',$thisarticleinfos->typeid)->where('flags','like','%'.'a'.'%')->take(4)->orderBy('id','desc')->get();
         return view('frontend.brand_join',compact('thisarticleinfos','pics','brandnews','topbrands','latesnews','indexname','latestbrands','comments','abrandlists'));
@@ -173,7 +173,7 @@ class ArticleController extends Controller
         $latestbrands=Brandarticle::take(5)->orderBy('id','desc')->get();
         $published=$thisarticleinfos->created_at;
         DB::table('brandarticles')->where('id',$id)->update(['click'=>$thisarticleinfos->click+1,'published_at'=>$published]);
-        $indexname=$thisarticleinfos->nid?'中国教育招商网':'中国教育招商网';
+        $indexname=$thisarticleinfos->nid?'干洗店品牌网':'干洗店品牌网';
         $comments=Comment::where('archive_id',$thisarticleinfos->id)->where('is_hidden',0)->get();
         $abrandlists=Brandarticle::where('mid','1')->where('typeid',$thisarticleinfos->typeid)->where('flags','like','%'.'a'.'%')->take(4)->orderBy('id','desc')->get();
         return view('frontend.brand_profit',compact('thisarticleinfos','pics','brandnews','topbrands','latesnews','indexname','latestbrands','comments','abrandlists'));
@@ -202,7 +202,7 @@ class ArticleController extends Controller
             $cid,//传入分类id,
             $brandnews//传入原始分页器
         );
-        $indexname=$thisarticleinfos->nid?'中国教育招商网':'中国教育招商网';
+        $indexname=$thisarticleinfos->nid?'干洗店品牌网':'干洗店品牌网';
         $abrandlists=Brandarticle::where('mid','1')->where('typeid',$thisarticleinfos->typeid)->where('flags','like','%'.'a'.'%')->take(4)->orderBy('id','desc')->get();
         return view('frontend.brand_news',compact('thisarticleinfos','topbrands','pics','latesnews','brandnews','latestbrands','indexname','abrandlists'));
 
@@ -229,7 +229,7 @@ class ArticleController extends Controller
         $latestnewslists=Archive::take(9)->latest()->get();
         $abrandlists=Brandarticle::where('mid','1')->where('typeid',$thisarticleinfos->typeid)->where('flags','like','%'.'a'.'%')->take(4)->orderBy('id','desc')->get();
         $cnew=Archive::whereIn('brandid',Brandarticle::where('typeid',$brandtypeid)->pluck('id'))->where('brandid','<>',$thisarticleinfos->brandid)->latest()->first();
-        $indexname=$thisarticleinfos->nid?'中国教育招商网':'中国教育招商网';
+        $indexname=$thisarticleinfos->nid?'干洗店品牌网':'干洗店品牌网';
         return view('frontend.article_production',compact('thisarticleinfos','cproductions','thisbrandinfo','productionlists','hproductions','indexname','topbrands','latestnewslists','flashlingshibrands','abrandlists','cnew'));
 
     }

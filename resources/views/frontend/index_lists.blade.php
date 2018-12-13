@@ -1,10 +1,10 @@
 @extends('frontend.frontend')
-@section('title'){{$thistypeinfo->title}}-中国教育招商网@stop
+@section('title'){{$thistypeinfo->title}}-干洗店品牌网@stop
 @section('keywords'){{$thistypeinfo->keywords}} @stop
 @section('description'){{trim($thistypeinfo->description)}}@stop
 @section('headlibs')
-    <meta name="Copyright" content="中国教育招商网-{{env('APP_URL')}}"/>
-    <meta name="author" content="中国教育招商网" />
+    <meta name="Copyright" content="干洗店品牌网-{{env('APP_URL')}}"/>
+    <meta name="author" content="干洗店品牌网" />
     <meta http-equiv="mobile-agent" content="format=wml; url={{str_replace('http://www.','http://m.',config('app.url'))}}{{Request::getrequesturi()}}" />
     <meta http-equiv="mobile-agent" content="format=xhtml; url={{str_replace('http://www.','http://m.',config('app.url'))}}{{Request::getrequesturi()}}" />
     <meta http-equiv="mobile-agent" content="format=html5; url={{str_replace('http://www.','http://m.',config('app.url'))}}{{Request::getrequesturi()}}" />
@@ -71,7 +71,7 @@
                 <ul>
                     @foreach($abrandlists as $abrandlist)
                     <li>
-                        <a href="/{{$abrandlist->arctype->real_path}}/{{$abrandlist->id}}.shtml"><img src="{{$abrandlist->brandname}}" /></a>
+                        <a href="/{{$abrandlist->arctype->real_path}}/{{$abrandlist->id}}.shtml"><img src="{{$abrandlist->litpic}}" /></a>
                         <a href="" class="conl2-right-2-a">{{$abrandlist->brandname}}</a>
                     </li>
                    @endforeach

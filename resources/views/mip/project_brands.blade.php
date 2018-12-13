@@ -1,5 +1,5 @@
 @extends('mip.mip')
-@section('title'){{$cid}}{{$tid}}{{$zid}}{{$thistypeinfo->title}}-中国教育招商网@stop
+@section('title'){{$cid}}{{$tid}}{{$zid}}{{$thistypeinfo->title}}-干洗店品牌网@stop
 @section('keywords'){{$thistypeinfo->keywords}} @stop
 @section('description'){{trim($thistypeinfo->description)}}@stop
 @section('headlibs')
@@ -105,7 +105,7 @@
                             <div class="left fl">
                                 <div class="lefttitle">{{$cnewslist->title}}</div>
                                 <div class="text">
-                                    <div class="message">编辑：中国教育招商网</div>
+                                    <div class="message">编辑：干洗店品牌网</div>
                                     <div class="time">{{date('Y-m-d',strtotime($cnewslist->created_at))}}</div>
                                 </div>
                             </div>

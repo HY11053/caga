@@ -1,7 +1,7 @@
 @extends('mip.mip')
-@section('title'){{ config('app.webname', '中国教育招商网') }}@stop
-@section('keywords'){{ config('app.keywords', '中国教育招商网') }}@stop
-@section('description'){{ config('app.description', '中国教育招商网') }}@stop
+@section('title'){{ config('app.webname', '干洗店品牌网') }}@stop
+@section('keywords'){{ config('app.keywords', '干洗店品牌网') }}@stop
+@section('description'){{ config('app.description', '干洗店品牌网') }}@stop
 @section('headlibs')
     <link href="{{str_replace('www.','mip.',config('app.url'))}}/mobile/css/mip_index.css" rel="stylesheet" type="text/css"/>
     <link href="{{str_replace('www.','mip.',config('app.url'))}}/frontend/css/swiper.min.css" rel="stylesheet" type="text/css"/>
@@ -182,7 +182,7 @@
                         @endforeach
                     </dd>
                     <dd class="publish ">
-                        <span class="fl publish-text">来源：中国教育招商网</span>
+                        <span class="fl publish-text">来源：干洗店品牌网</span>
                         <span class=" publish-text fl">{{$latestbrandnew->created_at}}</span>
                     </dd>
                 </dl>
@@ -206,7 +206,7 @@
                             @endforeach
                         </dd>
                         <dd class="publish ">
-                            <span class="fl publish-text">来源：中国教育招商网</span>
+                            <span class="fl publish-text">来源：干洗店品牌网</span>
                             <span class=" publish-text fl">{{$jmzhinannew->created_at}}</span>
                         </dd>
                     </dl>
@@ -230,7 +230,7 @@
                             @endforeach
                         </dd>
                         <dd class="publish ">
-                            <span class="fl publish-text">来源：中国教育招商网</span>
+                            <span class="fl publish-text">来源：干洗店品牌网</span>
                             <span class=" publish-text fl">{{$touzinew->created_at}}</span>
                         </dd>
                     </dl>
@@ -254,7 +254,7 @@
                             @endforeach
                         </dd>
                         <dd class="publish ">
-                            <span class="fl publish-text">来源：中国教育招商网</span>
+                            <span class="fl publish-text">来源：干洗店品牌网</span>
                             <span class=" publish-text fl">{{$jingyingnew->created_at}}</span>
                         </dd>
                     </dl>

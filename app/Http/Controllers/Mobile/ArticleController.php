@@ -40,7 +40,7 @@ class ArticleController extends Controller
         DB::table('archives')->where('id',$id)->update(['click'=>$thisarticleinfos->click+1,'published_at'=>$published]);
         $prev_article = Archive::latest('published_at')->find($this->getPrevArticleId($thisarticleinfos->id));
         $next_article = Archive::latest('published_at')->find($this->getNextArticleId($thisarticleinfos->id));
-        $indexname=$thisarticleinfos->nid?'中国教育招商网':'中国教育招商网';
+        $indexname=$thisarticleinfos->nid?'干洗店品牌网':'干洗店品牌网';
         $jsonpics='';
         preg_match_all('/<[img|IMG].*?src=[\' | \"](.*?(?:[\.jpg|\.jpeg|\.png|\.gif|\.bmp]))[\'|\"].*?[\/]?>/i',$thisarticleinfos->body,$matches);
         if (isset($matches[1]))
@@ -84,7 +84,7 @@ class ArticleController extends Controller
         $topbrands=Brandarticle::whereIn('typeid',$typeids)->orwhere('typeid',$typeid)->take(4)->orderBy('click','desc')->get();
         $published=$thisarticleinfos->created_at;
         DB::table('brandarticles')->where('id',$id)->update(['click'=>$thisarticleinfos->click+1,'published_at'=>$published]);
-        $indexname=$thisarticleinfos->nid?'中国教育招商网':'中国教育招商网';
+        $indexname=$thisarticleinfos->nid?'干洗店品牌网':'干洗店品牌网';
         return view('mobile.brand_article',compact('thisarticleinfos','pics','brandnews','topbrands','indexname'));
     }
 
@@ -114,7 +114,7 @@ class ArticleController extends Controller
         );
         $published=$thisarticleinfos->created_at;
         DB::table('brandarticles')->where('id',$id)->update(['click'=>$thisarticleinfos->click+1,'published_at'=>$published]);
-        $indexname=$thisarticleinfos->nid?'中国教育招商网':'中国教育招商网';
+        $indexname=$thisarticleinfos->nid?'干洗店品牌网':'干洗店品牌网';
         return view('mobile.brand_production',compact('thisarticleinfos','productionlists','pid','productions','topbrands','pics','brandnews','indexname'));
     }
 
@@ -132,7 +132,7 @@ class ArticleController extends Controller
         $topbrands=Brandarticle::whereIn('typeid',$typeids)->orwhere('typeid',$typeid)->take(4)->orderBy('click','desc')->get();
         $published=$thisarticleinfos->created_at;
         DB::table('brandarticles')->where('id',$id)->update(['click'=>$thisarticleinfos->click+1,'published_at'=>$published]);
-        $indexname=$thisarticleinfos->nid?'中国教育招商网':'中国教育招商网';
+        $indexname=$thisarticleinfos->nid?'干洗店品牌网':'干洗店品牌网';
         return view('mobile.brand_company',compact('thisarticleinfos','pics','brandnews','topbrands','indexname'));
     }
 
@@ -150,7 +150,7 @@ class ArticleController extends Controller
         $topbrands=Brandarticle::whereIn('typeid',$typeids)->orwhere('typeid',$typeid)->take(4)->orderBy('click','desc')->get();
         $published=$thisarticleinfos->created_at;
         DB::table('brandarticles')->where('id',$id)->update(['click'=>$thisarticleinfos->click+1,'published_at'=>$published]);
-        $indexname=$thisarticleinfos->nid?'中国教育招商网':'中国教育招商网';
+        $indexname=$thisarticleinfos->nid?'干洗店品牌网':'干洗店品牌网';
         return view('mobile.brand_join',compact('thisarticleinfos','pics','brandnews','topbrands','indexname'));
 
     }
@@ -169,7 +169,7 @@ class ArticleController extends Controller
         $topbrands=Brandarticle::whereIn('typeid',$typeids)->orwhere('typeid',$typeid)->take(4)->orderBy('click','desc')->get();
         $published=$thisarticleinfos->created_at;
         DB::table('brandarticles')->where('id',$id)->update(['click'=>$thisarticleinfos->click+1,'published_at'=>$published]);
-        $indexname=$thisarticleinfos->nid?'中国教育招商网':'中国教育招商网';
+        $indexname=$thisarticleinfos->nid?'干洗店品牌网':'干洗店品牌网';
         return view('mobile.brand_profit',compact('thisarticleinfos','pics','brandnews','topbrands','indexname'));
     }
 
@@ -191,7 +191,7 @@ class ArticleController extends Controller
             $cid,//传入分类id,
             $brandnews//传入原始分页器
         );
-        $indexname=$thisarticleinfos->nid?'中国教育招商网':'中国教育招商网';
+        $indexname=$thisarticleinfos->nid?'干洗店品牌网':'干洗店品牌网';
         return view('mobile.brand_news',compact('thisarticleinfos','topbrands','pics','latesnews','brandnews','indexname'));
 
      }
@@ -213,7 +213,7 @@ class ArticleController extends Controller
         }else{
             $topbrands=Brandarticle::where('mid','1')->take(4)->orderBy('click','desc')->get();
         }
-        $indexname=$thisarticleinfos->nid?'中国教育招商网':'中国教育招商网';
+        $indexname=$thisarticleinfos->nid?'干洗店品牌网':'干洗店品牌网';
         return view('mobile.article_production',compact('thisarticleinfos','cproductions','thisbrandinfo','productionlists','indexname','topbrands'));
 
     }
