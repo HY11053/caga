@@ -250,7 +250,7 @@
             <img src="/frontend/images/con4_48.png" />
             <ul>
                 @foreach($shebeilists as $shebeilist)
-                    <li><a href=""><span>{{date('Y-m-d',strtotime($shebeilist->created_at))}}</span>{{$shebeilist->title}}<span style="float: right;margin-right: 0px;font-size: 14px;">></span>  </a></li>
+                    <li><a href="/{{$shebeilist->arctype->real_path}}/{{$shebeilist->id}}.shtml/"><span>{{date('Y-m-d',strtotime($shebeilist->created_at))}}</span>{{$shebeilist->title}}<span style="float: right;margin-right: 0px;font-size: 14px;">></span>  </a></li>
                 @endforeach
             </ul>
         </div>
