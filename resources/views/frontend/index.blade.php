@@ -301,7 +301,7 @@
 
                 <ul>
                     @foreach($zhuangxiulists as $zhuangxiulist)
-                        <li class="first_line"><a href="/{{$zhuangxiulist->arctype->real_path}}/{{$zhuangxiulist->id}}.shtml" style="font-size: 14px;">{{$zhuangxiulist->title}}</a></li>
+                        <li @if($index<4) class="first_line" @endif><a href="/{{$zhuangxiulist->arctype->real_path}}/{{$zhuangxiulist->id}}.shtml" style="font-size: 14px;">{{$zhuangxiulist->title}}</a></li>
                     @endforeach
                 </ul>
 
