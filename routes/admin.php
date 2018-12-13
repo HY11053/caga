@@ -148,4 +148,5 @@ Route::group(['prefix' => 'admin'],function ()
     Route::get('/captcha/{config?}','CaptchasController@Captchas');
     Route::get('articletranslate/getarticle','ArticleTraslateController@getArticles');
     Route::get('brandtranslate/getarticle','ArticleTraslateController@getBrandArticles');
+    Route::get('checktool/updateats','CheckToolsController@updateArticles');
 });

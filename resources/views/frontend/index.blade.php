@@ -247,7 +247,11 @@
         <div class="con4-right">
             <h3 class="con4-left-top-1">干洗设备资讯</h3>
             <div></div>
-            <img src="/frontend/images/con4_48.png" />
+            @foreach($shebeilists as $shebeilist)
+                @if($loop->first)
+                    <img src="{{$shebeilist->litpic}}" />
+                @endif
+            @endforeach
             <ul>
                 @foreach($shebeilists as $shebeilist)
                     <li><a href="/{{$shebeilist->arctype->real_path}}/{{$shebeilist->id}}.shtml/"><span>{{date('Y-m-d',strtotime($shebeilist->created_at))}}</span>{{$shebeilist->title}}<span style="float: right;margin-right: 0px;font-size: 14px;">></span>  </a></li>
@@ -324,8 +328,11 @@
         <div class="con5-right">
             <h1>经营指南</h1>
             <div></div>
-            <img src="/frontend/images/con5-tu_09.png" />
-
+            @foreach($latestnews as $latestnew)
+                @if($loop->first)
+                    <img src="{{$latestnew->litpic}}" />
+                @endif
+            @endforeach
             <ul>
                 @foreach($latestnews as $latestnew)
                 <li><a href="/{{$latestnew->arctype->real_path}}/{{$latestnew->id}}.shtml"><span>{{$latestnew->title}}</span></a></li>

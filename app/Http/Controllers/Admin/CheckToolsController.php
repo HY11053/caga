@@ -208,4 +208,18 @@ class CheckToolsController extends Controller
             }
             echo '1';
         }
+
+
+        public function updateArticles()
+        {
+            $articlesids=Archive::withoutGlobalScope(PublishedScope::class)->where('title','like','%ucc%')->pluck('id');
+            foreach ($articlesids as $articlesid)
+            {
+                Archive::withoutGlobalScope(PublishedScope::class)->where('id',$articlesid)->update([
+                    'brandid'=>Brandarticle::withoutGlobalScope(PublishedScope::class)->where('brandname','ucc')->value('id'),
+                    'typeid'=>3
+                ]);
+            }
+            echo '更新完毕';
+        }
 }
