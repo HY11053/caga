@@ -10,97 +10,148 @@
     <meta http-equiv="mobile-agent" content="format=html5; url={{str_replace('http://www.','http://m.',config('app.url'))}}{{Request::getrequesturi()}}" />
     <link rel="alternate" media="only screen and(max-width: 640px)" href="{{str_replace('http://www.','http://m.',config('app.url'))}}{{Request::getrequesturi()}}" >
     <link rel="canonical" href="{{config('app.url')}}{{str_replace('','',Request::getrequesturi())}}"/>
-    <link rel="stylesheet" href="/frontend/css/index.css" />
-    <link href="/frontend/css/list.css" rel="stylesheet" type="text/css" />
 @stop
 @section('main_content')
+    <div class="main_content">
+        {{--
+  <div class="bl_con1 center">
+<ul class="bl_con1-ul1">
+    <li><h1>投资金额  ：</h1></li>
+    <li><p>不限</p></li>
+    <li><a href="" style="margin-left: 20px;">3万以下</a></li>
+    <li><a href="">3万~5万</a></li>
+    <li><a href="">5万~8万</a></li>
+    <li><a href="">8万~12万</a></li>
+    <li><a href="">12万~15万</a></li>
+    <li><a href="">15万以上</a></li>
+</ul>
 
-    <div style="background-color: #f5f5f5;">
-        <div class="w1200">
-            <div class="paixu-nav bg-ff box-shadow mt20">
-                <h1>搜索项目列表项目列表</h1>
-                <div class="px-btn o">
-                    <span class="cur"><a href="javascript:void(0);" data-f="time" data-o="d" rel="nofollow">默认排序</a></span><span><a href="javascript:void(0);" class="iconfont" data-f="investment" data-o="a" rel="nofollow">投资金额</a></span><span><a href="javascript:void(0);" class="iconfont" data-f="shop" data-o="d" rel="nofollow">门店数</a></span>
-                </div>
-            </div>
+<ul class="bl_con1-ul2">
+    <li><h1>所需面积  ：</h1></li>
+    <li><p>不限</p></li>
+    <li><a href="" style="margin-left: 20px;">10平米以下</a></li>
+    <li><a href="">10-30平米</a></li>
+    <li><a href="">30-50平米</a></li>
+    <li><a href="">50-80平米</a></li>
+    <li><a href="">100平米以上</a></li>
+</ul>
+
+<ul class="bl_con1-ul3">
+    <li><h1>所在地区  ：</h1></li>
+    <li><p>不限</p></li>
+    <li><a href="" style="margin-left: 20px;">北京</a></li>
+    <li><a href="">安徽</a></li>
+    <li><a href="">福建</a></li>
+    <li><a href="">甘肃</a></li>
+    <li><a href="">广东</a></li>
+    <li><a href="">广西</a></li>
+    <li><a href="">贵州</a></li>
+    <li><a href="">海南</a></li>
+    <li><a href="">河北</a></li>
+    <li><a href="">河南</a></li>
+    <li><a href="">黑龙江</a></li>
+    <li><a href="">湖北</a></li>
+    <li><a href="">湖南</a></li>
+    <li><a href="">吉林</a></li>
+    <li><a href="">江苏</a></li>
+    <li><a href="">江西</a></li>
+    <li><a href="">辽宁</a></li>
+    <li><a href="">内蒙</a></li>
+</ul>
+</div>
+
+--}}
+        <div class="bl_con2 center box-shadow">
+            <div class="brand_head">品牌招商项目列表</div>
+            <ul>
+                <li><a href="" style="margin-left: 0px;">默认排序</a></li>
+                <li><p>|</p></li>
+                <li><a href="">投资金额</a></li>
+                <li><p>|</p></li>
+                <li><a href="">门店数</a></li>
+            </ul>
+        </div>
+
+        <div class="bl_con3 center">
             <div class="w870 fl">
-                <ul class="xm-list-H224 clearfix" style="width: 870px; float:left; cursor: pointer">
+                <ul class="xm-list-H224 clearfix" style="width: 840px; float:left; cursor: pointer">
                     @foreach($pagelists as $pagelist)
                         <li class="">
-                            <div class="btn-duibi btn-addbyb" data-id="{{$pagelist->id}}">
-                                <i class="iconfont icon-Contrast"></i>对比
+                            <div class="btn-duibi btn-addbyb" data-id="2171">
+                                <i class="iconfont icon-Contrast"></i>咨询
                             </div>
-                            <a target="_blank" href="/xm/{{$pagelist->id}}.shtml" class="img-block magnify"><img src="{{$pagelist->litpic}}" alt="{{$pagelist->brandname}}"></a>
+                            <a target="_blank" href="/{{$pagelist->arctype->real_path}}/{{$pagelist->id}}.shtml/" class="img-block magnify"><img src="{{$pagelist->litpic}}" alt="{{$pagelist->brandname}}"></a>
                             <div class="f20">
-                                <a target="_blank" href="/xm/{{$pagelist->id}}.shtml">{{$pagelist->brandname}}</a>
+                                <h3><a target="_blank" href="/{{$pagelist->arctype->real_path}}/{{$pagelist->id}}.shtml">{{$pagelist->brandname}}</a></h3>
                             </div>
                             <div class="info">
-                                <span title="{{$pagelist->brandpay}}">投资金额：<b class="s-oe">{{$pagelist->brandpay}}</b></span><span title="{{\App\AdminModel\Acreagement::where('id',$pagelist->acreage)->value('type')}}㎡">所需面积：<b class="s-oe">{{\App\AdminModel\Acreagement::where('id',$pagelist->acreage)->value('type')}}㎡</b></span>
+                                <span title="{{$pagelist->brandpay}}">投资金额：<b class="s-oe">{{$pagelist->brandpay}}</b></span><span title="30-50平米㎡">所需面积：<b class="s-oe">30-50平米㎡</b></span>
                             </div>
                             <p> 门店数量：<span class="s-c26">{{$pagelist->brandnum}}</span></p>
                             <p>加盟区域：<span class="s-c26">{{$pagelist->brandarea}}</span></p>
-                            <p>主要产品：<span class="s-c26">{{$pagelist->brandmap}}</span></p>
+                            <p>经营范围：<span class="s-c26">{{$pagelist->brandmap}}</span></p>
                             <p style="height:48px">项目描述：<span>{{$pagelist->description}}</span></p>
                         </li>
                     @endforeach
                 </ul>
                 <div class="clear"></div>
             </div>
-
-            <div class="w320 fr">
-                <dl class="rank-bar mr30">
-                    <dt><h3>品牌排行榜</h3><span class="fr">关注量</span></dt>
-                    @foreach($topbrands as $index=>$topbrand)
-                        <dd @if($loop->first)  class="show" @endif>
-                            <div class="item">
-                                <i class="icon-all @if($index<3) i-a3{{$index}}@else i-a33 @endif">{{$index+1}}</i>
-                                <div class="default">
-                                    <span class="fr">{{$topbrand->brandnum}}</span><a target="_blank" href="/xm/{{$topbrand->id}}.shtml" class="f16">{{$topbrand->brandname}}</a>
-                                </div>
-                                <div class="tips">
-                                    <a target="_blank" href="/xm/{{$topbrand->id}}.shtml"><img src="{{$topbrand->litpic}}" alt="{{$topbrand->brandname}}" class="fr"></a>
-                                    <p> {{$topbrand->description}}</p>
-                                </div>
-                            </div>
-                        </dd>
-                    @endforeach
-                </dl>
-
-                <div class="bg-ff p20">
-                    <div class="lh24">
-                        <a target="_blank" href="//xm//" class="fr s-c999">更多</a>
-                        <h3 class="f22">热门加盟项目</h3>
-                    </div>
-                    <ul class="join-project mt30">
-                        @foreach($flashlingshibrands as $flashlingshibrand)
+            <div class="bl_con3-right">
+                <div class="bl_con3-right-1 box-shadow">
+                    <h3>干洗品牌排行榜关注量</h3>
+                    <div class="bl_con3-right-1-xian"></div>
+                    <ul>
+                        @foreach($topbrands as $index=>$topbrand)
                             <li>
-                                <a target="_blank" href="/xm/{{$flashlingshibrand->id}}.shtml" class="img-block magnify"><img src="{{$flashlingshibrand->litpic}}" alt="{{$flashlingshibrand->brandname}}"></a>
-                                <p class="f16"><a target="_blank" href="/xm/{{$flashlingshibrand->id}}.shtml">{{$flashlingshibrand->brandname}}</a></p>
-                                <p class="f14">投资金额：<span class="s-oe">{{$flashlingshibrand->brandpay}}</span></p>
-                                <p class="f14">加盟门店数：<span class="s-oe">{{$flashlingshibrand->brandnum}}</span></p>
+                                <a href="/{{$topbrand->arctype->real_path}}/{{$topbrand->id}}.shtml"><img src="{{$topbrand->litpic}}" /></a>
+                                <dl class="paihangbf">
+                                    <dt class="a2"><span>NO{{$index+1}}.</span><a class="b_tit" href="/{{$topbrand->arctype->real_path}}/{{$topbrand->id}}.shtml">{{$topbrand->brandname}}</a></dt>
+                                    <dd>
+                                        项目特色:{{str_limit($topbrand->brandpsp,40,'')}}
+                                    </dd>
+                                </dl>
                             </li>
                         @endforeach
                     </ul>
                 </div>
-                <div class="bg-ff p20 mt20">
-                    <div class="lh24">
-                        <a target="_blank" href="/news/" class="fr s-c999">更多</a>
-                        <h3 class="f22">加盟资讯</h3>
-                    </div>
-                    <ul class="tw-list tw-list-h84 mt15">
-                        @foreach($cnewslists as $cnewslist)
-                            <li><a target="_blank" href="/news/{{$cnewslist->id}}.shtml" class="img-block magnify"><img  @if($cnewslist->litpic) src="{{$cnewslist->litpic}}" alt="{{$cnewslist->tite}}" @else src="/public/images/noimg.jpg" @endif></a>
-                                <p class="f16">
-                                    <a target="_blank" href="/news/{{$cnewslist->id}}.shtml">{{$cnewslist->title}}</a>
+
+                <div class="bl_con3-right-2 box-shadow">
+                    <h3>干洗店加盟优选品牌</h3>
+                    <div class="bl_con3-right-2-xian"></div>
+
+                    <ul>
+                        @foreach($hotbrands as $hotbrand)
+                            <li @if($loop->first) class="mt0" @endif>
+                                <a href=""><img src="{{$hotbrand->litpic}}" /></a>
+                                <a href="" class="a3">{{$hotbrand->brandname}}</a>
+                                <p>
+                                    投资金额 ： <span>{{$hotbrand->brandpay}}</span><br />
+                                    加盟门店数 ： <span>{{$hotbrand->brandnum}}</span>
                                 </p>
-                                <p class="f14 s-8c">{{$cnewslist->description}}</p>
                             </li>
                         @endforeach
                     </ul>
                 </div>
+                <div class="bl_con3-right-3 box-shadow">
+                    <h3>干洗店加盟资讯</h3>
+                    <div class="bl_con3-right-3-xian"></div>
+                    <ul>
+                        @foreach($cnewslists as $cnewslist)
+                            <li  @if($loop->first) class="mt0" @endif>
+                                <a href="/{{$cnewslist->arctype->real_path}}/{{$cnewslist->id}}.shtml"><img src="{{$cnewslist->litpic}}" /></a>
+                                <a href="/{{$cnewslist->arctype->real_path}}/{{$cnewslist->id}}.shtml" class="a4">{{$cnewslist->title}}</a>
+                                <p>{{str_limit($cnewslist->description,60,'...')}}</p>
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+            <div class="pageinfo">
+                {!! str_replace('page=','page/',str_replace('?','/',preg_replace('/<a href=[\'\"]?([^\'\" ]+).*?>/','<a href="${1}/">',$pagelists->links()))) !!}
+                <div class="clear"></div>
             </div>
         </div>
-        <div style="clear: both;"></div>
     </div>
-
 @stop

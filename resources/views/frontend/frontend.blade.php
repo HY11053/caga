@@ -26,12 +26,12 @@
         <img src="/frontend/images/logo_03.png" class="logo" />
         <form action="/sprodlist/all/" method="post">
             {{csrf_field()}}
-            <input type="text" name="secrch" placeholder="请输入您感兴趣的项目名称" class="shuru">
+            <input type="text" name="keywords" placeholder="请输入您感兴趣的项目名称" class="shuru">
             <input type="button" value="搜索"  class="sousuo">
         </form>
         <ul class="top-right">
             <li style="margin-left: 0px;"><img src="/frontend/images/top01.png" /><a href="/paihangbang/">排行榜</a></li>
-            <li> <img src="/frontend/images/top02.png" /><a href="/sprodlist/all/">项目搜索</a></li>
+            <li> <img src="/frontend/images/top02.png" /><a href="/sprodlist/all/" rel="nofollow">项目搜索</a></li>
             <li><img src="/frontend/images/top03.png" /><a href="/{{\App\AdminModel\Arctype::where('id',1)->value('real_path')}}/">品牌大全</a></li>
         </ul>
         <ul class="nav2">
@@ -48,8 +48,8 @@
             <li><a href="/gxdlr/">干洗店利润 </a></li>
             <li><a href="/gxdsb/">干洗店设备</a></li>
             <li><a href="/gxdjs/">干洗店技术</a></li>
-            <li><a href="/jmal/">加盟案例</a></li>
             <li><a href="/gxdzx/">干洗店装修</a></li>
+            <li><a href="/paihangbang/">品牌排行榜</a></li>
         </ul>
     </div>
 </div>
@@ -92,15 +92,15 @@
             </div>
             <div class="qrcode">
                 <div class="qrcode-item">
-                    <img src="/frontend/images/v3/code_xcx.png?t=3" alt="APP下载">
+                    <img src="/frontend/images/wchat.png" alt="微信公众平台">
                     <span class="ma_xcx">小程序</span>
                 </div>
                 <div class="qrcode-item">
-                    <img src="/frontend/images/v3/code_app.png?t=3" alt="APP下载">
+                    <img src="/frontend/images/v3/wap.png" alt="APP下载">
                     <span class="ma_app">扫码下载APP</span>
                 </div>
                 <div class="qrcode-item">
-                    <img src="/frontend/images/v3/code_wx.png?t=3" alt="干洗店微信公众号">
+                    <img src="/frontend/images/xiongzhang.png" alt="干洗店熊掌号">
                     <span class="ma_wx">微信公众号</span>
                 </div>
             </div>
@@ -120,6 +120,8 @@
         </div>
     </div>
 </footer>
+<script src="/frontend/js/jquery.min.js"></script>
+<script src="/frontend/js/frontend.js"></script>
 @yield('footerlibs')
 </body>
 </html>

@@ -37,7 +37,7 @@
                 @foreach($pagelists as $pagelist)
                 <li>
                     <a href="/{{$pagelist->arctype->real_path}}/{{$pagelist->id}}.shtml"><img src="{{$pagelist->litpic}}" /></a>
-                    <a href="/{{$pagelist->arctype->real_path}}/{{$pagelist->id}}.shtml" class="conl2-left-a">{{$pagelist->title}}</a>
+                    <h3  class="conl2-left-a"><a href="/{{$pagelist->arctype->real_path}}/{{$pagelist->id}}.shtml">{{$pagelist->title}}</a></h3>
                     <p>{{$pagelist->description}}</p>
                     <p class="info">{{$pagelist->created_at}}<span>{{config('app.indexname')}}</span></p>
                 </li>

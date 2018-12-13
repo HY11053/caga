@@ -13,7 +13,8 @@
 @stop
 @section('main_content')
     <div class="main_content">
-    <div class="bl_con1 center">
+        {{--
+          <div class="bl_con1 center">
         <ul class="bl_con1-ul1">
             <li><h1>投资金额  ：</h1></li>
             <li><p>不限</p></li>
@@ -58,6 +59,8 @@
             <li><a href="">内蒙</a></li>
         </ul>
     </div>
+
+        --}}
 
     <div class="bl_con2 center box-shadow">
         <div class="brand_head">品牌招商项目列表</div>

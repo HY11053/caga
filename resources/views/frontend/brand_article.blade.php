@@ -24,16 +24,26 @@
     <div class="b_con1 center box-shadow">
         <div class="b_con1-left">
             <div class="b_con1-left-tu">
-                @foreach($pics as $pic)
-                    @if($loop->first)
-                        <img src="{{$pic}}"  class="datu"/>
-                    @endif
-                @endforeach
-                <ul>
-                    @foreach($pics as $pic)
-                    <li><img src="{{$pic}}" /></li>
-                    @endforeach
-                </ul>
+                <div class="xm-show-bar">
+                    <div class="img-block tu">
+                        @foreach($pics as $pic)
+                            @if($loop->first)
+                                 <li class="img-block cur"><img src="{{$pic}}" alt=""></li>
+                            @endif
+                        @endforeach
+                    </div>
+                    <div class="xm-scroll">
+                        <div class="btn-left btn-disabled"><i class="iconfont icon-leftarrow"></i></div>
+                        <div class="btn-right"><i class="iconfont icon-rightarrow"></i></div>
+                        <div class="ovh">
+                            <ul style="width: 272px;">
+                                @foreach($pics as $pic)
+                                <li class="img-block cur"><img src="{{$pic}}" alt=""></li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="b_con1-right">
                 <div class="b_con1-right-top">
@@ -96,7 +106,7 @@
         </div>
 
         <div class="b_con-right">
-            <img src="/frontend/images/pinpaixinagqingye-con1_03.png" />
+            <img src="{{$thisarticleinfos->litpic}}" />
             <h1>{{$thisarticleinfos->brandgroup}}</h1>
             <ul>
                 <li><p style="margin-top: 0px;">所在地：<span>{{$thisarticleinfos->brandaddr}}</span></p></li>
@@ -106,12 +116,10 @@
             <button class="bt_frst">在线咨询</button>
            <button>我要加盟</button>
         </div>
-
         <div class="b_con1-bottom">
             <p>浏览：{{$thisarticleinfos->click}} 更新时间：{{$thisarticleinfos->created_at}}</p>
         </div>
     </div>
-
     <div class="b_con2 center">
         <div class="tu1">
             <img src="/frontend/images/risk_title@2x.png" />
@@ -124,8 +132,14 @@
         <div class="tu2">
             <img src="/frontend/images/qingbao_title@2x.png" />
         </div>
-        <div class="zi2">
-            <a href="">一扫光加盟怎么样？只要10.28万即可开店做老板</a>
+        <div class="zi2" >
+            <div id="moocBox">
+                <ul data-id="m_n_a02" data-type="cmsadpos">
+                    @foreach($brandnews as $brandnew)
+                        <li><a href="/{{$brandnew->arctype->real_path}}/{{$brandnew->id}}/" title="{{$brandnew->title}}">{{$brandnew->title}}</a></li>
+                    @endforeach
+                </ul>
+            </div>
         </div>
     </div>
 
@@ -150,49 +164,51 @@
                 <div class="xiaokuai6"></div>
                 <h2>{{$thisarticleinfos->brandname}}<span>运营综合分析</span></h2>
                 <div class="b_con3-6-xian"></div>
-                <table>
+                <table cellspacing="0" style="border-top: 1px solid rgb(230, 230, 230);">
                     <tbody>
                     <tr>
-                        <td class="td_color">品牌名称</td>
-                        <td class="td_style">公主驾到</td>
+                        <td class="td_color" >品牌名称</td>
+                        <td class="td_style">{{$thisarticleinfos->brandname}}</td>
                         <td class="td_color">装修费用</td>
-                        <td class="td_style">49929</td>
+                        <td class="td_style">{{$thisarticleinfos->decorationpay}}</td>
                     </tr>
                     <tr>
-                        <td class="td_color">前两季度房租</td>
-                        <td class="td_style">2216</td>
+                        <td class="td_color" >前两季度房租</td>
+                        <td class="td_style">{{$thisarticleinfos->quartersrent}}</td>
                         <td class="td_color">货铺/设备费用</td>
-                        <td class="td_style">13417</td>
+                        <td class="td_style">{{$thisarticleinfos->equipmentcost}}</td>
                     </tr>
                     <tr>
                         <td class="td_color">流动资金</td>
-                        <td class="td_style">20000</td>
+                        <td class="td_style">{{$thisarticleinfos->workingcapital}}</td>
                         <td class="td_color">人工开支</td>
-                        <td class="td_style">2378</td>
+                        <td class="td_style">{{$thisarticleinfos->laborquarter}}</td>
                     </tr>
                     <tr>
                         <td class="td_color">工商税务杂项</td>
-                        <td class="td_style">2605</td>
+                        <td class="td_style">{{$thisarticleinfos->miscellaneous}}</td>
                         <td class="td_color">水电煤(元/月)</td>
-                        <td class="td_style">448</td>
+                        <td class="td_style">{{$thisarticleinfos->watercoal}}</td>
+
                     </tr>
                     <tr>
                         <td class="td_color">日成交量</td>
-                        <td class="td_style">87</td>
+                        <td class="td_style">{{$thisarticleinfos->dailyvolume}}</td>
                         <td class="td_color">平均单价</td>
-                        <td class="td_style">84</td>
+                        <td class="td_style">{{$thisarticleinfos->unitprice}}</td>
+
                     </tr>
                     <tr>
                         <td class="td_color">日均成本</td>
-                        <td class="td_style">215</td>
+                        <td class="td_style">{{ceil(($thisarticleinfos->decorationpay/365)+($thisarticleinfos->quartersrent/180)+($thisarticleinfos->equipmentcost/365)+($thisarticleinfos->laborquarter/365)+($thisarticleinfos->miscellaneous/365)+($thisarticleinfos->watercoal/30))}}</td>
                         <td class="td_color">日均收入</td>
-                        <td class="td_style">7355</td>
+                        <td class="td_style">{{ceil(($thisarticleinfos->dailyvolume*$thisarticleinfos->dailyvolume)-(($thisarticleinfos->decorationpay/365)+($thisarticleinfos->quartersrent/180)+($thisarticleinfos->equipmentcost/365)+($thisarticleinfos->laborquarter/365)+($thisarticleinfos->miscellaneous/365)+($thisarticleinfos->watercoal/30)))}}</td>
                     </tr>
                     <tr>
                         <td class="td_color">月收入</td>
-                        <td class="td_style">22.065万</td>
+                        <td class="td_style">{{ceil(($thisarticleinfos->dailyvolume*$thisarticleinfos->dailyvolume)-(($thisarticleinfos->decorationpay/365)+($thisarticleinfos->quartersrent/180)+($thisarticleinfos->equipmentcost/365)+($thisarticleinfos->laborquarter/365)+($thisarticleinfos->miscellaneous/365)+($thisarticleinfos->watercoal/30)))*30/10000}}万</td>
                         <td class="td_color">年收入</td>
-                        <td class="td_style">268.4575万</td>
+                        <td class="td_style">{{ceil(($thisarticleinfos->dailyvolume*$thisarticleinfos->dailyvolume)-(($thisarticleinfos->decorationpay/365)+($thisarticleinfos->quartersrent/180)+($thisarticleinfos->equipmentcost/365)+($thisarticleinfos->laborquarter/365)+($thisarticleinfos->miscellaneous/365)+($thisarticleinfos->watercoal/30)))*365/10000}}万</td>
                     </tr>
                     </tbody>
                 </table>

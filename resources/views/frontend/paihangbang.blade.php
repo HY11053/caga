@@ -14,88 +14,162 @@
     <link rel="stylesheet" href="/frontend/css/index.css" />
 @stop
 @section('main_content')
-    <div id="ny_main">
-        <div class="fenlei_jianjie">
-            <div class="fenlei_jianjie_ph"></div>
-            <div class="fenlei_jianjie_c">	干洗店品牌网综合排行榜是干洗店品牌网推出的互联网教育品牌加盟品牌排行榜。所有入驻干洗店品牌网的优质品牌都将获得一定的排名。本次排名根据干洗店品牌网用户的偏好等综合因素进行排名，加盟排行榜不作为官方和权威的行业排名，仅供投资者进行参考。干洗店品牌网定期对所有教育品牌品牌进行排名，包括早教品牌排名榜、幼儿园品牌排行榜、舞蹈培训加盟品牌排行榜、国学馆排行榜等……干洗店品牌网温馨提示:所有创业加盟项目及相关信息均来自互联网及用户自主添加，筛选品牌前务必进行实地考察和咨询。
-            </div>
+    @extends('frontend.frontend')
+@section('title'){{$thistypeinfo->title}}-干洗店品牌网@stop
+@section('keywords'){{$thistypeinfo->keywords}} @stop
+@section('description'){{trim($thistypeinfo->description)}}@stop
+@section('headlibs')
+    <meta name="Copyright" content="干洗店品牌网-{{env('APP_URL')}}"/>
+    <meta name="author" content="干洗店品牌网" />
+    <meta http-equiv="mobile-agent" content="format=wml; url={{str_replace('http://www.','http://m.',config('app.url'))}}{{Request::getrequesturi()}}" />
+    <meta http-equiv="mobile-agent" content="format=xhtml; url={{str_replace('http://www.','http://m.',config('app.url'))}}{{Request::getrequesturi()}}" />
+    <meta http-equiv="mobile-agent" content="format=html5; url={{str_replace('http://www.','http://m.',config('app.url'))}}{{Request::getrequesturi()}}" />
+    <link rel="alternate" media="only screen and(max-width: 640px)" href="{{str_replace('http://www.','http://m.',config('app.url'))}}{{Request::getrequesturi()}}" >
+    <link rel="canonical" href="{{config('app.url')}}{{str_replace('','',Request::getrequesturi())}}"/>
+@stop
+@section('main_content')
+    <div class="main_content">
+        {{--
+  <div class="bl_con1 center">
+<ul class="bl_con1-ul1">
+    <li><h1>投资金额  ：</h1></li>
+    <li><p>不限</p></li>
+    <li><a href="" style="margin-left: 20px;">3万以下</a></li>
+    <li><a href="">3万~5万</a></li>
+    <li><a href="">5万~8万</a></li>
+    <li><a href="">8万~12万</a></li>
+    <li><a href="">12万~15万</a></li>
+    <li><a href="">15万以上</a></li>
+</ul>
+
+<ul class="bl_con1-ul2">
+    <li><h1>所需面积  ：</h1></li>
+    <li><p>不限</p></li>
+    <li><a href="" style="margin-left: 20px;">10平米以下</a></li>
+    <li><a href="">10-30平米</a></li>
+    <li><a href="">30-50平米</a></li>
+    <li><a href="">50-80平米</a></li>
+    <li><a href="">100平米以上</a></li>
+</ul>
+
+<ul class="bl_con1-ul3">
+    <li><h1>所在地区  ：</h1></li>
+    <li><p>不限</p></li>
+    <li><a href="" style="margin-left: 20px;">北京</a></li>
+    <li><a href="">安徽</a></li>
+    <li><a href="">福建</a></li>
+    <li><a href="">甘肃</a></li>
+    <li><a href="">广东</a></li>
+    <li><a href="">广西</a></li>
+    <li><a href="">贵州</a></li>
+    <li><a href="">海南</a></li>
+    <li><a href="">河北</a></li>
+    <li><a href="">河南</a></li>
+    <li><a href="">黑龙江</a></li>
+    <li><a href="">湖北</a></li>
+    <li><a href="">湖南</a></li>
+    <li><a href="">吉林</a></li>
+    <li><a href="">江苏</a></li>
+    <li><a href="">江西</a></li>
+    <li><a href="">辽宁</a></li>
+    <li><a href="">内蒙</a></li>
+</ul>
+</div>
+
+--}}
+        <div class="bl_con2 center box-shadow">
+            <div class="brand_head">品牌招商项目列表</div>
+            <ul>
+                <li><a href="" style="margin-left: 0px;">默认排序</a></li>
+                <li><p>|</p></li>
+                <li><a href="">投资金额</a></li>
+                <li><p>|</p></li>
+                <li><a href="">门店数</a></li>
+            </ul>
         </div>
-        <div class="paihang_center">
-            <div class="path"><p>当前位置：<a href="/">首页</a>&gt;<a class="dq" href="/paihangbang/" title="品牌排行榜">品牌排行榜</a></p></div>
-            <div class="paihang_left">
-                <div class="ph_l">
-                    <p class="tit">干洗店品牌网排行榜</p>
+
+        <div class="bl_con3 center">
+            <div class="w870 fl">
+                <ul class="xm-list-H224 clearfix" style="width: 840px; float:left; cursor: pointer">
+                    @foreach($pagelists as $pagelist)
+                        <li class="">
+                            <div class="btn-duibi btn-addbyb" data-id="2171">
+                                <i class="iconfont icon-Contrast"></i>咨询
+                            </div>
+                            <a target="_blank" href="/{{$pagelist->arctype->real_path}}/{{$pagelist->id}}.shtml/" class="img-block magnify"><img src="{{$pagelist->litpic}}" alt="{{$pagelist->brandname}}"></a>
+                            <div class="f20">
+                                <h3><a target="_blank" href="/{{$pagelist->arctype->real_path}}/{{$pagelist->id}}.shtml">{{$pagelist->brandname}}</a></h3>
+                            </div>
+                            <div class="info">
+                                <span title="{{$pagelist->brandpay}}">投资金额：<b class="s-oe">{{$pagelist->brandpay}}</b></span><span title="30-50平米㎡">所需面积：<b class="s-oe">30-50平米㎡</b></span>
+                            </div>
+                            <p> 门店数量：<span class="s-c26">{{$pagelist->brandnum}}</span></p>
+                            <p>加盟区域：<span class="s-c26">{{$pagelist->brandarea}}</span></p>
+                            <p>经营范围：<span class="s-c26">{{$pagelist->brandmap}}</span></p>
+                            <p style="height:48px">项目描述：<span>{{$pagelist->description}}</span></p>
+                        </li>
+                    @endforeach
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="bl_con3-right">
+                <div class="bl_con3-right-1 box-shadow">
+                    <h3>干洗品牌排行榜关注量</h3>
+                    <div class="bl_con3-right-1-xian"></div>
                     <ul>
-                        @foreach($brandnavs as $brandnav)
-                            <li><a target="_self" href="/paihangbang/{{$brandnav->real_path}}/">{{$brandnav->typename}}品牌排行榜</a></li>
+                        @foreach($topbrands as $index=>$topbrand)
+                            <li>
+                                <a href="/{{$topbrand->arctype->real_path}}/{{$topbrand->id}}.shtml"><img src="{{$topbrand->litpic}}" /></a>
+                                <dl class="paihangbf">
+                                    <dt class="a2"><span>NO{{$index+1}}.</span><a class="b_tit" href="/{{$topbrand->arctype->real_path}}/{{$topbrand->id}}.shtml">{{$topbrand->brandname}}</a></dt>
+                                    <dd>
+                                        项目特色:{{str_limit($topbrand->brandpsp,40,'')}}
+                                    </dd>
+                                </dl>
+                            </li>
                         @endforeach
                     </ul>
                 </div>
-            </div>
-            <div class="paihang_right">
-                <div class="sheyLbox">
-                    @foreach($paihangbrands as $index=>$paihangbrand)
-                        <div class="sheyLlist clearfix">
 
-                            <div class="hdzjbox">
-                                <div class="pro-Img fl">
-                                    <a target="_blank" href="/xm/{{$paihangbrand->id}}.shtml" class="pp-pic-name" title="{{$paihangbrand->brandname}}"><img src="{{$paihangbrand->litpic}}" alt="{{$paihangbrand->brandname}}"></a>
-                                </div>
-                            </div>
-                            <div class="sheyincont">
-                                <div class="clearfix">
-                                    <div class="incontTop">
-                                        <div class="clearfix">
-                                            <h3 class="inshoptit"><em class="paihang">第{{$index+1}}名</em>
-                                                <a href="/xm/{{$paihangbrand->id}}.shtml" title="{{$paihangbrand->brandname}}"  target="_blank">{{$paihangbrand->brandname}}</a>
-                                            </h3>
-                                            <ul class="inrzbox clearfix">
-                                                <li><a class="hdicon rz_show"><em></em><i></i></a></li>
-                                                <li><a class="ddlicon rz_show"><em></em><i></i></a></li>
-                                                <li><a class="hoticon rz_show"><em></em><i></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="xiaobaonewbox">
-                                        </div>
-                                        <p class="inaddtxt">公司名称：{{$paihangbrand->brandgroup}} </p>
-                                        <p class="inaddtxt inyuyuepeo">公司地址： {{$paihangbrand->brandaddr}}</p>
-                                        <p class="ismoney">投资金额：￥{{$paihangbrand->brandpay}}
-                                        </p>
-                                        <p class="inpostcont"><span>适合人群<em></em></span>{{$paihangbrand->brandperson}}</p> </div>
-                                    <div class="iniconbox">
-                                        <ul>
-                                            <li class="xishu">门店总数{{$paihangbrand->brandnum}} </li>
-                                            <li class="renqi" style="color: red">指数 {{$paihangbrand->click}}</li>
-                                            <li class="pinglun">品牌好评{{rand(95,99)}}%</li>
-                                            <li class="zuopin">所需面积 {{\App\AdminModel\Acreagement::where('id',$paihangbrand->acreage)->value('type')}}㎡</li>
-                                            <li class="taoxi">品牌发源地 {{$paihangbrand->brandorigin}}</li>
-                                        </ul>
-                                    </div>
-                                    <div class="iniconbox">
-                                        <ul>
-                                            <li class="xishu">申请加盟 {{$paihangbrand->brandapply}} </li>
-                                            <li class="renqi">成立时间 {{$paihangbrand->brandtime}} </li>
-                                            <li class="pinglun">注册资金 {{$paihangbrand->registeredcapital}}</li>
-                                            <li class="zuopin">加盟区域 {{$paihangbrand->brandarea}}</li>
-                                            <li class="taoxi">经营范围 {{$paihangbrand->brandmap}}</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                <div class="bl_con3-right-2 box-shadow">
+                    <h3>干洗店加盟优选品牌</h3>
+                    <div class="bl_con3-right-2-xian"></div>
 
-                                <div class="newyouhui">
-                                    <ul class="newyouhuiinner coupon_more ">
-                                        <li><span>【品牌特色】<em></em></span>{{str_limit($paihangbrand->brandpsp,90,'...')}}</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                    @endforeach
-
+                    <ul>
+                        @foreach($hotbrands as $hotbrand)
+                            <li @if($loop->first) class="mt0" @endif>
+                                <a href=""><img src="{{$hotbrand->litpic}}" /></a>
+                                <a href="" class="a3">{{$hotbrand->brandname}}</a>
+                                <p>
+                                    投资金额 ： <span>{{$hotbrand->brandpay}}</span><br />
+                                    加盟门店数 ： <span>{{$hotbrand->brandnum}}</span>
+                                </p>
+                            </li>
+                        @endforeach
+                    </ul>
                 </div>
+                <div class="bl_con3-right-3 box-shadow">
+                    <h3>干洗店加盟资讯</h3>
+                    <div class="bl_con3-right-3-xian"></div>
+                    <ul>
+                        @foreach($cnewslists as $cnewslist)
+                            <li  @if($loop->first) class="mt0" @endif>
+                                <a href="/{{$cnewslist->arctype->real_path}}/{{$cnewslist->id}}.shtml"><img src="{{$cnewslist->litpic}}" /></a>
+                                <a href="/{{$cnewslist->arctype->real_path}}/{{$cnewslist->id}}.shtml" class="a4">{{$cnewslist->title}}</a>
+                                <p>{{str_limit($cnewslist->description,60,'...')}}</p>
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
+                <div class="clear"></div>
             </div>
             <div class="clear"></div>
+            <div class="pageinfo">
+                {!! str_replace(['cid=','&amp;','page='],['','/','page/'],str_replace('?','',preg_replace('/<a href=[\'\"]?([^\'\" ]+).*?>/','<a href="${1}/">',$pagelists->links()))) !!}
+                <div class="clear"></div>
+            </div>
         </div>
-
     </div>
+@stop
+
 @stop

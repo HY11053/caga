@@ -42,7 +42,8 @@ Route::group(['domain' => 'mip.jjedu.com.cn'], function () {
 });
 Route::get('/','Frontend\IndexController@Index');
 
-Route::get('paihangbang','Frontend\PaihangbangController@Paihangbang');
+Route::get('paihangbang','Frontend\PaihangbangController@Paihangbang')->name('paihangbang');
+Route::get('paihangbang/page/{page}','Frontend\PaihangbangController@Paihangbang')->name('paihangbangpage');
 Route::post('sprodlist/all/','Frontend\SeacrhController@SeacrhBrand');
 Route::get('sprodlist/all/','Frontend\SeacrhController@SeacrhBrand');
 Route::post('phone/complate/list/','Frontend\PhoneController@ComplateBrands');

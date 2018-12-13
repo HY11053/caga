@@ -300,7 +300,7 @@
             <div class="con5-left-zi">
 
                 <ul>
-                    @foreach($zhuangxiulists as $zhuangxiulist)
+                    @foreach($zhuangxiulists as $index=>$zhuangxiulist)
                         <li @if($index<4) class="first_line" @endif><a href="/{{$zhuangxiulist->arctype->real_path}}/{{$zhuangxiulist->id}}.shtml" style="font-size: 14px;">{{$zhuangxiulist->title}}</a></li>
                     @endforeach
                 </ul>
@@ -338,7 +338,6 @@
 </div>
 @stop
 @section('footerlibs')
-    <script src="/frontend/js/jquery.min.js"></script>
     <script src="/frontend/js/swiper.min.js"></script>
     <script>
         var mySwiper = new Swiper ('.swiper-container', {
