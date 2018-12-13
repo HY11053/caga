@@ -41,8 +41,7 @@ Route::group(['domain' => 'mip.jjedu.com.cn'], function () {
     Route::get('{path}','Mip\ListNewsController@listNews')->where('path','[a-zA-Z0-9/_]+')->name('newslist');
 });
 Route::get('/','Frontend\IndexController@Index');
-Route::get('news/{id}.shtml','Frontend\ArticleController@NewsArticle')->where('id', '[0-9]+')->name('news');
-Route::get('xm/{id}.shtml','Frontend\ArticleController@BrandArticle')->where('id', '[0-9]+');
+Route::get('{path}/{id}.shtml','Frontend\ArticleController@GetArticle')->where('id', '[0-9]+')->name('articles');
 Route::get('paihangbang/{path?}','Frontend\PaihangbangController@Paihangbang')->where('path', '[a-zA-Z_\/0-9]+');
 Route::post('sprodlist/all/','Frontend\SeacrhController@SeacrhBrand');
 Route::get('sprodlist/all/','Frontend\SeacrhController@SeacrhBrand');

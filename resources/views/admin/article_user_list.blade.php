@@ -79,13 +79,7 @@
                                 <td>{{$article->editor}}</td>
                                 <td>{{$article->click}}</td>
                                 <td>@if($article->ismake) 已审核 @else 未审核 @endif</td>
-                              @if($article->mid==0)
-                                    <td class="astyle"><span class="label label-success"><a href="/news/{{$article->id}}/" target="_blank">预览</a></span><span class="label label-warning"></span></td>
-                                @elseif($article->mid==1)
-                                    <td class="astyle"><span class="label label-success"><a href="/brand/{{$article->id}}/" target="_blank">预览</a></span><span class="label label-warning"></span></td>
-                                @elseif($article->mid==2)
-                                    <td class="astyle"><span class="label label-success"><a href="/item/{{$article->id}}/" target="_blank">预览</a></span><span class="label label-warning"></span></td>
-                                  @endif
+                                    <td class="astyle"><span class="label label-success"><a href="/{{$article->arctype->real_path}}/{{$article->id}}/" target="_blank">预览</a></span><span class="label label-warning"></span></td>
                             </tr>
                         @endforeach
                     </table>

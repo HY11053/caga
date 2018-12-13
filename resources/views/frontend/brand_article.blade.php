@@ -1,5 +1,5 @@
 @extends('frontend.frontend')
-@section('title'){{$thisarticleinfos->title}}-{{$indexname}}@stop
+@section('title'){{$thisarticleinfos->title}}-{{config('app.name')}}@stop
 @section('keywords'){{$thisarticleinfos->keywords}}@stop
 @section('description'){{trim($thisarticleinfos->description)}}@stop
 @section('headlibs')
@@ -15,9 +15,6 @@
     <meta property="og:image" content="{{config('app.url')}}{{str_replace(config('app.url'),'',$thisarticleinfos->litpic)}}"/>
     <meta property="article:author" content="{{config('app.name')}}" />
     <meta property="article:published_first" content="{{config('app.name')}}, {{config('app.url')}}{{Request::getrequesturi()}}" />
-    <link rel="stylesheet" href="/frontend/css/index.css" />
-    <link rel="stylesheet" href="/frontend/css/article.css" />
-    <link rel="stylesheet" href="/frontend/css/brand_article.css" />
 @stop
 @section('main_content')
 <div class="main_content">
@@ -36,8 +33,6 @@
                     <li><img src="/frontend/images/pinpaixinagqingye-con1_03.png" /></li>
                 </ul>
             </div>
-
-
             <div class="b_con1-right">
                 <div class="b_con1-right-top">
                     <h1>【{{$thisarticleinfos->brandname}}】</h1>
@@ -45,7 +40,6 @@
                         <li style="margin-top: 0px;"><p>投资金额：<span style="font-size: 16px;color: #df0000;">{{$thisarticleinfos->brandpay}}</span></p></li>
                         <li><p>所属行业：<span>干洗</span></p></li>
                     </ul>
-
                 </div>
 
                 <div class="b_con1-right-con">
@@ -157,7 +151,7 @@
             </div>
             <div class="b_con3-6">
                 <div class="xiaokuai6"></div>
-                <h1>{{$thisarticleinfos->brandname}}<span>运营综合分析</span></h1>
+                <h2>{{$thisarticleinfos->brandname}}<span>运营综合分析</span></h2>
                 <div class="b_con3-6-xian"></div>
                 <table>
                     <tbody>
@@ -207,14 +201,13 @@
                 </table>
             </div>
 
-            <div class="b_con3-7">
-                <div class="b_con3-7-xiaokuai"></div>
-                <div class="b_con3-7-top">
-                    <h1>给<span>赛维</span>留言，立即获得最新加盟资料</h1>
+            <div class="ar_con1-left-con5">
+                <div class="ar_con1-left-con5-top">
+                    <div class="bf_tit">给<span>{{$thisarticleinfos->brandname}}</span>留言，立即获得最新加盟资料</div>
                     <p>（<span>*</span>为必填选项）</p>
                 </div>
 
-                <ul class="b_con3-7-ul1">
+                <ul class="ar_con5-ul1">
                     <li style="margin-top: 0px;">
                         <p><span>*</span>姓名</p>
                         <input type="text" placeholder="您的真实姓名"/>
@@ -229,7 +222,7 @@
                     </li>
                 </ul>
 
-                <ul class="b_con3-7-ul2">
+                <ul class="ar_con5-ul2">
                     <li>
                         <input type="radio" name="sex" id="" value="男" />
                         <p>先生</p>
@@ -240,7 +233,7 @@
                     </li>
                 </ul>
 
-                <div class="b_con3-7-bottom">
+                <div class="ar_con1-left-con5-bottom">
                     <h1><span>*</span>留言</h1>
                     <textarea id="note" name="content" class="textarea_bk" placeholder="请输入您的留言内容或选择快捷留言"></textarea>
 
@@ -259,13 +252,11 @@
 
             </div>
 
-            <div class="b_con3-8">
-                <div class="b_con3-8-xiaokuai"></div>
-                <h1>赛维加盟咨询</h1>
-                <div class="b_con3-8-xian"></div>
+            <div class="ar_con1-left-con6">
+                <div class="bf_tit">{{$thisarticleinfos->brandname}}资讯</div>
                 <ul>
-                    @foreach($brandnews as $brandnew)
-                        <li><a href="/{{$brandnew->arctype->real_path}}/{{$brandnew->id}}.shtml">{{$brandnew->title}}</a></li>
+                    @foreach($brandnews as $search)
+                        <li><a href="/{{$search->arctype->real_path}}/{{$search->id}}.shtml" >{{$search->title}}</a></li>
                     @endforeach
                 </ul>
             </div>
@@ -311,61 +302,24 @@
 
             </div>
             <div class="b_con3-right-3 box-shadow">
+                <h3>干洗品牌加盟资讯</h3>
                 <ul>
-                    <li style="height: 59px;"><h1>干洗品牌加盟资讯</h1></li>
-                    <li><a href="">罗山县男孩女孩童装柜组</a></li>
-                    <li><a href="">京江南数娱(北京)科技有限公司</a></li>
-                    <li><a href="">上海童涵春堂晨春大药房</a></li>
-                    <li><a href="">日喀则市秋林硼业有限公司</a></li>
-                    <li style="border: none;"><a href="">中旗科创(北京)投资基金有限公司</a></li>
-                    <li style="border: none;"><a href="">中旗科创(北京)投资基金有限公司</a></li>
-                    <li style="border: none;"><a href="">中旗科创(北京)投资基金有限公司</a></li>
-                    <li style="border: none;"><a href="">中旗科创(北京)投资基金有限公司</a></li>
-                    <li style="border: none;"><a href="">中旗科创(北京)投资基金有限公司</a></li>
+                    @foreach($latestbrandnews as $latestbrandnew)
+                    <li><a href="/{{$latestbrandnew->arctype->real_path}}/{{$latestbrandnew->id}}.shtml">{{$latestbrandnew->title}}</a></li>
+                    @endforeach
                 </ul>
             </div>
 
             <div class="b_con3-right-4 box-shadow">
                 <h1>全站最新品牌资讯</h1>
                 <ul>
+                    @foreach($latesnews as $latesnew)
                     <li>
-                        <a href="">王前进调研“朱雀一号”运载火箭出厂前<br />
-                            准备工作
-
-                        </a>
-                        <p>2018-10-09<span>西安区县新闻网</span></p>
+                        <a href="/{{$latesnew->arctype->real_path}}/{{$latesnew->id}}.shtml">{{$latesnew->title}}</a>
+                        <p>{{$latesnew->description}}</p>
                     </li>
+                    @endforeach
 
-                    <li>
-                        <a href="">综述：细数国际宇航大会上的中国航天新<br />
-                            品|不来梅|中国航天|宇航_新浪新闻
-                        </a>
-                        <p>2018-10-04<span>新浪新闻</span></p>
-                    </li>
-
-                    <li>
-                        <a href="">综述：细数国际宇航大会上的中国航天新<br />
-                            品-新华网
-                        </a>
-                        <p>2018-10-04<span>新华网</span></p>
-                    </li>
-
-                    <li style="height: 169px;">
-                        <a href="">航天民企崛起这三年：官方支持超预期，<br />
-                            人才流动趋向正常化-谢涛,航天,航天科技,<br />
-                            张琦,中国,张小平,发射场,舒畅,民企,北京,-<br />
-                            中国新闻-东方网
-                        </a>
-                        <p>2018-10-04<span>东方网</span></p>
-                    </li>
-
-                    <li style="height: 156px;">
-                        <a href="">张小平事件后航天民企引关注：人才流动<br />
-                            趋向正常化-摩拜 航天发射 正常化 航天动<br />
-                            力 航天公司-中国新闻-东方网
-                        </a>
-                        <p>2018-10-04<span>东方网</span></p>
-                    </li>
                 </ul>
             </div>
 

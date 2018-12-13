@@ -25,44 +25,36 @@
                 <h1>{{$thisarticleinfos->title}}</h1>
                 <p>{{$thisarticleinfos->created_at}}来源：{{config('app.indexname')}}<span>{{$thisarticleinfos->arctype->typename}}</span></p>
             </div>
-
+            @if(isset($thisBrandArticle->id))
             <div class="ar_con1-left-con1">
-                <img src="/frontend/images/putongwendang-tu1_03.png" />
-                <ul class="ar_con1-ul1">
-                    <li><p style="margin-top: 0px;">加盟人气：</p></li>
-                    <li><p>加盟费用：</p></li>
-                    <li><p>投资金额：</p></li>
-                    <li><p>成立时间：</p></li>
-                    <li><p>区域特许：</p></li>
-                    <li><p>总部地址：</p></li>
-                    <li><p>品牌详情：</p></li>
-                    <li><p>项目咨询：</p></li>
-                </ul>
-                <ul class="ar_con1-ul2">
-                    <li><p style="margin-top: 0px;">480</p></li>
-                    <li><p>面议</p></li>
-                    <li><p>10-15万</p></li>
-                    <li><p>1994年</p></li>
-                    <li><p>全国</p></li>
-                    <li><p>威特斯国际干洗</p></li>
-                    <li><a href="" style="margin-top: 14px;">快速查看</a></li>
-                    <li><a href="">快速咨询</a></li>
-                </ul>
+                <div class="top-box">
+                    <div class="left"><img src="{{$thisBrandArticle->litpic}}" width="120" height="120" alt=""></div>
+                    <div class="mid">
+                        <h3 class="nowrap">{{$thisBrandArticle->brandname}}</h3>
+                        <span class="nowrap">{{$thisBrandArticle->brandgroup}}</span>
+                        <a href="/{{$thisBrandArticle->arctype->real_path}}/{{$thisBrandArticle->id}}.shtml" target="">索要资料</a>
+                        <p>
+                            <em>{{$thisBrandArticle->brandpay}}</em>
+                            <i class="nowrap">适宜人群：{{$thisBrandArticle->brandperson}}</i>
+                            <i class="nowrap">加盟区域：{{$thisBrandArticle->brandarea}}</i>
+                        </p>
+                    </div>
+                    <div class="right"><a href="/{{$thisBrandArticle->arctype->real_path}}/{{$thisBrandArticle->id}}.shtml" target="">{{$thisBrandArticle->brandname}}加盟</a></div>
+                </div>
             </div>
-
+            @endif
             <div class="content col-{{rand(1,150000)}}{{rand(1,10000)}}">
                 {!! $thisarticleinfos->body !!}
             </div>
 
             <div class="biaoqian">
-                <p>标签:</p>
-                <a href="">上一篇：弥茶加盟怎么样? 总部扶持 创业好选择</a>
-                <a href="" style="margin-top: 16px;">下一篇：百比佳加盟优势有哪些？投资优势多 门槛低</a>
+                <p>@if(isset($prev_article)) <span>上一篇：<a href="{{config('app.url')}}/{{$prev_article->arctype->real_path}}/{{$prev_article->id}}.shtml" title="{{$prev_article->title}}">{{str_limit($prev_article->title,40,'')}}</a></span> @else 没有了 @endif </p>
+                <p>@if(isset($next_article))  <span class="right">下一篇：<a href="{{config('app.url')}}/{{$prev_article->arctype->real_path}}/{{$next_article->id}}.shtml" title="{{$next_article->title}}">{{str_limit($next_article->title,40,'')}}</a></span> @else 没有了 @endif  </p>
             </div>
 
             <div class="ar_con1-left-con5">
                 <div class="ar_con1-left-con5-top">
-                    <h1>给<span>赛维</span>留言，立即获得最新加盟资料</h1>
+                    <div class="bf_tit">@if(isset($thisBrandArticle->id))给<span>{{$thisBrandArticle->brandname}}</span>留言，@endif立即获得最新加盟资料</div>
                     <p>（<span>*</span>为必填选项）</p>
                 </div>
 
@@ -112,8 +104,7 @@
             </div>
 
             <div class="ar_con1-left-con6">
-                <h1>赛维加盟咨询</h1>
-                <div></div>
+                <div class="bf_tit">@if(isset($thisBrandArticle->id)){{str_replace('加盟','',$thisBrandArticle->brandname)}}加盟@endif资讯</div>
                 <ul>
                     @foreach($xg_search as $search)
                     <li><a href="/{{$search->arctype->real_path}}/{{$search->id}}.shtml" >{{$search->title}}</a></li>
