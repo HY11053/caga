@@ -24,13 +24,15 @@
     <div class="b_con1 center box-shadow">
         <div class="b_con1-left">
             <div class="b_con1-left-tu">
-                <img src="/frontend/images/pinpaixinagqingye-con1_03.png"  class="datu"/>
+                @foreach($pics as $pic)
+                    @if($loop->first)
+                        <img src="{{$pic}}"  class="datu"/>
+                    @endif
+                @endforeach
                 <ul>
-                    <li style="margin-left: 0px;"><img src="/frontend/images/pinpaixinagqingye-con1_03.png" /></li>
-                    <li><img src="/frontend/images/pinpaixinagqingye-con1_03.png" /></li>
-                    <li><img src="/frontend/images/pinpaixinagqingye-con1_03.png" /></li>
-                    <li><img src="/frontend/images/pinpaixinagqingye-con1_03.png" /></li>
-                    <li><img src="/frontend/images/pinpaixinagqingye-con1_03.png" /></li>
+                    @foreach($pics as $pic)
+                    <li><img src="{{$pic}}" /></li>
+                    @endforeach
                 </ul>
             </div>
             <div class="b_con1-right">
@@ -80,20 +82,17 @@
                 <div class="b_con1-right-button">
                     <ul>
                         <li>
-                            <input type="button" value="申请加盟"/>
+                            <button>申请加盟</button>
                         </li>
                         <li>
-                            <input type="button" value="2629" style="width: 97px;background: none;border: 1px solid #efefef;color: #322931;margin-left: 10px;"/>
+                            <button class="bt_num">2629</button>
                         </li>
                         <li>
-                            <input type="button" value="成本计算" style="width: 97px;background: none;border: 1px solid #efefef;color: #322931;margin-left: 10px;"/>
+                            <button class="bt_comp">成本计算</button>
                         </li>
                     </ul>
                 </div>
-
-
             </div>
-
         </div>
 
         <div class="b_con-right">
@@ -104,8 +103,8 @@
                 <li><p>注册资金：<span>{{$thisarticleinfos->registeredcapital}}</span></p></li>
                 <li><p>公司类型：<span>{{$thisarticleinfos->genre}}</span></p></li>
             </ul>
-            <input type="button" value="在线加盟" style="margin-left: 30px;"/>
-            <input type="button" value="我要咨询"/>
+            <button class="bt_frst">在线咨询</button>
+           <button>我要加盟</button>
         </div>
 
         <div class="b_con1-bottom">
@@ -119,9 +118,7 @@
         </div>
         <div class="zi1">
             <ul>
-                <li><a href="" style="margin-left: 21px;">自身风险<span>20</span></a></li>
-                <li><a href="">关联风险<span>15</span></a></li>
-                <li><a href="">提示信息<span>1</span></a></li>
+                <li>{{str_limit($thisarticleinfos->brandpsp,60,'...')}}</li>
             </ul>
         </div>
         <div class="tu2">

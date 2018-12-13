@@ -16,7 +16,7 @@
 @section('main_content')
 <div class="main_content">
     <div class="mianbaoxie center">
-        <p><a href="{{config('app.url')}}" style="margin-left: 0px;">首页</a> > <a href="">{{$thisarticleinfos->arctype->typename}}</a> > <a href="{{$thisarticleinfos->arctype->reap_path}}">{{$thisarticleinfos->title}}</a></p>
+        <p><a href="{{config('app.url')}}" style="margin-left: 0px;">首页</a> > <a href="/{{$thisarticleinfos->arctype->real_path}}/">{{$thisarticleinfos->arctype->typename}}</a> > <a href="{{$thisarticleinfos->arctype->reap_path}}">{{$thisarticleinfos->title}}</a></p>
     </div>
 
     <div class="ar_con1 center">

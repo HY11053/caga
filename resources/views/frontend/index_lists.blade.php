@@ -68,7 +68,6 @@
             </div>
             <div class="conl2-right-2 box-shadow">
                 <h3>品牌专栏<a href="/{{\App\AdminModel\Arctype::where('id',1)->value('real_path')}}/">更多</a></h3>
-                <div class="conl2-right-2-xian"></div>
                 <ul>
                     @foreach($abrandlists as $abrandlist)
                     <li>
@@ -76,16 +75,12 @@
                         <a href="" class="conl2-right-2-a">{{$abrandlist->brandname}}</a>
                     </li>
                    @endforeach
+                    <div class="clear"></div>
                 </ul>
-
             </div>
 
             <div class="conl2-right-3 box-shadow">
-
-
                 <h3>最新入驻品牌<a href="/{{\App\AdminModel\Arctype::where('id',1)->value('real_path')}}/">更多</a></h3>
-                <div class="conl2-right-3-xian"></div>
-
                 <ul>
                     @foreach($latestbrands as $latestbrand)
                     <li @if($loop->first) class="mt0" @endif>
@@ -103,8 +98,6 @@
 
             <div class="conl2-right-4 box-shadow">
                 <h3>最新加盟资讯<a href="">更多</a></h3>
-                <div class="conl2-right-4-xian"></div>
-
                 <ul>
                     @foreach($latesenews as $latesenew)
                     <li @if($loop->first) class="mt0" @endif>
