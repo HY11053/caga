@@ -59,7 +59,7 @@
                             <dl class="paihangbf">
                                 <dt class="a2"><span>NO{{$index+1}}.</span><a class="b_tit" href="/{{$topbrand->arctype->real_path}}/{{$topbrand->id}}.shtml">{{$topbrand->brandname}}</a></dt>
                                 <dd>
-                                    项目特色:{{$topbrand->brandpsp}}
+                                    项目特色:{{str_limit($topbrand->brandpsp,40,'')}}
                                 </dd>
                             </dl>
                         </li>

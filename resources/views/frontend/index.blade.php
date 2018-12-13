@@ -300,26 +300,9 @@
             <div class="con5-left-zi">
 
                 <ul>
-                    <li class="first_line"><a href="" style="font-size: 14px;">干洗店装修费用</a></li>
-                    <li class="first_line"><a href="">干洗店如何正确把握装修格</a></li>
-                    <li class="first_line"><a href="">洗衣店装修多少钱</a></li>
-                    <li class="first_line"><a href="">开一家干洗店装修重要么</a></li>
-                    <li><a href="">小型干洗店怎么装修</a></li>
-                    <li style=""><a href="">40平干洗店装修效果图</a></li>
-                    <li><a href="">80平干洗店装修效果图</a></li>
-                    <li><a href="">开干洗店装修风格重要么</a></li>
-                    <li><a href="">45平干洗店装修效果图</a></li>
-                    <li style=""><a href="">干洗店如何装修能收到顾客的青睐</a></li>
-                    <li><a href="">一般装修一个干洗店需要多久</a></li>
-                    <li><a href="">干洗店应该如何装修好</a></li>
-                    <li><a href="">80平干洗店装修效果图</a></li>
-                    <li style=""><a href="">干洗店装修费用</a></li>
-                    <li><a href="">干洗店装修图纸设计</a></li>
-                    <li><a href="">薪金普丽店怎么装修好</a></li>
-                    <li><a href="">薪金普丽店怎么装修好</a></li>
-                    <li><a href="">薪金普丽店怎么装修好</a></li>
-                    <li><a href="">薪金普丽店怎么装修好</a></li>
-                    <li><a href="">薪金普丽店怎么装修好</a></li>
+                    @foreach($zhuangxiulists as $zhuangxiulist)
+                        <li class="first_line"><a href="/{{$zhuangxiulist->arctype->real_path}}/{{$zhuangxiulist->id}}.shtml" style="font-size: 14px;">{{$zhuangxiulist->title}}</a></li>
+                    @endforeach
                 </ul>
 
             </div>

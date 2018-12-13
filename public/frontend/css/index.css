@@ -155,7 +155,7 @@ li.newlist{overflow: hidden;    text-overflow: ellipsis;    white-space: nowrap;
 .con4-left{width: 859px;height:100%;background: white;float: left;}
 .con4-right{width: 321px;height: 100%;background: white;float: right;}
 
-.con4-left-top-1{display: block;font-size: 16px;height: 16px;color: #333333;margin: 17px 0px 0px 29px;line-height: 16px;}
+.con4-left-top-1{display: inline-block;font-size: 16px;height: 16px;color: #333333;margin: 17px 0px 0px 29px;line-height: 16px;}
 .con4-left-top-2{height: 16px;font-size: 10px;color: #bbbbbb;float: right;margin: 17px 35px 0px 0px;line-height: 16px;}
 .con4-left-top-2:hover{color: #e4000f;}
 .con4-left-xian{width: 831px;height: 1px;background: #efefef;float: left;margin: 17px 0px 0px 14px;}

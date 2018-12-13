@@ -29,8 +29,9 @@ class IndexController extends Controller
         $ganxishebeis=Archive::where('typeid',4)->where('flags','like','%s%')->take(8)->get();
         $shebeilists=Archive::where('typeid',4)->latest()->take(8)->get();
         $latestnews=Archive::where('typeid','<>',4)->latest()->take(8)->get();
+        $zhuangxiulists=Archive::where('typeid',8)->latest()->take(20)->get();
         $flinks=flink::latest()->take(25)->get();
-        return view('frontend.index',compact('hotbrands','brandnew','cbrands','paihangbangs','cbrandnew','brands','brandnews','cshebei','ganxishebeis','shebeilists','latestnews','flinks'));
+        return view('frontend.index',compact('hotbrands','brandnew','cbrands','paihangbangs','cbrandnew','brands','brandnews','cshebei','ganxishebeis','shebeilists','latestnews','flinks','zhuangxiulists'));
     }
 
 }
