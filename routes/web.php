@@ -41,13 +41,14 @@ Route::group(['domain' => 'mip.jjedu.com.cn'], function () {
     Route::get('{path}','Mip\ListNewsController@listNews')->where('path','[a-zA-Z0-9/_]+')->name('newslist');
 });
 Route::get('/','Frontend\IndexController@Index');
-Route::get('{path}/{id}.shtml','Frontend\ArticleController@GetArticle')->where('id', '[0-9]+')->name('articles');
-Route::get('paihangbang/{path?}','Frontend\PaihangbangController@Paihangbang')->where('path', '[a-zA-Z_\/0-9]+');
+
+Route::get('paihangbang','Frontend\PaihangbangController@Paihangbang');
 Route::post('sprodlist/all/','Frontend\SeacrhController@SeacrhBrand');
 Route::get('sprodlist/all/','Frontend\SeacrhController@SeacrhBrand');
 Route::post('phone/complate/list/','Frontend\PhoneController@ComplateBrands');
+Route::get('{path}','Frontend\ListNewsController@listNews')->where('path','[a-zA-Z0-9]+')->name('newslist');
+Route::get('{path}/{id}.shtml','Frontend\ArticleController@GetArticle')->where('id', '[0-9]+')->name('articles');
+Route::get('{path}/page/{page}','Frontend\ListNewsController@listNews')->where('path', '[a-zA-Z0-9/_]+')->name('newspagelist');
 Route::get('{path}_{tid}_{cid}_{zid}','Frontend\ListNewsController@projectBrandLists')->where(['path'=>'[a-zA-Z0-9_\/]+','tid'=>'[0-9]+','cid'=>'[0-9]+','zid'=>'[0-9]+'])->name('projectlists');
 Route::get('{path}_{tid}_{cid}_{zid}/page/{page}','Frontend\ListNewsController@projectBrandLists')->where(['path'=>'[a-zA-Z0-9_\/]+','tid'=>'[0-9]+','cid'=>'[0-9]+','zid'=>'[0-9]+','page'=>'[0-9]+'])->name('projectlistspage');
-Route::get('{path}/page/{page}','Frontend\ListNewsController@listNews')->where('path', '[a-zA-Z0-9/_]+')->name('newspagelist');
-Route::get('{path}','Frontend\ListNewsController@listNews')->where('path','[a-zA-Z0-9/_]+')->name('newslist');
 Route::post('/phonecomplate/','Frontend\PhoneController@phoneComplate');

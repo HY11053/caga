@@ -55,7 +55,7 @@ class ListNewsController extends Controller
             );
             $topbrands=Brandarticle::whereIn('typeid',$typeids)->orwhere('typeid',$typeid)->take(5)->orderBy('click','desc')->get();
             $hotbrands=Brandarticle::where('mid','1')->where('flags','like','%c%')->latest()->take(8)->orderBy('id','desc')->get();
-            return view('frontend.brands',compact('thistypeinfo','topbrandnavs','pagelists','topbrands','flashlingshibrands','cnewslists','cbrands','hotbrands'));
+            return view('frontend.brands',compact('thistypeinfo','pagelists','topbrands','cnewslists','hotbrands'));
         }
 
     }
