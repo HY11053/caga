@@ -37,7 +37,7 @@
         <div class="d_nav">
             <ul>
                 <li><a href="/" target="_self"><span>首页</span></a></li>
-                <li><a href="/pinpai/" target="_self"><span>品牌大全</span></a></li>
+                <li><a href="/item/" target="_self"><span>品牌大全</span></a></li>
                 <li><a href="/cost/" target="_self"><span>干洗店成本</span></a></li>
                 <li><a href="/investment/" target="_self"><span>干洗店投资</span></a></li>
                 <li><a href="/profit/" target="_self"><span>干洗店利润</span></a></li>

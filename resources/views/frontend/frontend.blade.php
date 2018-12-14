@@ -42,7 +42,7 @@
     <div class="center">
         <ul class="nav">
             <li><a href="/" >网站首页</a></li>
-            <li><a href="/pinpai/">干洗店品牌</a></li>
+            <li><a href="/item/">干洗店品牌</a></li>
             <li><a href="/news/" >品牌新闻</a></li>
             <li><a href="/cost/">干洗店成本 </a></li>
             <li><a href="/profit/">干洗店利润 </a></li>
