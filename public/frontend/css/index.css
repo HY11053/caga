@@ -438,7 +438,7 @@ ul.pagination li a.disabled {    color: #ddd}
 .xm-show-bar .ovh li {    float: left;    width: 60px;    height: 60px;    margin-right: 8px;    cursor: pointer;    position: relative;    transition: all .25s linear}
 .xm-show-bar .ovh li.cur:after {    position: absolute;    left: 0;    top: 0;    right: 0;    bottom: 0;    border: 2px solid #ff552e;    content: ''}
 .xm-show-bar .btn-left:hover,.xm-show-bar .btn-right:hover,.xm-show-bar .btn-disabled {    opacity: .6}
-
+img-block img{width: 320px; height: 320px; overflow: hidden;}
 
 .b_con1-right-top{width: 513px;height: 126px;border-bottom: 1px dashed #e1e1e1;float: left;margin-left: 30px;}
 .b_con1-right-top h1{display: block;font-size: 18px;width: 100%;margin-top: 22px;color: #2d3229;line-height: 18px;}

@@ -134,7 +134,7 @@ return [
     */
     'webname'=>'干洗店投资网-干洗店加盟品牌连锁招商投资平台',
     'indexname'=>'干洗店投资网',
-    'keywords'=>'干洗店加盟,干洗店投资,投资开干洗店,干洗店加盟连锁,干洗店投资网',
+    'keywords'=>'干洗店加盟,洗衣店加盟,干洗店投资,投资开干洗店,干洗店加盟连锁,干洗店投资网',
     'description'=>'干洗店投资网连锁招商加盟平台打造专业干洗投资在线信息平台，汇集全行业干洗店品牌投资信息及干洗店成本、利润、设备价格以及干洗店加盟费用等投资难题，让您开店无忧',
     //'api'=>'http://data.zz.baidu.com/urls?site=www.jjedu.com.cn&token=QeSFIvl5RWRgU3BT',
     //'mip_api'=>'http://data.zz.baidu.com/urls?site=mip.jjedu.com.cn&token=QeSFIvl5RWRgU3BT&type=mip',
