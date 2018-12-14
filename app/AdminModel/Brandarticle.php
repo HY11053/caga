@@ -18,6 +18,11 @@ class Brandarticle extends Model
         parent::boot();
         static::addGlobalScope(new PublishedScope);
     }
+
+    public function getIndexpicAttribute($indexpic)
+    {
+        return $indexpic?$indexpic:$this->litpic;
+    }
     /**栏目关联定义
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
