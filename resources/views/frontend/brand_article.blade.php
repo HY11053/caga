@@ -1,5 +1,5 @@
 @extends('frontend.frontend')
-@section('title'){{$thisarticleinfos->title}}-{{config('app.name')}}@stop
+@section('title'){{$thisarticleinfos->title}}-{{config('app.indexname')}}@stop
 @section('keywords'){{$thisarticleinfos->keywords}}@stop
 @section('description'){{trim($thisarticleinfos->description)}}@stop
 @section('headlibs')

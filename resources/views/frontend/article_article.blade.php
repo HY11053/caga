@@ -1,5 +1,6 @@
 @extends('frontend.frontend')
-@section('title'){{$thisarticleinfos->title}}-{{config('app.name')}}@stop
+@section('title'){{$thisarticleinfos->title}}-{{config('app.indexname')}}@stop
+@section('keywords'){{$thisarticleinfos->keywords}}@stop
 @section('description'){{$thisarticleinfos->description}}@stop
 @section('headlibs')
     <meta name="Copyright" content="{{config('app.name')}}-{{config('app.url')}}"/>

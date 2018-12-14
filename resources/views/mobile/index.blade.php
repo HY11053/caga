@@ -1,7 +1,7 @@
 @extends('mobile.mobile')
-@section('title'){{ config('app.webname', '干洗店投资网') }}@stop
-@section('keywords'){{ config('app.keywords', '干洗店投资网') }}@stop
-@section('description'){{ config('app.description', '干洗店投资网') }}@stop
+@section('title'){{config('app.webname')}}@stop
+@section('keywords'){{config('app.keywords')}}@stop
+@section('description'){{config('app.description')}}@stop
 @section('headlibs')
     <link href="/mobile/css/index.css" rel="stylesheet" type="text/css"/>
     <link href="/frontend/css/swiper.min.css" rel="stylesheet" type="text/css"/>

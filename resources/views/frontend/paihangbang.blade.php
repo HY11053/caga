@@ -1,31 +1,15 @@
 @extends('frontend.frontend')
-@section('title'){{str_replace('加盟','',$thistypeinfo->typename)}}加盟排行榜_{{str_replace('加盟','',$thistypeinfo->typename)}}品牌排行榜-干洗店投资网@stop
-@section('keywords'){{str_replace('加盟','',$thistypeinfo->typename)}}加盟排行榜,{{str_replace('加盟','',$thistypeinfo->typename)}}品牌排行榜,{{str_replace('加盟','',$thistypeinfo->typename)}}品牌排行@stop
-@section('description')干洗店投资网为您全方位解读{{str_replace('加盟','',$thistypeinfo->typename)}}加盟品牌排行信息。分享{{str_replace('加盟','',$thistypeinfo->typename)}}门店信息，{{str_replace('加盟','',$thistypeinfo->typename)}}排行榜分类提供性价比最高{{str_replace('加盟','',$thistypeinfo->typename)}}品牌加盟排行榜信息，供你快速的选择适合自己的{{str_replace('加盟','',$thistypeinfo->typename)}}加盟品牌@stop
-@section('headlibs')
-    <meta name="Copyright" content="干洗店投资网-{{env('APP_URL')}}"/>
-    <meta name="author" content="干洗店投资网" />
-    <meta http-equiv="mobile-agent" content="format=wml; url={{str_replace('http://www.','http://m.',config('app.url'))}}{{Request::getrequesturi()}}" />
-    <meta http-equiv="mobile-agent" content="format=xhtml; url={{str_replace('http://www.','http://m.',config('app.url'))}}{{Request::getrequesturi()}}" />
-    <meta http-equiv="mobile-agent" content="format=html5; url={{str_replace('http://www.','http://m.',config('app.url'))}}{{Request::getrequesturi()}}" />
-    <link rel="alternate" media="only screen and(max-width: 640px)" href="{{str_replace('http://www.','http://m.',config('app.url'))}}{{Request::getrequesturi()}}" >
-    <link rel="canonical" href="{{config('app.url')}}{{str_replace('','',Request::getrequesturi())}}"/>
-    <link rel="stylesheet" href="/frontend/css/article.css" />
-    <link rel="stylesheet" href="/frontend/css/index.css" />
-@stop
-@section('main_content')
-    @extends('frontend.frontend')
-@section('title'){{$thistypeinfo->title}}-干洗店投资网@stop
+@section('title'){{$thistypeinfo->title}}-{{config('app.indexname')}}@stop
 @section('keywords'){{$thistypeinfo->keywords}} @stop
 @section('description'){{trim($thistypeinfo->description)}}@stop
 @section('headlibs')
-    <meta name="Copyright" content="干洗店投资网-{{env('APP_URL')}}"/>
-    <meta name="author" content="干洗店投资网" />
+    <meta name="Copyright" content="{{config('app.indexname')}}-{{config('app.url')}}"/>
+    <meta name="author" content="{{config('app.indexname')}}" />
     <meta http-equiv="mobile-agent" content="format=wml; url={{str_replace('http://www.','http://m.',config('app.url'))}}{{Request::getrequesturi()}}" />
     <meta http-equiv="mobile-agent" content="format=xhtml; url={{str_replace('http://www.','http://m.',config('app.url'))}}{{Request::getrequesturi()}}" />
     <meta http-equiv="mobile-agent" content="format=html5; url={{str_replace('http://www.','http://m.',config('app.url'))}}{{Request::getrequesturi()}}" />
     <link rel="alternate" media="only screen and(max-width: 640px)" href="{{str_replace('http://www.','http://m.',config('app.url'))}}{{Request::getrequesturi()}}" >
-    <link rel="canonical" href="{{config('app.url')}}{{str_replace('','',Request::getrequesturi())}}"/>
+    <link rel="canonical" href="{{config('app.url')}}{{Request::getrequesturi()}}"/>
 @stop
 @section('main_content')
     <div class="main_content">

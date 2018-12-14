@@ -1,7 +1,7 @@
 @extends('mip.mip')
-@section('title'){{str_replace('加盟','',$thistypeinfo->typename)}}加盟排行榜_{{str_replace('加盟','',$thistypeinfo->typename)}}品牌排行榜-干洗店投资网@stop
-@section('keywords'){{str_replace('加盟','',$thistypeinfo->typename)}}加盟排行榜,{{str_replace('加盟','',$thistypeinfo->typename)}}品牌排行榜,{{str_replace('加盟','',$thistypeinfo->typename)}}品牌排行@stop
-@section('description')干洗店投资网为您全方位解读{{str_replace('加盟','',$thistypeinfo->typename)}}加盟品牌排行信息。分享{{str_replace('加盟','',$thistypeinfo->typename)}}门店信息，{{str_replace('加盟','',$thistypeinfo->typename)}}排行榜分类提供性价比最高{{str_replace('加盟','',$thistypeinfo->typename)}}品牌加盟排行榜信息，供你快速的选择适合自己的{{str_replace('加盟','',$thistypeinfo->typename)}}加盟品牌@stop
+@section('title'){{$thistypeinfo->title}}-{{config('app.indexname')}}@stop
+@section('keywords'){{$thistypeinfo->keywords}} @stop
+@section('description'){{trim($thistypeinfo->description)}}@stop
 @section('headlibs')
     <link href="{{str_replace('www.','mip.',config('app.url'))}}/mobile/css/miplist.css" rel="stylesheet" type="text/css"/>
     <link href="{{str_replace('www.','mip.',config('app.url'))}}/frontend/css/swiper.min.css" rel="stylesheet" type="text/css"/>

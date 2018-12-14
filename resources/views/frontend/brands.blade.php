@@ -1,15 +1,15 @@
 @extends('frontend.frontend')
-@section('title'){{$thistypeinfo->title}}-干洗店投资网@stop
+@section('title'){{$thistypeinfo->title}}-{{config('app.indexname')}}@stop
 @section('keywords'){{$thistypeinfo->keywords}} @stop
 @section('description'){{trim($thistypeinfo->description)}}@stop
 @section('headlibs')
-    <meta name="Copyright" content="干洗店投资网-{{env('APP_URL')}}"/>
-    <meta name="author" content="干洗店投资网" />
+    <meta name="Copyright" content="{{config('app.indexname')}}-{{config('app.url')}}"/>
+    <meta name="author" content="{{config('app.indexname')}}" />
     <meta http-equiv="mobile-agent" content="format=wml; url={{str_replace('http://www.','http://m.',config('app.url'))}}{{Request::getrequesturi()}}" />
     <meta http-equiv="mobile-agent" content="format=xhtml; url={{str_replace('http://www.','http://m.',config('app.url'))}}{{Request::getrequesturi()}}" />
     <meta http-equiv="mobile-agent" content="format=html5; url={{str_replace('http://www.','http://m.',config('app.url'))}}{{Request::getrequesturi()}}" />
     <link rel="alternate" media="only screen and(max-width: 640px)" href="{{str_replace('http://www.','http://m.',config('app.url'))}}{{Request::getrequesturi()}}" >
-    <link rel="canonical" href="{{config('app.url')}}{{str_replace('','',Request::getrequesturi())}}"/>
+    <link rel="canonical" href="{{config('app.url')}}{{Request::getrequesturi()}}"/>
 @stop
 @section('main_content')
     <div class="main_content">

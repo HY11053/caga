@@ -18,11 +18,11 @@
                         <div class="check_msg_tit">请填写留言或根据意向选择下列快捷留言</div>
                         <div class="check_msg_bd">
                             <ul>
-                                <li><a href="javascript:;" class="no" target="_self">我加盟后，您们还会提供哪些服务？</a></li>
-                                <li><a href="javascript:;" class="no" target="_self">有兴趣开一个店，请寄资料或给我打电话。</a></li>
-                                <li><a href="javascript:;" class="no" target="_self">请问我这个地方有加盟商了吗？</a></li>
-                                <li><a href="javascript:;" class="no" target="_self">请将详细投资方案和资料寄给本人。</a></li>
-                                <li><a href="javascript:;" class="no" target="_self">初步打算加盟贵公司，请寄资料。</a></li>
+                                <li><a href="javascript:;" class="no" target="_self" rel="nofollow">我加盟后，您们还会提供哪些服务？</a></li>
+                                <li><a href="javascript:;" class="no" target="_self" rel="nofollow">有兴趣开一个店，请寄资料或给我打电话。</a></li>
+                                <li><a href="javascript:;" class="no" target="_self" rel="nofollow">请问我这个地方有加盟商了吗？</a></li>
+                                <li><a href="javascript:;" class="no" target="_self" rel="nofollow">请将详细投资方案和资料寄给本人。</a></li>
+                                <li><a href="javascript:;" class="no" target="_self" rel="nofollow">初步打算加盟贵公司，请寄资料。</a></li>
                             </ul>
                         </div>
                     </div>
