@@ -429,13 +429,14 @@ ul.pagination li a.disabled {    color: #ddd}
 .b_con1-left-tu{padding-left: 10px;}
 .xm-show-bar {    float: left;    width: 320px; }
 .xm-show-bar .tu {    height: 320px}
+.xm-show-bar .img-block li	{    height: 320px;    overflow: hidden;}
 .xm-show-bar .xm-scroll {    height: 60px;    padding: 0 28px;    margin-top: 8px;    position: relative}
 .xm-show-bar .btn-left,.xm-show-bar .btn-right {    position: absolute;    top: 0;    width: 20px;    height: 60px;    line-height: 60px;    background-color: #8c8c8c;    text-align: center;    color: #fff;    cursor: pointer;    transition: all .25s linear}
 .xm-show-bar .btn-left {    left: 0}
 .xm-show-bar .btn-right {    right: 0}
 .xm-show-bar .ovh {    position: relative;    height: 60px}
 .xm-show-bar .ovh ul {    position: absolute;    left: 0;    height: 60px}
-.xm-show-bar .ovh li {    float: left;    width: 60px;    height: 60px;    margin-right: 8px;    cursor: pointer;    position: relative;    transition: all .25s linear}
+.xm-show-bar .ovh li {    float: left;    width: 60px;    height: 60px;    margin-right: 8px;    cursor: pointer;    position: relative;    transition: all .25s linear; overflow:hidden;}
 .xm-show-bar .ovh li.cur:after {    position: absolute;    left: 0;    top: 0;    right: 0;    bottom: 0;    border: 2px solid #ff552e;    content: ''}
 .xm-show-bar .btn-left:hover,.xm-show-bar .btn-right:hover,.xm-show-bar .btn-disabled {    opacity: .6}
 img-block img{width: 320px; height: 320px; overflow: hidden;}
