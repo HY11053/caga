@@ -88,7 +88,7 @@ footer .foot-text {    /*font-size: 0.16rem;*/    font-size: 7px;    color: #919
 .lunbo {    position: relative;    width: 100%;}
 .swiper-container{    width: 100%;    height: 3.2rem;}
 .swiper-container  img {    width: 100%;    height: 3.5rem;}
-.search {    width: 100%;   top: 0;    z-index: 2;    /*background: transparent;*/    height: 0.84rem;    background: #dc0011;}
+.search {    width: 100%;   top: 0;    z-index: 2;    /*background: transparent;*/    height: 0.84rem;    background: #00b19a;}
 .search .city,.search .message {    width: 16%;    height: 0.54rem;    margin-top: 0.15rem;}
 .search .city a img {    display: block;    width: 0.54rem;  max-width: 0.54rem; min-width: .54rem;  height: 0.54rem;    margin-left: 0.3rem;}
 .search .city p {    color: #fff;    margin-top: -0.05rem;}

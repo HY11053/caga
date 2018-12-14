@@ -10,22 +10,22 @@
 @include('mip.header')
     <div class="smalllist clearfix">
         <div class="smalllist clearfix">
-            <div class="small-box"><a href="/xm/"> <mip-img src="/mobile/images/zhaoshang.png"></mip-img><span>教育品牌</span></a></div>
-            <div class="small-box"><a href="/zaojiao/" class="rightbox"><mip-img src="/mobile/images/zhinan.png"></mip-img><span>早教加盟</span></a></div>
-            <div class="small-box"><a href="/youeryuan/"><mip-img src="/mobile/images/touzi.png"></mip-img><span>幼儿园加盟</span></a></div>
-            <div class="small-box rightbox"><a href="/shaoer/" class="rightbox"><mip-img src="/mobile/images/jingying.png"></mip-img><span>少儿英语加盟</span></a></div>
-            <div class="small-box rightbox"><a href="/wudao/" class="rightbox"><mip-img src="/mobile/images/xinwen.png"></mip-img><span>舞蹈培训</span></a></div>
-            <div class="small-box rightbox"><a href="/xuedifudao/" class="rightbox"><mip-img src="/mobile/images/paihang.png"></mip-img><span>学习辅导</span></a></div>
-            <div class="small-box rightbox"><a href="/yishujiaoyu/" class="rightbox"><mip-img src="/mobile/images/canyin.png"></mip-img><span>艺术教育</span></a></div>
-            <div class="small-box rightbox"><a href="/zuowen/" class="rightbox"><mip-img src="/mobile/images/huoguo.png"></mip-img><span>作文培训</span></a>
+            <div class="small-box"><a href="/pinpai/"> <mip-img src="/mobile/images/zhaoshang.png"></mip-img><span>干洗店品牌</span></a></div>
+            <div class="small-box"><a href="/cost/" class="rightbox"><mip-img src="/mobile/images/zhinan.png"></mip-img><span>干洗店成本</span></a></div>
+            <div class="small-box"><a href="/investment/"><mip-img src="/mobile/images/touzi.png"></mip-img><span>干洗店投资</span></a></div>
+            <div class="small-box rightbox"><a href="/profit/" class="rightbox"><mip-img src="/mobile/images/jingying.png"></mip-img><span>干洗店利润</span></a></div>
+            <div class="small-box rightbox"><a href="/devices/" class="rightbox"><mip-img src="/mobile/images/xinwen.png"></mip-img><span>干洗店设备</span></a></div>
+            <div class="small-box rightbox"><a href="/technology/" class="rightbox"><mip-img src="/mobile/images/paihang.png"></mip-img><span>干洗技术</span></a></div>
+            <div class="small-box rightbox"><a href="/news/" class="rightbox"><mip-img src="/mobile/images/canyin.png"></mip-img><span>品牌新闻</span></a></div>
+            <div class="small-box rightbox"><a href="/paihangbang/" class="rightbox"><mip-img src="/mobile/images/huoguo.png"></mip-img><span>排行榜</span></a>
         </div>
     </div>
     <div class="recommend clearfix">
         <mip-img src="/mobile/images/icon-kmtt.png"></mip-img>
         <div id="moocBox">
             <ul data-id="m_n_a02" data-type="cmsadpos">
-                @foreach($ctbrandnews as $ctbrandnew)
-                <li><a href="/news/{{$ctbrandnew->id}}.shtml" data-id="{{$ctbrandnew->id}}">{{$ctbrandnew->title}}</a></li>
+                @foreach($brandnews as $brandnew)
+                <li><a href="/{{$brandnew->arctype->real_path}}/{{$brandnew->id}}.shtml" data-id="{{$brandnew->id}}">{{$brandnew->title}}</a></li>
                 @endforeach
             </ul>
         </div>
@@ -41,7 +41,7 @@
             <ul class="content cy-item ">
                 @foreach($cbrands as $cbrand)
                 <li>
-                    <a href="/xm/{{$cbrand->id}}.shtml" data-id="{{$cbrand->id}}" data-type="cmsad">
+                    <a href="/{{$cbrand->arctype->real_path}}/{{$cbrand->id}}.shtml" data-id="{{$cbrand->id}}" data-type="cmsad">
                         <mip-img src="{{$cbrand->litpic}}"></mip-img>
                         <p class="online-title">{{$cbrand->brandname}}</p>
                         <p class="online-name">{{$cbrand->brandgroup}}</p>
@@ -52,42 +52,14 @@
                 @endforeach
             </ul>
             <ul class="content cy-item ">
-                @foreach($cbrand2s as $cbrand2)
+                @foreach($hotbrands as $hotbrand)
                     <li>
-                        <a href="/xm/{{$cbrand2->id}}.shtml" data-id="{{$cbrand2->id}}" data-type="cmsad">
-                            <mip-img  src="{{$cbrand2->litpic}}"></mip-img>
-                            <p class="online-title">{{$cbrand2->brandname}}</p>
-                            <p class="online-name">{{$cbrand2->brandgroup}}</p>
-                            <p class="online-money"><span class="rmb">￥</span>{{$cbrand2->brandpay}}</p>
-                            <span class="timespan">{{date('y-m-d',strtotime($cbrand2->created_at))}}</span>
-                        </a>
-                    </li>
-                @endforeach
-
-            </ul>
-            <ul class="content cy-item ">
-                @foreach($cbrand3s as $cbrand3)
-                    <li>
-                        <a href="/xm/{{$cbrand3->id}}.shtml" data-id="{{$cbrand3->id}}" data-type="cmsad">
-                            <mip-img  src="{{$cbrand3->litpic}}"></mip-img>
-                            <p class="online-title">{{$cbrand3->brandname}}</p>
-                            <p class="online-name">{{$cbrand3->brandgroup}}</p>
-                            <p class="online-money"><span class="rmb">￥</span>{{$cbrand3->brandpay}}</p>
-                            <span class="timespan">{{date('y-m-d',strtotime($cbrand3->created_at))}}</span>
-                        </a>
-                    </li>
-                @endforeach
-
-            </ul>
-            <ul class="content cy-item ">
-                @foreach($cbrand4s as $cbrand4)
-                    <li>
-                        <a href="/xm/{{$cbrand4->id}}.shtml" data-id="{{$cbrand4->id}}" data-type="cmsad">
-                            <mip-img  src="{{$cbrand4->litpic}}"></mip-img>
-                            <p class="online-title">{{$cbrand4->brandname}}</p>
-                            <p class="online-name">{{$cbrand4->brandgroup}}</p>
-                            <p class="online-money"><span class="rmb">￥</span>{{$cbrand4->brandpay}}</p>
-                            <span class="timespan">{{date('y-m-d',strtotime($cbrand4->created_at))}}</span>
+                        <a href="/{{$hotbrand->arctype->real_path}}/{{$hotbrand->id}}.shtml" data-id="{{$hotbrand->id}}" data-type="cmsad">
+                            <mip-img  src="{{$hotbrand->litpic}}"></mip-img>
+                            <p class="online-title">{{$hotbrand->brandname}}</p>
+                            <p class="online-name">{{$hotbrand->brandgroup}}</p>
+                            <p class="online-money"><span class="rmb">￥</span>{{$hotbrand->brandpay}}</p>
+                            <span class="timespan">{{date('y-m-d',strtotime($hotbrand->created_at))}}</span>
                         </a>
                     </li>
                 @endforeach
@@ -103,53 +75,14 @@
         </div>
         <div class="tabs-ctn" data-id="m_n_a04" data-type="cmsadpos">
             <ul class="content cy-item ">
-                @foreach($latestbrands as $latestbrand)
+                @foreach($brands as $brand)
                     <li>
-                        <a href="/xm/{{$latestbrand->id}}.shtml" data-id="{{$latestbrand->id}}" data-type="cmsad">
-                            <mip-img  src="{{$latestbrand->litpic}}"></mip-img>
-                            <p class="online-title">{{$latestbrand->brandname}}</p>
-                            <p class="online-name">{{$latestbrand->brandgroup}}</p>
-                            <p class="online-money"><span class="rmb">￥</span>{{$latestbrand->brandpay}}</p>
-                            <span class="timespan">{{date('y-m-d',strtotime($latestbrand->created_at))}}</span>
-                        </a>
-                    </li>
-                @endforeach
-            </ul>
-            <ul class="content cy-item ">
-                @foreach($latestbrand2s as $latestbrand2)
-                    <li>
-                        <a href="/xm/{{$latestbrand2->id}}.shtml" data-id="{{$latestbrand2->id}}" data-type="cmsad">
-                            <mip-img  src="{{$latestbrand2->litpic}}"></mip-img>
-                            <p class="online-title">{{$latestbrand2->brandname}}</p>
-                            <p class="online-name">{{$latestbrand2->brandgroup}}</p>
-                            <p class="online-money"><span class="rmb">￥</span>{{$latestbrand2->brandpay}}</p>
-                            <span class="timespan">{{date('y-m-d',strtotime($latestbrand2->created_at))}}</span>
-                        </a>
-                    </li>
-                @endforeach
-            </ul>
-            <ul class="content cy-item ">
-                @foreach($latestbrand3s as $latestbrand3)
-                    <li>
-                        <a href="/xm/{{$latestbrand3->id}}.shtml" data-id="{{$latestbrand3->id}}" data-type="cmsad">
-                            <mip-img  src="{{$latestbrand3->litpic}}"></mip-img>
-                            <p class="online-title">{{$latestbrand3->brandname}}</p>
-                            <p class="online-name">{{$latestbrand3->brandgroup}}</p>
-                            <p class="online-money"><span class="rmb">￥</span>{{$latestbrand3->brandpay}}</p>
-                            <span class="timespan">{{date('y-m-d',strtotime($latestbrand3->created_at))}}</span>
-                        </a>
-                    </li>
-                @endforeach
-            </ul>
-            <ul class="content cy-item ">
-                @foreach($latestbrand4s as $latestbrand4)
-                    <li>
-                        <a href="/xm/{{$latestbrand4->id}}.shtml" data-id="{{$latestbrand4->id}}" data-type="cmsad">
-                            <mip-img  src="{{$latestbrand4->litpic}}"></mip-img>
-                            <p class="online-title">{{$latestbrand4->brandname}}</p>
-                            <p class="online-name">{{$latestbrand4->brandgroup}}</p>
-                            <p class="online-money"><span class="rmb">￥</span>{{$latestbrand4->brandpay}}</p>
-                            <span class="timespan">{{date('y-m-d',strtotime($latestbrand4->created_at))}}</span>
+                        <a href="/{{$brand->arctype->real_path}}/{{$brand->id}}.shtml" data-id="{{$brand->id}}" data-type="cmsad">
+                            <mip-img  src="{{$brand->litpic}}"></mip-img>
+                            <p class="online-title">{{$brand->brandname}}</p>
+                            <p class="online-name">{{$brand->brandgroup}}</p>
+                            <p class="online-money"><span class="rmb">￥</span>{{$brand->brandpay}}</p>
+                            <span class="timespan">{{date('y-m-d',strtotime($brand->created_at))}}</span>
                         </a>
                     </li>
                 @endforeach
@@ -160,20 +93,20 @@
         <mip-vd-tabs>
             <section>
                 <li class="on">品牌新闻<i></i></li>
-                <li>加盟指南<i></i></li>
-                <li>投资分析<i></i></li>
-                <li>经营管理<i></i></li>
+                <li>干洗店成本<i></i></li>
+                <li>干洗店利润<i></i></li>
+                <li>干洗店投资<i></i></li>
             </section>
             <div class="news-content">
-                @foreach($latestbrandnews as $latestbrandnew)
+                @foreach($brandnews as $brandnew)
                 <dl class="newslist1">
                     <dt class="dd-two">
-                        <p class="newslist-tit p-two"><a href="/news/{{$latestbrandnew->id}}.shtml">{{$latestbrandnew->title}}</a></p>
-                        <p class="newslist-text p1-two">{{$latestbrandnew->descriprion}}</p>
+                        <p class="newslist-tit p-two"><a href="/{{$brandnew->arctype->real_path}}/{{$brandnew->id}}.shtml">{{$brandnew->title}}</a></p>
+                        <p class="newslist-text p1-two">{{$brandnew->descriprion}}</p>
                     </dt>
                     <dd class="dt-two dt-two1 clearfix">
                         @php
-                            $pics=array_filter(explode(',',\App\AdminModel\Brandarticle::where('id',$latestbrandnew->brandid)->value('imagepics')));
+                            $pics=array_filter(explode(',',\App\AdminModel\Brandarticle::where('id',$brandnew->brandid)->value('imagepics')));
                         @endphp
                        @foreach($pics as $index=>$pic)
                            @if($index<3)
@@ -183,21 +116,21 @@
                     </dd>
                     <dd class="publish ">
                         <span class="fl publish-text">来源：干洗店品牌网</span>
-                        <span class=" publish-text fl">{{$latestbrandnew->created_at}}</span>
+                        <span class=" publish-text fl">{{$brandnew->created_at}}</span>
                     </dd>
                 </dl>
                 @endforeach
             </div>
             <div class="news-content">
-                @foreach($jmzhinannews as $jmzhinannew)
+                @foreach($chengbenlists as $chengbenlist)
                     <dl class="newslist1">
                         <dt class="dd-two">
-                            <p class="newslist-tit p-two"><a href="/news/{{$jmzhinannew->id}}.shtml">{{$jmzhinannew->title}}</a></p>
-                            <p class="newslist-text p1-two">{{$jmzhinannew->descriprion}}</p>
+                            <p class="newslist-tit p-two"><a href="/{{$chengbenlist->arctype->real_path}}/{{$chengbenlist->id}}.shtml">{{$chengbenlist->title}}</a></p>
+                            <p class="newslist-text p1-two">{{$chengbenlist->descriprion}}</p>
                         </dt>
                         <dd class="dt-two dt-two1 clearfix">
                             @php
-                                $pics=array_filter(explode(',',\App\AdminModel\Brandarticle::where('id',$jmzhinannew->brandid)->value('imagepics')));
+                                $pics=array_filter(explode(',',\App\AdminModel\Brandarticle::where('id',$chengbenlist->brandid)->value('imagepics')));
                             @endphp
                             @foreach($pics as $index=>$pic)
                                 @if($index<3)
@@ -207,21 +140,21 @@
                         </dd>
                         <dd class="publish ">
                             <span class="fl publish-text">来源：干洗店品牌网</span>
-                            <span class=" publish-text fl">{{$jmzhinannew->created_at}}</span>
+                            <span class=" publish-text fl">{{$chengbenlist->created_at}}</span>
                         </dd>
                     </dl>
                 @endforeach
             </div>
             <div class="news-content">
-                @foreach($touzinews as $touzinew)
+                @foreach($lirunlists as $lirunlist)
                     <dl class="newslist1">
                         <dt class="dd-two">
-                            <p class="newslist-tit p-two"><a href="/news/{{$touzinew->id}}.shtml">{{$touzinew->title}}</a></p>
+                            <p class="newslist-tit p-two"><a href="/{{$lirunlist->arctype->real_path}}/{{$lirunlist->id}}.shtml">{{$lirunlist->title}}</a></p>
                             <p class="newslist-text p1-two">{{$touzinew->descriprion}}</p>
                         </dt>
                         <dd class="dt-two dt-two1 clearfix">
                             @php
-                                $pics=array_filter(explode(',',\App\AdminModel\Brandarticle::where('id',$touzinew->brandid)->value('imagepics')));
+                                $pics=array_filter(explode(',',\App\AdminModel\Brandarticle::where('id',$lirunlist->brandid)->value('imagepics')));
                             @endphp
                             @foreach($pics as $index=>$pic)
                                 @if($index<3)
@@ -231,21 +164,21 @@
                         </dd>
                         <dd class="publish ">
                             <span class="fl publish-text">来源：干洗店品牌网</span>
-                            <span class=" publish-text fl">{{$touzinew->created_at}}</span>
+                            <span class=" publish-text fl">{{$lirunlist->created_at}}</span>
                         </dd>
                     </dl>
                 @endforeach
             </div>
             <div class="news-content">
-                @foreach($jingyingnews as $jingyingnew)
+                @foreach($touzilists as $touzilist)
                     <dl class="newslist1">
                         <dt class="dd-two">
-                            <p class="newslist-tit p-two"><a href="/news/{{$jingyingnew->id}}.shtml">{{$jingyingnew->title}}</a></p>
-                            <p class="newslist-text p1-two">{{$jingyingnew->descriprion}}</p>
+                            <p class="newslist-tit p-two"><a href="/{{$touzilist->arctype->real_path}}/{{$touzilist->id}}.shtml">{{$touzilist->title}}</a></p>
+                            <p class="newslist-text p1-two">{{$touzilist->descriprion}}</p>
                         </dt>
                         <dd class="dt-two dt-two1 clearfix">
                             @php
-                                $pics=array_filter(explode(',',\App\AdminModel\Brandarticle::where('id',$jingyingnew->brandid)->value('imagepics')));
+                                $pics=array_filter(explode(',',\App\AdminModel\Brandarticle::where('id',$touzilist->brandid)->value('imagepics')));
                             @endphp
                             @foreach($pics as $index=>$pic)
                                 @if($index<3)
@@ -255,7 +188,7 @@
                         </dd>
                         <dd class="publish ">
                             <span class="fl publish-text">来源：干洗店品牌网</span>
-                            <span class=" publish-text fl">{{$jingyingnew->created_at}}</span>
+                            <span class=" publish-text fl">{{$touzilist->created_at}}</span>
                         </dd>
                     </dl>
                 @endforeach

@@ -45,7 +45,6 @@
                 <li><a href="/technology/" target="_self"><span>干洗技术</span></a></li>
                 <li><a href="/news/" target="_self"><span>品牌新闻</span></a></li>
                 <li><a href="/paihangbang/" target="_self"><span>干洗店排行榜</span></a></li>
-                </li>
             </ul>
         </div>
 
@@ -62,7 +61,7 @@
         <a href="/paihangbang/" class="foot-link">品牌排行榜</a>
     </div>
     <p class="firm clearfix">
-        <span class="foot-text mgr15">上海莫卡网路科技有限公司 版权所有</span>
+        <span class="foot-text mgr15">上海桥梓网络科技有限公司 版权所有</span>
     </p>
 </footer>
 <script type="text/javascript" src="/frontend/js/jquery.min.js"></script>

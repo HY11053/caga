@@ -18,9 +18,9 @@ class IndexController extends Controller
     function Index()
     {
         //项目抢先看
-        $hotbrands=Brandarticle::where('mid','1')->where('flags','like','%h%')->take(5)->orderBy('click','desc')->get();
-        $cbrands=Brandarticle::where('mid','1')->where('flags','like','%c%')->take(6)->orderBy('id','desc')->get();
-        $brands=Brandarticle::where('mid','1')->take(6)->latest()->get();
+        $hotbrands=Brandarticle::where('mid','1')->where('flags','like','%h%')->take(4)->orderBy('click','desc')->get();
+        $cbrands=Brandarticle::where('mid','1')->where('flags','like','%c%')->take(4)->orderBy('id','desc')->get();
+        $brands=Brandarticle::where('mid','1')->take(4)->latest()->get();
         $brandnews=Archive::where('brandid','<>',0)->latest()->take(7)->get();
         $chengbenlists=Archive::where('typeid',2)->latest()->take(7)->get();
         $lirunlists=Archive::where('typeid',3)->latest()->take(7)->get();

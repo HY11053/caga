@@ -13,16 +13,3 @@
         </div>
     </div>
 </div>
-<div id="focus" class="focus">
-    <div class="swiper-container">
-        <mip-carousel autoplay  defer="5000" layout="responsive" width="730"  height="304">
-            @foreach($pics as $pic)
-                @if(!ctype_space($pic))
-                    <li class="swiper-slide" ><mip-img src="{{$pic}}"></mip-img></li>
-                @else
-                    <li class="swiper-slide" ><mip-img src="/mobile/images/noproject.png" ></mip-img></li>
-                @endif
-            @endforeach
-        </mip-carousel>
-    </div>
-</div>

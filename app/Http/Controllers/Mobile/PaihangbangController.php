@@ -24,7 +24,7 @@ class PaihangbangController extends Controller
         );
         $topbrands=Brandarticle::take(5)->orderBy('click','desc')->get();
         $hotbrands=Brandarticle::where('mid','1')->where('flags','like','%c%')->latest()->take(8)->orderBy('id','desc')->get();
-        return view('frontend.paihangbang',compact('thistypeinfo','topbrandnavs','pagelists','topbrands','flashlingshibrands','cnewslists','cbrands','hotbrands'));
+        return view('mobile.paihangbang',compact('thistypeinfo','topbrandnavs','pagelists','topbrands','flashlingshibrands','cnewslists','cbrands','hotbrands'));
 
     }
 }

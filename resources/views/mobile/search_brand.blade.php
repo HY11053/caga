@@ -53,7 +53,6 @@
             {!! str_replace('page=','page/',str_replace('?','/',preg_replace('/<a href=[\'\"]?([^\'\" ]+).*?>/','<a href="${1}/">',$pagelists->links()))) !!}
         </div>
     </div>
-    @include('mobile.liuyan')
     <div class="index_item">
         <div class="common_tit">
             <span class="tit" href="/paihangbang/">{{$thistypeinfo->typename}}十大品牌</span>

@@ -4,40 +4,6 @@
         <i></i>
         <div class="title">在线留言</div>
         <mip-form method="post" target="_self" url="https://message.5988.com/index.php/my_ci/into/">
-        <input type="hidden" name="realm" value="www.xiuxianshipin.com">
-        <input type="hidden" name="job" value="guestbook">
-        <input type="hidden" name="title" value="干洗店品牌网">
-        <input type="hidden" name="cla" value="
-        @if(isset($thisarticleinfos))
-        @if($thisarticleinfos->brandname)
-        {{\App\AdminModel\Arctype::where('id',$thisarticleinfos->typeid)->value('typename')}}
-        @elseif ($thisarticleinfos->brandid)
-        {{\App\AdminModel\Arctype::where('id',\App\AdminModel\Brandarticle::where('id',$thisarticleinfos->brandid)->value('typeid'))->value('typename')}}
-        @else
-        {{$thisarticleinfos->arctype->typename}}
-        @endif
-        @elseif(isset($thistypeinfo))
-        {{$thistypeinfo->typename}}
-        @else
-                未知分类
-        @endif
-        ">
-        <input type="hidden" name="combrand" value="
-        @if(isset($thisarticleinfos))
-        @if($thisarticleinfos->brandname)
-        {{$thisarticleinfos->brandname}}
-        @elseif ($thisarticleinfos->brandid)
-        {{\App\AdminModel\Brandarticle::where('id',$thisarticleinfos->brandid)->value('brandname')}}
-        @else
-        {{$thisarticleinfos->title}}
-        @endif
-        @elseif(isset($thistypeinfo))
-        {{$thistypeinfo->typename}}
-        @else
-                未知分类
-        @endif
-        ">
-        <input type="hidden" name="resolution" id="resolution">
         <div class="inputbox">
             <input type="text" name="username" id="guestname" value="" placeholder="您的真实姓名"/>
             <span>姓名：</span>

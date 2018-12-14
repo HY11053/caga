@@ -14,6 +14,6 @@ class SeacrhController extends Controller
         $cnewslists=Archive::take(8)->latest()->get();
         $topbrands=Brandarticle::take(5)->orderBy('click','desc')->get();
         $hotbrands=Brandarticle::where('mid','1')->where('flags','like','%c%')->latest()->take(8)->orderBy('id','desc')->get();
-        return view('frontend.search_brand',compact('pagelists','cnewslists','topbrands','hotbrands'));
+        return view('mobile.search_brand',compact('pagelists','cnewslists','topbrands','hotbrands'));
     }
 }

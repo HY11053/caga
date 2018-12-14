@@ -23,7 +23,7 @@
         </div>
     </div>
     <div class="center">
-        <img src="/frontend/images/logo_03.png" class="logo" />
+        <img src="/frontend/images/logo_03.jpg" class="logo" />
         <form action="/sprodlist/all/" method="post">
             {{csrf_field()}}
             <input type="text" name="keywords" placeholder="请输入您感兴趣的项目名称" class="shuru">

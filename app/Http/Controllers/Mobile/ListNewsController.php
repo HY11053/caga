@@ -170,7 +170,7 @@ class ListNewsController extends Controller
         }else{
             $zid=null;
         }
-        return view('frontend.project_brands',compact('thistypeinfo','flashlingshibrands','topbrandnavs','pagelists','topbrands','tid','cid','cnewslists','zid','cbrands','hotbrandsearch'));
+        return view('mobile.project_brands',compact('thistypeinfo','flashlingshibrands','topbrandnavs','pagelists','topbrands','tid','cid','cnewslists','zid','cbrands','hotbrandsearch'));
     }
 
 

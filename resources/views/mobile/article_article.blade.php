@@ -1,5 +1,6 @@
 @extends('mobile.mobile')
 @section('title'){{$thisarticleinfos->title}}-{{config('app.indexname')}}@stop
+@section('keywords'){{$thisarticleinfos->keywords}}@stop
 @section('description'){{$thisarticleinfos->description}}@stop
 @section('headlibs')
     <link href="/mobile/css/article.css" rel="stylesheet" type="text/css"/>

@@ -5,32 +5,26 @@ namespace App\Http\Controllers\Mip;
 use App\AdminModel\Archive;
 use App\AdminModel\Arctype;
 use App\AdminModel\Brandarticle;
+use App\Overwrite\Paginator;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class PaihangbangController extends Controller
 {
-    public function Paihangbang($path='')
+    public function Paihangbang(Request $request,$page=0)
     {
-        if(!$path)
-        {
-            $thistypeinfo=Arctype::where('id',14)->first();
-        }else{
-            $thistypeinfo=Arctype::where('real_path',$path)->first();
-        }
-        if(!$thistypeinfo)
-        {
-            abort(404);
-        }
-        $typeids=Arctype::where('reid',14)->orWhere('topid',14)->pluck('id');
-        $paihangbrands=Brandarticle::take(20)->when($path, function ($query) use ($path) {
-        return $query->where('typeid',Arctype::where('real_path',$path)->value('id'));
-        })->orderBy('click','desc')->get();
-        if (!$paihangbrands->count())
-        {
-            $paihangbrands=Brandarticle::whereIn('typeid',$typeids)->take(20)->orderBy('click','desc')->get();
-        }
-        $brandnavs=Arctype::where('reid',14)->get();
-        return view('mip.paihangbang',compact('thistypeinfo','paihangbrands','brandnavs'));
+        $typeid=Arctype::where('real_path',preg_replace('/\/page\/[0-9]+/','',$request->path()))->value('id')?:abort(404);
+        $thistypeinfo=Arctype::where('id',$typeid)->first();
+        $cnewslists=Archive::take(8)->latest()->get();
+        $cid='';
+        $pagelists=Brandarticle::orderBy('click','desc')->distinct()->paginate($perPage = 10, $columns = ['*'], $pageName = 'page', $page);
+        $pagelists= Paginator::transfer(
+            $cid,//传入分类id,
+            $pagelists//传入原始分页器
+        );
+        $topbrands=Brandarticle::take(5)->orderBy('click','desc')->get();
+        $hotbrands=Brandarticle::where('mid','1')->where('flags','like','%c%')->latest()->take(8)->orderBy('id','desc')->get();
+        return view('mip.paihangbang',compact('thistypeinfo','topbrandnavs','pagelists','topbrands','flashlingshibrands','cnewslists','cbrands','hotbrands'));
+
     }
 }

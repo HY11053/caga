@@ -73,7 +73,7 @@ class PhoneController extends Controller
     }
 
 
-    function PhoneBottom(Request $request)
+    function phoneComplate(Request $request)
     {
         if(empty(Phonemanage::where('phoneno',$request->input('phoneno'))->value('phoneno')))
         {
@@ -81,7 +81,6 @@ class PhoneController extends Controller
             $request['host']=$request->input('host');
             $request['referer']=$request->session()->all()['referer'][0];
             Phonemanage::create($request->all());
-            event(new PhoneEvent(Phonemanage::latest() ->first()));
             Admin::first()->notify(new MailSendNotification(Phonemanage::latest() ->first()));
             echo '电话提交成功！我们将尽快与您联系';
         }else{

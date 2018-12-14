@@ -1,6 +1,7 @@
 @extends('mip.mip')
-@section('title'){{$thisarticleinfos->title}}-{{$indexname}}@stop
-@section('description'){{trim($thisarticleinfos->description)}}@stop
+@section('title'){{$thisarticleinfos->title}}-{{config('app.indexname')}}@stop
+@section('keywords'){{$thisarticleinfos->keywords}}@stop
+@section('description'){{$thisarticleinfos->description}}@stop
 @section('headlibs')
     <link href="{{str_replace('www.','mip.',config('app.url'))}}/mobile/css/miparticle.css" rel="stylesheet" type="text/css"/>
     <link href="{{str_replace('www.','mip.',config('app.url'))}}/mobile/css/mip_brand.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +26,7 @@
             <div id="item1">
                 <div class="item1box">
                     <div class="item1boxleft fl">
-                        <div class="title"><h1><a href="/xm/{{$thisBrandArticle->id}}.shtml">{{$thisBrandArticle->brandname}}加盟</a></h1></div>
+                        <div class="title"><h1><a href="/{{$thisBrandArticle->arctype->real_path}}/{{$thisBrandArticle->id}}.shtml">{{$thisBrandArticle->brandname}}加盟</a></h1></div>
                         <div class="text">{{$thisBrandArticle->brandgroup}}</div>
                         <div class="time"><span>{{date('Y-m-d',strtotime($thisBrandArticle->created_at))}}</span></div>
                     </div>
@@ -34,107 +35,6 @@
                         <li class="tl">所属行业：<span>{{$thisBrandArticle->arctype->typename}}</span></li>
                         <li class="tl">经营范围：<span>{{$thisBrandArticle->brandmap}}</span></li>
                         <li class="tl">店铺面积：<span>{{\App\AdminModel\Acreagement::where('id',$thisBrandArticle->acreage)->value('type')}}㎡</span></li>
-                    </div>
-                </div>
-            </div>
-            <div id="focus" class="focus">
-                <div class="swiper-container">
-                    <mip-carousel autoplay  defer="5000" layout="responsive" width="730"  height="304">
-                        @foreach($pics as $pic)
-                            <li class="swiper-slide" ><mip-img src="{{$pic}}"></mip-img></li>
-                        @endforeach
-                    </mip-carousel>
-                </div>
-            </div>
-            <div id="item3">
-                <div class="item3box">
-                    <ul class="title clearfix">
-                        <li class="tl">品牌地址：<span>{{$thisBrandArticle->country}}</span></li>
-                        <li class="tc">门店数目：<span>{{$thisBrandArticle->brandnum}}</span></li>
-                        <li class="tr">{{$thisBrandArticle->click}}人关注</li>
-                    </ul>
-                    <div class="top clearfix">
-                        <div class="topleft fl">
-                            <i></i>
-                            <p>注：{{$thisBrandArticle->brandname}}投资金额可能包含了加盟费、保证金、品牌使用费等其他相关费用，因此投资总额根据实际情况计算，相关费用解释请参考页面
-                            </p>
-                        </div>
-                        <div class="topright fr">
-                            <div class="item3boxbtn btn1 js_popup">
-                                <a href="/xm/{{$thisBrandArticle->id}}.shtml#msg">立即咨询</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bottom clearfix">
-                        <div class="bottomleft fl">
-                        </div>
-                        <div class="bottomright fr">
-                            <a href="tel:400-8896-216">
-                                <div class="item3boxbtn btn2">
-                                    拨打电话
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr>
-        </div>
-        @elseif($thisarticleinfos->brandname)
-        <div class="brandinfo">
-            <div id="item1">
-                <div class="item1box">
-                    <div class="item1boxleft fl">
-                        <div class="title"><h1><a href="/news/{{$thisarticleinfos->id}}.shtml">{{$thisarticleinfos->brandname}}加盟</a></h1></div>
-                        <div class="text">{{$thisarticleinfos->brandgroup}}</div>
-                        <div class="time"><span>{{date('Y-m-d',strtotime($thisarticleinfos->created_at))}}</span></div>
-                    </div>
-                    <div class="item1boxmiddle fl">
-                        <div class="top">{{$thisarticleinfos->brandpay}}</div>
-                        <li class="tl">所属行业：<span>{{$thisarticleinfos->arctype->typename}}</span></li>
-                        <li class="tl">经营范围：<span>{{$thisarticleinfos->brandmap}}</span></li>
-                        <li class="tl">店铺面积：<span>{{\App\AdminModel\Acreagement::where('id',$thisarticleinfos->acreage)->value('type')}}㎡</span></li>
-                    </div>
-                </div>
-            </div>
-            <div id="focus" class="focus">
-                <div class="swiper-container">
-                    <mip-carousel autoplay  defer="5000" layout="responsive" width="730"  height="304">
-                        @foreach(explode(',',$jsonpics) as $pic)
-                            <li class="swiper-slide" ><mip-img src={!! $pic !!}></mip-img></li>
-                        @endforeach
-                    </mip-carousel>
-                </div>
-            </div>
-            <div id="item3">
-                <div class="item3box">
-                    <ul class="title clearfix">
-                        <li class="tl">品牌地址：<span>{{$thisarticleinfos->country}}</span></li>
-                        <li class="tc">门店数目：<span>{{$thisarticleinfos->brandnum}}</span></li>
-                        <li class="tr">{{$thisarticleinfos->click}}人关注</li>
-                    </ul>
-                    <div class="top clearfix">
-                        <div class="topleft fl">
-                            <i></i>
-                            <p>注：{{$thisarticleinfos->brandname}}投资金额可能包含了加盟费、保证金、品牌使用费等其他相关费用，因此投资总额根据实际情况计算，相关费用解释请参考页面
-                            </p>
-                        </div>
-                        <div class="topright fr">
-                            <div class="item3boxbtn btn1 js_popup">
-                                <a href="/news/{{$thisarticleinfos->id}}.shtml#msg">立即咨询</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bottom clearfix">
-                        <div class="bottomleft fl">
-                        </div>
-                        <div class="bottomright fr">
-                            <a href="tel:400-8896-216">
-                                <div class="item3boxbtn btn2">
-                                    拨打电话
-                                </div>
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -155,7 +55,6 @@
              echo $content;
          @endphp
     </div>
-    @include('mip.liuyan')
     @if(isset($xg_search))
     <div id="item7">
         <div class="item7box clearfix">
@@ -164,7 +63,7 @@
             <div class="item7content">
             @foreach($xg_search as $xg_article)
                 <div class="item7list">
-                    <a href="/news/{{$xg_article->id}}.shtml">
+                    <a href="/{{$xg_article->arctype->real_path}}/{{$xg_article->id}}.shtml">
                         <div class="left fl">
                             <div class="lefttitle">{{$xg_article->title}}</div>
                             <div class="text">
@@ -191,7 +90,7 @@
             <div class="item8content">
                 @foreach($topbrands as $index=>$topbrand)
                     <div class="item8list @if(($index+1)%2==0) fl @else fr @endif">
-                        <a href="/xm/{{$topbrand->id}}.shtml">
+                        <a href="/{{$topbrand->arctype->real_path}}/{{$topbrand->id}}.shtml">
                             <mip-img src="{{$topbrand->litpic}}" alt="{{$topbrand->brandname}}"></mip-img>
                             <div class="item8listcontent">
                                 <div class="listtitle">{{$topbrand->brandname}}</div>
