@@ -136,10 +136,12 @@
                     <dl>
                         <dt>
                             <a href="/{{$cbrand->arctype->real_path}}/{{$cbrand->id}}.shtml"><img src="{{$cbrand->indexpic}}" alt="{{$cbrand->brandname}}"></a>
+                           {{--
                             <div class="brandinfo">
                                 <strong>{{$cbrand->brandname}}</strong>
                                 <p>{{str_limit($cbrand->brandpsp,22,'')}}</p>
                             </div>
+                           --}}
                         </dt>
                         <dd>
                         <p>门店总数<span>{{$cbrand->brandnum}}家！</span>开店率<span>{{rand(90,99)}}%</span></p>
@@ -180,10 +182,12 @@
                     <dl>
                         <dt>
                             <a href="/{{$brand->arctype->real_path}}/{{$brand->id}}.shtml"><img src="{{$brand->indexpic}}" alt="{{$brand->brandname}}"></a>
+                            {{--
                             <div class="brandinfo">
                                 <strong>{{$brand->brandname}}</strong>
                                 <p>{{str_limit($brand->brandpsp,22,'')}}</p>
                             </div>
+                            --}}
                         </dt>
                         <dd>
                             <p>门店总数<span>{{$brand->brandnum}}家！</span>开店率<span>{{rand(90,99)}}%</span></p>
