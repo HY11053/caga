@@ -42,13 +42,13 @@
     <div class="center">
         <ul class="nav">
             <li><a href="/" >网站首页</a></li>
-            <li><a href="/gxdpp/">干洗店品牌</a></li>
-            <li><a href="/cyzx/" >创业资讯</a></li>
-            <li><a href="/gxdcb/">干洗店成本 </a></li>
-            <li><a href="/gxdlr/">干洗店利润 </a></li>
-            <li><a href="/gxdsb/">干洗店设备</a></li>
-            <li><a href="/gxdjs/">干洗店技术</a></li>
-            <li><a href="/gxdzx/">干洗店装修</a></li>
+            <li><a href="/pinpai/">干洗店品牌</a></li>
+            <li><a href="/news/" >品牌新闻</a></li>
+            <li><a href="/cost/">干洗店成本 </a></li>
+            <li><a href="/profit/">干洗店利润 </a></li>
+            <li><a href="/devices/">干洗店设备</a></li>
+            <li><a href="/technology/">干洗店技术</a></li>
+            <li><a href="/zhuangxiu/">干洗店装修</a></li>
             <li><a href="/paihangbang/">品牌排行榜</a></li>
         </ul>
     </div>
