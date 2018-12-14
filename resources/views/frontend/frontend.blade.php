@@ -60,15 +60,15 @@
             <div class="about" style="">
                 <h4>快速导航</h4>
                 <ul class="list-unstyled">
-                    <li><a href="#">干洗店品牌</a></li>
-                    <li><a href="#">干洗店成本</a></li>
-                    <li><a  href="#">干洗店利润</a></li>
-                    <li><a  href="#">干洗店设备</a></li>
-                    <li><a  href="#">干洗店装修</a></li>
-                    <li><a  href="#">干洗店投资</a></li>
-                    <li><a  href="#">干洗技术培训</a></li>
-                    <li><a  href="#">干洗品牌新闻</a></li>
-                    <li><a  href="#">干洗品牌排行榜</a></li>
+                    <li><a href="/item/">干洗店品牌</a></li>
+                    <li><a href="/cost/">干洗店成本</a></li>
+                    <li><a  href="/profit/">干洗店利润</a></li>
+                    <li><a  href="/devices/">干洗店设备</a></li>
+                    <li><a  href="/zhuangxiu/">干洗店装修</a></li>
+                    <li><a  href="/investment/">干洗店投资</a></li>
+                    <li><a  href="/technology/">干洗技术培训</a></li>
+                    <li><a  href="/news/">干洗品牌新闻</a></li>
+                    <li><a  href="/paihangbang/">干洗品牌排行榜</a></li>
                 </ul>
             </div>
             <div class="contact">
@@ -92,16 +92,16 @@
             </div>
             <div class="qrcode">
                 <div class="qrcode-item">
-                    <img src="/frontend/images/wchat.png" alt="微信公众平台">
+                    <img src="/frontend/images/wchat.jpg" alt="微信公众平台">
                     <span class="ma_xcx">小程序</span>
                 </div>
                 <div class="qrcode-item">
-                    <img src="/frontend/images/v3/wap.png" alt="APP下载">
-                    <span class="ma_app">扫码下载APP</span>
+                    <img src="/frontend/images/v3/wap.jpg" alt="干洗品牌网手机站">
+                    <span class="ma_app">干洗品牌网手机站</span>
                 </div>
                 <div class="qrcode-item">
-                    <img src="/frontend/images/xiongzhang.png" alt="干洗店熊掌号">
-                    <span class="ma_wx">微信公众号</span>
+                    <img src="/frontend/images/xiongzhang.jpg" alt="干洗店熊掌号">
+                    <span class="ma_wx">干洗店品牌网熊掌号</span>
                 </div>
             </div>
             <div class="clear"></div>
