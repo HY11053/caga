@@ -67,7 +67,7 @@ $(function() {
                     var a =  $(t).offset().top;
                     topArr.push(a)
                 }),
-                e.on("click", "h2", function() {
+                e.on("click", "span", function() {
                     var e =  $(this).index();
                     $(this).addClass("cur").siblings().removeClass("cur"),
                         $("html,body").animate({
@@ -78,7 +78,7 @@ $(function() {
                     var t =  $(this).scrollTop();
                     t >= a ? e.addClass("nv-stair-fixed") : e.removeClass("nv-stair-fixed"),
                         $.each(topArr, function(a) {
-                            t >= topArr[a] - 2 * navHeight + 27 &&  $("h2", e).eq(a).addClass("cur").siblings().removeClass("cur")
+                            t >= topArr[a] - 2 * navHeight + 27 &&  $("span", e).eq(a).addClass("cur").siblings().removeClass("cur")
                         })
                 })
         }

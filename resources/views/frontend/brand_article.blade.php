@@ -146,21 +146,19 @@
 
     <div class="b_con3 center">
         <div class="b_con3-left box-shadow">
-            <ul class="b_con3-left-top">
-                <li style="width: 172px;font-weight: 500;"><a href="">特许经营信息</a></li>
-                <li><a href="">品牌介绍</a></li>
-                <li><a href="">品牌展示</a></li>
-                <li><a href="">投资分析</a></li>
-                <li><a href="">品牌资讯</a></li>
-                <li><a href="">品牌门店</a></li>
-                <li style="border: none;"><a href="">项目咨询</a></li>
+            <ul class="b_con3-left-top nv-stair">
+                <li><span>{{$thisarticleinfos->brandname}}品牌信息</span></li>
+                <li><span>品牌介绍</span></li>
+                <li><span>投资分析</span></li>
+                <li><span>项目咨询</span></li>
+                <li><span>品牌资讯</span></li>
             </ul>
-            <div class="b_con3-2">
+            <div class="b_con3-2 stair-wz_new">
                 <div class="xiaokuai2"></div>
                 <h2>{{$thisarticleinfos->brandname}}品牌介绍</h2>
                 {!! $thisarticleinfos->body !!}
             </div>
-            <div class="b_con3-6">
+            <div class="b_con3-6 stair-wz_new">
                 <div class="xiaokuai6"></div>
                 <h2>{{$thisarticleinfos->brandname}}<span>运营综合分析</span></h2>
                 <div class="b_con3-6-xian"></div>
@@ -214,7 +212,7 @@
                 </table>
             </div>
 
-            <div class="ar_con1-left-con5">
+            <div class="ar_con1-left-con5 stair-wz_new">
                 <div class="ar_con1-left-con5-top">
                     <div class="bf_tit">给<span>{{$thisarticleinfos->brandname}}</span>留言，立即获得最新加盟资料</div>
                     <p>（<span>*</span>为必填选项）</p>

@@ -93,15 +93,11 @@
             <div class="qrcode">
                 <div class="qrcode-item">
                     <img src="/frontend/images/wchat.jpg" alt="微信公众平台">
-                    <span class="ma_xcx">小程序</span>
+                    <span class="ma_xcx">微信公众平台</span>
                 </div>
                 <div class="qrcode-item">
-                    <img src="/frontend/images/v3/wap.jpg" alt="干洗品牌网手机站">
+                    <img src="/frontend/images/wap.jpg" alt="干洗品牌网手机站">
                     <span class="ma_app">干洗品牌网手机站</span>
-                </div>
-                <div class="qrcode-item">
-                    <img src="/frontend/images/xiongzhang.jpg" alt="干洗店熊掌号">
-                    <span class="ma_wx">干洗店品牌网熊掌号</span>
                 </div>
             </div>
             <div class="clear"></div>
