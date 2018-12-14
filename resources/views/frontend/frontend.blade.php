@@ -17,7 +17,7 @@
 <div class="top">
     <div class="top-top">
         <div class="center">
-            <p style="float: left;margin-left: 15px;">您好！欢迎来到干洗店品牌网！</p>
+            <p style="float: left;margin-left: 15px;">您好！欢迎来到干洗店投资网！</p>
             <a  style="float:right;margin-right: 15px;" href="/"> 网站首页</a>
             <a href="{{str_replace('www.','m.',config('app.url'))}}" style="float:right;margin-right: 15px;">手机版</a>
         </div>
@@ -86,7 +86,7 @@
                 <h4>查查服务</h4>
                 <ul class="list-unstyled">
                     <li>
-                        中国干洗网打造专业干洗投资在线信息平台，快速解答干洗店利润怎么样、开一家干洗店的成本、干洗店加盟哪个好、干洗店设备价格以及干洗店加盟费用多少等投资难题，让您开店无忧。整合市场信息，及时更新干洗店加盟连锁排名、中国干洗店十大排名，新鲜干洗资讯一手掌握，干洗店加盟品牌随时了解。
+                        干洗店投资网打造专业干洗投资在线信息平台，快速解答干洗店利润怎么样、开一家干洗店的成本、干洗店加盟哪个好、干洗店设备价格以及干洗店加盟费用多少等投资难题，让您开店无忧。整合市场信息，及时更新干洗店加盟连锁排名、中国干洗店十大排名，新鲜干洗资讯一手掌握，干洗店加盟品牌随时了解。
                     </li>
                 </ul>
             </div>
@@ -108,7 +108,7 @@
             <div class="footer-copy clearfix">
                 <div class="pull-left">
                     <div class="m-t-xs">
-                        <a href="javascript:void(0)" title="干洗店品牌网" rel="nofollow">©2014-2018</a>
+                        <a href="javascript:void(0)" title="干洗店投资网" rel="nofollow">©2014-2018</a>
                         <a href="http://www.miibeian.gov.cn/" target="_blank" rel="nofollow"> 粤ICP备07055879号-1	</a> 版权所有&nbsp;上海莫卡网络科技有限公司
                     </div>
                 </div>

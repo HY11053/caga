@@ -21,7 +21,7 @@
 <div class="header clearfix mtop84">
     <div class="search clearfix">
         <div class="city fl">
-            <a href="/"><img src="/mobile/images/nav-logo2.png" alt="干洗店品牌网"/></a>
+            <a href="/"><img src="/mobile/images/nav-logo2.png" alt="干洗店投资网"/></a>
         </div>
         <div class="searchCon fl">
             <form action="/sprodlist/all/" method="post">

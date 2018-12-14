@@ -21,7 +21,7 @@
 <div class="header clearfix mtop84">
     <div class="search clearfix">
         <div class="city fl">
-            <a href="/"><mip-img src="/mobile/images/nav-logo2.png" alt="干洗店品牌网"></mip-img></a>
+            <a href="/"><mip-img src="/mobile/images/nav-logo2.png" alt="干洗店投资网"></mip-img></a>
         </div>
         <div class="searchCon fl">
             <mip-form url="{{str_replace('www.','mip.',config('app.url'))}}/sprodlist/all/" target="_self" method="post">

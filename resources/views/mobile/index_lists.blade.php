@@ -1,5 +1,5 @@
 @extends('mobile.mobile')
-@section('title'){{$thistypeinfo->title}}-干洗店品牌网@stop
+@section('title'){{$thistypeinfo->title}}-干洗店投资网@stop
 @section('keywords'){{$thistypeinfo->keywords}} @stop
 @section('description'){{trim($thistypeinfo->description)}}@stop
 @section('headlibs')
@@ -43,7 +43,7 @@
                         <div class="left fl">
                             <div class="lefttitle">{{$latesenews->title}}</div>
                             <div class="text">
-                                <div class="message">编辑：干洗店品牌网</div>
+                                <div class="message">编辑：干洗店投资网</div>
                             </div>
                         </div>
                         <div class="right fr">

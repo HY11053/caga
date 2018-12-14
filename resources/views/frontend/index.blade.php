@@ -17,8 +17,6 @@
             <div class="fenleitit">干洗品牌筛选</div>
             <select style="margin-top: 12px;">
                 <option>干洗分类</option>
-                <option>干洗分类</option>
-                <option>干洗分类</option>
             </select>
             <select>
                 <option>1~5万</option>
@@ -63,11 +61,11 @@
             <div class="carousel carousel-bar1">
                 <div class="ovh swiper-container">
                     <ul class="ban-ul swiper-wrapper">
-                        <a target="_blank" href="/brand/1396/" class="item img-block swiper-slide"><img src="/frontend/images/banner_18.png" alt="UCC国际洗衣"></a>
-                        <a target="_blank" href="/brand/7/" class="item img-block swiper-slide"><img src="/frontend/images/banner04.png" alt="福奈特干洗店"></a>
-                        <a target="_blank" href="/brand/1062/" class="item img-block swiper-slide"><img src="/frontend/images/banner02.png" alt="康洁干洗店"></a>
-                        <a target="_blank" href="/brand/1062/" class="item img-block swiper-slide"><img src="/frontend/images/banner06.png" alt="皇家圣雪"></a>
-                        <a target="_blank" href="/brand/1062/" class="item img-block swiper-slide"><img src="/frontend/images/banner07.png" alt="赛维干洗店"></a>
+                        <a target="_blank" href="#" class="item img-block swiper-slide"><img src="/frontend/images/banner_18.png" alt=""></a>
+                        <a target="_blank" href="#" class="item img-block swiper-slide"><img src="/frontend/images/banner04.png" alt="福奈特干洗店"></a>
+                        <a target="_blank" href="/item/1.shtml" class="item img-block swiper-slide"><img src="/frontend/images/banner02.png" alt="UCC国际洗衣"></a>
+                        <a target="_blank" href="#" class="item img-block swiper-slide"><img src="/frontend/images/banner06.png" alt="皇家圣雪"></a>
+                        <a target="_blank" href="#" class="item img-block swiper-slide"><img src="/frontend/images/banner07.png" alt="赛维干洗店"></a>
                     </ul>
                 </div>
                 <div class="dot">
@@ -282,22 +280,22 @@
                 </div>
                 <div class="con5-left-tu2">
                     <div>
-                        <a href="">赛维干洗店</a>
+                        <a href="/item/1323.shtml">赛维干洗店</a>
                     </div>
                 </div>
                 <div class="con5-left-tu3">
                     <div>
-                        <a href="">澳洁干洗店</a>
+                        <a href="#" rel="nofollow">邦纳福干洗店</a>
                     </div>
                 </div>
                 <div class="con5-left-tu4">
                     <div>
-                        <a href="">洁丰干洗店</a>
+                        <a href="/item/1346.shtml">洁丰干洗店</a>
                     </div>
                 </div>
                 <div class="con5-left-tu5">
                     <div>
-                        <a href="">洗多郎干洗店</a>
+                        <a href="/item/1.shtml">UCC国际洗衣</a>
                     </div>
                 </div>
             </div>

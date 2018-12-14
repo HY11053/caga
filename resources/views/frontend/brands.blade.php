@@ -1,10 +1,10 @@
 @extends('frontend.frontend')
-@section('title'){{$thistypeinfo->title}}-干洗店品牌网@stop
+@section('title'){{$thistypeinfo->title}}-干洗店投资网@stop
 @section('keywords'){{$thistypeinfo->keywords}} @stop
 @section('description'){{trim($thistypeinfo->description)}}@stop
 @section('headlibs')
-    <meta name="Copyright" content="干洗店品牌网-{{env('APP_URL')}}"/>
-    <meta name="author" content="干洗店品牌网" />
+    <meta name="Copyright" content="干洗店投资网-{{env('APP_URL')}}"/>
+    <meta name="author" content="干洗店投资网" />
     <meta http-equiv="mobile-agent" content="format=wml; url={{str_replace('http://www.','http://m.',config('app.url'))}}{{Request::getrequesturi()}}" />
     <meta http-equiv="mobile-agent" content="format=xhtml; url={{str_replace('http://www.','http://m.',config('app.url'))}}{{Request::getrequesturi()}}" />
     <meta http-equiv="mobile-agent" content="format=html5; url={{str_replace('http://www.','http://m.',config('app.url'))}}{{Request::getrequesturi()}}" />
@@ -86,7 +86,7 @@
                         <h3><a target="_blank" href="/{{$pagelist->arctype->real_path}}/{{$pagelist->id}}.shtml">{{$pagelist->brandname}}</a></h3>
                     </div>
                     <div class="info">
-                        <span title="{{$pagelist->brandpay}}">投资金额：<b class="s-oe">{{$pagelist->brandpay}}</b></span><span title="30-50平米㎡">所需面积：<b class="s-oe">30-50平米㎡</b></span>
+                        <span title="{{$pagelist->brandpay}}">投资金额：<b class="s-oe">{{$pagelist->brandpay}}</b></span><span title="{{\App\AdminModel\Acreagement::where('id',$pagelist->acreage)->value('type')}}">所需面积：<b class="s-oe">{{\App\AdminModel\Acreagement::where('id',$pagelist->acreage)->value('type')}}</b></span>
                     </div>
                     <p> 门店数量：<span class="s-c26">{{$pagelist->brandnum}}</span></p>
                     <p>加盟区域：<span class="s-c26">{{$pagelist->brandarea}}</span></p>

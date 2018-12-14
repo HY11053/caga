@@ -1,5 +1,5 @@
 @extends('mip.mip')
-@section('title')品牌搜索页-干洗店品牌网@stop
+@section('title')品牌搜索页-干洗店投资网@stop
 @section('keywords')品牌搜索页 @stop
 @section('description')品牌搜索页@stop
 @section('headlibs')
@@ -107,7 +107,7 @@
                             <div class="left fl">
                                 <div class="lefttitle">{{$cnewslist->title}}</div>
                                 <div class="text">
-                                    <div class="message">编辑：干洗店品牌网</div>
+                                    <div class="message">编辑：干洗店投资网</div>
                                 </div>
                             </div>
                             <div class="right fr">
