@@ -12,8 +12,6 @@ use Carbon\Carbon;
 use App\Overwrite\Paginator;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Routing\Route;
-use PhpParser\Node\Expr\PreDec;
 
 class ListNewsController extends Controller
 {
@@ -32,44 +30,32 @@ class ListNewsController extends Controller
         //普通文档列表
         if(Arctype::where('id',$typeid)->value('mid')==0)
         {
-            $pagelists=Archive::where('typeid',$typeid)->orderBy('id','desc')->paginate($perPage = 15, $columns = ['*'], $pageName = 'page', $page);
+            $pagelists=Archive::where('typeid',$typeid)->orderBy('id','desc')->paginate($perPage = 13, $columns = ['*'], $pageName = 'page', $page);
             $pagelists= Paginator::transfer(
                 $cid,//传入分类id,
                 $pagelists//传入原始分页器
             );
+            $hotnew=Archive::where('typeid',$thistypeinfo->id)->where('flags','like','%h%')->latest()->first();
+            $cnewtop=Archive::where('typeid',$typeid)->where('flags','like','%'.'c'.'%')->latest()->first();
+            $cnewtops=Archive::where('typeid',$typeid)->where('flags','like','%'.'c'.'%')->take(8)->latest()->get();
+            $topbrands=Brandarticle::where('mid','1')->take(5)->orderBy('click','desc')->get();
+            $abrandlists=Brandarticle::where('mid','1')->where('flags','like','%'.'h'.'%')->take(6)->orderBy('id','desc')->get();
             $latestbrands=Brandarticle::where('mid','1')->take(4)->latest()->get();
-            $latesenews=Archive::where('typeid','<>',$thistypeinfo->id)->take(5)->latest()->get();
-            return view('mobile.index_lists',compact('thistypeinfo','pagelists','latestbrands','latesenews'));
+            $cnew=Archive::where('typeid','<>',$thistypeinfo->id)->where('flags','like','%c%')->latest()->first();
+            $latesenews=Archive::where('typeid','<>',$thistypeinfo->id)->take(7)->latest()->get();
+            return view('mobile.index_lists',compact('thistypeinfo','pagelists','hotnew','cnewtop','cnew','cnewtops','topbrands','latestbrands','latesenews','abrandlists'));
         }elseif (Arctype::where('id',$typeid)->value('mid')==1)
         {
-            if ($path=='blist/all')
-            {
-                $typeids=Arctype::where('topid',$typeid)->pluck('id');
-                $cnewslists=Archive::where('flags','like','%c%')->take(7)->latest()->get();
-            }else{
-                $cnewslists=Archive::whereIn('brandid',Brandarticle::where('typeid',$typeid)->take(10)->latest()->pluck('id'))->take(10)->latest()->get();
-            }
+            $cnewslists=Archive::take(8)->latest()->get();
             $cid=preg_replace('/\/page\/[0-9]+/','',$path);
             $pagelists=Brandarticle::whereIn('typeid',$typeids)->orwhere('typeid',$typeid)->orderBy('id','desc')->distinct()->paginate($perPage = 10, $columns = ['*'], $pageName = 'page', $page);
             $pagelists= Paginator::transfer(
                 $cid,//传入分类id,
                 $pagelists//传入原始分页器
             );
-            $topbrands=Brandarticle::whereIn('typeid',$typeids)->orwhere('typeid',$typeid)->take(10)->orderBy('click','desc')->get();
-            return view('mobile.brands',compact('thistypeinfo','pagelists','topbrands','cnewslists','cbrands'));
-        }else{
-            $cid=preg_replace('/\/page\/[0-9]+/','',$path);
-            $pagelists=Production::whereIn('typeid',$typeids)->orwhere('typeid',$typeid)->latest()->paginate($perPage = 28, $columns = ['*'], $pageName = 'page', $page);
-            $pagelists= Paginator::transfer(
-                $cid,//传入分类id,
-                $pagelists//传入原始分页器
-            );
-            $topbrandnavs=Arctype::where('mid',2)->get();
-            $flashlingshibrands=Brandarticle::where('mid','1')->where('flags','like','%'.'c'.'%')->take(9)->orderBy('id','desc')->get();
-            $topbrands=Brandarticle::take(10)->orderBy('click','desc')->get();
-            $cnewslists=Archive::where('flags','like','%c%')->take(10)->latest()->get();
-            $latestbrands=Brandarticle::where('mid','1')->take(20)->latest()->get();
-            return view('mobile.productions',compact('thistypeinfo','topbrandnavs','pagelists','flashlingshibrands','topbrands','cnewslists','latestbrands'));
+            $topbrands=Brandarticle::whereIn('typeid',$typeids)->orwhere('typeid',$typeid)->take(5)->orderBy('click','desc')->get();
+            $hotbrands=Brandarticle::where('mid','1')->where('flags','like','%c%')->latest()->take(8)->orderBy('id','desc')->get();
+            return view('mobile.brands',compact('thistypeinfo','pagelists','topbrands','cnewslists','hotbrands'));
         }
 
     }
@@ -144,7 +130,7 @@ class ListNewsController extends Controller
         }, function ($query) use($thistypeinfo) {
             return $query->where('typeid',$thistypeinfo->id);
         })->paginate($perPage = 32, $columns = ['*'], $pageName = 'page', $page);
-        $topbrandnavs=Arctype::where('reid',6)->take(10)->get();
+        $topbrandnavs=Arctype::where('mid',1)->where('id','<>',14)->where('reid','<>',0)->orderBy('sortrank','asc')->get();
         $flashlingshibrands=Brandarticle::where('mid','1')->where('flags','like','%'.'c'.'%')->take(8)->orderBy('id','desc')->get();
         $cbrands=Brandarticle::where('mid','1')->where('brandpsp','<>','')->where('flags','like','%c%')->take(4)->orderBy('click','desc')->get();
         $hotbrandsearch=Brandarticle::where('mid','1')->latest()->take(5)->orderBy('click','desc')->get();
@@ -184,7 +170,7 @@ class ListNewsController extends Controller
         }else{
             $zid=null;
         }
-        return view('mobile.project_brands',compact('thistypeinfo','flashlingshibrands','topbrandnavs','pagelists','topbrands','tid','cid','cnewslists','zid','cbrands','hotbrandsearch'));
+        return view('frontend.project_brands',compact('thistypeinfo','flashlingshibrands','topbrandnavs','pagelists','topbrands','tid','cid','cnewslists','zid','cbrands','hotbrandsearch'));
     }
 
 

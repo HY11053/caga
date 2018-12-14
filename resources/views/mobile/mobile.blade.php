@@ -37,23 +37,14 @@
         <div class="d_nav">
             <ul>
                 <li><a href="/" target="_self"><span>首页</span></a></li>
-                <li><a href="/xm/" target="_self"><span>项目大全</span></a></li>
-                <li><a href="/guide/" target="_self"><span>加盟指南</span></a></li>
-                <li><a href="/analysis/" target="_self"><span>投资分析</span></a></li>
-                <li><a href="/management/" target="_self"><span>经营管理</span></a></li>
+                <li><a href="/pinpai/" target="_self"><span>品牌大全</span></a></li>
+                <li><a href="/cost/" target="_self"><span>干洗店成本</span></a></li>
+                <li><a href="/investment/" target="_self"><span>干洗店投资</span></a></li>
+                <li><a href="/profit/" target="_self"><span>干洗店利润</span></a></li>
+                <li><a href="/devices/" target="_self"><span>干洗店设备</span></a></li>
+                <li><a href="/technology/" target="_self"><span>干洗技术</span></a></li>
                 <li><a href="/news/" target="_self"><span>品牌新闻</span></a></li>
-                <li><a href="/paihangbang/" target="_self"><span>品牌排行榜</span></a></li>
-                <li>热门行业</li>
-                <li><a href="/zaojiao/" target="_self"><span>早教加盟</span></a></li>
-                <li><a href="/shaoer/" target="_self"><span>少儿英语加盟</span></a></li>
-                <li><a href="/youeryuan/" target="_self"><span>幼儿园加盟</span></a></li>
-                <li><a href="/qianneng/" target="_self"><span>潜能教育</span></a></li>
-                <li><a href="/xuedifudao/" target="_self"><span>学习辅导</span></a></li>
-                <li><a href="/wudao/" target="_self"><span>舞蹈培训</span></a></li>
-                <li><a href="/yishujiaoyu/" target="_self"><span>艺术教育</span></a></li>
-                <li><a href="/shaoerbiancheng/" target="_self"><span>少儿编程</span></a></li>
-                <li><a href="/taiquandao/" target="_self"><span>跆拳道加盟</span></a></li>
-                <li><a href="/zuowen/" target="_self"><span>作文培训</span></a></li>
+                <li><a href="/paihangbang/" target="_self"><span>干洗店排行榜</span></a></li>
                 </li>
             </ul>
         </div>
@@ -64,29 +55,19 @@
 @yield('main_content')
 <footer>
     <div class="link-box ">
-        <a href="http://www.jjedu.com.cn/" class="foot-link">电脑版</a><span class="v-line">|</span>
-        <a href="/xm/" class="foot-link">教育品牌</a><span class="v-line">|</span>
-        <a href="/guide/" class="foot-link">加盟指南</a><span class="v-line">|</span>
-        <a href="/analysis/" class="foot-link">投资分析</a><span class="v-line">|</span>
-        <a href="/management/" class="foot-link">经营管理</a>
+        <a href="{{config('app.url')}}" class="foot-link">电脑版</a><span class="v-line">|</span>
+        <a href="/cost/" class="foot-link">干洗店成本</a><span class="v-line">|</span>
+        <a href="/profit/" class="foot-link">干洗店利润</a><span class="v-line">|</span>
+        <a href="/investment/" class="foot-link">干洗店投资</a><span class="v-line">|</span>
+        <a href="/paihangbang/" class="foot-link">品牌排行榜</a>
     </div>
     <p class="firm clearfix">
-        <span class="foot-text mgr15">上海桥梓网络科技有限公司 	 版权所有</span>
+        <span class="foot-text mgr15">上海莫卡网路科技有限公司 版权所有</span>
     </p>
 </footer>
 <script type="text/javascript" src="/frontend/js/jquery.min.js"></script>
 <script type="text/javascript" src="/frontend/js/swiper.min.js"></script>
 <script type="text/javascript" src="/mobile/js/index.js"></script>
 @yield('footlibs')
-<script>
-    var _hmt = _hmt || [];
-    (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?106a3a7232fd5ef32c3efd3b89d0358b";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
-</script>
-
 </body>
 </html>

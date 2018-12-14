@@ -17,7 +17,7 @@
             <ul>
                 @foreach($pagelists as $pagelist)
                     <li>
-                        <a href="/news/{{$pagelist->id}}.shtml">
+                        <a href="/{{$pagelist->arctype->real_path}}/{{$pagelist->id}}.shtml">
                             <div class="img_show"><img @if($pagelist->litpic) src="{{$pagelist->litpic}}" @else src="/images/012.jpg" @endif class="img_list" /></div>
                             <div class="cont">
                                 <p class="tit_1">{{$pagelist->title}}</p>
@@ -32,7 +32,6 @@
     <div class="page">
         {!! str_replace('page=','page/',str_replace('?','/',preg_replace('/<a href=[\'\"]?([^\'\" ]+).*?>/','<a href="${1}/">',$pagelists->links()))) !!}
     </div>
-    @include('mobile.liuyan')
     <div id="item7">
         <div class="item7box clearfix">
             <i></i>
@@ -40,7 +39,7 @@
             <div class="item7content">
                 @foreach($latesenews as $latesenews)
                     <div class="item7list">
-                    <a href="/news/{{$latesenews->id}}.shtml">
+                    <a href="/{{$latesenews->arctype->real_path}}/{{$latesenews->id}}.shtml">
                         <div class="left fl">
                             <div class="lefttitle">{{$latesenews->title}}</div>
                             <div class="text">
@@ -64,7 +63,7 @@
             <div class="item8content">
                 @foreach($latestbrands as $index=>$latestbrand)
                     <div class="item8list @if(($index+1)%2==0) fl @else fr @endif">
-                        <a href="/xm/{{$latestbrand->id}}.shtml">
+                        <a href="/{{$latestbrand->arctype->real_path}}/{{$latestbrand->id}}.shtml">
                             <img src="{{$latestbrand->litpic}}" alt="{{$latestbrand->brandname}}">
                             <div class="item8listcontent">
                                 <div class="listtitle">{{$latestbrand->brandname}}</div>

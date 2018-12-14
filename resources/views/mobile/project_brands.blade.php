@@ -21,12 +21,12 @@
                         <span class="top">{{$index+1}}</span>
                     </span>
                         <div class="title-text">
-                            <a href="{{str_replace('www.','m.',config('app.url'))}}/xm/{{$pagelist->id}}/" class="a "><span>{{$pagelist->brandname}}</span></a>
+                            <a href="{{str_replace('www.','m.',config('app.url'))}}/{{$pagelist->arctype->real_path}}/{{$pagelist->id}}.shtml" class="a "><span>{{$pagelist->brandname}}</span></a>
                         </div>
-                        <a href="{{str_replace('www.','m.',config('app.url'))}}/xm/{{$pagelist->id}}/" class="brand-list-item-jump-tmall official"  title="{{$pagelist->brandname}}" data-bde-bind="1"><span class="active">品牌详情</span></a>
+                        <a href="{{str_replace('www.','m.',config('app.url'))}}/{{$pagelist->arctype->real_path}}/{{$pagelist->id}}.shtml" class="brand-list-item-jump-tmall official"  title="{{$pagelist->brandname}}" data-bde-bind="1"><span class="active">品牌详情</span></a>
                     </div>
                     <div class="clear"></div>
-                    <a href="{{str_replace('www.','m.',config('app.url'))}}/xm/{{$pagelist->id}}/">
+                    <a href="{{str_replace('www.','m.',config('app.url'))}}/{{$pagelist->arctype->real_path}}/{{$pagelist->id}}.shtml/">
                         <dl class="list flex flex-align-center">
                             <div class="dt flex flex-align-center">
                                 <span>
@@ -51,21 +51,21 @@
                 </div>
             </div>
         @endforeach
-            <div class="page">
-                {!! preg_replace("#\/page/[\d]+\/page\/#",'/page/',str_replace('page=','page/',str_replace('?','/',preg_replace('/<a href=[\'\"]?([^\'\" ]+).*?>/','<a href="${1}/">',$pagelists->links())))) !!}
-            </div>
+        <div class="page">
+            {!! str_replace('page=','page/',str_replace('?','/',preg_replace('/<a href=[\'\"]?([^\'\" ]+).*?>/','<a href="${1}/">',$pagelists->links()))) !!}
+        </div>
     </div>
     @include('mobile.liuyan')
     <div class="index_item">
         <div class="common_tit">
-            <span class="tit" href="/paihangbang/{{$thistypeinfo->real_path}}.shtml">{{$thistypeinfo->typename}}十大品牌</span>
+            <span class="tit" href="/paihangbang/">{{$thistypeinfo->typename}}十大品牌</span>
         </div>
         <div class="bd">
             <ul>
                 @foreach($topbrands as $index=>$topbrand)
                     @if($index<3)
                         <li>
-                            <a href="{{str_replace('www.','m.',config('app.url'))}}/xm/{{$topbrand->id}}.shtml">
+                            <a href="{{str_replace('www.','m.',config('app.url'))}}/{{$topbrand->arctype->real_path}}/{{$topbrand->id}}.shtml">
                                 <div class="img_show"><img src="{{$topbrand->litpic}}"/></div>
                                 <div class="cont">
                                     <p class="tit">{{$topbrand->brandname}}</p>
@@ -81,10 +81,9 @@
         <div class="list">
             <ul>
                 @foreach($topbrands as $index=>$topbrand)
-
                     @if($index>2)
                         <li>
-                            <a href="{{str_replace('www.','m.',config('app.url'))}}/xm/{{$topbrand->id}}.shtml">
+                            <a href="{{str_replace('www.','m.',config('app.url'))}}/{{$topbrand->arctype->real_path}}/{{$topbrand->id}}.shtml">
                                 <i>{{$index+1}}</i><span>{{$topbrand->brandname}}</span><em>已有{{$topbrand->click}}人申请</em>
                             </a>
                         </li>
@@ -101,7 +100,7 @@
             <div class="item7content">
                 @foreach($cnewslists as $cnewslist)
                     <div class="item7list">
-                        <a href="/news/{{$cnewslist->id}}.shtml">
+                        <a href="/{{$cnewslist->arctype->real_path}}/{{$cnewslist->id}}.shtml">
                             <div class="left fl">
                                 <div class="lefttitle">{{$cnewslist->title}}</div>
                                 <div class="text">

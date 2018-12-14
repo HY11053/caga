@@ -19,55 +19,38 @@ class ArticleController extends Controller
      * @param $id
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function NewsArticle(Request $request,$id)
+    public function GetArticle(Request $request,$path,$id)
     {
-        $thisarticleinfos=Archive::findOrFail($id);
-        if ($thisarticleinfos->brandid)
+        $thistypeinfos=Arctype::findOrFail(Arctype::where('real_path',$path)->value('id'));
+        if ($thistypeinfos->mid==0)
         {
-            $thisBrandArticle=Brandarticle::find($thisarticleinfos->brandid);
-            if ($thisBrandArticle)
+            $thisarticleinfos=Archive::find($id);
+            if ($thisarticleinfos->brandid)
             {
-                $brandtypeid=Brandarticle::where('id',$thisarticleinfos->brandid)->value('typeid');
-                $topbrands=Brandarticle::where('mid','1')->where('typeid',$brandtypeid)->take(4)->orderBy('click','desc')->get();
-                $pics=array_filter(explode(',',$thisBrandArticle->imagepics));
-            }else{
-                $topbrands=Brandarticle::where('mid','1')->take(4)->orderBy('click','desc')->get();
+                $thisBrandArticle=Brandarticle::find($thisarticleinfos->brandid);
             }
-        }else{
+            $published=$thisarticleinfos->created_at;
+            DB::table('archives')->where('id',$id)->update(['click'=>$thisarticleinfos->click+1,'published_at'=>$published]);
+            $prev_article = Archive::latest('published_at')->find($this->getPrevArticleId($thisarticleinfos->id));
+            $next_article = Archive::latest('published_at')->find($this->getNextArticleId($thisarticleinfos->id));
+            $xg_search=Archive::where('typeid',$thisarticleinfos->typeid)->take(10)->latest()->get();
             $topbrands=Brandarticle::where('mid','1')->take(4)->orderBy('click','desc')->get();
+            $latestbrands=Brandarticle::where('mid','1')->latest()->take(4)->orderBy('id','desc')->get();
+            $latesenews=Archive::where('typeid','<>',$thisarticleinfos->arctype->id)->take(7)->latest()->get();
+            return view('mobile.article_article',compact('thisarticleinfos','thisBrandArticle','prev_article','next_article','xg_search','latestbrands','topbrands','latesenews'));
+        }else{
+            $thisarticleinfos=Brandarticle::findOrFail($id);
+            $pics=array_filter(explode(',',$thisarticleinfos->imagepics));
+            $brandnews=Archive::where('brandid',$id)->take(10)->orderBy('id','desc')->get();
+            $topbrands=Brandarticle::take(4)->orderBy('click','desc')->get();
+            $latesnews=Archive::take(5)->orderBy('id','desc')->get();
+            $latestbrands=Brandarticle::take(5)->orderBy('id','desc')->get();
+            $latestbrandnews=Archive::where('brandid','<>','')->take(10)->latest()->get();
+            $published=$thisarticleinfos->created_at;
+            DB::table('brandarticles')->where('id',$id)->update(['click'=>$thisarticleinfos->click+1,'published_at'=>$published]);
+            return view('mobile.brand_article',compact('thisarticleinfos','pics','brandnews','topbrands','latesnews','latestbrands','latestbrandnews'));
         }
-        $published=$thisarticleinfos->created_at;
-        DB::table('archives')->where('id',$id)->update(['click'=>$thisarticleinfos->click+1,'published_at'=>$published]);
-        $prev_article = Archive::latest('published_at')->find($this->getPrevArticleId($thisarticleinfos->id));
-        $next_article = Archive::latest('published_at')->find($this->getNextArticleId($thisarticleinfos->id));
-        $indexname=$thisarticleinfos->nid?'干洗店品牌网':'干洗店品牌网';
-        $jsonpics='';
-        preg_match_all('/<[img|IMG].*?src=[\' | \"](.*?(?:[\.jpg|\.jpeg|\.png|\.gif|\.bmp]))[\'|\"].*?[\/]?>/i',$thisarticleinfos->body,$matches);
-        if (isset($matches[1]))
-        {
-            foreach ($matches[1] as $match)
-            {
-                if (!empty($match))
-                {
-                    if(!str_contains($match,'http'))
-                    {
-                        $jsonpics.='"http://mip.xiuxianshipin.com'.$match.'"';
-                    }else{
-                        $jsonpics.='"'.$match.'"'.',';
-                    }
-                }else{
-                    if(!str_contains($thisarticleinfos->litpic,'http'))
-                    {
-                        $jsonpics.='"http://mip.xiuxianshipin.com'.$thisarticleinfos->litpic.'"';
-                    }else{
-                        $jsonpics.='"'.$thisarticleinfos->litpic.'"';
-                    }
-                }
-            }
-        }
-        $jsonpics=rtrim($jsonpics,',');
-        return view('mobile.article_article',compact('thisarticleinfos','thisBrandArticle','prev_article','next_article','indexname','pics','topbrands','jsonpics'));
-    }
+   }
 
     /**品牌文档界面
      * @param $id
@@ -76,17 +59,8 @@ class ArticleController extends Controller
 
     public function BrandArticle($id)
     {
-        $thisarticleinfos=Brandarticle::findOrFail($id);
-        $pics=array_filter(explode(',',$thisarticleinfos->imagepics));
-        $brandnews=Archive::where('brandid',$id)->take(5)->orderBy('id','desc')->get();
-        $typeid=Brandarticle::where('id',$id)->value('typeid');
-        $typeids=Arctype::where('reid',$typeid)->pluck('id');
-        $topbrands=Brandarticle::whereIn('typeid',$typeids)->orwhere('typeid',$typeid)->take(4)->orderBy('click','desc')->get();
-        $published=$thisarticleinfos->created_at;
-        DB::table('brandarticles')->where('id',$id)->update(['click'=>$thisarticleinfos->click+1,'published_at'=>$published]);
-        $indexname=$thisarticleinfos->nid?'干洗店品牌网':'干洗店品牌网';
-        return view('mobile.brand_article',compact('thisarticleinfos','pics','brandnews','topbrands','indexname'));
-    }
+
+       }
 
     /**
      * 品牌产品界面
@@ -97,12 +71,18 @@ class ArticleController extends Controller
      */
     public function BrandProductionArticle($id,$pid=0,$page=0)
     {
+        if($id>5013)
+        {
+            abort(404);
+        }
         $thisarticleinfos=Brandarticle::findOrFail($id);
         $pics=array_filter(explode(',',$thisarticleinfos->imagepics));
-        $brandnews=Archive::where('brandid',$id)->take(5)->orderBy('id','desc')->get();
+        $brandnews=Archive::where('brandid',$id)->take(10)->orderBy('id','desc')->get();
         $typeid=Brandarticle::where('id',$id)->value('typeid');
         $typeids=Arctype::where('reid',$typeid)->pluck('id');
-        $topbrands=Brandarticle::whereIn('typeid',$typeids)->orwhere('typeid',$typeid)->take(4)->orderBy('click','desc')->get();
+        $topbrands=Brandarticle::whereIn('typeid',$typeids)->orwhere('typeid',$typeid)->take(10)->orderBy('click','desc')->get();
+        $latesnews=Archive::take(10)->orderBy('id','desc')->get();
+        $latestbrands=Brandarticle::take(20)->orderBy('id','desc')->get();
         $cid=$id.'/'.$pid;
         $productionlists=Arctype::whereIn('id',Production::where('brandid',$id)->distinct()->pluck('typeid'))->get();
         $productions=Production::where('brandid',$id)->when($pid, function ($query) use ($pid) {
@@ -112,10 +92,12 @@ class ArticleController extends Controller
             $cid,//传入分类id,
             $productions//传入原始分页器
         );
+
         $published=$thisarticleinfos->created_at;
         DB::table('brandarticles')->where('id',$id)->update(['click'=>$thisarticleinfos->click+1,'published_at'=>$published]);
         $indexname=$thisarticleinfos->nid?'干洗店品牌网':'干洗店品牌网';
-        return view('mobile.brand_production',compact('thisarticleinfos','productionlists','pid','productions','topbrands','pics','brandnews','indexname'));
+        $abrandlists=Brandarticle::where('mid','1')->where('typeid',$thisarticleinfos->typeid)->where('flags','like','%'.'a'.'%')->take(4)->orderBy('id','desc')->get();
+        return view('frontend.brand_production',compact('thisarticleinfos','productionlists','pid','productions','topbrands','pics','brandnews','latesnews','latestbrands','indexname','abrandlists'));
     }
 
     /**公司品牌介绍
@@ -124,16 +106,24 @@ class ArticleController extends Controller
      */
     public function BrandCompanyArticle($id)
     {
+        if($id>5013)
+        {
+            abort(404);
+        }
         $thisarticleinfos=Brandarticle::findOrFail($id);
         $pics=array_filter(explode(',',$thisarticleinfos->imagepics));
-        $brandnews=Archive::where('brandid',$id)->take(5)->orderBy('id','desc')->get();
+        $brandnews=Archive::where('brandid',$id)->take(10)->orderBy('id','desc')->get();
         $typeid=Brandarticle::where('id',$id)->value('typeid');
         $typeids=Arctype::where('reid',$typeid)->pluck('id');
-        $topbrands=Brandarticle::whereIn('typeid',$typeids)->orwhere('typeid',$typeid)->take(4)->orderBy('click','desc')->get();
+        $topbrands=Brandarticle::whereIn('typeid',$typeids)->orwhere('typeid',$typeid)->take(10)->orderBy('click','desc')->get();
+        $latesnews=Archive::take(5)->orderBy('id','desc')->get();
+        $latestbrands=Brandarticle::take(5)->orderBy('id','desc')->get();
         $published=$thisarticleinfos->created_at;
         DB::table('brandarticles')->where('id',$id)->update(['click'=>$thisarticleinfos->click+1,'published_at'=>$published]);
         $indexname=$thisarticleinfos->nid?'干洗店品牌网':'干洗店品牌网';
-        return view('mobile.brand_company',compact('thisarticleinfos','pics','brandnews','topbrands','indexname'));
+        $comments=Comment::where('archive_id',$thisarticleinfos->id)->where('is_hidden',0)->get();
+        $abrandlists=Brandarticle::where('mid','1')->where('typeid',$thisarticleinfos->typeid)->where('flags','like','%'.'a'.'%')->take(4)->orderBy('id','desc')->get();
+        return view('frontend.brand_company',compact('thisarticleinfos','pics','brandnews','topbrands','latesnews','indexname','latestbrands','comments','abrandlists'));
     }
 
     /**品牌加盟详情
@@ -142,16 +132,24 @@ class ArticleController extends Controller
      */
     public function BrandJoinArticle($id)
     {
+        if($id>5013)
+        {
+            abort(404);
+        }
         $thisarticleinfos=Brandarticle::findOrFail($id);
         $pics=array_filter(explode(',',$thisarticleinfos->imagepics));
-        $brandnews=Archive::where('brandid',$id)->take(5)->orderBy('id','desc')->get();
+        $brandnews=Archive::where('brandid',$id)->take(10)->orderBy('id','desc')->get();
         $typeid=Brandarticle::where('id',$id)->value('typeid');
         $typeids=Arctype::where('reid',$typeid)->pluck('id');
-        $topbrands=Brandarticle::whereIn('typeid',$typeids)->orwhere('typeid',$typeid)->take(4)->orderBy('click','desc')->get();
+        $topbrands=Brandarticle::whereIn('typeid',$typeids)->orwhere('typeid',$typeid)->take(10)->orderBy('click','desc')->get();
+        $latesnews=Archive::take(5)->orderBy('id','desc')->get();
+        $latestbrands=Brandarticle::take(5)->orderBy('id','desc')->get();
         $published=$thisarticleinfos->created_at;
         DB::table('brandarticles')->where('id',$id)->update(['click'=>$thisarticleinfos->click+1,'published_at'=>$published]);
         $indexname=$thisarticleinfos->nid?'干洗店品牌网':'干洗店品牌网';
-        return view('mobile.brand_join',compact('thisarticleinfos','pics','brandnews','topbrands','indexname'));
+        $comments=Comment::where('archive_id',$thisarticleinfos->id)->where('is_hidden',0)->get();
+        $abrandlists=Brandarticle::where('mid','1')->where('typeid',$thisarticleinfos->typeid)->where('flags','like','%'.'a'.'%')->take(4)->orderBy('id','desc')->get();
+        return view('frontend.brand_join',compact('thisarticleinfos','pics','brandnews','topbrands','latesnews','indexname','latestbrands','comments','abrandlists'));
 
     }
 
@@ -161,16 +159,24 @@ class ArticleController extends Controller
      */
     public function BrandProfitArticle($id)
     {
+        if($id>5013)
+        {
+            abort(404);
+        }
         $thisarticleinfos=Brandarticle::findOrFail($id);
         $pics=array_filter(explode(',',$thisarticleinfos->imagepics));
-        $brandnews=Archive::where('brandid',$id)->take(5)->orderBy('id','desc')->get();
+        $brandnews=Archive::where('brandid',$id)->take(10)->orderBy('id','desc')->get();
         $typeid=Brandarticle::where('id',$id)->value('typeid');
         $typeids=Arctype::where('reid',$typeid)->pluck('id');
-        $topbrands=Brandarticle::whereIn('typeid',$typeids)->orwhere('typeid',$typeid)->take(4)->orderBy('click','desc')->get();
+        $topbrands=Brandarticle::whereIn('typeid',$typeids)->orwhere('typeid',$typeid)->take(10)->orderBy('click','desc')->get();
+        $latesnews=Archive::take(5)->orderBy('id','desc')->get();
+        $latestbrands=Brandarticle::take(5)->orderBy('id','desc')->get();
         $published=$thisarticleinfos->created_at;
         DB::table('brandarticles')->where('id',$id)->update(['click'=>$thisarticleinfos->click+1,'published_at'=>$published]);
         $indexname=$thisarticleinfos->nid?'干洗店品牌网':'干洗店品牌网';
-        return view('mobile.brand_profit',compact('thisarticleinfos','pics','brandnews','topbrands','indexname'));
+        $comments=Comment::where('archive_id',$thisarticleinfos->id)->where('is_hidden',0)->get();
+        $abrandlists=Brandarticle::where('mid','1')->where('typeid',$thisarticleinfos->typeid)->where('flags','like','%'.'a'.'%')->take(4)->orderBy('id','desc')->get();
+        return view('frontend.brand_profit',compact('thisarticleinfos','pics','brandnews','topbrands','latesnews','indexname','latestbrands','comments','abrandlists'));
     }
 
     /**品牌新闻
@@ -179,20 +185,26 @@ class ArticleController extends Controller
      */
     public function BrandNewsArticle($id,$page=0,Request $request)
     {
+        if($id>5013)
+        {
+            abort(404);
+        }
         $cid='brand/'.$id.'/news';
         $thisarticleinfos=Brandarticle::findOrFail($id);
         $pics=array_filter(explode(',',$thisarticleinfos->imagepics));
         $typeid=Brandarticle::where('id',$id)->value('typeid');
         $typeids=Arctype::where('reid',$typeid)->pluck('id');
-        $topbrands=Brandarticle::whereIn('typeid',$typeids)->orwhere('typeid',$typeid)->take(4)->orderBy('click','desc')->get();
-        $latesnews=Archive::take(5)->orderBy('id','desc')->get();
+        $topbrands=Brandarticle::whereIn('typeid',$typeids)->orwhere('typeid',$typeid)->take(10)->orderBy('click','desc')->get();
+        $latesnews=Archive::take(10)->orderBy('id','desc')->get();
+        $latestbrands=Brandarticle::take(20)->orderBy('id','desc')->get();
         $brandnews=Archive::where('brandid',$id)->paginate($perPage = 15, $columns = ['*'], $pageName = 'page', $page);
         $brandnews= Paginator::transfer(
             $cid,//传入分类id,
             $brandnews//传入原始分页器
         );
         $indexname=$thisarticleinfos->nid?'干洗店品牌网':'干洗店品牌网';
-        return view('mobile.brand_news',compact('thisarticleinfos','topbrands','pics','latesnews','brandnews','indexname'));
+        $abrandlists=Brandarticle::where('mid','1')->where('typeid',$thisarticleinfos->typeid)->where('flags','like','%'.'a'.'%')->take(4)->orderBy('id','desc')->get();
+        return view('frontend.brand_news',compact('thisarticleinfos','topbrands','pics','latesnews','brandnews','latestbrands','indexname','abrandlists'));
 
      }
     /**产品文档
@@ -205,16 +217,20 @@ class ArticleController extends Controller
         $typeid=Production::where('id',$id)->value('typeid');
         $cproductions=Production::where('typeid',$typeid)->take(8)->orderBy('id','desc')->get();
         $thisbrandinfo=Brandarticle::where('id',Production::where('id',$id)->value('brandid'))->first();
-        $productionlists=Archive::where('brandid',$thisarticleinfos->brandid)->take(5)->orderBy('id','desc')->get();
+        $productionlists=Archive::where('brandid',$thisarticleinfos->brandid)->take(10)->orderBy('id','desc')->get();
+        $hproductions=Production::where('flags','like','%h%')->take(10)->orderBy('click','desc')->get();
         if ($thisarticleinfos->brandid)
         {
             $brandtypeid=Brandarticle::where('id',$thisarticleinfos->brandid)->value('typeid');
-            $topbrands=Brandarticle::where('mid','1')->where('typeid',$brandtypeid)->take(4)->orderBy('click','desc')->get();
+            $topbrands=Brandarticle::where('mid','1')->where('typeid',$brandtypeid)->take(10)->orderBy('click','desc')->get();
         }else{
-            $topbrands=Brandarticle::where('mid','1')->take(4)->orderBy('click','desc')->get();
+            $topbrands=Brandarticle::where('mid','1')->take(10)->orderBy('click','desc')->get();
         }
+        $latestnewslists=Archive::take(9)->latest()->get();
+        $abrandlists=Brandarticle::where('mid','1')->where('typeid',$thisarticleinfos->typeid)->where('flags','like','%'.'a'.'%')->take(4)->orderBy('id','desc')->get();
+        $cnew=Archive::whereIn('brandid',Brandarticle::where('typeid',$brandtypeid)->pluck('id'))->where('brandid','<>',$thisarticleinfos->brandid)->latest()->first();
         $indexname=$thisarticleinfos->nid?'干洗店品牌网':'干洗店品牌网';
-        return view('mobile.article_production',compact('thisarticleinfos','cproductions','thisbrandinfo','productionlists','indexname','topbrands'));
+        return view('frontend.article_production',compact('thisarticleinfos','cproductions','thisbrandinfo','productionlists','hproductions','indexname','topbrands','latestnewslists','flashlingshibrands','abrandlists','cnew'));
 
     }
 
